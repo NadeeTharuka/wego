@@ -10,34 +10,34 @@ const TourPackages = () => {
   const [searchDuration, setSearchDuration] = useState("");
 
   const tourPackagesData = {
-    Thailand: [
+    "Sri Lanka": [
       {
         id: 1,
-        name: "Bangkok & Pattaya Adventure",
-        image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
-        duration: "5 Days",
-        price: "$799",
+        name: "EXPLORE SRI LANKA IN 04 DAYS 03 NIGHTS",
+        image: "https://images.unsplash.com/photo-1589786742500-f38497953a65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+        duration: "4 Days",
+        price: "$599",
       },
       {
         id: 2,
-        name: "Phuket Island Escape",
-        image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
-        duration: "7 Days",
-        price: "$999",
+        name: "EXPLORE SRI LANKA IN 05 DAYS 04 NIGHTS",
+        image: "https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+        duration: "5 Days",
+        price: "$699",
       },
       {
         id: 3,
-        name: "Chiang Mai Cultural Tour",
-        image: "https://images.unsplash.com/photo-1598127004573-3a359cd8c997?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
-        duration: "4 Days",
+        name: "EXPLORE SRI LANKA IN 05 DAYS 04 NIGHTS",
+        image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+        duration: "5 Days",
         price: "$699",
       },
       {
         id: 4,
-        name: "Thailand Grand Tour",
-        image: "https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
-        duration: "10 Days",
-        price: "$1499",
+        name: "EXPLORE SRI LANKA IN 07 DAYS 06 NIGHTS",
+        image: "https://images.unsplash.com/photo-1586791965091-35685e092763?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+        duration: "7 Days",
+        price: "$899",
       },
     ],
     Malaysia: [
@@ -184,7 +184,7 @@ const TourPackages = () => {
             onChange={handleSearchCountry}
           >
             <option>Tour Country</option>
-            <option>Thailand</option>
+            <option>Sri Lanka</option>
             <option>Malaysia</option>
             <option>Australia</option>
             <option>Indonesia</option>
@@ -222,7 +222,7 @@ const TourPackages = () => {
               >
                 <a
                   className="position-relative d-block overflow-hidden"
-                  onClick={() => setSelectedCountry("Thailand")}
+                  onClick={() => setSelectedCountry("Sri Lanka")}
                   style={{ cursor: "pointer" }}
                 >
                   <img
@@ -234,7 +234,7 @@ const TourPackages = () => {
                     30% OFF
                   </div>
                   <div className="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                    Thailand
+                    Sri Lanka
                   </div>
                 </a>
               </div>
