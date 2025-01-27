@@ -142,6 +142,11 @@ const TourPackages = () => {
   };
 
   const filterPackages = () => {
+    // Only proceed if there's a search country or duration
+    if (!searchCountry && !searchDuration) {
+      return [];
+    }
+
     let filtered = Object.values(tourPackagesData).flat();
 
     if (searchCountry && searchCountry !== "Tour Country") {
@@ -315,52 +320,58 @@ const TourPackages = () => {
 
       {/* Tour Packages Section */}
       <section className="tour-packages">
-        <h2>
-          {selectedCountry 
-            ? `${selectedCountry} Tour Packages` 
-            : (searchCountry || searchDuration) 
-              ? 'Filtered Tour Packages' 
-              : 'All Tour Packages'}
-        </h2>
-        <div className="packages-grid">
-          {selectedCountry
-            ? tourPackagesData[selectedCountry].map((pkg) => (
-                <div className="package" key={pkg.id}>
-                  <img
-                    src={pkg.image}
-                    alt={pkg.name}
-                    className="package-img"
-                  />
-                  <h3>{pkg.name}</h3>
-                  <p>{pkg.duration}</p>
-                  <p>Starting from {pkg.price}</p>
-                  <button 
-                    className="view-button" 
-                    onClick={() => handleViewPackage(pkg)}
-                  >
-                    View Package ➜
-                  </button>
-                </div>
-              ))
-            : filterPackages().map((pkg) => (
-                <div className="package" key={pkg.id}>
-                  <img
-                    src={pkg.image}
-                    alt={pkg.name}
-                    className="package-img"
-                  />
-                  <h3>{pkg.name}</h3>
-                  <p>{pkg.duration}</p>
-                  <p>Starting from {pkg.price}</p>
-                  <button 
-                    className="view-button" 
-                    onClick={() => handleViewPackage(pkg)}
-                  >
-                    View Package ➜
-                  </button>
-                </div>
-              ))}
-        </div>
+        {selectedCountry || searchCountry || searchDuration ? (
+          <>
+            <h2>
+              {selectedCountry 
+                ? `${selectedCountry} Tour Packages` 
+                : 'Filtered Tour Packages'}
+            </h2>
+            <div className="packages-grid">
+              {selectedCountry
+                ? tourPackagesData[selectedCountry].map((pkg) => (
+                    <div className="package" key={pkg.id}>
+                      <img
+                        src={pkg.image}
+                        alt={pkg.name}
+                        className="package-img"
+                      />
+                      <h3>{pkg.name}</h3>
+                      <p>{pkg.duration}</p>
+                      <p>Starting from {pkg.price}</p>
+                      <button 
+                        className="view-button" 
+                        onClick={() => handleViewPackage(pkg)}
+                      >
+                        View Package ➜
+                      </button>
+                    </div>
+                  ))
+                : filterPackages().map((pkg) => (
+                    <div className="package" key={pkg.id}>
+                      <img
+                        src={pkg.image}
+                        alt={pkg.name}
+                        className="package-img"
+                      />
+                      <h3>{pkg.name}</h3>
+                      <p>{pkg.duration}</p>
+                      <p>Starting from {pkg.price}</p>
+                      <button 
+                        className="view-button" 
+                        onClick={() => handleViewPackage(pkg)}
+                      >
+                        View Package ➜
+                      </button>
+                    </div>
+                  ))}
+            </div>
+          </>
+        ) : (
+          <div className="text-center py-5">
+            <h2>Please select a country or use the search filters to view packages</h2>
+          </div>
+        )}
       </section>
     </div>
   );
