@@ -37,7 +37,7 @@ function Header() {
             </small>
             <small className="text-light">
               <i className="fa fa-envelope-open me-2" />
-              info@example.com
+              opulenttoursinfo@gmail.com
             </small>
           </div>
         </div>
@@ -94,7 +94,7 @@ function Header() {
                 style={{ objectFit: "cover" }} 
               />
             
-            WeGo Travels
+            Opulent Tours
           </h1>
           {/* <img src="img/logo.png" alt="Logo"> */}
         </Link>

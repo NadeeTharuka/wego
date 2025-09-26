@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./TourPackages.css";
 import "./TripSteps.css";
 
+
 const TourPackages = () => {
   const navigate = useNavigate();
   const [selectedCountry, setSelectedCountry] = useState(null);
@@ -14,7 +15,7 @@ const TourPackages = () => {
       {
         id: 1,
         name: "EXPLORE SRI LANKA IN 04 DAYS 03 NIGHTS",
-        image: "https://images.unsplash.com/photo-1589786742500-f38497953a65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+        image: "https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
         duration: "4 Days",
         price: "$599",
       },
@@ -35,7 +36,7 @@ const TourPackages = () => {
       {
         id: 4,
         name: "EXPLORE SRI LANKA IN 07 DAYS 06 NIGHTS",
-        image: "https://images.unsplash.com/photo-1586791965091-35685e092763?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+        image: "https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
         duration: "7 Days",
         price: "$899",
       },
@@ -178,36 +179,36 @@ const TourPackages = () => {
     navigate('/destination', { state: { package: pkg } });
   };
 
-  return (
-    <div>
-      {/* Updated Header Section */}
-      <header className="header">
-        <div className="search-bar">
-          <select 
-            className="dropdown" 
-            value={searchCountry} 
-            onChange={handleSearchCountry}
-          >
-            <option>Tour Country</option>
-            <option>Sri Lanka</option>
-            <option>Malaysia</option>
-            <option>Australia</option>
-            <option>Indonesia</option>
-          </select>
-          <select 
-            className="dropdown" 
-            value={searchDuration} 
-            onChange={handleSearchDuration}
-          >
-            <option>Tour duration</option>
-            <option>3 Days</option>
-            <option>7 Days</option>
-            <option>14 Days</option>
-          </select>
-          <input type="date" className="date-picker" />
-          <button className="quote-button">Get a Quote in 5 min</button>
+  
+    return (
+      <div>
+          <div className="container-fluid bg-primary py-5 mb-5 hero-header">
+      <div className="container py-5">
+        <div className="row justify-content-center py-5">
+          <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+            <h1 className="display-3 text-white animated slideInDown">
+              Tours
+            </h1>
+            <nav aria-label="breadcrumb">
+              <ol className="breadcrumb justify-content-center">
+                <li className="breadcrumb-item">
+                  <a href="/">Home</a>
+                </li>
+                {/* <li className="breadcrumb-item">
+                  <a href="/Pages">Pages</a>
+                </li> */}
+                <li
+                  className="breadcrumb-item text-white active"
+                  aria-current="page"
+                >
+                  Tours
+                </li>
+              </ol>
+            </nav>
+          </div>
         </div>
-      </header>
+      </div>
+    </div>
 
       {/* Destination Start */}
     <div className="container-xxl py-5 destination">
@@ -437,3 +438,4 @@ const TripSteps = () => {
   
   
   export default TourPackages;
+  

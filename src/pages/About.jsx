@@ -54,16 +54,22 @@ function About() {
               About Us
             </h6>
             <h1 className="mb-4">
-              Welcome to <span className="text-primary">WeGo Travels</span>
+              Welcome to <span className="text-primary">Opulent Tours</span>
             </h1>
             <p className="mb-4">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-              diam amet diam et eos. Clita erat ipsum et lorem et sit.
-            </p>
+            🌏 “Opulent” based in Kalutara, Sri Lanka, brings 15 years of travel expertise to life with a young and creative team. Specializing in unforgettable trips across Sri Lanka, India, and Thailand, Wego offers a wide range of travel experiences, from exotic getaways to thrilling adventures.
+</p>
             <p className="mb-4">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-              diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-              lorem sit clita duo justo magna dolore erat amet
+🛫 Discover your next adventure with us! Opulent, a renowned travel agency based in Kalutara, Sri Lanka, combines 15 years of industry expertise with the fresh energy of a young, innovative team to create exceptional travel experiences. Our passion is to transform your travel dreams into reality by offering a wide range of tailored journeys. From the pristine beaches of Sri Lanka to the vibrant cultures of India and the tropical beauty of Thailand, we specialize in curating unforgettable trips that cater to every kind of traveler. Whether you're seeking a luxurious escape to a tranquil island, an exhilarating adventure through dense rainforests, or an immersive cultural tour through ancient cities, Wego has something for everyone. Our diverse offerings range from exotic getaways in paradise locations to adrenaline-pumping experiences, all meticulously planned to ensure a seamless and stress-free journey.
+</p>
+
+<p className="mb-4">
+⛺ At Opulent, we believe that travel is more than just visiting a destination—it's about creating memories that last a lifetime. Our dedicated team is committed to providing personalized services, from custom itineraries to insider recommendations, ensuring that every trip you take with us is truly one-of-a-kind.
+</p>
+
+            
+            <p className="mb-4">
+            🚁 Let us help you discover new horizons, explore hidden gems, and embark on adventures that will leave you enriched and inspired. Your next extraordinary journey awaits with Opulent!
             </p>
             <div className="row gy-2 gx-4 mb-4">
               <div className="col-sm-6">

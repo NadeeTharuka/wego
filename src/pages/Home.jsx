@@ -2,32 +2,45 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <div>
-      {/* Header Section */}
-      <header className="header">
-        <div className="search-bar">
+    
+
+      <div>
+      <div className="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div className="container py-5">
+          <div className="row justify-content-center py-5">
+            <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+              <h1 className="display-3 text-white mb-3 animated slideInDown">
+                Enjoy Your Vacation With Us
+              </h1>
+              <p className="fs-4 text-white mb-4 animated slideInDown">
+                We Go Wherever You Go
+              </p>
+              
           <select className="dropdown">
             <option>Tour Country</option>
             <option>Sri Lanka</option>
             <option>Maldives</option>
             <option>Singapore</option>
             <option>Thailand</option>
-          </select>
-          <select className="dropdown">
+          </select>&nbsp;&nbsp;&nbsp;
+          <select className="dropdown">&nbsp;
             <option>Tour duration</option>
             <option>3 Days</option>
             <option>7 Days</option>
             <option>14 Days</option>
-          </select>
-          <input type="date" className="date-picker" />
-          <button className="quote-button">Get a Quote in 5 min</button>
-          <img
-            src="profile.jpg" // Replace with actual image path
-            alt="Profile"
-            className="profile-pic"
-          />
+          </select>&nbsp;&nbsp;&nbsp;
+          <input type="date" className="date-picker" /><br /><br />
+          <button className="quote-button">Get a Quote</button>&nbsp;&nbsp;&nbsp;
+          
+          
         </div>
-      </header>
+            </div>
+          </div>
+        </div>
+      
+      
+
+
       
             {/* About Start */}
     <div className="container-xxl py-5">
@@ -41,7 +54,7 @@ export default function Home() {
             <div className="position-relative h-100">
               <img
                 className="img-fluid position-absolute w-100 h-100"
-                src="assets/img/about.jpg"
+                src="assets/img/BG7.png"
                 alt=""
                 style={{ objectFit: "cover" }}
               />
@@ -52,10 +65,10 @@ export default function Home() {
               About Us
             </h6>
             <h1 className="mb-4">
-              Welcome to <span className="text-primary">WeGo Travels</span>
+              Welcome to <span className="text-primary">Opulent Tours</span>
             </h1>
             <p className="mb-4">
-            “Wego” based in Kalutara, Sri Lanka, brings 15 years of travel expertise to life with a young and creative team. Specializing in unforgettable trips across Sri Lanka, India, and Thailand, Wego offers a wide range of travel experiences, from exotic getaways to thrilling adventures.
+            “Opulent” based in Kalutara, Sri Lanka, brings 15 years of travel expertise to life with a young and creative team. Specializing in unforgettable trips across Sri Lanka, India, and Thailand, Wego offers a wide range of travel experiences, from exotic getaways to thrilling adventures.
             </p>
             <p className="mb-4">
             Discover your next adventure with us! Wego, a renowned travel agency based in Kalutara, Sri Lanka, combines 15 years of industry expertise with the fresh energy of a young, innovative team to create exceptional travel experiences.
@@ -218,107 +231,80 @@ export default function Home() {
     {/* Service End */}
     {/* Destination Start */}
     <div className="container-xxl py-5 destination">
-      <div className="container">
+    <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 className="section-title bg-white text-center text-primary px-3">
-            Destination
-          </h6>
-          <h1 className="mb-5">Popular Destination</h1>
+            <h6 className="section-title bg-white text-center text-primary px-3">
+                Destination
+            </h6>
+            <h1 className="mb-5">Special Offers Just for You</h1>
         </div>
         <div className="row g-3">
-          <div className="col-lg-7 col-md-6">
-            <div className="row g-3">
-              <div
-                className="col-lg-12 col-md-12 wow zoomIn"
-                data-wow-delay="0.1s"
-              >
-                <a
-                  className="position-relative d-block overflow-hidden"
-                  href=""
-                >
-                  <img
-                    className="img-fluid"
-                    src="assets/img/destination-1.jpg"
-                    alt=""
-                  />
-                  <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                    30% OFF
-                  </div>
-                  <div className="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                    Thailand
-                  </div>
-                </a>
-              </div>
-              <div
-                className="col-lg-6 col-md-12 wow zoomIn"
+            <div
+                className="col-lg-4 col-md-6 wow zoomIn"
                 data-wow-delay="0.3s"
-              >
-                <a
-                  className="position-relative d-block overflow-hidden"
-                  href=""
-                >
-                  <img
-                    className="img-fluid"
-                    src="assets/img/destination-2.jpg"
-                    alt=""
-                  />
-                  <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                    25% OFF
-                  </div>
-                  <div className="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                    Malaysia
-                  </div>
-                </a>
-              </div>
-              <div
-                className="col-lg-6 col-md-12 wow zoomIn"
-                data-wow-delay="0.5s"
-              >
-                <a
-                  className="position-relative d-block overflow-hidden"
-                  href=""
-                >
-                  <img
-                    className="img-fluid"
-                    src="assets/img/destination-3.jpg"
-                    alt=""
-                  />
-                  <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                    35% OFF
-                  </div>
-                  <div className="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                    Australia
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-lg-5 col-md-6 wow zoomIn"
-            data-wow-delay="0.7s"
-            style={{ minHeight: 350 }}
-          >
-            <a
-              className="position-relative d-block h-100 overflow-hidden"
-              href=""
             >
-              <img
-                className="img-fluid position-absolute w-100 h-100"
-                src="assets/img/destination-4.jpg"
-                alt=""
-                style={{ objectFit: "cover" }}
-              />
-              <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                20% OFF
-              </div>
-              <div className="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                Indonesia
-              </div>
-            </a>
-          </div>
+                <a
+                    className="position-relative d-block overflow-hidden equal-box"
+                    href=""
+                >
+                    <img
+                        className="img-fluid"
+                        src="assets/img/destination-2.jpg"
+                        alt=""
+                    />
+                    <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
+                        25% OFF
+                    </div>
+                    <div className="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
+                        India
+                    </div>
+                </a>
+            </div>
+            <div
+                className="col-lg-4 col-md-6 wow zoomIn"
+                data-wow-delay="0.5s"
+            >
+                <a
+                    className="position-relative d-block overflow-hidden equal-box"
+                    href=""
+                >
+                    <img
+                        className="img-fluid"
+                        src="assets/img/destination-2.jpg"
+                        alt=""
+                    />
+                    <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
+                        35% OFF
+                    </div>
+                    <div className="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
+                        Thailand
+                    </div>
+                </a>
+            </div>
+            <div
+                className="col-lg-4 col-md-6 wow zoomIn"
+                data-wow-delay="0.6s"
+            >
+                <a
+                    className="position-relative d-block overflow-hidden equal-box"
+                    href=""
+                >
+                    <img
+                        className="img-fluid"
+                        src="assets/img/destination-3.jpg"
+                        alt=""
+                    />
+                    <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
+                        10% OFF
+                    </div>
+                    <div className="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
+                        Sri Lanka
+                    </div>
+                </a>
+            </div>
         </div>
-      </div>
     </div>
+</div>
     {/* Destination Start */}
     {/* Package Start */}
     <div className="container-xxl py-5">
@@ -327,7 +313,7 @@ export default function Home() {
           <h6 className="section-title bg-white text-center text-primary px-3">
             Packages
           </h6>
-          <h1 className="mb-5">Awesome Packages</h1>
+          <h1 className="mb-5">Explore More Spendless</h1>
         </div>
         <div className="row g-4 justify-content-center">
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">

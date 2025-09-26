@@ -40,8 +40,7 @@ function Contact() {
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <h5>Get In Touch</h5>
             <p className="mb-4">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-              diam amet diam et eos
+              Contact us
             </p>
             <div className="d-flex align-items-center mb-4">
               <div
@@ -52,7 +51,7 @@ function Contact() {
               </div>
               <div className="ms-3">
                 <h5 className="text-primary">Office</h5>
-                <p className="mb-0">123 Street, New York, USA</p>
+                <p className="mb-0">123 Street, Kalutara south, Srilanka</p>
               </div>
             </div>
             <div className="d-flex align-items-center mb-4">
@@ -64,7 +63,7 @@ function Contact() {
               </div>
               <div className="ms-3">
                 <h5 className="text-primary">Mobile</h5>
-                <p className="mb-0">+012 345 67890</p>
+                <p className="mb-0">+9471 534 5060</p>
               </div>
             </div>
             <div className="d-flex align-items-center">
@@ -76,7 +75,7 @@ function Contact() {
               </div>
               <div className="ms-3">
                 <h5 className="text-primary">Email</h5>
-                <p className="mb-0">info@example.com</p>
+                <p className="mb-0">opulenttoursinfo@gmail.com</p>
               </div>
             </div>
           </div>

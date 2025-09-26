@@ -36,11 +36,11 @@ export default function Footer() {
             </p>
             <p className="mb-2">
               <i className="fa fa-phone-alt me-3" />
-              +012 345 67890
+              +94 71 534 5060
             </p>
             <p className="mb-2">
               <i className="fa fa-envelope me-3" />
-              info@example.com
+              opulenttoursinfo@gmail.com
             </p>
             <div className="d-flex pt-2">
               <a className="btn btn-outline-light btn-social" href="/">
@@ -132,12 +132,12 @@ export default function Footer() {
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
               ©{" "}
               <a className="border-bottom" href="#">
-                Your Site Name
+                Opulenttours.com
               </a>
               , All Right Reserved.
               Designed By{" "}
               <a className="border-bottom" href="https://github.com/ParasSalunke">
-                Paras Salunke
+                Nadun Kanchana
               </a>
             </div>
             <div className="col-md-6 text-center text-md-end">

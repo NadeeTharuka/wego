@@ -250,7 +250,14 @@
 .destination a:hover img {
     transform: scale(1.1);
 }
+.equal-box {
+    height: 350px; /* Set a fixed height for all boxes */
+}
 
+.equal-box img {
+    height: 100%; /* Make the image fill the entire height of the box */
+    object-fit: cover; /* This is the key: it crops the image to fit the container */
+}
 
 /*** Package ***/
 .package-item {
