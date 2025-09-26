@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "dotenv": "^16.4.7",
     "gh-pages": "^6.1.1",
+    "lucide-react": "^0.544.0",
     "mailgen": "^2.0.29",
     "nodemailer": "^6.9.16",
     "react": "^18.3.1",
