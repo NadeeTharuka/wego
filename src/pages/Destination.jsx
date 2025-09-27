@@ -1,68 +1,76 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
-import './Destination.css';  // Add this import
+import './Destination.css';
 
 function Destination() {
   const location = useLocation();
   const selectedPackage = location.state?.package;
 
-  // Add program details for Sri Lanka package 1
+  // Comprehensive package details based on your documents
   const packageDetails = {
     "EXPLORE SRI LANKA IN 04 DAYS 03 NIGHTS": {
       program: [
         {
           day: "Day 01",
+          title: "Airport → Dambulla",
           activities: [
-            "Airport to Negombo",
-            "Visits Negombo City",
-            "Overnight in Negombo",
+            "Airport to Dambulla",
+            "Taking a short break at hotel during the journey",
             "Pinnawala Elephant Orphanage",
-            "Dambulla Temple",
+            "Dambulla Cave Temple - UNESCO World Heritage Site",
             "Overnight in Dambulla"
           ],
           details: {
-            "Pinnawala": `Pinnawala Elephant Orphanage is where you can find the largest herd of captive elephants in the world. Established in 1975, it is a popular breeding ground for wild Asian elephants working towards the protection and welfare of these wild mammals. Orphaned and unweaned calves and wounded adults spotted in the forests of Sri Lanka are taken in here for proper care. Here you can take a closer look at the elephants who freely roam on the premises, learn elephant behavioral patterns, and get to know the ways of mahouts. Located amidst the major tourist destinations of the country, a visit to this elephant park is much more convenient and worth your time.`,
-            "Dambulla": `Dambulla is a commercial town in Sri Lanka, located 20 km south of Habarana and 55 km north of Matale, known for hosting the country's largest produce market. Its most famous attractions are the Dambulla Cave Temples and the Golden Temple, both of which are part of one of Sri Lanka's eight UNESCO World Heritage Sites. The Dambulla heritage site has a history that spans from prehistoric times to the modern era.\n\nThe Dambulla Cave Temples, located near the geographical center of the island, are a significant cultural treasure. Dating back to the 1st century BCE, these caves are renowned for their exquisite Sinhala art and sculpture. The complex includes five caves beneath a vast overhanging rock, with intricately painted ceilings and images of Lord Buddha, Bodhisattvas, and various deities. These caves were developed during the Anuradhapura and Polonnaruwa periods and are among the most impressive cave temples in Sri Lanka.`
+            "Pinnawala Elephant Orphanage": "Pinnawala Elephant Orphanage is where you can find the largest herd of captive elephants in the world. Established in 1975, it is a popular breeding ground for wild Asian elephants working towards the protection and welfare of these wild mammals. Orphaned and unweaned calves and wounded adults spotted in the forests of Sri Lanka are taken in here for proper care.",
+            "Dambulla Cave Temple": "The Dambulla Cave Temples, located near the geographical center of the island, are a significant cultural treasure. Dating back to the 1st century BCE, these caves are renowned for their exquisite Sinhala art and sculpture. The complex includes five caves beneath a vast overhanging rock, with intricately painted ceilings and images of Lord Buddha, Bodhisattvas, and various deities."
           }
         },
         {
           day: "Day 02",
+          title: "Dambulla → Kandy",
           activities: [
-            "Visits Sigiri Rock",
-            "Sigiriya Village Tour with Lunch",
+            "Sigiriya Lion Rock Fortress",
+            "Sigiriya Village Tour with Traditional Lunch",
             "Matale Spice Garden",
             "Overnight in Kandy"
           ],
           details: {
-            "Sigiriya": `Sigiriya, often referred to as the "Lion Rock," is an ancient rock fortress and one of Sri Lanka's most iconic landmarks. Located in the central Matale District near the town of Dambulla, it is a UNESCO World Heritage site and a popular tourist destination.\n\nSigiriya, built in the 5th century AD by King Kashyapa I, served as a royal palace atop a 200-meter rock for strategic defense. After his death, the site was abandoned as a royal residence and later used as a Buddhist monastery until the 14th century.`,
-            "Village Tours": `Village tours in Sigiriya offer a glimpse into traditional Sri Lankan rural life. These tours typically include a bullock cart ride, a boat ride on a serene lake, and a walk-through paddy fields and local farms. Visitors can experience traditional cooking, visit a village home, and interact with local villagers, learning about their customs and daily activities.`,
-            "The Matale Spice Garden": `The Matale Spice Garden in Sri Lanka, located near Kandy, is a popular tourist spot known for its rich variety of spices, including cinnamon, pepper, cloves, nutmeg, cardamom, vanilla, and turmeric. Visitors can enjoy guided tours, where they learn about spice cultivation and uses, see demonstrations, and purchase fresh spices and Ayurvedic products.`
+            "Sigiriya Lion Rock": "Sigiriya, often referred to as the 'Lion Rock,' is an ancient rock fortress and one of Sri Lanka's most iconic landmarks. Built in the 5th century AD by King Kashyapa I, it served as a royal palace atop a 200-meter rock for strategic defense. The rock features vivid frescoes of the 'Sigiriya Damsels' and the polished Mirror Wall.",
+            "Village Tour": "Village tours in Sigiriya offer a glimpse into traditional Sri Lankan rural life. These tours typically include a bullock cart ride, a boat ride on a serene lake, and a walk-through paddy fields and local farms. Visitors can experience traditional cooking and interact with local villagers.",
+            "Matale Spice Garden": "The Matale Spice Garden near Kandy is known for its rich variety of spices, including cinnamon, pepper, cloves, nutmeg, cardamom, vanilla, and turmeric. Visitors can enjoy guided tours, learn about spice cultivation and uses, and purchase fresh spices and Ayurvedic products."
           }
         },
         {
           day: "Day 03",
+          title: "Kandy → Colombo",
           activities: [
-            "Visits Kandy Dalada maligawa",
-            "Cultural Show",
-            "Gem Shop",
-            "Colombo Shopping",
+            "Temple of the Sacred Tooth Relic (Dalada Maligawa)",
+            "Kandyan Cultural Dance Show",
+            "Gem Shop Visit",
+            "Evening Shopping in Colombo",
             "Overnight in Colombo"
           ],
           details: {
-            "Sri Dalada Maligawa": `The Temple of the Sacred Tooth Relic, or Dalada Maligawa, in Kandy is one of Sri Lanka's most significant religious and cultural sites, housing the revered tooth relic of the Buddha. This sacred relic, symbolizing both spiritual and political authority, has been enshrined in Kandy since the 16th century and is closely associated with the Sinhalese monarchy.`,
-            "Cultural Show": `Cultural shows in Sri Lanka showcase the island's rich traditions through vibrant performances of dance, music, and rituals. Key highlights include Kandyan dance, known for its elegant movements and elaborate costumes, and Low Country dance, featuring energetic performances with striking masks.`,
-            "Gem shops": `Gem shops in Sri Lanka are popular for offering a wide variety of precious and semi-precious gemstones, including sapphires, rubies, and topaz. The country, known as the "Gem Island," is especially famous for its Ceylon Blue Sapphires.`
+            "Temple of the Sacred Tooth Relic": "The Temple of the Sacred Tooth Relic, or Dalada Maligawa, in Kandy is one of Sri Lanka's most significant religious and cultural sites, housing the revered tooth relic of the Buddha. This sacred relic has been enshrined in Kandy since the 16th century and showcases exquisite Kandyan architecture.",
+            "Cultural Dance Show": "Cultural shows in Sri Lanka showcase the island's rich traditions through vibrant performances of dance, music, and rituals. Key highlights include Kandyan dance, known for its elegant movements and elaborate costumes, and Low Country dance, featuring energetic performances with striking masks.",
+            "Gem Shops": "Sri Lanka is known as the 'Gem Island,' especially famous for its Ceylon Blue Sapphires. These shops often provide certificates of authenticity and sometimes allow visitors to see the cutting and polishing process."
           }
         },
         {
           day: "Day 04",
+          title: "Colombo → Airport",
           activities: [
-            "Visits Colombo City",
-            "Departure - To Airport"
+            "Colombo City Tour",
+            "Gangaramaya Temple",
+            "Lotus Tower",
+            "Historic Fort Area",
+            "Galle Face Green",
+            "Independence Square",
+            "Departure to Airport"
           ],
           details: {
-            "Colombo": `Colombo, the capital of Sri Lanka, is a vibrant city that blends modernity with rich history. It serves as the country's commercial and cultural hub, offering a mix of colonial architecture, bustling markets, and contemporary skyscrapers.\n\nKey attractions include the Galle Face Green, the Gangaramaya Temple, and the historic Fort area. Colombo is also known for its diverse dining scene, luxury shopping, and lively nightlife.`
+            "Colombo City Tour": "Colombo, the capital of Sri Lanka, is a vibrant city that blends modernity with rich history. It serves as the country's commercial and cultural hub, offering a mix of colonial architecture, bustling markets, and contemporary skyscrapers. Key attractions include the Galle Face Green, the Gangaramaya Temple, and the historic Fort area."
           }
         }
       ]
@@ -71,238 +79,544 @@ function Destination() {
       program: [
         {
           day: "Day 01",
+          title: "Airport → Negombo",
           activities: [
             "Airport to Negombo",
-            "Visits Negombo City",
+            "Negombo Fish Market / Fishing Village",
+            "Hamilton Dutch Canal exploration",
+            "Angurukaramulla Temple",
+            "St. Mary's Church",
+            "Evening Negombo Lagoon Tour",
             "Overnight in Negombo"
           ],
           details: {
-            "Negombo": `Negombo is a quiet town on Sri Lanka's west coast, just 10 km from Bandaranaike International Airport. Known for its white sandy beaches and turquoise waters, it's a popular beach resort and commercial hub with a rich history in spice and seafood trade. The town reflects Dutch and Portuguese influences in its food, architecture, and culture. Key attractions include the thriving Fishing Village, Angurukaramulla Temple, St. Mary's Church, and scenic boat rides on the Hamilton Dutch Canal.\n\nNegombo Beach offers activities like kitesurfing and sailing, while Browns Beach is popular for midnight swims. Visitors can also shop at Beach Road Market and Negombo Shopping Plaza.`
+            "Negombo": "Negombo is a quiet town on Sri Lanka's west coast, just 10 km from Bandaranaike International Airport. Known for its white sandy beaches and turquoise waters, it's a popular beach resort with a rich history in spice and seafood trade. The town reflects Dutch and Portuguese influences.",
+            "Hamilton Dutch Canal": "Originally built by the Dutch in the 17th century to transport cinnamon, coconuts, and salt, the Hamilton Canal offers boat tours through narrow channels shaded by dense mangroves, where visitors can spot various bird species and monitor lizards."
           }
         },
         {
           day: "Day 02",
+          title: "Negombo → Dambulla",
           activities: [
-            "Visits Pinnawala Elephant Orphanage",
-            "Dambulla Temple",
+            "Short break at hotel during journey",
+            "Pinnawala Elephant Orphanage",
+            "Dambulla Cave Temple - UNESCO World Heritage Site",
             "Overnight in Dambulla"
           ],
           details: {
-            "Pinnawala": `Pinnawala Elephant Orphanage is where you can find the largest herd of captive elephants in the world. Established in 1975, it is a popular breeding ground for wild Asian elephants working towards the protection and welfare of these wild mammals. Orphaned and unweaned calves and wounded adults spotted in the forests of Sri Lanka are taken in here for proper care. Here you can take a closer look at the elephants who freely roam on the premises, learn elephant behavioral patterns, and get to know the ways of mahouts. Located amidst the major tourist destinations of the country, a visit to this elephant park is much more convenient and worth your time.`,
-            "Dambulla": `Dambulla is a commercial town in Sri Lanka, located 20 km south of Habarana and 55 km north of Matale, known for hosting the country's largest produce market. Its most famous attractions are the Dambulla Cave Temples and the Golden Temple, both of which are part of one of Sri Lanka's eight UNESCO World Heritage Sites. The Dambulla heritage site has a history that spans from prehistoric times to the modern era.\n\nThe Dambulla Cave Temples, located near the geographical center of the island, are a significant cultural treasure. Dating back to the 1st century BCE, these caves are renowned for their exquisite Sinhala art and sculpture. The complex includes five caves beneath a vast overhanging rock, with intricately painted ceilings and images of Lord Buddha, Bodhisattvas, and various deities. These caves were developed during the Anuradhapura and Polonnaruwa periods and are among the most impressive cave temples in Sri Lanka.\n\nVisitors to Dambulla can also explore the nearby ironwood forest, rose quartz mountain, and a megalithic cemetery, making it a worthwhile stop on the way to Sigiriya.`
+            "Pinnawala": "Established in 1975, this is where you can find the largest herd of captive elephants in the world. It's a popular breeding ground for wild Asian elephants, taking care of orphaned and wounded elephants from Sri Lankan forests.",
+            "Dambulla": "Dating back to the 1st century BCE, these caves are renowned for their exquisite Sinhala art and sculpture, featuring intricately painted ceilings and images of Lord Buddha, Bodhisattvas, and various deities."
           }
         },
         {
           day: "Day 03",
+          title: "Dambulla → Kandy",
           activities: [
-            "Visits Sigiri Rock",
-            "Sigiriya Village Tour with Lunch",
+            "Sigiriya Lion Rock Fortress - UNESCO Site",
+            "Sigiriya Village Tour with Traditional Lunch",
             "Matale Spice Garden",
             "Overnight in Kandy"
           ],
           details: {
-            "Sigiriya": `Sigiriya, often referred to as the "Lion Rock," is an ancient rock fortress and one of Sri Lanka's most iconic landmarks. Located in the central Matale District near the town of Dambulla, it is a UNESCO World Heritage site and a popular tourist destination.\n\nSigiriya, built in the 5th century AD by King Kashyapa I, served as a royal palace atop a 200-meter rock for strategic defense. After his death, the site was abandoned as a royal residence and later used as a Buddhist monastery until the 14th century Sigiriya's architectural highlights include the Lion's Gate, once a grand entrance shaped like a lion, now marked by its remaining paws. The rock features vivid frescoes of the "Sigiriya Damsels" and the polished Mirror Wall, inscribed with ancient visitors' writings. The surrounding water gardens showcase advanced hydraulic engineering, while the summit holds the ruins of King Kashyapa's palace, including a large throne and water tanks.\n\nSigiriya is a well-preserved example of ancient urban planning, showcasing the sophistication of Sri Lankan architecture and art. It provides insight into the political history of King Kashyapa's reign. Today, Sigiriya is a symbol of Sri Lankan heritage, attracting visitors for its historical significance, stunning views, and challenging climb.`,
-            "Village Tours": `Village tours in Sigiriya offer a glimpse into traditional Sri Lankan rural life. These tours typically include a bullock cart ride, a boat ride on a serene lake, and a walk-through paddy fields and local farms. Visitors can experience traditional cooking, visit a village home, and interact with local villagers, learning about their customs and daily activities. The tours provide an authentic cultural experience, set against the backdrop of Sigiriya's natural beauty, including the iconic Sigiriya Rock Fortress.`,
-            "The Matale Spice Garden": `The Matale Spice Garden in Sri Lanka, located near Kandy, is a popular tourist spot known for its rich variety of spices, including cinnamon, pepper, cloves, nutmeg, cardamom, vanilla, and turmeric. Visitors can enjoy guided tours, where they learn about spice cultivation and uses, see demonstrations, and purchase fresh spices and Ayurvedic products. The gardens are surrounded by lush hills and are close to other attractions like the Aluvihare Rock Temple and the Knuckles Mountain Range. The best time to visit is during the dry season, from November to April.`
+            "Sigiriya": "Built in the 5th century AD by King Kashyapa I, this ancient rock fortress served as a royal palace atop a 200-meter rock. The site features the Lion's Gate, vivid frescoes of the 'Sigiriya Damsels,' and advanced hydraulic engineering in the surrounding water gardens."
           }
         },
         {
           day: "Day 04",
+          title: "Kandy → Colombo",
           activities: [
-            "Visits Kandy Dalada maligawa",
-            "Cultural Show",
-            "Gem Shop",
-            "Colombo Shopping",
+            "Temple of the Sacred Tooth Relic (Dalada Maligawa)",
+            "Kandyan Cultural Dance Show",
+            "Gem Shop Visit",
+            "Evening Shopping in Colombo",
             "Overnight in Colombo"
           ],
           details: {
-            "Sri Dalada Maligawa": `The Temple of the Sacred Tooth Relic, or Dalada Maligawa, in Kandy is one of Sri Lanka's most significant religious and cultural sites, housing the revered tooth relic of the Buddha. This sacred relic, symbolizing both spiritual and political authority, has been enshrined in Kandy since the 16th century and is closely associated with the Sinhalese monarchy. The temple, part of the royal palace complex, showcases exquisite Kandyan architecture, with its golden canopy, intricate woodwork, and the iconic Paththirippuwa. Daily rituals and ceremonies, enhanced by traditional drumming and dancing, create a deeply spiritual atmosphere. The annual Esala Perahera, a grand procession featuring decorated elephants and cultural performances, highlights the temple's importance and attracts thousands of pilgrims and tourists. Recognized as a UNESCO World Heritage Site, the Dalada Maligawa is a vital center of Buddhist worship and Sri Lankan cultural heritage.`,
-            "Cultural Show": `Cultural shows in Sri Lanka showcase the island's rich traditions through vibrant performances of dance, music, and rituals. Key highlights include Kandyan dance, known for its elegant movements and elaborate costumes, and Low Country dance, featuring energetic performances with striking masks. Fire dancing and fire walking add dramatic flair, while folk dances and puppet shows depict rural life and folklore. These shows are most popular in Kandy, Colombo, and Sigiriya, offering tourists a lively glimpse into Sri Lanka's cultural heritage. They are often held year-round, especially during festival seasons.`,
-            "Gem shops": `Gem shops in Sri Lanka are popular for offering a wide variety of precious and semi-precious gemstones, including sapphires, rubies, and topaz. The country, known as the "Gem Island," is especially famous for its Ceylon Blue Sapphires. These shops often provide certificates of authenticity and sometimes allow visitors to see the cutting and polishing process. Major gem-buying centers are in cities like Colombo, Kandy, and Ratnapura, the latter being the heart of Sri Lanka's gem mining industry. Tourists can find a range of jewelry and loose stones in various designs and price ranges.`
+            "Dalada Maligawa": "Part of the royal palace complex, this temple showcases exquisite Kandyan architecture with its golden canopy, intricate woodwork, and the iconic Paththirippuwa. Daily rituals enhanced by traditional drumming create a deeply spiritual atmosphere."
           }
         },
         {
           day: "Day 05",
+          title: "Colombo → Airport",
           activities: [
-            "Visits Colombo City",
-            "Departure - To Airport"
+            "Colombo City Tour",
+            "Major attractions visit",
+            "Shopping opportunities",
+            "Departure to Airport"
           ],
           details: {
-            "Colombo": `Colombo, the capital of Sri Lanka, is a vibrant city that blends modernity with rich history. It serves as the country's commercial and cultural hub, offering a mix of colonial architecture, bustling markets, and contemporary skyscrapers.\n\nKey attractions include the Galle Face Green, the Gangaramaya Temple, and the historic Fort area. Colombo is also known for its diverse dining scene, luxury shopping, and lively nightlife. The city's coastal location provides scenic views and easy access to nearby beaches. Colombo is a gateway to exploring the rest of Sri Lanka, offering a dynamic urban experience.`
+            "Colombo": "The capital offers a dynamic urban experience with colonial architecture, contemporary skyscrapers, diverse dining scene, luxury shopping, and lively nightlife, all with scenic coastal views."
           }
         }
       ]
     },
-    "EXPLORE SRI LANKA IN 05 DAYS 04 NIGHTS": {
+    "ANCIENT CITIES TOUR - 05 DAYS 04 NIGHTS": {
       program: [
         {
           day: "Day 01",
+          title: "Airport → Anuradhapura",
           activities: [
-            "Airport to Negombo",
-            "Visits Negombo City",
-            "To Anuradhapura",
-            "Visits Ruwanwalisaya",
-            "Sri Maha Bodhiya",
+            "Airport to Anuradhapura",
+            "Sri Maha Bodhiya - Sacred Bodhi Tree",
+            "Ruwanwelisaya Stupa",
             "Overnight in Anuradhapura"
           ],
           details: {
-            "Anuradhapura": `Anuradhapura is one of the ancient capitals of Sri Lanka, renowned for its well-preserved ruins of an early Sri Lankan civilization. Located in the North Central Province, it was the first capital of the island and the center of Theravada Buddhism for many centuries. Founded in the 4th century BCE, Anuradhapura was the seat of Sinhalese kings and is home to many significant archaeological sites, including stupas, temples, and monasteries. Key landmarks include the sacred Bodhi Tree, believed to be the oldest living tree with a recorded history, and the Ruwanwelisaya Stupa. Today, it is a UNESCO World Heritage Site and a major pilgrimage destination.`,
-            "Sri Maha Bodhiya": `Sri Maha Bodhiya, located in Anuradhapura, Sri Lanka, is one of the most sacred Buddhist sites in the world. It is home to a sacred fig tree (Ficus religiosa) that is believed to be a direct descendant of the original Bodhi tree under which Siddhartha Gautama attained enlightenment. Planted in 288 BCE by Sanghamitta Theri, the tree has become a symbol of peace and spiritual significance for Buddhists. The site attracts thousands of pilgrims and visitors each year, who come to pay homage and engage in meditation beneath its sprawling branches. Surrounded by beautiful temples and shrines, Sri Maha Bodhiya remains a vital part of Sri Lanka's cultural and religious landscape.`,
-            "Ruwanwalisaya": `Ruwanwalisaya, located in Anuradhapura, Sri Lanka, is a significant stupa built by King Dutugemunu in the 2nd century BCE. Standing about 55 meters tall, it is one of the largest stupas in the world and is believed to house relics of the Buddha. Renowned for its striking white dome and surrounding gardens, Ruwanwalisaya is a UNESCO World Heritage Site and a major pilgrimage destination for Buddhists, reflecting Sri Lanka's rich cultural and religious heritage.`
+            "Anuradhapura": "One of the ancient capitals of Sri Lanka, founded in the 4th century BCE. It was the first capital and the center of Theravada Buddhism for many centuries, featuring well-preserved ruins of an early Sri Lankan civilization.",
+            "Sri Maha Bodhiya": "Home to a sacred fig tree believed to be a direct descendant of the original Bodhi tree under which Buddha attained enlightenment. Planted in 288 BCE, it attracts thousands of pilgrims yearly.",
+            "Ruwanwelisaya": "Built by King Dutugemunu in the 2nd century BCE, standing about 55 meters tall. It's one of the largest stupas in the world and is believed to house relics of the Buddha."
           }
         },
         {
           day: "Day 02",
+          title: "Anuradhapura → Polonnaruwa → Sigiriya",
           activities: [
-            "Visit Polonnaruwa",
+            "Explore Polonnaruwa Ancient City - UNESCO World Heritage Site",
+            "Gal Vihara Rock Temple",
+            "Royal Palace ruins",
             "Overnight in Sigiriya"
           ],
           details: {
-            "Polonnaruwa": `Polonnaruwa is an ancient city in Sri Lanka that served as the country's second capital after Anuradhapura. Established in the 11th century, it flourished under the rule of King Parakramabahu I during the 12th century. The city is renowned for its well-preserved ruins, which include impressive Buddhist temples, stupas, and palaces, reflecting the advanced engineering and artistry of the era.\n\nKey attractions in Polonnaruwa include the Gal Vihara, a rock temple featuring four magnificent Buddha statues, the Royal Palace, and the intricate stone carvings at the Rankot Vihara. The city is also part of the UNESCO World Heritage Site, showcasing its historical and cultural significance. Surrounded by lush greenery and wildlife, Polonnaruwa offers visitors a glimpse into Sri Lanka's rich heritage and ancient civilization.`
+            "Polonnaruwa": "Sri Lanka's second capital that flourished under King Parakramabahu I during the 12th century. Key attractions include the Gal Vihara with four magnificent Buddha statues, the Royal Palace, and intricate stone carvings at the Rankot Vihara."
           }
         },
         {
           day: "Day 03",
+          title: "Sigiriya → Kandy",
           activities: [
-            "Visits Sigiri Rock",
-            "Sigiriya Village Tour with Lunch",
+            "Sigiriya Lion Rock Fortress - UNESCO Site",
+            "Sigiriya Village Tour with Traditional Lunch",
             "Matale Spice Garden",
             "Overnight in Kandy"
           ],
           details: {
-            "Sigiriya": `Sigiriya, often referred to as the "Lion Rock," is an ancient rock fortress and one of Sri Lanka's most iconic landmarks. Located in the central Matale District near the town of Dambulla, it is a UNESCO World Heritage site and a popular tourist destination.\n\nSigiriya, built in the 5th century AD by King Kashyapa I, served as a royal palace atop a 200-meter rock for strategic defense. After his death, the site was abandoned as a royal residence and later used as a Buddhist monastery until the 14th century Sigiriya's architectural highlights include the Lion's Gate, once a grand entrance shaped like a lion, now marked by its remaining paws. The rock features vivid frescoes of the "Sigiriya Damsels" and the polished Mirror Wall, inscribed with ancient visitors' writings. The surrounding water gardens showcase advanced hydraulic engineering, while the summit holds the ruins of King Kashyapa's palace, including a large throne and water tanks.\n\nSigiriya is a well-preserved example of ancient urban planning, showcasing the sophistication of Sri Lankan architecture and art. It provides insight into the political history of King Kashyapa's reign. Today, Sigiriya is a symbol of Sri Lankan heritage, attracting visitors for its historical significance, stunning views, and challenging climb.`,
-            "Village Tours": `Village tours in Sigiriya offer a glimpse into traditional Sri Lankan rural life. These tours typically include a bullock cart ride, a boat ride on a serene lake, and a walk-through paddy fields and local farms. Visitors can experience traditional cooking, visit a village home, and interact with local villagers, learning about their customs and daily activities. The tours provide an authentic cultural experience, set against the backdrop of Sigiriya's natural beauty, including the iconic Sigiriya Rock Fortress.`,
-            "The Matale Spice Garden": `The Matale Spice Garden in Sri Lanka, located near Kandy, is a popular tourist spot known for its rich variety of spices, including cinnamon, pepper, cloves, nutmeg, cardamom, vanilla, and turmeric. Visitors can enjoy guided tours, where they learn about spice cultivation and uses, see demonstrations, and purchase fresh spices and Ayurvedic products. The gardens are surrounded by lush hills and are close to other attractions like the Aluvihare Rock Temple and the Knuckles Mountain Range. The best time to visit is during the dry season, from November to April.`
+            "Sigiriya Heritage": "A well-preserved example of ancient urban planning, showcasing the sophistication of Sri Lankan architecture and art, providing insight into King Kashyapa's political history."
           }
         },
         {
           day: "Day 04",
+          title: "Kandy → Colombo",
           activities: [
-            "Visits Kandy Dalada maligawa",
-            "Cultural Show",
-            "Gem Shop",
-            "Colombo Shopping",
+            "Temple of the Sacred Tooth Relic",
+            "Kandyan Cultural Dance Show",
+            "Gem Shop Visit",
+            "Evening Shopping in Colombo",
             "Overnight in Colombo"
           ],
           details: {
-            "Sri Dalada Maligawa": `The Temple of the Sacred Tooth Relic, or Dalada Maligawa, in Kandy is one of Sri Lanka's most significant religious and cultural sites, housing the revered tooth relic of the Buddha. This sacred relic, symbolizing both spiritual and political authority, has been enshrined in Kandy since the 16th century and is closely associated with the Sinhalese monarchy. The temple, part of the royal palace complex, showcases exquisite Kandyan architecture, with its golden canopy, intricate woodwork, and the iconic Paththirippuwa. Daily rituals and ceremonies, enhanced by traditional drumming and dancing, create a deeply spiritual atmosphere. The annual Esala Perahera, a grand procession featuring decorated elephants and cultural performances, highlights the temple's importance and attracts thousands of pilgrims and tourists. Recognized as a UNESCO World Heritage Site, the Dalada Maligawa is a vital center of Buddhist worship and Sri Lankan cultural heritage.`,
-            "Cultural Show": `Cultural shows in Sri Lanka showcase the island's rich traditions through vibrant performances of dance, music, and rituals. Key highlights include Kandyan dance, known for its elegant movements and elaborate costumes, and Low Country dance, featuring energetic performances with striking masks. Fire dancing and fire walking add dramatic flair, while folk dances and puppet shows depict rural life and folklore. These shows are most popular in Kandy, Colombo, and Sigiriya, offering tourists a lively glimpse into Sri Lanka's cultural heritage. They are often held year-round, especially during festival seasons.`,
-            "Gem shops": `Gem shops in Sri Lanka are popular for offering a wide variety of precious and semi-precious gemstones, including sapphires, rubies, and topaz. The country, known as the "Gem Island," is especially famous for its Ceylon Blue Sapphires. These shops often provide certificates of authenticity and sometimes allow visitors to see the cutting and polishing process. Major gem-buying centers are in cities like Colombo, Kandy, and Ratnapura, the latter being the heart of Sri Lanka's gem mining industry. Tourists can find a range of jewelry and loose stones in various designs and price ranges.`
+            "Cultural Heritage": "Experience the annual Esala Perahera traditions, grand processions featuring decorated elephants and cultural performances that highlight the temple's importance."
           }
         },
         {
           day: "Day 05",
+          title: "Colombo → Airport",
           activities: [
-            "Visits Colombo City",
-            "Departure - To Airport"
+            "Colombo City Tour",
+            "Historical and cultural sites",
+            "Departure to Airport"
           ],
           details: {
-            "Colombo": `Colombo, the capital of Sri Lanka, is a vibrant city that blends modernity with rich history. It serves as the country's commercial and cultural hub, offering a mix of colonial architecture, bustling markets, and contemporary skyscrapers.\n\nKey attractions include the Galle Face Green, the Gangaramaya Temple, and the historic Fort area. Colombo is also known for its diverse dining scene, luxury shopping, and lively nightlife. The city's coastal location provides scenic views and easy access to nearby beaches. Colombo is a gateway to exploring the rest of Sri Lanka, offering a dynamic urban experience.`
+            "Final Experience": "Complete your ancient cities journey with modern Colombo's blend of history and contemporary life."
           }
         }
       ]
     },
-    "EXPLORE SRI LANKA IN 07 DAYS 06 NIGHTS": {
+    "HILL COUNTRY & BEACHES - 07 DAYS 06 NIGHTS": {
       program: [
         {
           day: "Day 01",
+          title: "Airport → Dambulla",
           activities: [
-            "Airport to Negombo",
             "Short rest at hotel in Negombo",
-            "Visits Pinnawala Elephant Orphanage",
-            "Dambulla Temple",
+            "Pinnawala Elephant Orphanage",
+            "Dambulla Cave Temple",
             "Overnight in Dambulla"
           ],
           details: {
-            "Negombo": `Negombo is a quiet town on Sri Lanka's west coast, just 10 km from Bandaranaike International Airport. Known for its white sandy beaches and turquoise waters, it's a popular beach resort and commercial hub with a rich history in spice and seafood trade. The town reflects Dutch and Portuguese influences in its food, architecture, and culture. Key attractions include the thriving Fishing Village, Angurukaramulla Temple, St. Mary's Church, and scenic boat rides on the Hamilton Dutch Canal. Negombo Beach offers activities like kitesurfing and sailing, while Browns Beach is popular for midnight swims. Visitors can also shop at Beach Road Market and Negombo Shopping Plaza.`,
-            "Pinnawala": `Pinnawala Elephant Orphanage is where you can find the largest herd of captive elephants in the world. Established in 1975, it is a popular breeding ground for wild Asian elephants working towards the protection and welfare of these wild mammals. Orphaned and unweaned calves and wounded adults spotted in the forests of Sri Lanka are taken in here for proper care. Here you can take a closer look at the elephants who freely roam on the premises, learn elephant behavioral patterns, and get to know the ways of mahouts. Located amidst the major tourist destinations of the country, a visit to this elephant park is much more convenient and worth your time.`,
-            "Dambulla": `Dambulla is a commercial town in Sri Lanka, located 20 km south of Habarana and 55 km north of Matale, known for hosting the country's largest produce market. Its most famous attractions are the Dambulla Cave Temples and the Golden Temple, both of which are part of one of Sri Lanka's eight UNESCO World Heritage Sites. The Dambulla heritage site has a history that spans from prehistoric times to the modern era.\n\nThe Dambulla Cave Temples, located near the geographical center of the island, are a significant cultural treasure. Dating back to the 1st century BCE, these caves are renowned for their exquisite Sinhala art and sculpture. The complex includes five caves beneath a vast overhanging rock, with intricately painted ceilings and images of Lord Buddha, Bodhisattvas, and various deities. These caves were developed during the Anuradhapura and Polonnaruwa periods and are among the most impressive cave temples in Sri Lanka.`
+            "Journey Start": "Begin your comprehensive Sri Lanka experience with cultural and wildlife encounters."
           }
         },
         {
           day: "Day 02",
+          title: "Dambulla → Kandy",
           activities: [
-            "Visits Sigiri Rock",
-            "Sigiriya Village Tour with Lunch",
+            "Sigiriya Lion Rock Fortress",
+            "Village Tour with Traditional Lunch",
             "Matale Spice Garden",
             "Overnight in Kandy"
           ],
           details: {
-            "Sigiriya": `Sigiriya, often referred to as the "Lion Rock," is an ancient rock fortress and one of Sri Lanka's most iconic landmarks. Located in the central Matale District near the town of Dambulla, it is a UNESCO World Heritage site and a popular tourist destination.\n\nSigiriya, built in the 5th century AD by King Kashyapa I, served as a royal palace atop a 200-meter rock for strategic defense. After his death, the site was abandoned as a royal residence and later used as a Buddhist monastery until the 14th century.`,
-            "Village Tours": `Village tours in Sigiriya offer a glimpse into traditional Sri Lankan rural life. These tours typically include a bullock cart ride, a boat ride on a serene lake, and a walk-through paddy fields and local farms. Visitors can experience traditional cooking, visit a village home, and interact with local villagers, learning about their customs and daily activities.`,
-            "The Matale Spice Garden": `The Matale Spice Garden in Sri Lanka, located near Kandy, is a popular tourist spot known for its rich variety of spices, including cinnamon, pepper, cloves, nutmeg, cardamom, vanilla, and turmeric. Visitors can enjoy guided tours, where they learn about spice cultivation and uses, see demonstrations, and purchase fresh spices and Ayurvedic products.`
+            "Cultural Immersion": "Experience authentic rural life and ancient royal history in one day."
           }
         },
         {
           day: "Day 03",
+          title: "Kandy → Nuwara Eliya",
           activities: [
-            "Visits Kandy Dalada maligawa",
-            "Cultural Show",
-            "Gem Shop",
-            "Overnight in Nuwara-Eliya"
+            "Temple of the Sacred Tooth Relic",
+            "Kandyan Cultural Dance Show",
+            "Journey to Hill Country",
+            "Overnight in Nuwara Eliya"
           ],
           details: {
-            "Sri Dalada Maligawa": `The Temple of the Sacred Tooth Relic, or Dalada Maligawa, in Kandy is one of Sri Lanka's most significant religious and cultural sites, housing the revered tooth relic of the Buddha. This sacred relic, symbolizing both spiritual and political authority, has been enshrined in Kandy since the 16th century and is closely associated with the Sinhalese monarchy.`,
-            "Cultural Show": `Cultural shows in Sri Lanka showcase the island's rich traditions through vibrant performances of dance, music, and rituals. Key highlights include Kandyan dance, known for its elegant movements and elaborate costumes, and Low Country dance, featuring energetic performances with striking masks.`,
-            "Gem shops": `Gem shops in Sri Lanka are popular for offering a wide variety of precious and semi-precious gemstones, including sapphires, rubies, and topaz. The country, known as the "Gem Island," is especially famous for its Ceylon Blue Sapphires.`
+            "Hill Country": "Travel to 'Little England' known for its cool climate, colonial buildings, and tea plantations."
           }
         },
         {
           day: "Day 04",
+          title: "Nuwara Eliya → Ella → Tissamaharama",
           activities: [
-            "Visits Gregory park",
-            "Ambewela Farm",
-            "To Ella",
-            "Visits Nine Arch",
-            "To Thisamaharama",
-            "Overnight in Thissamaharama"
+            "Gregory Park and Lake",
+            "Ambewela Farm - 'Little New Zealand'",
+            "Nine Arch Bridge in Ella",
+            "Overnight in Tissamaharama"
           ],
           details: {
-            "Gregory Park": `Gregory Park, located in Nuwara Eliya, Sri Lanka, is a popular recreational area centered around the picturesque Gregory Lake. The park, established during the British colonial period in the 19th century, offers scenic views, boat rides, and lush green landscapes, making it a favorite spot for both locals and tourists. Visitors can enjoy activities like paddle boating, cycling, and picnicking while surrounded by the cool climate and serene environment of Nuwara Eliya. The park is also known for its well-maintained gardens and pathways, providing a peaceful escape in the heart of the hill country`,
-            "Ambewela Farm": `Ambewela Farm, located in the Nuwara Eliya District of Sri Lanka, is one of the country's most famous dairy farms. Known as "Little New Zealand," the farm is situated in a lush, green landscape at a high altitude, which provides a cool climate ideal for dairy farming. The farm produces high-quality milk, cheese, and other dairy products, and it is home to a variety of livestock, including cows and goats. Visitors to Ambewela Farm can tour the facilities, observe the milking process, and enjoy the scenic views of rolling hills and vast pastures. It's a popular destination for those interested in agriculture and the natural beauty of Sri Lanka's hill country.`,
-            "The Nine Arch Bridge": `The Nine Arch Bridge, also known as the "Bridge in the Sky," is a famous viaduct located in Ella, Sri Lanka. Built during the British colonial era in the early 20th century, this architectural marvel spans 91 meters and stands 24 meters high. The bridge is constructed entirely of brick, stone, and cement, without the use of steel, making it a unique engineering feat. Nestled amidst lush green forests and tea plantations, the Nine Arch Bridge offers stunning views and is a popular spot for photography. Trains passing over the bridge create a picturesque scene, attracting both local and international tourists to this iconic landmark in Sri Lanka's hill country`
+            "Nine Arch Bridge": "This architectural marvel spans 91 meters and stands 24 meters high, constructed entirely of brick, stone, and cement without steel. Trains passing over create a picturesque scene.",
+            "Ambewela Farm": "Known as 'Little New Zealand' for its lush green fields and dairy farming, located at over 6,000 feet above sea level."
           }
         },
         {
           day: "Day 05",
+          title: "Tissamaharama → Galle → Hikkaduwa",
           activities: [
-            "Visits Yala Safari",
-            "To Galle",
-            "Visits Galle Fort",
-            "Gem shops",
-            "Hikkaduwa corral Garden",
+            "Yala Safari Adventure",
+            "Galle Fort - UNESCO World Heritage Site",
+            "Gem Shop Visit",
+            "Hikkaduwa Coral Garden",
             "Overnight in Hikkaduwa"
           ],
           details: {
-            "Yala Safari": `Yala Safari, located in Yala National Park in southeastern Sri Lanka, offers an exhilarating wildlife experience. Yala is the most visited and second-largest national park in Sri Lanka, known for its rich biodiversity and dense population of leopards. During a Yala Safari, visitors can explore the park's diverse ecosystems, which include forests, grasslands, and wetlands, home to animals like elephants, sloth bears, crocodiles, and a wide variety of birds. The park is especially renowned for providing one of the best chances to see leopards in the wild. Safari tours typically take place in open-top jeeps, allowing for close encounters with wildlife while enjoying the park's natural beauty`,
-            "Galle Fort": `Galle Fort, located in the coastal city of Galle, Sri Lanka, is a UNESCO World Heritage Site and one of the best-preserved colonial-era forts in Asia. Originally built by the Portuguese in the 16th century and later expanded by the Dutch in the 17th century, the fort showcases a blend of European architecture and South Asian culture. Its thick stone walls enclose a vibrant town with cobbled streets, historic buildings, boutique shops, and cafes. Key attractions within the fort include the Dutch Reformed Church, Galle Lighthouse, and the Maritime Museum. Galle Fort is a popular destination for its historical significance, architecture, and seaside charm.`,
-            "Hikkaduwa Coral Gardens": `Hikkaduwa Coral Gardens, located in Hikkaduwa, Sri Lanka, is a vibrant underwater paradise known for its colorful coral reefs and diverse marine life. This popular snorkeling and diving destination offers visitors the chance to explore the stunning coral formations and observe a variety of fish, sea turtles, and other marine species. The clear, shallow waters make it an ideal spot for both beginners and experienced snorkelers. Hikkaduwa Coral Gardens is part of the Hikkaduwa National Park, a marine sanctuary that helps protect the area's delicate ecosystem. It's a must-visit for nature lovers and those interested in experiencing the beauty of Sri Lanka's coastal waters.`
+            "Yala Safari": "Sri Lanka's most visited national park, known for its dense leopard population and diverse wildlife including elephants, sloth bears, crocodiles, and numerous bird species.",
+            "Galle Fort": "One of the best-preserved colonial-era forts in Asia, originally built by Portuguese and expanded by Dutch, showcasing European architecture and South Asian culture."
           }
         },
         {
           day: "Day 06",
+          title: "Hikkaduwa → Colombo",
           activities: [
-            "Visits Turtle Farm",
-            "Madu river Boat Ride",
-            "Cinnamon Garden",
-            "Fish Therapy",
+            "Turtle Conservation Project",
+            "Madu River Boat Safari",
+            "Cinnamon Garden Visit",
+            "Fish Therapy Experience",
             "Overnight in Colombo"
           ],
           details: {
-            "Hikkaduwa Turtle farm": `The Turtle Hatchery in Hikkaduwa, Sri Lanka, is dedicated to protecting endangered sea turtles. It collects and incubates eggs in a safe environment, releasing hatchlings into the ocean. Visitors can learn about conservation and witness turtle releases, making it an educational and eco-friendly destination.`,
-            "The Madhu River boat ride": `The Madhu River boat ride in Sri Lanka provides a scenic journey through mangroves and waterways near Balapitiya. Visitors can explore rich biodiversity, including various birds and aquatic life, and visit small islands like Kothduwa Temple and cinnamon plantations, making it a serene escape for nature lovers.`,
-            "Cinnamon Garden": `Cinnamon cultivation in Sri Lanka is a significant agricultural practice, as the country is renowned for producing high-quality Ceylon cinnamon, often referred to as "true cinnamon." The cultivation primarily occurs in the southern regions, particularly in areas like Galle and Matara.`,
-            "Fish Therapy": `Fish therapy in Sri Lanka, commonly known as fish spa therapy, involves soaking feet in water filled with small fish, typically Garra rufa, which gently nibble away dead skin. This treatment is popular for its exfoliating benefits and relaxing effects, attracting both locals and tourists seeking a unique and soothing experience.`
+            "Madu River": "Scenic journey through mangroves and waterways, exploring rich biodiversity including various birds and aquatic life, visiting small islands with temples and cinnamon plantations.",
+            "Turtle Conservation": "Learn about endangered sea turtle protection efforts and witness conservation work at local hatcheries."
           }
         },
         {
           day: "Day 07",
+          title: "Colombo → Airport",
           activities: [
-            "Colombo city tour & shopping",
-            "Departure - To Airport"
+            "Colombo City Tour and Shopping",
+            "Final cultural experiences",
+            "Departure to Airport"
           ],
           details: {
-            "Colombo": `Colombo, the capital of Sri Lanka, is a vibrant city that blends modernity with rich history. It serves as the country's commercial and cultural hub, offering a mix of colonial architecture, bustling markets, and contemporary skyscrapers.\n\nKey attractions include the Galle Face Green, the Gangaramaya Temple, and the historic Fort area. Colombo is also known for its diverse dining scene, luxury shopping, and lively nightlife. The city's coastal location provides scenic views and easy access to nearby beaches. Colombo is a gateway to exploring the rest of Sri Lanka, offering a dynamic urban experience.`
+            "Conclusion": "Complete your comprehensive Sri Lanka journey with urban experiences and last-minute shopping."
+          }
+        }
+      ]
+    },
+    "COMPREHENSIVE TOUR - 08 DAYS 07 NIGHTS": {
+      program: [
+        {
+          day: "Day 01",
+          title: "Airport → Negombo",
+          activities: [
+            "Fishing Village exploration",
+            "Hamilton Dutch Canal tour",
+            "Angurukaramulla Temple",
+            "St. Mary's Church",
+            "Overnight in Negombo"
+          ],
+          details: {
+            "Comprehensive Start": "Begin with coastal culture and colonial heritage exploration."
+          }
+        },
+        {
+          day: "Day 02",
+          title: "Negombo → Dambulla",
+          activities: [
+            "Negombo Fish Market",
+            "Optional Mangrove Forest Boat Safari",
+            "Pinnawala Elephant Orphanage",
+            "Dambulla Cave Temple",
+            "Overnight in Dambulla"
+          ],
+          details: {
+            "Wildlife & Culture": "Combine marine ecosystems, elephant conservation, and ancient Buddhist art."
+          }
+        },
+        {
+          day: "Day 03",
+          title: "Dambulla → Kandy",
+          activities: [
+            "Sigiriya Lion Rock Fortress",
+            "Village Tour with cultural immersion",
+            "Matale Spice Garden",
+            "Overnight in Kandy"
+          ],
+          details: {
+            "Ancient & Rural": "Experience royal history and authentic village life."
+          }
+        },
+        {
+          day: "Day 04",
+          title: "Kandy Exploration",
+          activities: [
+            "Temple of the Sacred Tooth Relic",
+            "Kandyan Cultural Dance Show",
+            "Royal Botanic Gardens Peradeniya",
+            "Gem Museum visit",
+            "Overnight in Kandy"
+          ],
+          details: {
+            "Cultural Capital": "Deep dive into Sri Lanka's cultural and spiritual heart with botanical wonders."
+          }
+        },
+        {
+          day: "Day 05",
+          title: "Kandy → Nuwara Eliya",
+          activities: [
+            "Tea Plantation Tour with factory visit",
+            "Colonial Town exploration",
+            "Tea-picking experience",
+            "Overnight in Nuwara Eliya"
+          ],
+          details: {
+            "Tea Heritage": "Discover Ceylon tea's history from plantation to cup, experiencing British colonial influence."
+          }
+        },
+        {
+          day: "Day 06",
+          title: "Nuwara Eliya → Udawalawe",
+          activities: [
+            "Scenic Mountain Train Ride",
+            "Udawalawe Safari - Wildlife conservation education",
+            "Overnight in Udawalawe"
+          ],
+          details: {
+            "Mountain to Wildlife": "Journey from misty mountains to wildlife conservation areas via scenic railway."
+          }
+        },
+        {
+          day: "Day 07",
+          title: "Udawalawe → Bentota",
+          activities: [
+            "Galle Fort UNESCO Site exploration",
+            "Sea Turtle Hatchery",
+            "Cinnamon Garden visit",
+            "Fish Therapy experience",
+            "Optional Madu River Boat Ride",
+            "Overnight in Bentota"
+          ],
+          details: {
+            "Coast & Conservation": "Combine Dutch colonial history with marine conservation and spice heritage."
+          }
+        },
+        {
+          day: "Day 08",
+          title: "Bentota → Airport",
+          activities: [
+            "Coastal Train Ride experience",
+            "Colombo City Tour",
+            "Final cultural and shopping experiences",
+            "Departure to Airport"
+          ],
+          details: {
+            "Grand Finale": "Complete your comprehensive journey with the famous coastal railway and urban experiences."
+          }
+        }
+      ]
+    },
+    "GRAND ADVENTURE - 14 DAYS 13 NIGHTS": {
+      program: [
+        {
+          day: "Day 01",
+          title: "Airport → Negombo",
+          activities: [
+            "Arrival and hotel rest",
+            "Evening Negombo Lagoon Tour",
+            "Overnight in Negombo"
+          ],
+          details: {
+            "Gentle Start": "Begin your grand adventure with relaxation and lagoon exploration."
+          }
+        },
+        {
+          day: "Day 02",
+          title: "Negombo → Hikkaduwa",
+          activities: [
+            "Colombo City Tour",
+            "Major landmarks visit",
+            "Turtle Conservation Project",
+            "Madu River Boat Safari with Cinnamon Tour",
+            "Overnight in Hikkaduwa"
+          ],
+          details: {
+            "Urban to Coastal": "Experience capital city highlights before moving to beach conservation areas."
+          }
+        },
+        {
+          day: "Day 03",
+          title: "Hikkaduwa → Yala",
+          activities: [
+            "Galle Dutch Fort exploration",
+            "Rumassala Japanese Peace Pagoda",
+            "Unawatuna Beach",
+            "Tissamaharama Ancient City and Lake",
+            "Overnight in Yala"
+          ],
+          details: {
+            "Heritage Coast": "Combine Dutch colonial architecture, Buddhist peace symbols, and ancient kingdoms."
+          }
+        },
+        {
+          day: "Day 04",
+          title: "Yala → Ella",
+          activities: [
+            "Yala National Park Morning Safari",
+            "Buduruwagala Rock Temple",
+            "Ravana Waterfall",
+            "Optional Ravana Cave exploration",
+            "Overnight in Ella"
+          ],
+          details: {
+            "Wildlife to Mountains": "From leopard spotting to ancient rock carvings and mythical caves."
+          }
+        },
+        {
+          day: "Day 05",
+          title: "Ella Full Day",
+          activities: [
+            "Little Adam's Peak hike",
+            "Nine Arch Bridge photography",
+            "Ella Rock challenging hike",
+            "Secret Waterfall swimming",
+            "Overnight in Ella"
+          ],
+          details: {
+            "Adventure Day": "Full day of hiking, photography, and natural pool swimming in scenic hill country."
+          }
+        },
+        {
+          day: "Day 06",
+          title: "Ella → Nuwara Eliya",
+          activities: [
+            "Famous Blue Train journey Ella to Nanu Oya",
+            "Gregory Lake activities",
+            "Nuwara Eliya walking city tour",
+            "Overnight in Nuwara Eliya"
+          ],
+          details: {
+            "Scenic Railway": "Experience one of the world's most scenic train rides through tea plantations and mountains."
+          }
+        },
+        {
+          day: "Day 07",
+          title: "Nuwara Eliya → Kandy",
+          activities: [
+            "Horton Plains National Park",
+            "Tea Plantations and Factory tour",
+            "Ramboda Waterfall",
+            "Kandy Cultural Show and Temple visit",
+            "Overnight in Kandy"
+          ],
+          details: {
+            "Highlands to Cultural Capital": "From World's End cliff to sacred tooth relic."
+          }
+        },
+        {
+          day: "Day 08",
+          title: "Kandy → Habarana",
+          activities: [
+            "Peradeniya Botanical Garden",
+            "Matale Hindu Temple",
+            "Nalanda Gedige Temple",
+            "Dambulla Cave Temple",
+            "Pidurangala Sunset View",
+            "Overnight in Habarana"
+          ],
+          details: {
+            "Temple Trail": "Multi-religious temple exploration from Hindu to Buddhist sites."
+          }
+        },
+        {
+          day: "Day 09",
+          title: "Habarana → Sigiriya → Habarana",
+          activities: [
+            "Sigiriya Rock Fortress climb",
+            "Hiriwadunna Village Tour with Cooking Class",
+            "Traditional lunch preparation",
+            "Minneriya/Kaudulla/Eco Park Safari",
+            "Overnight in Habarana"
+          ],
+          details: {
+            "Royal & Rural": "Ancient royal fortress combined with authentic village life and elephant gathering."
+          }
+        },
+        {
+          day: "Day 10",
+          title: "Habarana → Polonnaruwa",
+          activities: [
+            "Polonnaruwa Ancient Kingdom exploration by bicycle or car",
+            "UNESCO World Heritage Site tour",
+            "Overnight in Polonnaruwa"
+          ],
+          details: {
+            "Ancient Kingdom": "Explore the second capital's magnificent ruins and archaeological treasures."
+          }
+        },
+        {
+          day: "Day 11",
+          title: "Polonnaruwa → Pasikuda",
+          activities: [
+            "Travel to East Coast",
+            "Beach leisure and water sports at Pasikuda",
+            "Overnight in Pasikuda"
+          ],
+          details: {
+            "East Coast Beaches": "Experience pristine eastern beaches with crystal-clear waters."
+          }
+        },
+        {
+          day: "Day 12",
+          title: "Pasikuda → Trincomalee → Nilaveli",
+          activities: [
+            "Koneswaram Temple",
+            "Pigeon Island National Park",
+            "Fort Frederick",
+            "Overnight in Nilaveli"
+          ],
+          details: {
+            "Ancient Port": "Explore one of Asia's finest natural harbors with Hindu temples and marine parks."
+          }
+        },
+        {
+          day: "Day 13",
+          title: "Trincomalee → Dambulla",
+          activities: [
+            "Leisure at Nilaveli Beach",
+            "Return journey preparation",
+            "Overnight in Dambulla"
+          ],
+          details: {
+            "Beach Relaxation": "Final beach day before returning to cultural triangle."
+          }
+        },
+        {
+          day: "Day 14",
+          title: "Dambulla → Airport",
+          activities: [
+            "Final Dambulla Cave Temple visit",
+            "Journey to airport",
+            "Departure"
+          ],
+          details: {
+            "Grand Conclusion": "Complete your comprehensive 14-day Sri Lankan adventure."
           }
         }
       ]
@@ -312,7 +626,10 @@ function Destination() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    date: ''
+    date: '',
+    phone: '',
+    guests: '2',
+    specialRequests: ''
   });
 
   const handleInputChange = (e) => {
@@ -327,28 +644,40 @@ function Destination() {
     e.preventDefault();
     
     const templateParams = {
-      to_email: process.env.REACT_APP_ADMIN_EMAIL,
+      to_email: 'opulenttoursinfo@gmail.com',
       from_name: formData.name,
       from_email: formData.email,
+      phone: formData.phone,
+      guests: formData.guests,
       travel_date: formData.date,
-      package_name: selectedPackage.name,
-      duration: selectedPackage.duration,
-      price: selectedPackage.price
+      special_requests: formData.specialRequests,
+      package_name: selectedPackage?.name || 'Custom Package',
+      duration: selectedPackage?.duration || 'To be determined',
+      price: selectedPackage?.price || 'Quote on request'
     };
 
     try {
+      // Replace with your actual EmailJS credentials
       await emailjs.send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        'your_service_id', // Replace with your EmailJS service ID
+        'your_template_id', // Replace with your EmailJS template ID
         templateParams,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        'your_public_key' // Replace with your EmailJS public key
       );
       
-      setFormData({ name: '', email: '', date: '' });
-      alert('Booking request sent successfully!');
+      setFormData({ 
+        name: '', 
+        email: '', 
+        date: '', 
+        phone: '', 
+        guests: '2', 
+        specialRequests: '' 
+      });
+      
+      alert('Booking request sent successfully! We will contact you within 24 hours.');
     } catch (error) {
       console.error('Failed to send email:', error);
-      alert('Failed to send booking request. Please try again.');
+      alert('Failed to send booking request. Please contact us directly at +9471 534 5060 or opulenttoursinfo@gmail.com');
     }
   };
 
@@ -359,18 +688,18 @@ function Destination() {
           <div className="row justify-content-center py-5">
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
               <h1 className="display-3 text-white animated slideInDown">
-                Destination
+                Tour Details
               </h1>
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb justify-content-center">
                   <li className="breadcrumb-item">
-                    <a href="/">Home</a>
+                    <a href="/" className="text-white">Home</a>
                   </li>
-                  <li
-                    className="breadcrumb-item text-white active"
-                    aria-current="page"
-                  >
-                    Destination
+                  <li className="breadcrumb-item">
+                    <a href="/tours" className="text-white">Tours</a>
+                  </li>
+                  <li className="breadcrumb-item text-white active" aria-current="page">
+                    Details
                   </li>
                 </ol>
               </nav>
@@ -382,95 +711,299 @@ function Destination() {
       {selectedPackage ? (
         <div className="container py-5">
           <div className="row">
+            {/* Tour Details Section */}
             <div className="col-lg-8">
-              <img
-                src={selectedPackage.image}
-                alt={selectedPackage.name}
-                className="img-fluid rounded w-100"
-              />
-              <h2 className="mt-4">{selectedPackage.name}</h2>
-              <div className="d-flex mb-3">
-                <p className="mb-0 me-4">
-                  <i className="fa fa-clock text-primary me-2"></i>
-                  {selectedPackage.duration}
-                </p>
-                <p className="mb-0">
-                  <i className="fa fa-money-bill text-primary me-2"></i>
-                  Starting from {selectedPackage.price}
-                </p>
+              <div className="tour-header mb-4">
+                <img
+                  src={selectedPackage.image}
+                  alt={selectedPackage.name}
+                  className="img-fluid rounded w-100 mb-4"
+                  style={{ height: '400px', objectFit: 'cover' }}
+                />
+                <div className="tour-title-section">
+                  <h1 className="display-5 fw-bold text-primary mb-3">{selectedPackage.name}</h1>
+                  <div className="tour-meta d-flex flex-wrap gap-4 mb-4">
+                    <div className="meta-item">
+                      <i className="fa fa-clock text-primary me-2"></i>
+                      <span className="fw-semibold">Duration:</span> {selectedPackage.duration}
+                    </div>
+                    <div className="meta-item">
+                      <i className="fa fa-money-bill text-primary me-2"></i>
+                      <span className="fw-semibold">Starting from:</span> <span className="text-success fs-5 fw-bold">{selectedPackage.price}</span>
+                    </div>
+                    <div className="meta-item">
+                      <i className="fa fa-users text-primary me-2"></i>
+                      <span className="fw-semibold">Group Size:</span> 2-15 people
+                    </div>
+                  </div>
+                  
+                  {/* Package Highlights */}
+                  {selectedPackage.highlights && (
+                    <div className="highlights-section mb-4">
+                      <h4 className="text-primary mb-3">
+                        <i className="fa fa-star me-2"></i>Tour Highlights
+                      </h4>
+                      <div className="row">
+                        {selectedPackage.highlights.map((highlight, index) => (
+                          <div key={index} className="col-md-6 mb-2">
+                            <div className="highlight-item p-2 rounded bg-light">
+                              <i className="fa fa-check-circle text-success me-2"></i>
+                              {highlight}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
 
-              {/* Program Details */}
+              {/* Detailed Itinerary */}
               {packageDetails[selectedPackage.name] && (
-                <div className="program-details mt-4">
-                  <h3>Program Details</h3>
+                <div className="program-details">
+                  <h3 className="text-primary mb-4">
+                    <i className="fa fa-route me-2"></i>Detailed Itinerary
+                  </h3>
+                  
                   {packageDetails[selectedPackage.name].program.map((day, index) => (
                     <div key={index} className="day-section mb-4">
-                      <h4 className="text-primary">{day.day}</h4>
-                      <ul className="list-unstyled">
-                        {day.activities.map((activity, idx) => (
-                          <li key={idx} className="mb-2">
-                            <i className="fa fa-check text-primary me-2"></i>
-                            {activity}
-                          </li>
-                        ))}
-                      </ul>
-                      {Object.entries(day.details).map(([place, description]) => (
-                        <div key={place} className="place-details mb-3">
-                          <h5 className="text-secondary">{place}</h5>
-                          <p style={{ whiteSpace: 'pre-line' }}>{description}</p>
+                      <div className="day-header bg-primary text-white p-3 rounded-top">
+                        <h4 className="mb-1">
+                          <i className="fa fa-calendar-day me-2"></i>
+                          {day.day}
+                        </h4>
+                        <p className="mb-0 fs-6">{day.title}</p>
+                      </div>
+                      
+                      <div className="day-content bg-light p-4 rounded-bottom">
+                        <div className="activities mb-3">
+                          <h5 className="text-secondary mb-3">
+                            <i className="fa fa-list me-2"></i>Activities
+                          </h5>
+                          <ul className="list-unstyled">
+                            {day.activities.map((activity, idx) => (
+                              <li key={idx} className="mb-2 d-flex align-items-start">
+                                <i className="fa fa-chevron-right text-primary me-2 mt-1"></i>
+                                <span>{activity}</span>
+                              </li>
+                            ))}
+                          </ul>
                         </div>
-                      ))}
+
+                        {/* Place Details */}
+                        {Object.entries(day.details).map(([place, description]) => (
+                          <div key={place} className="place-details mb-3">
+                            <h6 className="text-primary fw-bold">
+                              <i className="fa fa-map-marker-alt me-2"></i>{place}
+                            </h6>
+                            <p className="text-muted" style={{ whiteSpace: 'pre-line' }}>
+                              {description}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   ))}
                 </div>
               )}
+
+              {/* What's Included Section */}
+              <div className="inclusions-section mt-5">
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="included-section p-4 bg-success bg-opacity-10 rounded">
+                      <h5 className="text-success mb-3">
+                        <i className="fa fa-check-circle me-2"></i>What's Included
+                      </h5>
+                      <ul className="list-unstyled">
+                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Accommodation in selected hotels</li>
+                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Daily breakfast</li>
+                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Transportation by air-conditioned vehicle</li>
+                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>English-speaking guide</li>
+                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Entrance fees to mentioned sites</li>
+                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Safari jeep charges</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="excluded-section p-4 bg-danger bg-opacity-10 rounded">
+                      <h5 className="text-danger mb-3">
+                        <i className="fa fa-times-circle me-2"></i>What's Not Included
+                      </h5>
+                      <ul className="list-unstyled">
+                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>International airfare</li>
+                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>Visa fees</li>
+                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>Lunch and dinner (except mentioned)</li>
+                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>Personal expenses</li>
+                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>Tips for guide and driver</li>
+                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>Travel insurance</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            {/* Booking Form Sidebar */}
             <div className="col-lg-4">
-              <div className="bg-light p-4 rounded">
-                <h4 className="mb-4">Book This Tour</h4>
-                <form onSubmit={handleSubmit}>
-                  <div className="mb-3">
-                    <input 
-                      type="text" 
-                      className="form-control" 
-                      placeholder="Your Name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                    />
+              <div className="booking-sidebar sticky-top">
+                <div className="booking-card bg-light p-4 rounded shadow">
+                  <h4 className="text-primary mb-4">
+                    <i className="fa fa-calendar-check me-2"></i>Book This Tour
+                  </h4>
+                  
+                  <div className="price-display text-center mb-4 p-3 bg-primary bg-opacity-10 rounded">
+                    <div className="price-label text-muted">Starting from</div>
+                    <div className="price-amount display-6 fw-bold text-primary">{selectedPackage.price}</div>
+                    <div className="price-note small text-muted">per person</div>
                   </div>
-                  <div className="mb-3">
-                    <input 
-                      type="email" 
-                      className="form-control" 
-                      placeholder="Your Email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                    />
+
+                  <form onSubmit={handleSubmit}>
+                    <div className="mb-3">
+                      <label htmlFor="name" className="form-label fw-semibold">
+                        <i className="fa fa-user me-2"></i>Full Name *
+                      </label>
+                      <input 
+                        type="text" 
+                        className="form-control" 
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+
+                    <div className="mb-3">
+                      <label htmlFor="email" className="form-label fw-semibold">
+                        <i className="fa fa-envelope me-2"></i>Email Address *
+                      </label>
+                      <input 
+                        type="email" 
+                        className="form-control" 
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+
+                    <div className="mb-3">
+                      <label htmlFor="phone" className="form-label fw-semibold">
+                        <i className="fa fa-phone me-2"></i>Phone Number
+                      </label>
+                      <input 
+                        type="tel" 
+                        className="form-control" 
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        placeholder="+94 XX XXX XXXX"
+                      />
+                    </div>
+
+                    <div className="row">
+                      <div className="col-md-6 mb-3">
+                        <label htmlFor="date" className="form-label fw-semibold">
+                          <i className="fa fa-calendar me-2"></i>Travel Date *
+                        </label>
+                        <input 
+                          type="date" 
+                          className="form-control"
+                          id="date"
+                          name="date"
+                          value={formData.date}
+                          onChange={handleInputChange}
+                          min={new Date().toISOString().split('T')[0]}
+                          required
+                        />
+                      </div>
+                      <div className="col-md-6 mb-3">
+                        <label htmlFor="guests" className="form-label fw-semibold">
+                          <i className="fa fa-users me-2"></i>Guests
+                        </label>
+                        <select 
+                          className="form-select" 
+                          id="guests"
+                          name="guests"
+                          value={formData.guests}
+                          onChange={handleInputChange}
+                        >
+                          <option value="1">1 Person</option>
+                          <option value="2">2 People</option>
+                          <option value="3">3 People</option>
+                          <option value="4">4 People</option>
+                          <option value="5">5 People</option>
+                          <option value="6+">6+ People</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div className="mb-4">
+                      <label htmlFor="specialRequests" className="form-label fw-semibold">
+                        <i className="fa fa-comment me-2"></i>Special Requests
+                      </label>
+                      <textarea 
+                        className="form-control" 
+                        id="specialRequests"
+                        name="specialRequests"
+                        rows="3"
+                        value={formData.specialRequests}
+                        onChange={handleInputChange}
+                        placeholder="Any special dietary requirements, accessibility needs, or preferences..."
+                      />
+                    </div>
+
+                    <button type="submit" className="btn btn-primary w-100 py-3 mb-3">
+                      <i className="fa fa-paper-plane me-2"></i>Send Booking Request
+                    </button>
+
+                    <div className="contact-info text-center">
+                      <small className="text-muted">
+                        Or contact us directly:<br/>
+                        <i className="fa fa-phone me-1"></i> +9471 534 5060<br/>
+                        <i className="fa fa-envelope me-1"></i> opulenttoursinfo@gmail.com
+                      </small>
+                    </div>
+                  </form>
+                </div>
+
+                {/* Additional Info */}
+                <div className="additional-info mt-4">
+                  <div className="info-card bg-white p-4 rounded shadow-sm">
+                    <h6 className="text-primary mb-3">
+                      <i className="fa fa-info-circle me-2"></i>Important Information
+                    </h6>
+                    <ul className="list-unstyled small">
+                      <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Free cancellation up to 48 hours</li>
+                      <li className="mb-2"><i className="fa fa-check text-success me-2"></i>24/7 customer support</li>
+                      <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Customizable itinerary</li>
+                      <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Best price guarantee</li>
+                    </ul>
                   </div>
-                  <div className="mb-3">
-                    <input 
-                      type="date" 
-                      className="form-control"
-                      name="date"
-                      value={formData.date}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                  <button type="submit" className="btn btn-primary w-100">Book Now</button>
-                </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       ) : (
         <div className="container text-center py-5">
-          <h2>Please select a package from the Tours page</h2>
+          <div className="row justify-content-center">
+            <div className="col-lg-6">
+              <div className="no-package-selected p-5 bg-light rounded">
+                <i className="fa fa-exclamation-triangle fa-4x text-warning mb-4"></i>
+                <h2>No Package Selected</h2>
+                <p className="text-muted mb-4">
+                  Please select a tour package from our Tours page to view detailed information.
+                </p>
+                <a href="/tours" className="btn btn-primary btn-lg">
+                  <i className="fa fa-arrow-left me-2"></i>Back to Tours
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>
