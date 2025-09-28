@@ -6,354 +6,263 @@
     z-index: 1000;
 }
 
+/* Search Section Styling */
+.search-section {
+    transition: all 0.3s ease;
+}
+
+.search-section:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
 .search-bar {
     display: flex;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
+    margin-top: 60px;
     position: relative;
     z-index: 1001;
 }
 
 .dropdown,
-.date-picker,
-.form-select {
-    padding: 12px 16px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.date-picker {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     position: relative;
     z-index: 1002;
-    transition: all 0.3s ease;
-    font-size: 16px;
 }
 
-.form-select:focus,
-.dropdown:focus,
-.date-picker:focus {
-    border-color: #06A3DA;
-    box-shadow: 0 0 0 0.2rem rgba(6, 163, 218, 0.25);
-}
-
-.quote-button,
-.btn-primary {
-    background: linear-gradient(45deg, #06A3DA, #0585B3);
+.quote-button {
+    background-color: #28a745;
     color: white;
-    padding: 12px 20px;
+    padding: 10px 15px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
-.quote-button:hover,
-.btn-primary:hover {
-    background: linear-gradient(45deg, #0585B3, #06A3DA);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(6, 163, 218, 0.3);
+.quote-button:hover {
+    background-color: #218838;
 }
 
-/* Country Card Styling */
-.country-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.country-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.country-card .position-relative::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, transparent 0%, rgba(6, 163, 218, 0.1) 100%);
-    transition: all 0.3s ease;
-    z-index: 1;
-}
-
-.country-card:hover .position-relative::before {
-    background: linear-gradient(135deg, transparent 0%, rgba(6, 163, 218, 0.2) 100%);
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* Tour Packages Section */
 .tour-packages {
-    padding: 40px 20px;
+    padding: 20px;
+    text-align: center;
 }
 
 .packages-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 2.5rem;
-    padding: 2rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .package {
     background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     overflow: hidden;
-    transition: all 0.4s ease;
-    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .package:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .package-image-container {
     position: relative;
     overflow: hidden;
-    height: 250px;
 }
 
 .package-img {
     width: 100%;
-    height: 100%;
+    height: 250px;
     object-fit: cover;
-    transition: transform 0.4s ease;
+    transition: transform 0.3s ease;
 }
 
 .package:hover .package-img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .package-overlay {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(6, 163, 218, 0.1) 0%, rgba(5, 133, 179, 0.3) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.package:hover .package-overlay {
-    opacity: 1;
+    background: rgba(6, 163, 218, 0.9);
+    color: white;
+    padding: 10px 15px;
+    border-bottom-left-radius: 8px;
 }
 
 .package-price {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: linear-gradient(45deg, #06A3DA, #0585B3);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
-    font-size: 18px;
-    box-shadow: 0 4px 15px rgba(6, 163, 218, 0.3);
 }
 
 .package-content {
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .package-title {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    line-height: 1.3;
-    height: 65px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    font-size: 1.1rem;
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 .package-duration {
-    color: #06A3DA;
-    font-weight: 600;
+    color: #666;
     margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
 }
 
 .package-highlights {
     margin-bottom: 1.5rem;
-    min-height: 80px;
 }
 
 .highlight-tag {
     display: inline-block;
-    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
-    color: #495057;
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.85rem;
-    margin: 2px 4px 2px 0;
-    border: 1px solid #dee2e6;
-    transition: all 0.3s ease;
-}
-
-.highlight-tag:hover {
-    background: linear-gradient(45deg, #06A3DA, #0585B3);
-    color: white;
-    transform: scale(1.05);
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 4px 8px;
+    margin: 2px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    border: 1px solid #bbdefb;
 }
 
 .view-button {
     display: block;
     width: 100%;
-    padding: 14px;
-    background: linear-gradient(45deg, #06A3DA, #0585B3);
+    padding: 12px;
+    background: #06A3DA;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .view-button:hover {
-    background: linear-gradient(45deg, #0585B3, #06A3DA);
+    background: #0585B3;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(6, 163, 218, 0.3);
+    box-shadow: 0 4px 12px rgba(6, 163, 218, 0.3);
 }
 
-/* Animation Classes */
-.wow.fadeInUp {
-    animation-name: fadeInUp;
+/* Country Card Styling */
+.country-card {
+    margin-bottom: 2rem;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 40px, 0);
-    }
-    to {
-        opacity: 1;
-        transform: none;
-    }
+.country-card:hover .btn {
+    background: #06A3DA !important;
+    border-color: #06A3DA !important;
 }
 
-.wow.zoomIn {
-    animation-name: zoomIn;
+/* Trip Steps Section */
+.trip-steps-container {
+    background: #f8f9fa;
 }
 
-@keyframes zoomIn {
-    from {
-        opacity: 0;
-        transform: scale3d(0.3, 0.3, 0.3);
-    }
-    50% {
-        opacity: 1;
-    }
+.trip-steps-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #e9ecef;
 }
 
-/* Section Styling */
-.section-title {
-    position: relative;
-    display: inline-block;
-    text-transform: uppercase;
+.trip-steps-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.step-circle {
+    width: 60px;
+    height: 60px;
+    background: #06A3DA;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 auto 1rem auto;
+}
+
+.step-icon {
+    font-size: 2.5rem;
     color: #06A3DA;
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
-.destination {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+.step-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .packages-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
-    .packages-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 1rem 0;
-    }
-    
-    .package-content {
-        padding: 1.5rem;
-    }
-    
-    .package-title {
-        font-size: 1.1rem;
-        height: auto;
-    }
-    
-    .search-bar {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .country-card {
-        margin: 0 1rem;
-    }
+  .packages-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .package-content {
+    padding: 1rem;
+  }
+  
+  .search-section {
+    margin: 0 15px;
+  }
+  
+  .step-circle {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+  
+  .step-icon {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 576px) {
-    .tour-packages {
-        padding: 20px 10px;
-    }
-    
-    .package {
-        margin: 0 10px;
-    }
-    
-    .package-image-container {
-        height: 200px;
-    }
-}
-
-/* Loading States */
-.package.loading {
-    opacity: 0.7;
-    pointer-events: none;
-}
-
-.package.loading .package-img {
-    filter: blur(2px);
-}
-
-/* Special Effects */
-.package::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-    z-index: 1;
-}
-
-.package:hover::before {
-    left: 100%;
-}
-
-/* Button Variants */
-.btn-outline-primary {
-    border: 2px solid #06A3DA;
-    color: #06A3DA;
-    background: transparent;
-    transition: all 0.3s ease;
-}
-
-.btn-outline-primary:hover {
-    background: linear-gradient(45deg, #06A3DA, #0585B3);
-    border-color: #06A3DA;
-    color: white;
-    transform: translateY(-2px);
+  .search-section {
+    padding: 1rem;
+  }
+  
+  .package-title {
+    font-size: 1rem;
+  }
 }

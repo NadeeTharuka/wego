@@ -45,7 +45,7 @@ const TourPackages = () => {
     {
       id: 5,
       name: "COMPREHENSIVE TOUR - 08 DAYS 07 NIGHTS",
-      image: "https://images.unsplash.com/photo-1517424523327-85bb548bd5a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+      image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
       duration: "8 Days 7 Nights",
       price: "$1599",
       highlights: ["Complete Island Experience", "Wildlife & Cultural Sites", "Beaches & Mountains", "All UNESCO Sites"]
@@ -53,7 +53,7 @@ const TourPackages = () => {
     {
       id: 6,
       name: "GRAND ADVENTURE - 14 DAYS 13 NIGHTS",
-      image: "https://images.unsplash.com/photo-1566558492752-3dd22d02e2bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
       duration: "14 Days 13 Nights",
       price: "$2499",
       highlights: ["Complete Sri Lanka Discovery", "All Major Destinations", "Adventure & Relaxation", "Cultural Immersion"]
@@ -122,31 +122,40 @@ const TourPackages = () => {
         </div>
       </div>
 
-      {/* Search Filters */}
-      <div className="container mb-4">
-        <div className="row justify-content-center">
-          <div className="col-lg-8">
-            <div className="search-bar bg-light p-4 rounded shadow-sm">
-              <div className="row g-3">
-                <div className="col-md-6">
-                  <select 
-                    className="form-select" 
-                    value={searchDuration} 
-                    onChange={handleSearchDuration}
-                  >
-                    <option value="">Tour duration</option>
-                    <option value="3 Days">Short Tours (3-4 Days)</option>
-                    <option value="7 Days">Medium Tours (5-8 Days)</option>
-                    <option value="14 Days">Extended Tours (10+ Days)</option>
-                  </select>
+      {/* Search Filters Section - Properly Centered */}
+      <div className="container-xxl py-4 mb-5">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 col-md-10 col-sm-12">
+              <div className="search-section bg-white rounded-3 shadow p-4 border">
+                <div className="text-center mb-4">
+                  <h5 className="text-primary mb-2">Find Your Perfect Tour</h5>
+                  <p className="text-muted mb-0">Search by duration or explore all Sri Lanka tours</p>
                 </div>
-                <div className="col-md-6">
-                  <button 
-                    className="btn btn-primary w-100"
-                    onClick={() => setSelectedCountry("Sri Lanka")}
-                  >
-                    View Sri Lanka Tours
-                  </button>
+                <div className="row g-3 align-items-end">
+                  <div className="col-md-6">
+                    <label className="form-label text-dark fw-semibold">Tour Duration</label>
+                    <select 
+                      className="form-select form-select-lg" 
+                      value={searchDuration} 
+                      onChange={handleSearchDuration}
+                    >
+                      <option value="">Select Duration</option>
+                      <option value="3 Days">Short Tours (3-4 Days)</option>
+                      <option value="7 Days">Medium Tours (5-8 Days)</option>
+                      <option value="14 Days">Extended Tours (10+ Days)</option>
+                    </select>
+                  </div>
+                  <div className="col-md-6">
+                    <button 
+                      className="btn btn-primary btn-lg w-100"
+                      onClick={() => setSelectedCountry("Sri Lanka")}
+                      style={{ minHeight: '48px' }}
+                    >
+                      <i className="fa fa-search me-2"></i>
+                      View Sri Lanka Tours
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -322,43 +331,43 @@ const TripSteps = () => {
   const steps = [
     {
       id: 1,
-      icon: "fa-solid fa-suitcase-rolling",
+      icon: "fa fa-clipboard-list",
       description: "Give Us the Requirement.",
     },
     {
       id: 2,
-      icon: "fa-solid fa-envelope",
+      icon: "fa fa-envelope",
       description: "Few Tour Options will Email to You.",
     },
     {
       id: 3,
-      icon: "fa-solid fa-handshake",
+      icon: "fa fa-handshake",
       description: "Request for any Changes or If not proceed with the Payment.",
     },
     {
       id: 4,
-      icon: "fa-solid fa-bed",
+      icon: "fa fa-bed",
       description: "Make a Reservation for Air, Hotels, Transport, Sightseeing, Guides, Etc.",
     },
     {
       id: 5,
-      icon: "fa-solid fa-file-signature",
+      icon: "fa fa-file-check",
       description: "Within 72 Hours, Return Back to You with all Confirmation.",
     },
     {
       id: 6,
-      icon: "fa-solid fa-passport",
+      icon: "fa fa-passport",
       description: "Process Visa.",
     },
     {
       id: 7,
-      icon: "fa-solid fa-plane-departure",
+      icon: "fa fa-plane-departure",
       description: "Enjoy your tour. Thank you.",
     },
   ];
 
   return (
-    <div className="trip-steps container-xxl py-5">
+    <div className="container-xxl py-5" style={{ backgroundColor: '#f8f9fa' }}>
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
           <h6 className="section-title bg-white text-center text-primary px-3">
@@ -366,12 +375,30 @@ const TripSteps = () => {
           </h6>
           <h2 className="mb-5">How to create your trip in 7 easy steps</h2>
         </div>
-        <div className="steps-container">
+        <div className="row g-4 justify-content-center">
           {steps.map((step) => (
-            <div className="step wow fadeInUp" key={step.id} data-wow-delay={`0.${step.id}s`}>
-              <div className="step-circle">{step.id}</div>
-              <i className={step.icon}></i>
-              <p className="step-description">{step.description}</p>
+            <div 
+              className="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" 
+              key={step.id} 
+              data-wow-delay={`0.${step.id}s`}
+            >
+              <div className="text-center p-4 bg-white rounded shadow-sm h-100">
+                <div 
+                  className="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle mb-3"
+                  style={{ width: '60px', height: '60px', fontSize: '18px', fontWeight: 'bold' }}
+                >
+                  {step.id}
+                </div>
+                <div className="mb-3">
+                  <i 
+                    className={`${step.icon} text-primary`}
+                    style={{ fontSize: '2.5rem' }}
+                  ></i>
+                </div>
+                <p className="mb-0" style={{ fontSize: '14px', lineHeight: '1.5' }}>
+                  {step.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
