@@ -7,6 +7,52 @@ function Destination() {
   const location = useLocation();
   const selectedPackage = location.state?.package;
 
+  // Function to get appropriate image based on location
+  const getDayImage = (dayTitle, activities) => {
+    const title = dayTitle.toLowerCase();
+    const acts = activities.join(' ').toLowerCase();
+    
+    if (title.includes('negombo') || acts.includes('negombo')) {
+      return 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('dambulla') || acts.includes('dambulla')) {
+      return 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('sigiriya') || acts.includes('sigiriya')) {
+      return 'https://images.unsplash.com/photo-1588417837058-c8884bfb5b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('kandy') || acts.includes('kandy')) {
+      return 'https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('nuwara eliya') || acts.includes('nuwara eliya')) {
+      return 'https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('ella') || acts.includes('ella')) {
+      return 'https://images.unsplash.com/photo-1586539195093-e683155f9b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('yala') || acts.includes('yala') || acts.includes('safari')) {
+      return 'https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('galle') || acts.includes('galle')) {
+      return 'https://images.unsplash.com/photo-1580837119756-563d608dd119?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('colombo') || acts.includes('colombo')) {
+      return 'https://images.unsplash.com/photo-1608482056615-c6e485096f2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('hikkaduwa') || acts.includes('hikkaduwa')) {
+      return 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('bentota') || acts.includes('bentota')) {
+      return 'https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('anuradhapura') || acts.includes('anuradhapura')) {
+      return 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('polonnaruwa') || acts.includes('polonnaruwa')) {
+      return 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('mirissa') || acts.includes('mirissa')) {
+      return 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('udawalawe') || acts.includes('udawalawe')) {
+      return 'https://images.unsplash.com/photo-1535083783855-76ae62b2914e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('tissamaharama') || acts.includes('tissamaharama')) {
+      return 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('habarana') || acts.includes('habarana')) {
+      return 'https://images.unsplash.com/photo-1563551379-5d4d8b197e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else if (title.includes('pasikuda') || title.includes('trincomalee') || title.includes('nilaveli') || acts.includes('beach')) {
+      return 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    } else {
+      return 'https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+    }
+  };
+
   // Comprehensive package details based on your documents
   const packageDetails = {
     "EXPLORE SRI LANKA IN 04 DAYS 03 NIGHTS": {
@@ -657,12 +703,11 @@ function Destination() {
     };
 
     try {
-      // Replace with your actual EmailJS credentials
       await emailjs.send(
-        'your_service_id', // Replace with your EmailJS service ID
-        'your_template_id', // Replace with your EmailJS template ID
+        'your_service_id',
+        'your_template_id',
         templateParams,
-        'your_public_key' // Replace with your EmailJS public key
+        'your_public_key'
       );
       
       setFormData({ 
@@ -758,7 +803,7 @@ function Destination() {
                 </div>
               </div>
 
-              {/* Detailed Itinerary */}
+              {/* Detailed Itinerary with Images */}
               {packageDetails[selectedPackage.name] && (
                 <div className="program-details">
                   <h3 className="text-primary mb-4">
@@ -767,12 +812,29 @@ function Destination() {
                   
                   {packageDetails[selectedPackage.name].program.map((day, index) => (
                     <div key={index} className="day-section mb-4">
-                      <div className="day-header bg-primary text-white p-3 rounded-top">
-                        <h4 className="mb-1">
-                          <i className="fa fa-calendar-day me-2"></i>
-                          {day.day}
-                        </h4>
-                        <p className="mb-0 fs-6">{day.title}</p>
+                      <div className="day-header bg-primary text-white p-3 rounded-top position-relative" style={{ overflow: 'hidden' }}>
+                        <div className="row align-items-center">
+                          <div className="col-md-8">
+                            <h4 className="mb-1">
+                              <i className="fa fa-calendar-day me-2"></i>
+                              {day.day}
+                            </h4>
+                            <p className="mb-0 fs-6">{day.title}</p>
+                          </div>
+                          <div className="col-md-4 text-end">
+                            <img 
+                              src={getDayImage(day.title, day.activities)} 
+                              alt={day.day}
+                              className="rounded shadow-sm"
+                              style={{ 
+                                width: '120px', 
+                                height: '80px', 
+                                objectFit: 'cover',
+                                border: '3px solid white'
+                              }}
+                            />
+                          </div>
+                        </div>
                       </div>
                       
                       <div className="day-content bg-light p-4 rounded-bottom">
