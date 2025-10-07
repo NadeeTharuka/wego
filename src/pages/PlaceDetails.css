@@ -1,0 +1,133 @@
+/* Place Details Page Styles */
+
+.place-hero {
+  position: relative;
+  padding: 100px 0;
+}
+
+.place-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+}
+
+.place-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.place-main-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.place-main-image img {
+  transition: transform 0.3s ease;
+}
+
+.place-main-image:hover img {
+  transform: scale(1.05);
+}
+
+.place-description {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.place-highlights {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.highlight-card:hover {
+  background: linear-gradient(45deg, #06A3DA, #0585B3) !important;
+  color: white;
+  transform: translateX(5px);
+  border-color: transparent;
+}
+
+.highlight-card:hover i {
+  color: white !important;
+}
+
+.contact-cta {
+  transition: all 0.3s ease;
+}
+
+.contact-cta:hover {
+  box-shadow: 0 8px 25px rgba(6, 163, 218, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .place-hero {
+    min-height: 40vh !important;
+    padding: 60px 0;
+  }
+  
+  .display-3 {
+    font-size: 2rem;
+  }
+  
+  .place-description,
+  .place-highlights {
+    padding: 1.5rem;
+  }
+  
+  .contact-cta {
+    padding: 2rem !important;
+  }
+  
+  .contact-cta .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .place-main-image img {
+    max-height: 300px !important;
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+  
+  .highlight-card {
+    padding: 1rem !important;
+  }
+}
+
+/* Animation */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.slideInDown {
+  animation-name: slideInDown;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
