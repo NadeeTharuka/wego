@@ -12,6 +12,7 @@ import Testimonial from './pages/Testimonial'
 import Error from './pages/Error'
 import Contact from './pages/Contact'
 import Tours from './pages/Tours'
+import PlaceDetails from './pages/PlaceDetails';
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
         <Route path='/testimonial' element={<Testimonial/>}/>
         <Route path='/error' element={<Error/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path="/place-details" element={<PlaceDetails />} />
         </Routes>
         <Footer />
     </div>
