@@ -1,59 +1,128 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import './Destination.css';
 
 function Destination() {
   const location = useLocation();
+  const navigate = useNavigate();
   const selectedPackage = location.state?.package;
 
-  // Function to get appropriate image based on location
-  const getDayImage = (dayTitle, activities) => {
-    const title = dayTitle.toLowerCase();
-    const acts = activities.join(' ').toLowerCase();
-    
-    if (title.includes('negombo') || acts.includes('negombo')) {
-      return 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('dambulla') || acts.includes('dambulla')) {
-      return 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('sigiriya') || acts.includes('sigiriya')) {
-      return 'https://images.unsplash.com/photo-1588417837058-c8884bfb5b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('kandy') || acts.includes('kandy')) {
-      return 'https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('nuwara eliya') || acts.includes('nuwara eliya')) {
-      return 'https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('ella') || acts.includes('ella')) {
-      return 'https://images.unsplash.com/photo-1586539195093-e683155f9b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('yala') || acts.includes('yala') || acts.includes('safari')) {
-      return 'https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('galle') || acts.includes('galle')) {
-      return 'https://images.unsplash.com/photo-1580837119756-563d608dd119?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('colombo') || acts.includes('colombo')) {
-      return 'https://images.unsplash.com/photo-1608482056615-c6e485096f2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('hikkaduwa') || acts.includes('hikkaduwa')) {
-      return 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('bentota') || acts.includes('bentota')) {
-      return 'https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('anuradhapura') || acts.includes('anuradhapura')) {
-      return 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('polonnaruwa') || acts.includes('polonnaruwa')) {
-      return 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('mirissa') || acts.includes('mirissa')) {
-      return 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('udawalawe') || acts.includes('udawalawe')) {
-      return 'https://images.unsplash.com/photo-1535083783855-76ae62b2914e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('tissamaharama') || acts.includes('tissamaharama')) {
-      return 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('habarana') || acts.includes('habarana')) {
-      return 'https://images.unsplash.com/photo-1563551379-5d4d8b197e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else if (title.includes('pasikuda') || title.includes('trincomalee') || title.includes('nilaveli') || acts.includes('beach')) {
-      return 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-    } else {
-      return 'https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+  // Place details mapping with images
+  const placeDetails = {
+    "Pinnawala Elephant Orphanage": {
+      image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Dambulla Cave Temple": {
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Sigiriya Lion Rock Fortress": {
+      image: "https://images.unsplash.com/photo-1588417837058-c8884bfb5b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Sigiriya Village Tour": {
+      image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Matale Spice Garden": {
+      image: "https://images.unsplash.com/photo-1596040033229-a0b3b83f6258?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Temple of the Sacred Tooth Relic": {
+      image: "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Kandyan Cultural Dance Show": {
+      image: "https://images.unsplash.com/photo-1524230659092-07f99a75c013?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Colombo City Tour": {
+      image: "https://images.unsplash.com/photo-1608482056615-c6e485096f2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Gangaramaya Temple": {
+      image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Lotus Tower": {
+      image: "https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Negombo Fish Market": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Hamilton Dutch Canal": {
+      image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Angurukaramulla Temple": {
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Anuradhapura": {
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Sri Maha Bodhiya": {
+      image: "https://images.unsplash.com/photo-1605536968169-738c98afd7bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Ruwanwelisaya": {
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Polonnaruwa": {
+      image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Nine Arch Bridge": {
+      image: "https://images.unsplash.com/photo-1586539195093-e683155f9b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Gregory Park": {
+      image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Ambewela Farm": {
+      image: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Yala Safari": {
+      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Galle Fort": {
+      image: "https://images.unsplash.com/photo-1580837119756-563d608dd119?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Hikkaduwa Coral Garden": {
+      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Turtle Farm": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Madu River Boat Ride": {
+      image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Tea Plantation": {
+      image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Udawalawe Safari": {
+      image: "https://images.unsplash.com/photo-1535083783855-76ae62b2914e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Ella Rock": {
+      image: "https://images.unsplash.com/photo-1586539195093-e683155f9b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Ravana Falls": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   };
 
-  // Comprehensive package details based on your documents
+  // Extract place names from activities
+  const extractPlaces = (activities) => {
+    const places = [];
+    activities.forEach(activity => {
+      // Match known places
+      Object.keys(placeDetails).forEach(place => {
+        if (activity.includes(place) || activity.toLowerCase().includes(place.toLowerCase())) {
+          if (!places.find(p => p.name === place)) {
+            places.push({
+              name: place,
+              image: placeDetails[place].image
+            });
+          }
+        }
+      });
+    });
+    return places;
+  };
+
+  const handlePlaceClick = (placeName) => {
+    navigate('/place-details', { state: { placeName } });
+  };
+
+  // Comprehensive package details
   const packageDetails = {
     "EXPLORE SRI LANKA IN 04 DAYS 03 NIGHTS": {
       program: [
@@ -66,11 +135,7 @@ function Destination() {
             "Pinnawala Elephant Orphanage",
             "Dambulla Cave Temple - UNESCO World Heritage Site",
             "Overnight in Dambulla"
-          ],
-          details: {
-            "Pinnawala Elephant Orphanage": "Pinnawala Elephant Orphanage is where you can find the largest herd of captive elephants in the world. Established in 1975, it is a popular breeding ground for wild Asian elephants working towards the protection and welfare of these wild mammals. Orphaned and unweaned calves and wounded adults spotted in the forests of Sri Lanka are taken in here for proper care.",
-            "Dambulla Cave Temple": "The Dambulla Cave Temples, located near the geographical center of the island, are a significant cultural treasure. Dating back to the 1st century BCE, these caves are renowned for their exquisite Sinhala art and sculpture. The complex includes five caves beneath a vast overhanging rock, with intricately painted ceilings and images of Lord Buddha, Bodhisattvas, and various deities."
-          }
+          ]
         },
         {
           day: "Day 02",
@@ -80,12 +145,7 @@ function Destination() {
             "Sigiriya Village Tour with Traditional Lunch",
             "Matale Spice Garden",
             "Overnight in Kandy"
-          ],
-          details: {
-            "Sigiriya Lion Rock": "Sigiriya, often referred to as the 'Lion Rock,' is an ancient rock fortress and one of Sri Lanka's most iconic landmarks. Built in the 5th century AD by King Kashyapa I, it served as a royal palace atop a 200-meter rock for strategic defense. The rock features vivid frescoes of the 'Sigiriya Damsels' and the polished Mirror Wall.",
-            "Village Tour": "Village tours in Sigiriya offer a glimpse into traditional Sri Lankan rural life. These tours typically include a bullock cart ride, a boat ride on a serene lake, and a walk-through paddy fields and local farms. Visitors can experience traditional cooking and interact with local villagers.",
-            "Matale Spice Garden": "The Matale Spice Garden near Kandy is known for its rich variety of spices, including cinnamon, pepper, cloves, nutmeg, cardamom, vanilla, and turmeric. Visitors can enjoy guided tours, learn about spice cultivation and uses, and purchase fresh spices and Ayurvedic products."
-          }
+          ]
         },
         {
           day: "Day 03",
@@ -96,12 +156,7 @@ function Destination() {
             "Gem Shop Visit",
             "Evening Shopping in Colombo",
             "Overnight in Colombo"
-          ],
-          details: {
-            "Temple of the Sacred Tooth Relic": "The Temple of the Sacred Tooth Relic, or Dalada Maligawa, in Kandy is one of Sri Lanka's most significant religious and cultural sites, housing the revered tooth relic of the Buddha. This sacred relic has been enshrined in Kandy since the 16th century and showcases exquisite Kandyan architecture.",
-            "Cultural Dance Show": "Cultural shows in Sri Lanka showcase the island's rich traditions through vibrant performances of dance, music, and rituals. Key highlights include Kandyan dance, known for its elegant movements and elaborate costumes, and Low Country dance, featuring energetic performances with striking masks.",
-            "Gem Shops": "Sri Lanka is known as the 'Gem Island,' especially famous for its Ceylon Blue Sapphires. These shops often provide certificates of authenticity and sometimes allow visitors to see the cutting and polishing process."
-          }
+          ]
         },
         {
           day: "Day 04",
@@ -114,10 +169,7 @@ function Destination() {
             "Galle Face Green",
             "Independence Square",
             "Departure to Airport"
-          ],
-          details: {
-            "Colombo City Tour": "Colombo, the capital of Sri Lanka, is a vibrant city that blends modernity with rich history. It serves as the country's commercial and cultural hub, offering a mix of colonial architecture, bustling markets, and contemporary skyscrapers. Key attractions include the Galle Face Green, the Gangaramaya Temple, and the historic Fort area."
-          }
+          ]
         }
       ]
     },
@@ -134,11 +186,7 @@ function Destination() {
             "St. Mary's Church",
             "Evening Negombo Lagoon Tour",
             "Overnight in Negombo"
-          ],
-          details: {
-            "Negombo": "Negombo is a quiet town on Sri Lanka's west coast, just 10 km from Bandaranaike International Airport. Known for its white sandy beaches and turquoise waters, it's a popular beach resort with a rich history in spice and seafood trade. The town reflects Dutch and Portuguese influences.",
-            "Hamilton Dutch Canal": "Originally built by the Dutch in the 17th century to transport cinnamon, coconuts, and salt, the Hamilton Canal offers boat tours through narrow channels shaded by dense mangroves, where visitors can spot various bird species and monitor lizards."
-          }
+          ]
         },
         {
           day: "Day 02",
@@ -148,11 +196,7 @@ function Destination() {
             "Pinnawala Elephant Orphanage",
             "Dambulla Cave Temple - UNESCO World Heritage Site",
             "Overnight in Dambulla"
-          ],
-          details: {
-            "Pinnawala": "Established in 1975, this is where you can find the largest herd of captive elephants in the world. It's a popular breeding ground for wild Asian elephants, taking care of orphaned and wounded elephants from Sri Lankan forests.",
-            "Dambulla": "Dating back to the 1st century BCE, these caves are renowned for their exquisite Sinhala art and sculpture, featuring intricately painted ceilings and images of Lord Buddha, Bodhisattvas, and various deities."
-          }
+          ]
         },
         {
           day: "Day 03",
@@ -162,10 +206,7 @@ function Destination() {
             "Sigiriya Village Tour with Traditional Lunch",
             "Matale Spice Garden",
             "Overnight in Kandy"
-          ],
-          details: {
-            "Sigiriya": "Built in the 5th century AD by King Kashyapa I, this ancient rock fortress served as a royal palace atop a 200-meter rock. The site features the Lion's Gate, vivid frescoes of the 'Sigiriya Damsels,' and advanced hydraulic engineering in the surrounding water gardens."
-          }
+          ]
         },
         {
           day: "Day 04",
@@ -176,10 +217,7 @@ function Destination() {
             "Gem Shop Visit",
             "Evening Shopping in Colombo",
             "Overnight in Colombo"
-          ],
-          details: {
-            "Dalada Maligawa": "Part of the royal palace complex, this temple showcases exquisite Kandyan architecture with its golden canopy, intricate woodwork, and the iconic Paththirippuwa. Daily rituals enhanced by traditional drumming create a deeply spiritual atmosphere."
-          }
+          ]
         },
         {
           day: "Day 05",
@@ -189,10 +227,7 @@ function Destination() {
             "Major attractions visit",
             "Shopping opportunities",
             "Departure to Airport"
-          ],
-          details: {
-            "Colombo": "The capital offers a dynamic urban experience with colonial architecture, contemporary skyscrapers, diverse dining scene, luxury shopping, and lively nightlife, all with scenic coastal views."
-          }
+          ]
         }
       ]
     },
@@ -206,12 +241,7 @@ function Destination() {
             "Sri Maha Bodhiya - Sacred Bodhi Tree",
             "Ruwanwelisaya Stupa",
             "Overnight in Anuradhapura"
-          ],
-          details: {
-            "Anuradhapura": "One of the ancient capitals of Sri Lanka, founded in the 4th century BCE. It was the first capital and the center of Theravada Buddhism for many centuries, featuring well-preserved ruins of an early Sri Lankan civilization.",
-            "Sri Maha Bodhiya": "Home to a sacred fig tree believed to be a direct descendant of the original Bodhi tree under which Buddha attained enlightenment. Planted in 288 BCE, it attracts thousands of pilgrims yearly.",
-            "Ruwanwelisaya": "Built by King Dutugemunu in the 2nd century BCE, standing about 55 meters tall. It's one of the largest stupas in the world and is believed to house relics of the Buddha."
-          }
+          ]
         },
         {
           day: "Day 02",
@@ -221,10 +251,7 @@ function Destination() {
             "Gal Vihara Rock Temple",
             "Royal Palace ruins",
             "Overnight in Sigiriya"
-          ],
-          details: {
-            "Polonnaruwa": "Sri Lanka's second capital that flourished under King Parakramabahu I during the 12th century. Key attractions include the Gal Vihara with four magnificent Buddha statues, the Royal Palace, and intricate stone carvings at the Rankot Vihara."
-          }
+          ]
         },
         {
           day: "Day 03",
@@ -234,10 +261,7 @@ function Destination() {
             "Sigiriya Village Tour with Traditional Lunch",
             "Matale Spice Garden",
             "Overnight in Kandy"
-          ],
-          details: {
-            "Sigiriya Heritage": "A well-preserved example of ancient urban planning, showcasing the sophistication of Sri Lankan architecture and art, providing insight into King Kashyapa's political history."
-          }
+          ]
         },
         {
           day: "Day 04",
@@ -248,10 +272,7 @@ function Destination() {
             "Gem Shop Visit",
             "Evening Shopping in Colombo",
             "Overnight in Colombo"
-          ],
-          details: {
-            "Cultural Heritage": "Experience the annual Esala Perahera traditions, grand processions featuring decorated elephants and cultural performances that highlight the temple's importance."
-          }
+          ]
         },
         {
           day: "Day 05",
@@ -260,10 +281,7 @@ function Destination() {
             "Colombo City Tour",
             "Historical and cultural sites",
             "Departure to Airport"
-          ],
-          details: {
-            "Final Experience": "Complete your ancient cities journey with modern Colombo's blend of history and contemporary life."
-          }
+          ]
         }
       ]
     },
@@ -277,10 +295,7 @@ function Destination() {
             "Pinnawala Elephant Orphanage",
             "Dambulla Cave Temple",
             "Overnight in Dambulla"
-          ],
-          details: {
-            "Journey Start": "Begin your comprehensive Sri Lanka experience with cultural and wildlife encounters."
-          }
+          ]
         },
         {
           day: "Day 02",
@@ -290,10 +305,7 @@ function Destination() {
             "Village Tour with Traditional Lunch",
             "Matale Spice Garden",
             "Overnight in Kandy"
-          ],
-          details: {
-            "Cultural Immersion": "Experience authentic rural life and ancient royal history in one day."
-          }
+          ]
         },
         {
           day: "Day 03",
@@ -303,10 +315,7 @@ function Destination() {
             "Kandyan Cultural Dance Show",
             "Journey to Hill Country",
             "Overnight in Nuwara Eliya"
-          ],
-          details: {
-            "Hill Country": "Travel to 'Little England' known for its cool climate, colonial buildings, and tea plantations."
-          }
+          ]
         },
         {
           day: "Day 04",
@@ -316,11 +325,7 @@ function Destination() {
             "Ambewela Farm - 'Little New Zealand'",
             "Nine Arch Bridge in Ella",
             "Overnight in Tissamaharama"
-          ],
-          details: {
-            "Nine Arch Bridge": "This architectural marvel spans 91 meters and stands 24 meters high, constructed entirely of brick, stone, and cement without steel. Trains passing over create a picturesque scene.",
-            "Ambewela Farm": "Known as 'Little New Zealand' for its lush green fields and dairy farming, located at over 6,000 feet above sea level."
-          }
+          ]
         },
         {
           day: "Day 05",
@@ -331,11 +336,7 @@ function Destination() {
             "Gem Shop Visit",
             "Hikkaduwa Coral Garden",
             "Overnight in Hikkaduwa"
-          ],
-          details: {
-            "Yala Safari": "Sri Lanka's most visited national park, known for its dense leopard population and diverse wildlife including elephants, sloth bears, crocodiles, and numerous bird species.",
-            "Galle Fort": "One of the best-preserved colonial-era forts in Asia, originally built by Portuguese and expanded by Dutch, showcasing European architecture and South Asian culture."
-          }
+          ]
         },
         {
           day: "Day 06",
@@ -346,11 +347,7 @@ function Destination() {
             "Cinnamon Garden Visit",
             "Fish Therapy Experience",
             "Overnight in Colombo"
-          ],
-          details: {
-            "Madu River": "Scenic journey through mangroves and waterways, exploring rich biodiversity including various birds and aquatic life, visiting small islands with temples and cinnamon plantations.",
-            "Turtle Conservation": "Learn about endangered sea turtle protection efforts and witness conservation work at local hatcheries."
-          }
+          ]
         },
         {
           day: "Day 07",
@@ -359,10 +356,7 @@ function Destination() {
             "Colombo City Tour and Shopping",
             "Final cultural experiences",
             "Departure to Airport"
-          ],
-          details: {
-            "Conclusion": "Complete your comprehensive Sri Lanka journey with urban experiences and last-minute shopping."
-          }
+          ]
         }
       ]
     },
@@ -377,10 +371,7 @@ function Destination() {
             "Angurukaramulla Temple",
             "St. Mary's Church",
             "Overnight in Negombo"
-          ],
-          details: {
-            "Comprehensive Start": "Begin with coastal culture and colonial heritage exploration."
-          }
+          ]
         },
         {
           day: "Day 02",
@@ -391,10 +382,7 @@ function Destination() {
             "Pinnawala Elephant Orphanage",
             "Dambulla Cave Temple",
             "Overnight in Dambulla"
-          ],
-          details: {
-            "Wildlife & Culture": "Combine marine ecosystems, elephant conservation, and ancient Buddhist art."
-          }
+          ]
         },
         {
           day: "Day 03",
@@ -404,10 +392,7 @@ function Destination() {
             "Village Tour with cultural immersion",
             "Matale Spice Garden",
             "Overnight in Kandy"
-          ],
-          details: {
-            "Ancient & Rural": "Experience royal history and authentic village life."
-          }
+          ]
         },
         {
           day: "Day 04",
@@ -418,10 +403,7 @@ function Destination() {
             "Royal Botanic Gardens Peradeniya",
             "Gem Museum visit",
             "Overnight in Kandy"
-          ],
-          details: {
-            "Cultural Capital": "Deep dive into Sri Lanka's cultural and spiritual heart with botanical wonders."
-          }
+          ]
         },
         {
           day: "Day 05",
@@ -431,10 +413,7 @@ function Destination() {
             "Colonial Town exploration",
             "Tea-picking experience",
             "Overnight in Nuwara Eliya"
-          ],
-          details: {
-            "Tea Heritage": "Discover Ceylon tea's history from plantation to cup, experiencing British colonial influence."
-          }
+          ]
         },
         {
           day: "Day 06",
@@ -443,10 +422,7 @@ function Destination() {
             "Scenic Mountain Train Ride",
             "Udawalawe Safari - Wildlife conservation education",
             "Overnight in Udawalawe"
-          ],
-          details: {
-            "Mountain to Wildlife": "Journey from misty mountains to wildlife conservation areas via scenic railway."
-          }
+          ]
         },
         {
           day: "Day 07",
@@ -458,10 +434,7 @@ function Destination() {
             "Fish Therapy experience",
             "Optional Madu River Boat Ride",
             "Overnight in Bentota"
-          ],
-          details: {
-            "Coast & Conservation": "Combine Dutch colonial history with marine conservation and spice heritage."
-          }
+          ]
         },
         {
           day: "Day 08",
@@ -471,10 +444,7 @@ function Destination() {
             "Colombo City Tour",
             "Final cultural and shopping experiences",
             "Departure to Airport"
-          ],
-          details: {
-            "Grand Finale": "Complete your comprehensive journey with the famous coastal railway and urban experiences."
-          }
+          ]
         }
       ]
     },
@@ -487,10 +457,7 @@ function Destination() {
             "Arrival and hotel rest",
             "Evening Negombo Lagoon Tour",
             "Overnight in Negombo"
-          ],
-          details: {
-            "Gentle Start": "Begin your grand adventure with relaxation and lagoon exploration."
-          }
+          ]
         },
         {
           day: "Day 02",
@@ -501,24 +468,18 @@ function Destination() {
             "Turtle Conservation Project",
             "Madu River Boat Safari with Cinnamon Tour",
             "Overnight in Hikkaduwa"
-          ],
-          details: {
-            "Urban to Coastal": "Experience capital city highlights before moving to beach conservation areas."
-          }
+          ]
         },
         {
           day: "Day 03",
           title: "Hikkaduwa → Yala",
           activities: [
-            "Galle Dutch Fort exploration",
+            "Galle Fort exploration",
             "Rumassala Japanese Peace Pagoda",
             "Unawatuna Beach",
             "Tissamaharama Ancient City and Lake",
             "Overnight in Yala"
-          ],
-          details: {
-            "Heritage Coast": "Combine Dutch colonial architecture, Buddhist peace symbols, and ancient kingdoms."
-          }
+          ]
         },
         {
           day: "Day 04",
@@ -529,10 +490,7 @@ function Destination() {
             "Ravana Waterfall",
             "Optional Ravana Cave exploration",
             "Overnight in Ella"
-          ],
-          details: {
-            "Wildlife to Mountains": "From leopard spotting to ancient rock carvings and mythical caves."
-          }
+          ]
         },
         {
           day: "Day 05",
@@ -543,10 +501,7 @@ function Destination() {
             "Ella Rock challenging hike",
             "Secret Waterfall swimming",
             "Overnight in Ella"
-          ],
-          details: {
-            "Adventure Day": "Full day of hiking, photography, and natural pool swimming in scenic hill country."
-          }
+          ]
         },
         {
           day: "Day 06",
@@ -556,10 +511,7 @@ function Destination() {
             "Gregory Lake activities",
             "Nuwara Eliya walking city tour",
             "Overnight in Nuwara Eliya"
-          ],
-          details: {
-            "Scenic Railway": "Experience one of the world's most scenic train rides through tea plantations and mountains."
-          }
+          ]
         },
         {
           day: "Day 07",
@@ -570,10 +522,7 @@ function Destination() {
             "Ramboda Waterfall",
             "Kandy Cultural Show and Temple visit",
             "Overnight in Kandy"
-          ],
-          details: {
-            "Highlands to Cultural Capital": "From World's End cliff to sacred tooth relic."
-          }
+          ]
         },
         {
           day: "Day 08",
@@ -585,24 +534,18 @@ function Destination() {
             "Dambulla Cave Temple",
             "Pidurangala Sunset View",
             "Overnight in Habarana"
-          ],
-          details: {
-            "Temple Trail": "Multi-religious temple exploration from Hindu to Buddhist sites."
-          }
+          ]
         },
         {
           day: "Day 09",
           title: "Habarana → Sigiriya → Habarana",
           activities: [
-            "Sigiriya Rock Fortress climb",
+            "Sigiriya Lion Rock Fortress climb",
             "Hiriwadunna Village Tour with Cooking Class",
             "Traditional lunch preparation",
             "Minneriya/Kaudulla/Eco Park Safari",
             "Overnight in Habarana"
-          ],
-          details: {
-            "Royal & Rural": "Ancient royal fortress combined with authentic village life and elephant gathering."
-          }
+          ]
         },
         {
           day: "Day 10",
@@ -611,10 +554,7 @@ function Destination() {
             "Polonnaruwa Ancient Kingdom exploration by bicycle or car",
             "UNESCO World Heritage Site tour",
             "Overnight in Polonnaruwa"
-          ],
-          details: {
-            "Ancient Kingdom": "Explore the second capital's magnificent ruins and archaeological treasures."
-          }
+          ]
         },
         {
           day: "Day 11",
@@ -623,10 +563,7 @@ function Destination() {
             "Travel to East Coast",
             "Beach leisure and water sports at Pasikuda",
             "Overnight in Pasikuda"
-          ],
-          details: {
-            "East Coast Beaches": "Experience pristine eastern beaches with crystal-clear waters."
-          }
+          ]
         },
         {
           day: "Day 12",
@@ -636,10 +573,7 @@ function Destination() {
             "Pigeon Island National Park",
             "Fort Frederick",
             "Overnight in Nilaveli"
-          ],
-          details: {
-            "Ancient Port": "Explore one of Asia's finest natural harbors with Hindu temples and marine parks."
-          }
+          ]
         },
         {
           day: "Day 13",
@@ -648,10 +582,7 @@ function Destination() {
             "Leisure at Nilaveli Beach",
             "Return journey preparation",
             "Overnight in Dambulla"
-          ],
-          details: {
-            "Beach Relaxation": "Final beach day before returning to cultural triangle."
-          }
+          ]
         },
         {
           day: "Day 14",
@@ -660,10 +591,7 @@ function Destination() {
             "Final Dambulla Cave Temple visit",
             "Journey to airport",
             "Departure"
-          ],
-          details: {
-            "Grand Conclusion": "Complete your comprehensive 14-day Sri Lankan adventure."
-          }
+          ]
         }
       ]
     }
@@ -803,69 +731,78 @@ function Destination() {
                 </div>
               </div>
 
-              {/* Detailed Itinerary with Images */}
+              {/* Detailed Itinerary with Place Cards */}
               {packageDetails[selectedPackage.name] && (
                 <div className="program-details">
                   <h3 className="text-primary mb-4">
                     <i className="fa fa-route me-2"></i>Detailed Itinerary
                   </h3>
                   
-                  {packageDetails[selectedPackage.name].program.map((day, index) => (
-                    <div key={index} className="day-section mb-4">
-                      <div className="day-header bg-primary text-white p-3 rounded-top position-relative" style={{ overflow: 'hidden' }}>
-                        <div className="row align-items-center">
-                          <div className="col-md-8">
-                            <h4 className="mb-1">
-                              <i className="fa fa-calendar-day me-2"></i>
-                              {day.day}
-                            </h4>
-                            <p className="mb-0 fs-6">{day.title}</p>
-                          </div>
-                          <div className="col-md-4 text-end">
-                            <img 
-                              src={getDayImage(day.title, day.activities)} 
-                              alt={day.day}
-                              className="rounded shadow-sm"
-                              style={{ 
-                                width: '120px', 
-                                height: '80px', 
-                                objectFit: 'cover',
-                                border: '3px solid white'
-                              }}
-                            />
-                          </div>
+                  {packageDetails[selectedPackage.name].program.map((day, index) => {
+                    const places = extractPlaces(day.activities);
+                    
+                    return (
+                      <div key={index} className="day-section mb-4">
+                        <div className="day-header bg-primary text-white p-3 rounded-top">
+                          <h4 className="mb-1">
+                            <i className="fa fa-calendar-day me-2"></i>
+                            {day.day}
+                          </h4>
+                          <p className="mb-0 fs-6">{day.title}</p>
+                        </div>
+                        
+                        <div className="day-content bg-light p-4 rounded-bottom">
+                          {places.length > 0 ? (
+                            <div className="places-grid">
+                              <div className="row g-3">
+                                {places.map((place, placeIndex) => (
+                                  <div key={placeIndex} className="col-md-6">
+                                    <div 
+                                      className="place-card cursor-pointer"
+                                      onClick={() => handlePlaceClick(place.name)}
+                                      style={{ cursor: 'pointer' }}
+                                    >
+                                      <div className="place-image-wrapper">
+                                        <img
+                                          src={place.image}
+                                          alt={place.name}
+                                          className="place-image"
+                                        />
+                                        <div className="place-overlay">
+                                          <i className="fa fa-eye text-white"></i>
+                                        </div>
+                                      </div>
+                                      <div className="place-info">
+                                        <h6 className="place-name mb-2">{place.name}</h6>
+                                        <button className="btn btn-sm btn-primary w-100">
+                                          <i className="fa fa-info-circle me-1"></i>
+                                          View Details
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="activities mb-3">
+                              <h5 className="text-secondary mb-3">
+                                <i className="fa fa-list me-2"></i>Activities
+                              </h5>
+                              <ul className="list-unstyled">
+                                {day.activities.map((activity, idx) => (
+                                  <li key={idx} className="mb-2 d-flex align-items-start">
+                                    <i className="fa fa-chevron-right text-primary me-2 mt-1"></i>
+                                    <span>{activity}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
                         </div>
                       </div>
-                      
-                      <div className="day-content bg-light p-4 rounded-bottom">
-                        <div className="activities mb-3">
-                          <h5 className="text-secondary mb-3">
-                            <i className="fa fa-list me-2"></i>Activities
-                          </h5>
-                          <ul className="list-unstyled">
-                            {day.activities.map((activity, idx) => (
-                              <li key={idx} className="mb-2 d-flex align-items-start">
-                                <i className="fa fa-chevron-right text-primary me-2 mt-1"></i>
-                                <span>{activity}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        {/* Place Details */}
-                        {Object.entries(day.details).map(([place, description]) => (
-                          <div key={place} className="place-details mb-3">
-                            <h6 className="text-primary fw-bold">
-                              <i className="fa fa-map-marker-alt me-2"></i>{place}
-                            </h6>
-                            <p className="text-muted" style={{ whiteSpace: 'pre-line' }}>
-                              {description}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
 
