@@ -731,80 +731,80 @@ function Destination() {
                 </div>
               </div>
 
-              {/* Detailed Itinerary with Place Cards */}
-              {packageDetails[selectedPackage.name] && (
-                <div className="program-details">
-                  <h3 className="text-primary mb-4">
-                    <i className="fa fa-route me-2"></i>Detailed Itinerary
-                  </h3>
-                  
-                  {packageDetails[selectedPackage.name].program.map((day, index) => {
-                    const places = extractPlaces(day.activities);
-                    
-                    return (
-                      <div key={index} className="day-section mb-4">
-                        <div className="day-header bg-primary text-white p-3 rounded-top">
-                          <h4 className="mb-1">
-                            <i className="fa fa-calendar-day me-2"></i>
-                            {day.day}
-                          </h4>
-                          <p className="mb-0 fs-6">{day.title}</p>
-                        </div>
-                        
-                        <div className="day-content bg-light p-4 rounded-bottom">
-                          {places.length > 0 ? (
-                            <div className="places-grid">
-                              <div className="row g-3">
-                                {places.map((place, placeIndex) => (
-                                  <div key={placeIndex} className="col-md-6">
-                                    <div 
-                                      className="place-card cursor-pointer"
-                                      onClick={() => handlePlaceClick(place.name)}
-                                      style={{ cursor: 'pointer' }}
-                                    >
-                                      <div className="place-image-wrapper">
-                                        <img
-                                          src={place.image}
-                                          alt={place.name}
-                                          className="place-image"
-                                        />
-                                        <div className="place-overlay">
-                                          <i className="fa fa-eye text-white"></i>
-                                        </div>
-                                      </div>
-                                      <div className="place-info">
-                                        <h6 className="place-name mb-2">{place.name}</h6>
-                                        <button className="btn btn-sm btn-primary w-100">
-                                          <i className="fa fa-info-circle me-1"></i>
-                                          View Details
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          ) : (
-                            <div className="activities mb-3">
-                              <h5 className="text-secondary mb-3">
-                                <i className="fa fa-list me-2"></i>Activities
-                              </h5>
-                              <ul className="list-unstyled">
-                                {day.activities.map((activity, idx) => (
-                                  <li key={idx} className="mb-2 d-flex align-items-start">
-                                    <i className="fa fa-chevron-right text-primary me-2 mt-1"></i>
-                                    <span>{activity}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
-                        </div>
+              {/* Detailed Itinerary with Place List */}
+{packageDetails[selectedPackage.name] && (
+  <div className="program-details">
+    <h3 className="text-primary mb-4">
+      <i className="fa fa-route me-2"></i>Detailed Itinerary
+    </h3>
+    
+    {packageDetails[selectedPackage.name].program.map((day, index) => {
+      const places = extractPlaces(day.activities);
+      
+      return (
+        <div key={index} className="day-section mb-4">
+          <div className="day-header bg-primary text-white p-3 rounded-top">
+            <h4 className="mb-1">
+              <i className="fa fa-calendar-day me-2"></i>
+              {day.day}
+            </h4>
+            <p className="mb-0 fs-6">{day.title}</p>
+          </div>
+          
+          <div className="day-content bg-light p-4 rounded-bottom">
+            {places.length > 0 ? (
+              <div className="places-list">
+                {places.map((place, placeIndex) => (
+                  <div 
+                    key={placeIndex} 
+                    className="place-item d-flex align-items-center justify-content-between mb-3 p-3 bg-white rounded shadow-sm"
+                    style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}
+                    onMouseEnter={(e) => e.currentTarget.style.transform = 'translateX(5px)'}
+                    onMouseLeave={(e) => e.currentTarget.style.transform = 'translateX(0)'}
+                  >
+                    <div className="d-flex align-items-center">
+                      <div 
+                        className="place-circle bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                        style={{ width: '40px', height: '40px', minWidth: '40px' }}
+                      >
+                        <i className="fa fa-map-marker-alt"></i>
                       </div>
-                    );
-                  })}
-                </div>
-              )}
+                      <div>
+                        <h6 className="mb-0 fw-semibold">{place.name}</h6>
+                      </div>
+                    </div>
+                    <button 
+                      className="btn btn-outline-primary btn-sm rounded-circle"
+                      onClick={() => handlePlaceClick(place.name)}
+                      style={{ width: '35px', height: '35px', padding: '0' }}
+                      title="View Details"
+                    >
+                      <i className="fa fa-plus"></i>
+                    </button>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="activities mb-3">
+                <h5 className="text-secondary mb-3">
+                  <i className="fa fa-list me-2"></i>Activities
+                </h5>
+                <ul className="list-unstyled">
+                  {day.activities.map((activity, idx) => (
+                    <li key={idx} className="mb-2 d-flex align-items-start">
+                      <i className="fa fa-chevron-right text-primary me-2 mt-1"></i>
+                      <span>{activity}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+)}
 
               {/* What's Included Section */}
               <div className="inclusions-section mt-5">

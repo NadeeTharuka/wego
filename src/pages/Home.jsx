@@ -467,6 +467,25 @@ export default function Home() {
       </div>
     </div>
     {/* Package End */}
+
+    {/* Enquire Now CTA Section */}
+<div className="container-xxl py-5">
+  <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-lg-8 text-center">
+        <div className="bg-primary bg-opacity-10 p-5 rounded">
+          <h3 className="mb-4">Ready to Plan Your Dream Vacation?</h3>
+          <p className="mb-4 text-muted">Let us help you create the perfect travel experience tailored to your preferences</p>
+          <a href="/booking"></a>
+          <a href="/booking" className="btn btn-primary btn-lg px-5 py-3">
+            <i className="fa fa-calendar-check me-2"></i>
+            Enquire Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     {/* Booking Start */}
     <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
       <div className="container">
