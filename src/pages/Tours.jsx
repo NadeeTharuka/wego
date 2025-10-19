@@ -111,7 +111,7 @@ const TourPackages = () => {
         </div>
       </div>
 
-     {/* Sri Lanka Map Section */}
+{/* Sri Lanka Map Section */}
 <div className="container-xxl py-5" style={{ background: 'linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%)' }}>
   <div className="container">
     <div className="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
@@ -169,19 +169,21 @@ const TourPackages = () => {
 
 {/* Center - Real Sri Lanka Map Image */}
 <div className="text-center" style={{ zIndex: 5 }}>
-  <img
-    src="/assets/img/sri-lanka-illustrated-map.png"
+  <img 
+    src="https://www.srilanka.travel/images/map-srilanka.png"
     alt="Sri Lanka Map"
-    style={{
-      width: "500px",
-      height: "auto",
+    onError={(e) => {
+      e.target.onerror = null;
+      e.target.src = "https://geology.com/world/sri-lanka-map.gif";
+    }}
+    style={{ 
+      width: "500px", 
+      height: "auto", 
       maxWidth: "100%",
       filter: "drop-shadow(0 10px 25px rgba(0,0,0,0.2))"
     }}
   />
 </div>
-
-
           {/* Right Side Features */}
           <div className="position-absolute" style={{ right: "5%", top: "20%", zIndex: 10 }}>
             <div className="feature-card text-center" style={{ width: "160px" }}>
