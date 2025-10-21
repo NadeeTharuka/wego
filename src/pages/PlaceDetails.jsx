@@ -7,12 +7,10 @@ function PlaceDetails() {
   const navigate = useNavigate();
   const placeName = location.state?.placeName;
 
-  // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Complete place details with updated images
   const allPlaceDetails = {
     "Colombo City Tour": {
       image: "https://images.unsplash.com/photo-1608482056615-c6e485096f2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
