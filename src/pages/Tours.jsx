@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./TourPackages.css";
 
 const TourPackages = () => {
   const navigate = useNavigate();
+  const [selectedFeature, setSelectedFeature] = useState(null);
 
   const sriLankaTourPackages = [
     {
@@ -56,41 +57,90 @@ const TourPackages = () => {
     }
   ];
 
-  const mapFeatures = [
-    {
-      name: "Popular Beaches",
+  const mapFeatures = {
+    "Popular Beaches": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200",
-      position: { top: "45%", left: "15%" }
+      position: { top: "45%", left: "15%" },
+      places: [
+        { name: "Mirissa Beach", position: { top: "72%", left: "18%" } },
+        { name: "Unawatuna Beach", position: { top: "70%", left: "28%" } },
+        { name: "Hikkaduwa Beach", position: { top: "65%", left: "20%" } },
+        { name: "Bentota Beach", position: { top: "58%", left: "22%" } },
+        { name: "Arugam Bay", position: { top: "68%", right: "12%" } },
+        { name: "Negombo Beach", position: { top: "48%", left: "18%" } },
+        { name: "Pasikudah Beach", position: { top: "52%", right: "8%" } },
+        { name: "Mount Lavinia", position: { top: "54%", left: "24%" } }
+      ]
     },
-    {
-      name: "Wildlife & Nature",
-      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=200",
-      position: { top: "60%", left: "25%" }
+    "Wildlife & Nature": {
+      image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=200",
+      position: { top: "60%", left: "25%" },
+      places: [
+        { name: "Yala National Park", position: { top: "75%", left: "38%" } },
+        { name: "Udawalawe Park", position: { top: "68%", left: "32%" } },
+        { name: "Minneriya Park", position: { top: "40%", left: "35%" } },
+        { name: "Horton Plains", position: { top: "58%", left: "34%" } },
+        { name: "Sinharaja Forest", position: { top: "64%", left: "26%" } },
+        { name: "Bundala Park", position: { top: "78%", left: "35%" } }
+      ]
     },
-    {
-      name: "Adventure",
+    "Adventure": {
       image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=200",
-      position: { top: "35%", left: "35%" }
+      position: { top: "35%", left: "35%" },
+      places: [
+        { name: "Ella Rock Hiking", position: { top: "62%", left: "36%" } },
+        { name: "Adam's Peak", position: { top: "56%", left: "30%" } },
+        { name: "Kitulgala Rafting", position: { top: "52%", left: "28%" } },
+        { name: "Knuckles Range", position: { top: "46%", left: "32%" } },
+        { name: "Hot Air Ballooning", position: { top: "42%", left: "33%" } }
+      ]
     },
-    {
-      name: "History & Culture",
+    "History & Culture": {
       image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=200",
-      position: { top: "25%", right: "25%" }
+      position: { top: "25%", right: "25%" },
+      places: [
+        { name: "Sigiriya Rock", position: { top: "40%", left: "34%" } },
+        { name: "Dambulla Temple", position: { top: "42%", left: "32%" } },
+        { name: "Anuradhapura", position: { top: "32%", left: "32%" } },
+        { name: "Polonnaruwa", position: { top: "38%", left: "38%" } },
+        { name: "Temple of Tooth", position: { top: "50%", left: "32%" } },
+        { name: "Galle Fort", position: { top: "70%", left: "26%" } }
+      ]
     },
-    {
-      name: "Lesser Travelled",
+    "Lesser Travelled": {
       image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=200",
-      position: { top: "50%", right: "20%" }
+      position: { top: "50%", right: "20%" },
+      places: [
+        { name: "Jaffna", position: { top: "12%", left: "35%" } },
+        { name: "Trincomalee", position: { top: "35%", right: "10%" } },
+        { name: "Mannar Island", position: { top: "25%", left: "25%" } },
+        { name: "Batticaloa", position: { top: "48%", right: "12%" } },
+        { name: "Mullaitivu", position: { top: "18%", left: "35%" } }
+      ]
     },
-    {
-      name: "Gastronomy",
-      image: "https://images.unsplash.com/photo-1596040033229-a0b3b83f6258?w=200",
-      position: { top: "70%", right: "30%" }
+    "Gastronomy": {
+      image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=200",
+      position: { top: "70%", right: "30%" },
+      places: [
+        { name: "Colombo Food St", position: { top: "54%", left: "28%" } },
+        { name: "Galle Restaurants", position: { top: "70%", left: "24%" } },
+        { name: "Jaffna Crab Curry", position: { top: "12%", left: "38%" } },
+        { name: "Matale Spices", position: { top: "46%", left: "31%" } },
+        { name: "Negombo Seafood", position: { top: "48%", left: "20%" } }
+      ]
     }
-  ];
+  };
 
   const handleViewPackage = (pkg) => {
     navigate('/destination', { state: { package: pkg } });
+  };
+
+  const handleFeatureHover = (featureName) => {
+    setSelectedFeature(featureName);
+  };
+
+  const handleFeatureLeave = () => {
+    setSelectedFeature(null);
   };
 
   return (
@@ -111,127 +161,232 @@ const TourPackages = () => {
         </div>
       </div>
 
-{/* Sri Lanka Map Section */}
-<div className="container-xxl py-5" style={{ background: 'linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%)' }}>
-  <div className="container">
-    <div className="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
-      <h6 className="section-title bg-white text-center text-primary px-3">Our Island</h6>
-      <h1 className="mb-3">Sri Lanka</h1>
-      <p className="text-muted">Discover the pearl of the Indian Ocean</p>
-    </div>
-    
-    <div className="row justify-content-center">
-      <div className="col-lg-12">
-        <div className="position-relative d-flex justify-content-center align-items-center" style={{ minHeight: "800px", padding: "4rem 0" }}>
+      {/* Interactive Sri Lanka Map Section */}
+      <div className="container-xxl py-5" style={{ background: 'linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%)' }}>
+        <div className="container">
+          <div className="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
+            <h6 className="section-title bg-white text-center text-primary px-3">Our Island</h6>
+            <h1 className="mb-3">Sri Lanka</h1>
+            <p className="text-muted">Discover the pearl of the Indian Ocean - Hover over features to explore destinations</p>
+          </div>
           
-          {/* Left Side Features */}
-          <div className="position-absolute" style={{ left: "5%", top: "20%", zIndex: 10 }}>
-            <div className="feature-card text-center" style={{ width: "160px" }}>
-              <div className="feature-image-wrapper mb-2">
-                <img
-                  src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=300"
-                  alt="Popular Beaches"
-                  className="rounded-circle shadow"
-                  style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
-                />
+          <div className="row justify-content-center">
+            <div className="col-lg-12">
+              <div className="position-relative d-flex justify-content-center align-items-center" style={{ minHeight: "900px", padding: "4rem 0" }}>
+                
+                {/* Left Side Features */}
+                <div 
+                  className="position-absolute interactive-feature" 
+                  style={{ left: "5%", top: "20%", zIndex: 10 }}
+                  onMouseEnter={() => handleFeatureHover("Popular Beaches")}
+                  onMouseLeave={handleFeatureLeave}
+                >
+                  <div className="feature-card text-center" style={{ width: "160px", cursor: "pointer" }}>
+                    <div className="feature-image-wrapper mb-2">
+                      <img
+                        src={mapFeatures["Popular Beaches"].image}
+                        alt="Popular Beaches"
+                        className="rounded-circle shadow"
+                        style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
+                      />
+                    </div>
+                    <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Popular Beaches</h6>
+                  </div>
+                </div>
+
+                <div 
+                  className="position-absolute interactive-feature" 
+                  style={{ left: "3%", top: "48%", zIndex: 10 }}
+                  onMouseEnter={() => handleFeatureHover("Wildlife & Nature")}
+                  onMouseLeave={handleFeatureLeave}
+                >
+                  <div className="feature-card text-center" style={{ width: "160px", cursor: "pointer" }}>
+                    <div className="feature-image-wrapper mb-2">
+                      <img
+                        src={mapFeatures["Wildlife & Nature"].image}
+                        alt="Wildlife & Nature"
+                        className="rounded-circle shadow"
+                        style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
+                      />
+                    </div>
+                    <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Wildlife & Nature</h6>
+                  </div>
+                </div>
+
+                <div 
+                  className="position-absolute interactive-feature" 
+                  style={{ left: "12%", bottom: "5%", zIndex: 10 }}
+                  onMouseEnter={() => handleFeatureHover("Adventure")}
+                  onMouseLeave={handleFeatureLeave}
+                >
+                  <div className="feature-card text-center" style={{ width: "160px", cursor: "pointer" }}>
+                    <div className="feature-image-wrapper mb-2">
+                      <img
+                        src={mapFeatures["Adventure"].image}
+                        alt="Adventure"
+                        className="rounded-circle shadow"
+                        style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
+                      />
+                    </div>
+                    <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Adventure</h6>
+                  </div>
+                </div>
+
+                {/* Center - Real Sri Lanka Map Image */}
+                <div className="text-center" style={{ zIndex: 5, position: "relative" }}>
+                  <img 
+                    src="https://www.srilanka.travel/images/map-srilanka.png"
+                    alt="Sri Lanka Map"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = "https://geology.com/world/sri-lanka-map.gif";
+                    }}
+                    style={{ 
+                      width: "500px", 
+                      height: "auto", 
+                      maxWidth: "100%",
+                      filter: "drop-shadow(0 10px 25px rgba(0,0,0,0.2))"
+                    }}
+                  />
+
+                  {/* Show place markers when feature is selected */}
+                  {selectedFeature && (
+                    <div className="places-overlay">
+                      {mapFeatures[selectedFeature].places.map((place, index) => (
+                        <div
+                          key={index}
+                          className="place-marker"
+                          style={{
+                            position: "absolute",
+                            ...place.position,
+                            transform: "translate(-50%, -50%)",
+                            zIndex: 20,
+                            animation: `placePopIn 0.4s ease-out ${index * 0.1}s both`
+                          }}
+                        >
+                          <div 
+                            className="place-pin"
+                            style={{
+                              background: "linear-gradient(135deg, #06A3DA, #0585B3)",
+                              color: "white",
+                              padding: "6px 12px",
+                              borderRadius: "20px",
+                              fontSize: "0.7rem",
+                              fontWeight: "700",
+                              whiteSpace: "nowrap",
+                              boxShadow: "0 4px 15px rgba(6, 163, 218, 0.5)",
+                              border: "2px solid white",
+                              position: "relative"
+                            }}
+                          >
+                            <i className="fa fa-map-marker-alt me-1"></i>
+                            {place.name}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Right Side Features */}
+                <div 
+                  className="position-absolute interactive-feature" 
+                  style={{ right: "5%", top: "20%", zIndex: 10 }}
+                  onMouseEnter={() => handleFeatureHover("History & Culture")}
+                  onMouseLeave={handleFeatureLeave}
+                >
+                  <div className="feature-card text-center" style={{ width: "160px", cursor: "pointer" }}>
+                    <div className="feature-image-wrapper mb-2">
+                      <img
+                        src={mapFeatures["History & Culture"].image}
+                        alt="History & Culture"
+                        className="rounded-circle shadow"
+                        style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
+                      />
+                    </div>
+                    <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>History & Culture</h6>
+                  </div>
+                </div>
+
+                <div 
+                  className="position-absolute interactive-feature" 
+                  style={{ right: "3%", top: "48%", zIndex: 10 }}
+                  onMouseEnter={() => handleFeatureHover("Lesser Travelled")}
+                  onMouseLeave={handleFeatureLeave}
+                >
+                  <div className="feature-card text-center" style={{ width: "160px", cursor: "pointer" }}>
+                    <div className="feature-image-wrapper mb-2">
+                      <img
+                        src={mapFeatures["Lesser Travelled"].image}
+                        alt="Lesser Travelled"
+                        className="rounded-circle shadow"
+                        style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
+                      />
+                    </div>
+                    <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Lesser Travelled</h6>
+                  </div>
+                </div>
+
+                <div 
+                  className="position-absolute interactive-feature" 
+                  style={{ right: "12%", bottom: "5%", zIndex: 10 }}
+                  onMouseEnter={() => handleFeatureHover("Gastronomy")}
+                  onMouseLeave={handleFeatureLeave}
+                >
+                  <div className="feature-card text-center" style={{ width: "160px", cursor: "pointer" }}>
+                    <div className="feature-image-wrapper mb-2">
+                      <img
+                        src={mapFeatures["Gastronomy"].image}
+                        alt="Gastronomy"
+                        className="rounded-circle shadow"
+                        style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
+                      />
+                    </div>
+                    <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Gastronomy</h6>
+                  </div>
+                </div>
+
               </div>
-              <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Popular Beaches</h6>
             </div>
           </div>
 
-          <div className="position-absolute" style={{ left: "3%", top: "48%", zIndex: 10 }}>
-            <div className="feature-card text-center" style={{ width: "160px" }}>
-              <div className="feature-image-wrapper mb-2">
-                <img
-                  src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=300"
-                  alt="Wildlife & Nature"
-                  className="rounded-circle shadow"
-                  style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
-                />
+          {/* Selected Feature Places List */}
+          {selectedFeature && (
+            <div className="row justify-content-center mt-4">
+              <div className="col-lg-10">
+                <div className="alert alert-info text-center" style={{ 
+                  background: "linear-gradient(135deg, #06A3DA 0%, #0585B3 100%)",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "15px",
+                  boxShadow: "0 4px 20px rgba(6, 163, 218, 0.3)"
+                }}>
+                  <h5 className="mb-3">
+                    <i className="fa fa-info-circle me-2"></i>
+                    Exploring: {selectedFeature}
+                  </h5>
+                  <div className="d-flex flex-wrap justify-content-center gap-2">
+                    {mapFeatures[selectedFeature].places.map((place, index) => (
+                      <span 
+                        key={index} 
+                        className="badge bg-white text-primary"
+                        style={{ 
+                          padding: "8px 15px", 
+                          fontSize: "0.9rem",
+                          fontWeight: "600"
+                        }}
+                      >
+                        <i className="fa fa-map-marker-alt me-1"></i>
+                        {place.name}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Wildlife & Nature</h6>
             </div>
-          </div>
-
-          <div className="position-absolute" style={{ left: "12%", bottom: "8%", zIndex: 10 }}>
-            <div className="feature-card text-center" style={{ width: "160px" }}>
-              <div className="feature-image-wrapper mb-2">
-                <img
-                  src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=300"
-                  alt="Adventure"
-                  className="rounded-circle shadow"
-                  style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
-                />
-              </div>
-              <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Adventure</h6>
-            </div>
-          </div>
-
-{/* Center - Real Sri Lanka Map Image */}
-<div className="text-center" style={{ zIndex: 5 }}>
-  <img 
-    src="https://www.srilanka.travel/images/map-srilanka.png"
-    alt="Sri Lanka Map"
-    onError={(e) => {
-      e.target.onerror = null;
-      e.target.src = "https://geology.com/world/sri-lanka-map.gif";
-    }}
-    style={{ 
-      width: "500px", 
-      height: "auto", 
-      maxWidth: "100%",
-      filter: "drop-shadow(0 10px 25px rgba(0,0,0,0.2))"
-    }}
-  />
-</div>
-          {/* Right Side Features */}
-          <div className="position-absolute" style={{ right: "5%", top: "20%", zIndex: 10 }}>
-            <div className="feature-card text-center" style={{ width: "160px" }}>
-              <div className="feature-image-wrapper mb-2">
-                <img
-                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=300"
-                  alt="History & Culture"
-                  className="rounded-circle shadow"
-                  style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
-                />
-              </div>
-              <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>History & Culture</h6>
-            </div>
-          </div>
-
-          <div className="position-absolute" style={{ right: "3%", top: "48%", zIndex: 10 }}>
-            <div className="feature-card text-center" style={{ width: "160px" }}>
-              <div className="feature-image-wrapper mb-2">
-                <img
-                  src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=300"
-                  alt="Lesser Travelled"
-                  className="rounded-circle shadow"
-                  style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
-                />
-              </div>
-              <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Lesser Travelled</h6>
-            </div>
-          </div>
-
-          <div className="position-absolute" style={{ right: "12%", bottom: "8%", zIndex: 10 }}>
-            <div className="feature-card text-center" style={{ width: "160px" }}>
-              <div className="feature-image-wrapper mb-2">
-                <img
-                  src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=300"
-                  alt="Gastronomy"
-                  className="rounded-circle shadow"
-                  style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
-                />
-              </div>
-              <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Gastronomy</h6>
-            </div>
-          </div>
-
+          )}
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
       {/* Tour Packages Section */}
       <section className="tour-packages py-5">

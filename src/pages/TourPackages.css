@@ -223,10 +223,24 @@
     margin: 0;
 }
 
-/* Map Section Styles */
+/* Interactive Map Section Styles */
 .map-container {
   position: relative;
   padding: 2rem 0;
+}
+
+.interactive-feature {
+  transition: all 0.3s ease;
+}
+
+.interactive-feature:hover .feature-card {
+  transform: scale(1.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
+}
+
+.interactive-feature:hover .feature-image-wrapper img {
+  border-color: #06A3DA !important;
+  box-shadow: 0 0 0 4px rgba(6, 163, 218, 0.3);
 }
 
 .feature-marker {
@@ -254,6 +268,7 @@
   display: inline-block;
   white-space: nowrap;
 }
+
 /* Feature Cards - No Overlap */
 .feature-card {
   animation: fadeInUp 0.8s ease-out;
@@ -261,6 +276,7 @@
   background: rgba(255, 255, 255, 0.95);
   padding: 10px;
   border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .feature-card h6 {
@@ -283,75 +299,51 @@
   border-color: #06A3DA !important;
 }
 
-@media (max-width: 1200px) {
-  .position-absolute[style*="left"] {
-    left: 2% !important;
+/* Place Markers on Map */
+.place-marker {
+  animation: placePopIn 0.4s ease-out;
+}
+
+.place-pin {
+  position: relative;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.place-pin::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid #06A3DA;
+}
+
+/* Animations */
+@keyframes placePopIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
   }
-  
-  .position-absolute[style*="right"] {
-    right: 2% !important;
+  60% {
+    transform: translate(-50%, -50%) scale(1.1);
   }
-  
-  .feature-card {
-    width: 140px !important;
-  }
-  
-  .feature-image-wrapper img {
-    width: 75px !important;
-    height: 75px !important;
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
-@media (max-width: 768px) {
-  .position-absolute[style*="bottom"] {
-    display: none;
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  .text-center img[alt="Sri Lanka Map"] {
-    width: 250px !important;
+  50% {
+    transform: translateY(-5px);
   }
-}
-
-/* Responsive adjustments for map */
-@media (max-width: 1200px) {
-  .position-absolute[style*="left"] {
-    left: 5% !important;
-  }
-  
-  .position-absolute[style*="right"] {
-    right: 5% !important;
-  }
-}
-
-@media (max-width: 992px) {
-  .feature-card {
-    width: 140px !important;
-  }
-  
-  .feature-image-wrapper img {
-    width: 80px !important;
-    height: 80px !important;
-  }
-  
-  .feature-card h6 {
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .position-absolute[style*="bottom"] {
-    display: none;
-  }
-  
-  svg {
-    width: 200px !important;
-    height: 350px !important;
-  }
-}
-
-/* SVG Map Animation */
-svg path {
-  animation: fadeIn 1s ease-out;
 }
 
 @keyframes fadeIn {
@@ -376,8 +368,69 @@ svg path {
   }
 }
 
-/* Responsive map adjustments */
+/* SVG Map Animation */
+svg path {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Responsive adjustments for map */
+@media (max-width: 1200px) {
+  .position-absolute[style*="left"] {
+    left: 2% !important;
+  }
+  
+  .position-absolute[style*="right"] {
+    right: 2% !important;
+  }
+  
+  .feature-card {
+    width: 140px !important;
+  }
+  
+  .feature-image-wrapper img {
+    width: 75px !important;
+    height: 75px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .feature-card {
+    width: 140px !important;
+  }
+  
+  .feature-image-wrapper img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .feature-card h6 {
+    font-size: 0.85rem;
+  }
+
+  .place-pin {
+    font-size: 0.65rem !important;
+    padding: 6px 10px !important;
+  }
+}
+
 @media (max-width: 768px) {
+  .position-absolute[style*="bottom"] {
+    display: none;
+  }
+  
+  .text-center img[alt="Sri Lanka Map"] {
+    width: 250px !important;
+  }
+
+  .place-marker {
+    font-size: 0.6rem;
+  }
+
+  .place-pin {
+    padding: 5px 8px !important;
+    font-size: 0.6rem !important;
+  }
+
   .feature-circle {
     width: 60px !important;
     height: 60px !important;
@@ -431,4 +484,21 @@ svg path {
   .package-title {
     font-size: 1rem;
   }
+}
+
+/* Pulse effect for interactive features */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(6, 163, 218, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(6, 163, 218, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(6, 163, 218, 0);
+  }
+}
+
+.interactive-feature:hover {
+  animation: pulse 1.5s infinite;
 }
