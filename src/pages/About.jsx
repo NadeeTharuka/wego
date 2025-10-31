@@ -15,9 +15,6 @@ function About() {
               <li className="breadcrumb-item">
                 <a href="/">Home</a>
               </li>
-              {/* <li className="breadcrumb-item">
-                <a href="/Pages">Pages</a>
-              </li> */}
               <li
                 className="breadcrumb-item text-white active"
                 aria-current="page"
@@ -57,20 +54,18 @@ function About() {
               Welcome to <span className="text-primary">Opulent Tours</span>
             </h1>
             <p className="mb-4">
-            🌏 “Opulent” based in Kalutara, Sri Lanka, brings 15 years of travel expertise to life with a young and creative team. Specializing in unforgettable trips across Sri Lanka, India, and Thailand, Wego offers a wide range of travel experiences, from exotic getaways to thrilling adventures.
-</p>
-            <p className="mb-4">
-🛫 Discover your next adventure with us! Opulent, a renowned travel agency based in Kalutara, Sri Lanka, combines 15 years of industry expertise with the fresh energy of a young, innovative team to create exceptional travel experiences. Our passion is to transform your travel dreams into reality by offering a wide range of tailored journeys. From the pristine beaches of Sri Lanka to the vibrant cultures of India and the tropical beauty of Thailand, we specialize in curating unforgettable trips that cater to every kind of traveler. Whether you're seeking a luxurious escape to a tranquil island, an exhilarating adventure through dense rainforests, or an immersive cultural tour through ancient cities, Wego has something for everyone. Our diverse offerings range from exotic getaways in paradise locations to adrenaline-pumping experiences, all meticulously planned to ensure a seamless and stress-free journey.
-</p>
-
-<p className="mb-4">
-⛺ At Opulent, we believe that travel is more than just visiting a destination—it's about creating memories that last a lifetime. Our dedicated team is committed to providing personalized services, from custom itineraries to insider recommendations, ensuring that every trip you take with us is truly one-of-a-kind.
-</p>
-
-            
-            <p className="mb-4">
-            🚁 Let us help you discover new horizons, explore hidden gems, and embark on adventures that will leave you enriched and inspired. Your next extraordinary journey awaits with Opulent!
+              Welcome to Opulent Tours, your gateway to Sri Lanka, a tropical island that captivates travelers with its golden beaches, misty mountains, ancient cities, and the genuine warmth of its people. A land where culture, nature, and adventure blend beautifully, Sri Lanka promises unforgettable experiences at every turn.
             </p>
+            <p className="mb-4">
+              Based in Kalutara, Opulent Tours proudly stands as a leading Sri Lankan travel company, with over 15 years of experience in crafting unforgettable travel experiences. Our young and creative team combines local expertise with modern innovation, ensuring every journey is crafted with care, comfort, and a touch of luxury.
+            </p>
+            <p className="mb-4">
+              We design exceptional tours not only across Sri Lanka, but also to India and Thailand, offering everything from exotic getaways and cultural escapes to thrilling adventures. Each itinerary is tailor-made to reflect your style — whether you seek relaxation, exploration, or indulgence.
+            </p>
+            <p className="mb-4" style={{ fontWeight: '600', color: '#086AD8' }}>
+              At Opulent Tours, we believe travel should be as extraordinary as the destinations themselves.
+            </p>
+
             <div className="row gy-2 gx-4 mb-4">
               <div className="col-sm-6">
                 <p className="mb-0">
@@ -99,7 +94,7 @@ function About() {
               <div className="col-sm-6">
                 <p className="mb-0">
                   <i className="fa fa-arrow-right text-primary me-2" />
-                  150 Premium City Tours
+                  Professional Tour Guides
                 </p>
               </div>
               <div className="col-sm-6">
