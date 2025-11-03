@@ -1,3 +1,5 @@
+// src/pages/Tours.jsx
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./TourPackages.css";
@@ -145,6 +147,7 @@ const TourPackages = () => {
 
   return (
     <div>
+      {/* Hero Header */}
       <div className="container-fluid bg-primary py-5 mb-5 hero-header">
         <div className="container py-5">
           <div className="row justify-content-center py-5">
@@ -232,22 +235,132 @@ const TourPackages = () => {
                   </div>
                 </div>
 
-                {/* Center - Real Sri Lanka Map Image */}
+                {/* Center - Local Topographical Sri Lanka Map */}
                 <div className="text-center" style={{ zIndex: 5, position: "relative" }}>
                   <img 
-                    src="https://www.srilanka.travel/images/map-srilanka.png"
-                    alt="Sri Lanka Map"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = "https://geology.com/world/sri-lanka-map.gif";
-                    }}
+                    src="/assets/img/91a5c3ff-7781-4f6e-a4ff-cbe8d3bc8d20.png"
+                    alt="Sri Lanka Topographical Map"
                     style={{ 
                       width: "500px", 
                       height: "auto", 
                       maxWidth: "100%",
-                      filter: "drop-shadow(0 10px 25px rgba(0,0,0,0.2))"
+                      filter: "drop-shadow(0 10px 25px rgba(0,0,0,0.2))",
+                      borderRadius: "10px"
                     }}
                   />
+
+                  {/* Highlighted Areas for Features */}
+                  {selectedFeature && (
+                    <>
+                      {/* Popular Beaches - South & West Coast Highlight */}
+                      {selectedFeature === "Popular Beaches" && (
+                        <div 
+                          className="map-highlight beach-highlight"
+                          style={{
+                            position: "absolute",
+                            bottom: "15%",
+                            left: "5%",
+                            width: "40%",
+                            height: "50%",
+                            background: "radial-gradient(circle, rgba(6, 163, 218, 0.3) 0%, rgba(6, 163, 218, 0.1) 50%, transparent 70%)",
+                            borderRadius: "50%",
+                            animation: "pulseGlow 2s ease-in-out infinite",
+                            pointerEvents: "none"
+                          }}
+                        />
+                      )}
+
+                      {/* Wildlife & Nature - Central & South Highlight */}
+                      {selectedFeature === "Wildlife & Nature" && (
+                        <div 
+                          className="map-highlight wildlife-highlight"
+                          style={{
+                            position: "absolute",
+                            top: "45%",
+                            left: "25%",
+                            width: "50%",
+                            height: "45%",
+                            background: "radial-gradient(ellipse, rgba(76, 175, 80, 0.3) 0%, rgba(76, 175, 80, 0.15) 40%, transparent 70%)",
+                            borderRadius: "50%",
+                            animation: "pulseGlow 2s ease-in-out infinite",
+                            pointerEvents: "none"
+                          }}
+                        />
+                      )}
+
+                      {/* Adventure - Central Highlands Highlight */}
+                      {selectedFeature === "Adventure" && (
+                        <div 
+                          className="map-highlight adventure-highlight"
+                          style={{
+                            position: "absolute",
+                            top: "35%",
+                            left: "30%",
+                            width: "35%",
+                            height: "35%",
+                            background: "radial-gradient(circle, rgba(255, 152, 0, 0.35) 0%, rgba(255, 152, 0, 0.15) 45%, transparent 70%)",
+                            borderRadius: "50%",
+                            animation: "pulseGlow 2s ease-in-out infinite",
+                            pointerEvents: "none"
+                          }}
+                        />
+                      )}
+
+                      {/* History & Culture - Cultural Triangle Highlight */}
+                      {selectedFeature === "History & Culture" && (
+                        <div 
+                          className="map-highlight culture-highlight"
+                          style={{
+                            position: "absolute",
+                            top: "25%",
+                            left: "28%",
+                            width: "45%",
+                            height: "40%",
+                            background: "radial-gradient(ellipse, rgba(156, 39, 176, 0.3) 0%, rgba(156, 39, 176, 0.15) 45%, transparent 70%)",
+                            borderRadius: "50%",
+                            animation: "pulseGlow 2s ease-in-out infinite",
+                            pointerEvents: "none"
+                          }}
+                        />
+                      )}
+
+                      {/* Lesser Travelled - North & East Highlight */}
+                      {selectedFeature === "Lesser Travelled" && (
+                        <div 
+                          className="map-highlight remote-highlight"
+                          style={{
+                            position: "absolute",
+                            top: "10%",
+                            left: "30%",
+                            width: "50%",
+                            height: "50%",
+                            background: "radial-gradient(ellipse, rgba(103, 58, 183, 0.3) 0%, rgba(103, 58, 183, 0.15) 45%, transparent 70%)",
+                            borderRadius: "50%",
+                            animation: "pulseGlow 2s ease-in-out infinite",
+                            pointerEvents: "none"
+                          }}
+                        />
+                      )}
+
+                      {/* Gastronomy - All Over Highlight */}
+                      {selectedFeature === "Gastronomy" && (
+                        <div 
+                          className="map-highlight gastronomy-highlight"
+                          style={{
+                            position: "absolute",
+                            top: "35%",
+                            left: "20%",
+                            width: "60%",
+                            height: "50%",
+                            background: "radial-gradient(ellipse, rgba(255, 87, 34, 0.3) 0%, rgba(255, 87, 34, 0.15) 50%, transparent 70%)",
+                            borderRadius: "50%",
+                            animation: "pulseGlow 2s ease-in-out infinite",
+                            pointerEvents: "none"
+                          }}
+                        />
+                      )}
+                    </>
+                  )}
 
                   {/* Show place markers when feature is selected */}
                   {selectedFeature && (

@@ -502,3 +502,176 @@ svg path {
 .interactive-feature:hover {
   animation: pulse 1.5s infinite;
 }
+
+
+/* Map Highlight Areas Animation */
+.map-highlight {
+  transition: all 0.5s ease-in-out;
+  z-index: 3;
+}
+
+/* Pulsing Glow Animation */
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+}
+
+/* Beach Highlight - Coastal Shimmer Effect */
+.beach-highlight {
+  animation: pulseGlow 2s ease-in-out infinite, waveShimmer 3s ease-in-out infinite;
+}
+
+@keyframes waveShimmer {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(6, 163, 218, 0.4), 
+                0 0 40px rgba(6, 163, 218, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(6, 163, 218, 0.6), 
+                0 0 60px rgba(6, 163, 218, 0.3);
+  }
+}
+
+/* Wildlife Highlight - Nature Pulse Effect */
+.wildlife-highlight {
+  animation: pulseGlow 2s ease-in-out infinite, naturePulse 4s ease-in-out infinite;
+}
+
+@keyframes naturePulse {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(76, 175, 80, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(76, 175, 80, 0.6);
+  }
+}
+
+/* Adventure Highlight - Mountain Peak Effect */
+.adventure-highlight {
+  animation: pulseGlow 2s ease-in-out infinite, mountainGlow 3s ease-in-out infinite;
+}
+
+@keyframes mountainGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.5), 
+                inset 0 0 20px rgba(255, 152, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 152, 0, 0.7), 
+                inset 0 0 30px rgba(255, 152, 0, 0.3);
+  }
+}
+
+/* Culture Highlight - Ancient Aura Effect */
+.culture-highlight {
+  animation: pulseGlow 2s ease-in-out infinite, ancientAura 3.5s ease-in-out infinite;
+}
+
+@keyframes ancientAura {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(156, 39, 176, 0.4), 
+                0 0 50px rgba(156, 39, 176, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(156, 39, 176, 0.6), 
+                0 0 70px rgba(156, 39, 176, 0.3);
+  }
+}
+
+/* Remote Areas Highlight - Mystical Glow */
+.remote-highlight {
+  animation: pulseGlow 2s ease-in-out infinite, mysticalGlow 4s ease-in-out infinite;
+}
+
+@keyframes mysticalGlow {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(103, 58, 183, 0.5);
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(103, 58, 183, 0.7);
+    filter: brightness(1.2);
+  }
+}
+
+/* Gastronomy Highlight - Flavorful Burst Effect */
+.gastronomy-highlight {
+  animation: pulseGlow 2s ease-in-out infinite, flavorBurst 3s ease-in-out infinite;
+}
+
+@keyframes flavorBurst {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(255, 87, 34, 0.5), 
+                0 0 45px rgba(255, 87, 34, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 87, 34, 0.7), 
+                0 0 70px rgba(255, 87, 34, 0.4);
+  }
+}
+
+/* Enhanced Interactive Feature Hover Effects */
+.interactive-feature {
+  transition: all 0.3s ease;
+}
+
+.interactive-feature:hover {
+  transform: scale(1.05);
+}
+
+.interactive-feature:hover .feature-card {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
+  transform: translateY(-5px);
+}
+
+/* Ripple Effect on Feature Selection */
+@keyframes rippleEffect {
+  0% {
+    box-shadow: 0 0 0 0 rgba(6, 163, 218, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(6, 163, 218, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 40px rgba(6, 163, 218, 0);
+  }
+}
+
+/* Add ripple to feature cards when selected */
+.feature-card.active {
+  animation: rippleEffect 1.5s ease-out infinite;
+}
+
+/* Smooth transitions for all highlights */
+.map-highlight {
+  will-change: transform, opacity;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .map-highlight {
+    opacity: 0.7;
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.03);
+    }
+  }
+}
