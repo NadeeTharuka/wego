@@ -1,0 +1,116 @@
+/* ============================================
+   OPULENT TOURS - GLOBAL STYLES
+   FILE: src/index.css (CREATE THIS FILE)
+   ============================================ */
+
+/* ========================================
+   1. LOGO AND TITLE STYLING - BLUE COLOR
+   ======================================== */
+
+/* Change "Opulent Tours" text color to blue */
+.navbar-brand,
+.navbar-brand h1,
+.navbar-brand .text-primary {
+    color: #086AD8 !important;
+}
+
+/* Add spacing between logo and "Opulent Tours" text */
+.navbar-brand h1 {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin: 0 !important;
+}
+
+.navbar-brand h1 img {
+    margin-right: 0 !important;
+}
+
+/* Override any green colors */
+.text-success {
+    color: #086AD8 !important;
+}
+
+/* Ensure all primary colors use blue theme */
+.text-primary {
+    color: #086AD8 !important;
+}
+
+.btn-primary {
+    background-color: #086AD8 !important;
+    border-color: #086AD8 !important;
+}
+
+.btn-primary:hover {
+    background-color: #0651A8 !important;
+    border-color: #0651A8 !important;
+}
+
+.bg-primary {
+    background-color: #086AD8 !important;
+}
+
+/* ========================================
+   2. ENHANCED MAP IMAGE QUALITY
+   ======================================== */
+
+img[alt*="Sri Lanka"],
+img[alt*="Map"],
+img[src*="91a5c3ff-7781-4f6e-a4ff-cbe8d3bc8d20"] {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    filter: contrast(1.15) brightness(1.08) saturate(1.1) drop-shadow(0 10px 25px rgba(0,0,0,0.2));
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* ========================================
+   3. RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 992px) {
+    .navbar-brand h1 {
+        gap: 10px !important;
+        font-size: 1.5rem !important;
+    }
+    
+    .navbar-brand h1 img {
+        max-width: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand h1 {
+        gap: 8px !important;
+        font-size: 1.2rem !important;
+    }
+    
+    .navbar-brand h1 img {
+        max-width: 40px;
+    }
+    
+    img[alt*="Sri Lanka Map"] {
+        width: 280px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand h1 {
+        gap: 6px !important;
+        font-size: 1rem !important;
+    }
+}
+
+/* ========================================
+   4. HIGH DPI / RETINA DISPLAY
+   ======================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi) {
+    img[alt*="Sri Lanka"],
+    img[alt*="Map"] {
+        filter: contrast(1.2) brightness(1.1) saturate(1.15);
+    }
+}
