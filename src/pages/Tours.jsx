@@ -57,76 +57,115 @@ const TourPackages = () => {
     }
   ];
 
+  // ACCURATE MAP COORDINATES - Based on real Sri Lanka geography
   const mapFeatures = {
     "Popular Beaches": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200",
-      position: { top: "45%", left: "15%" },
+      highlightArea: {
+        // West & South coast beaches
+        top: "48%",
+        left: "8%",
+        width: "35%",
+        height: "48%"
+      },
       places: [
-        { name: "Mirissa Beach", position: { top: "72%", left: "18%" } },
-        { name: "Unawatuna Beach", position: { top: "70%", left: "28%" } },
-        { name: "Hikkaduwa Beach", position: { top: "65%", left: "20%" } },
-        { name: "Bentota Beach", position: { top: "58%", left: "22%" } },
-        { name: "Arugam Bay", position: { top: "68%", right: "12%" } },
-        { name: "Negombo Beach", position: { top: "48%", left: "18%" } },
-        { name: "Pasikudah Beach", position: { top: "52%", right: "8%" } },
-        { name: "Mount Lavinia", position: { top: "54%", left: "24%" } }
+        { name: "Negombo", position: { top: "48%", left: "20%" } },
+        { name: "Mount Lavinia", position: { top: "53%", left: "22%" } },
+        { name: "Bentota", position: { top: "58%", left: "20%" } },
+        { name: "Hikkaduwa", position: { top: "63%", left: "21%" } },
+        { name: "Unawatuna", position: { top: "69%", left: "25%" } },
+        { name: "Mirissa", position: { top: "72%", left: "23%" } },
+        { name: "Tangalle", position: { top: "76%", left: "28%" } },
+        { name: "Arugam Bay", position: { top: "70%", right: "14%" } }
       ]
     },
     "Wildlife & Nature": {
       image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=200",
-      position: { top: "60%", left: "25%" },
+      highlightArea: {
+        // South and Southeast - National Parks
+        top: "60%",
+        left: "20%",
+        width: "55%",
+        height: "35%"
+      },
       places: [
-        { name: "Yala National Park", position: { top: "75%", left: "38%" } },
-        { name: "Udawalawe Park", position: { top: "68%", left: "32%" } },
-        { name: "Minneriya Park", position: { top: "40%", left: "35%" } },
-        { name: "Horton Plains", position: { top: "58%", left: "34%" } },
-        { name: "Sinharaja Forest", position: { top: "64%", left: "26%" } },
-        { name: "Bundala Park", position: { top: "78%", left: "35%" } }
+        { name: "Yala National Park", position: { top: "78%", left: "40%" } },
+        { name: "Udawalawe", position: { top: "68%", left: "28%" } },
+        { name: "Bundala", position: { top: "80%", left: "36%" } },
+        { name: "Minneriya", position: { top: "42%", left: "35%" } },
+        { name: "Kaudulla", position: { top: "38%", left: "36%" } },
+        { name: "Sinharaja Forest", position: { top: "62%", left: "25%" } }
       ]
     },
     "Adventure": {
       image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=200",
-      position: { top: "35%", left: "35%" },
+      highlightArea: {
+        // Central Highlands - Hill Country
+        top: "45%",
+        left: "24%",
+        width: "30%",
+        height: "25%"
+      },
       places: [
-        { name: "Ella Rock Hiking", position: { top: "62%", left: "36%" } },
-        { name: "Adam's Peak", position: { top: "56%", left: "30%" } },
-        { name: "Kitulgala Rafting", position: { top: "52%", left: "28%" } },
-        { name: "Knuckles Range", position: { top: "46%", left: "32%" } },
-        { name: "Hot Air Ballooning", position: { top: "42%", left: "33%" } }
+        { name: "Ella Rock", position: { top: "62%", left: "36%" } },
+        { name: "Adam's Peak", position: { top: "56%", left: "28%" } },
+        { name: "Horton Plains", position: { top: "58%", left: "33%" } },
+        { name: "Knuckles Range", position: { top: "48%", left: "32%" } },
+        { name: "Kitulgala Rafting", position: { top: "52%", left: "27%" } }
       ]
     },
     "History & Culture": {
       image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=200",
-      position: { top: "25%", right: "25%" },
+      highlightArea: {
+        // Cultural Triangle - North Central
+        top: "28%",
+        left: "26%",
+        width: "35%",
+        height: "30%"
+      },
       places: [
-        { name: "Sigiriya Rock", position: { top: "40%", left: "34%" } },
-        { name: "Dambulla Temple", position: { top: "42%", left: "32%" } },
         { name: "Anuradhapura", position: { top: "32%", left: "32%" } },
         { name: "Polonnaruwa", position: { top: "38%", left: "38%" } },
-        { name: "Temple of Tooth", position: { top: "50%", left: "32%" } },
-        { name: "Galle Fort", position: { top: "70%", left: "26%" } }
+        { name: "Sigiriya", position: { top: "40%", left: "34%" } },
+        { name: "Dambulla", position: { top: "42%", left: "32%" } },
+        { name: "Kandy", position: { top: "50%", left: "31%" } },
+        { name: "Galle Fort", position: { top: "69%", left: "26%" } }
       ]
     },
     "Lesser Travelled": {
       image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=200",
-      position: { top: "50%", right: "20%" },
+      highlightArea: {
+        // Northern & Eastern regions
+        top: "8%",
+        left: "28%",
+        width: "48%",
+        height: "48%"
+      },
       places: [
-        { name: "Jaffna", position: { top: "12%", left: "35%" } },
-        { name: "Trincomalee", position: { top: "35%", right: "10%" } },
-        { name: "Mannar Island", position: { top: "25%", left: "25%" } },
-        { name: "Batticaloa", position: { top: "48%", right: "12%" } },
-        { name: "Mullaitivu", position: { top: "18%", left: "35%" } }
+        { name: "Jaffna", position: { top: "10%", left: "34%" } },
+        { name: "Mannar", position: { top: "22%", left: "26%" } },
+        { name: "Trincomalee", position: { top: "34%", right: "12%" } },
+        { name: "Batticaloa", position: { top: "50%", right: "10%" } },
+        { name: "Mullaitivu", position: { top: "18%", left: "36%" } },
+        { name: "Vavuniya", position: { top: "28%", left: "32%" } }
       ]
     },
     "Gastronomy": {
       image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=200",
-      position: { top: "70%", right: "30%" },
+      highlightArea: {
+        // Major cities and culinary hotspots - spread across island
+        top: "30%",
+        left: "18%",
+        width: "60%",
+        height: "60%"
+      },
       places: [
-        { name: "Colombo Food St", position: { top: "54%", left: "28%" } },
-        { name: "Galle Restaurants", position: { top: "70%", left: "24%" } },
-        { name: "Jaffna Crab Curry", position: { top: "12%", left: "38%" } },
+        { name: "Colombo", position: { top: "52%", left: "24%" } },
+        { name: "Galle", position: { top: "69%", left: "26%" } },
+        { name: "Jaffna", position: { top: "10%", left: "34%" } },
+        { name: "Kandy", position: { top: "50%", left: "31%" } },
         { name: "Matale Spices", position: { top: "46%", left: "31%" } },
-        { name: "Negombo Seafood", position: { top: "48%", left: "20%" } }
+        { name: "Negombo", position: { top: "48%", left: "20%" } }
       ]
     }
   };
@@ -162,7 +201,7 @@ const TourPackages = () => {
         </div>
       </div>
 
-      {/* Interactive Sri Lanka Map Section - REDUCED SIZE */}
+      {/* Interactive Sri Lanka Map Section - ACCURATE POSITIONING */}
       <div className="container-xxl py-5" style={{ background: 'linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%)' }}>
         <div className="container">
           <div className="text-center wow fadeInUp mb-4" data-wow-delay="0.1s">
@@ -248,114 +287,37 @@ const TourPackages = () => {
                     }}
                   />
 
-                  {/* Highlighted Areas for Features */}
-                  {selectedFeature && (
-                    <>
-                      {selectedFeature === "Popular Beaches" && (
-                        <div 
-                          className="map-highlight beach-highlight"
-                          style={{
-                            position: "absolute",
-                            bottom: "15%",
-                            left: "5%",
-                            width: "40%",
-                            height: "50%",
-                            background: "radial-gradient(circle, rgba(6, 163, 218, 0.3) 0%, rgba(6, 163, 218, 0.1) 50%, transparent 70%)",
-                            borderRadius: "50%",
-                            animation: "pulseGlow 2s ease-in-out infinite",
-                            pointerEvents: "none"
-                          }}
-                        />
-                      )}
-
-                      {selectedFeature === "Wildlife & Nature" && (
-                        <div 
-                          className="map-highlight wildlife-highlight"
-                          style={{
-                            position: "absolute",
-                            top: "45%",
-                            left: "25%",
-                            width: "50%",
-                            height: "45%",
-                            background: "radial-gradient(ellipse, rgba(76, 175, 80, 0.3) 0%, rgba(76, 175, 80, 0.15) 40%, transparent 70%)",
-                            borderRadius: "50%",
-                            animation: "pulseGlow 2s ease-in-out infinite",
-                            pointerEvents: "none"
-                          }}
-                        />
-                      )}
-
-                      {selectedFeature === "Adventure" && (
-                        <div 
-                          className="map-highlight adventure-highlight"
-                          style={{
-                            position: "absolute",
-                            top: "35%",
-                            left: "30%",
-                            width: "35%",
-                            height: "35%",
-                            background: "radial-gradient(circle, rgba(255, 152, 0, 0.35) 0%, rgba(255, 152, 0, 0.15) 45%, transparent 70%)",
-                            borderRadius: "50%",
-                            animation: "pulseGlow 2s ease-in-out infinite",
-                            pointerEvents: "none"
-                          }}
-                        />
-                      )}
-
-                      {selectedFeature === "History & Culture" && (
-                        <div 
-                          className="map-highlight culture-highlight"
-                          style={{
-                            position: "absolute",
-                            top: "25%",
-                            left: "28%",
-                            width: "45%",
-                            height: "40%",
-                            background: "radial-gradient(ellipse, rgba(156, 39, 176, 0.3) 0%, rgba(156, 39, 176, 0.15) 45%, transparent 70%)",
-                            borderRadius: "50%",
-                            animation: "pulseGlow 2s ease-in-out infinite",
-                            pointerEvents: "none"
-                          }}
-                        />
-                      )}
-
-                      {selectedFeature === "Lesser Travelled" && (
-                        <div 
-                          className="map-highlight remote-highlight"
-                          style={{
-                            position: "absolute",
-                            top: "10%",
-                            left: "30%",
-                            width: "50%",
-                            height: "50%",
-                            background: "radial-gradient(ellipse, rgba(103, 58, 183, 0.3) 0%, rgba(103, 58, 183, 0.15) 45%, transparent 70%)",
-                            borderRadius: "50%",
-                            animation: "pulseGlow 2s ease-in-out infinite",
-                            pointerEvents: "none"
-                          }}
-                        />
-                      )}
-
-                      {selectedFeature === "Gastronomy" && (
-                        <div 
-                          className="map-highlight gastronomy-highlight"
-                          style={{
-                            position: "absolute",
-                            top: "35%",
-                            left: "20%",
-                            width: "60%",
-                            height: "50%",
-                            background: "radial-gradient(ellipse, rgba(255, 87, 34, 0.3) 0%, rgba(255, 87, 34, 0.15) 50%, transparent 70%)",
-                            borderRadius: "50%",
-                            animation: "pulseGlow 2s ease-in-out infinite",
-                            pointerEvents: "none"
-                          }}
-                        />
-                      )}
-                    </>
+                  {/* ACCURATE Highlighted Areas for Features */}
+                  {selectedFeature && mapFeatures[selectedFeature].highlightArea && (
+                    <div 
+                      className={`map-highlight ${selectedFeature.toLowerCase().replace(/\s+/g, '-').replace('&', '')}-highlight`}
+                      style={{
+                        position: "absolute",
+                        top: mapFeatures[selectedFeature].highlightArea.top,
+                        left: mapFeatures[selectedFeature].highlightArea.left,
+                        right: mapFeatures[selectedFeature].highlightArea.right,
+                        width: mapFeatures[selectedFeature].highlightArea.width,
+                        height: mapFeatures[selectedFeature].highlightArea.height,
+                        background: selectedFeature === "Popular Beaches" 
+                          ? "radial-gradient(ellipse, rgba(6, 163, 218, 0.35) 0%, rgba(6, 163, 218, 0.15) 50%, transparent 70%)"
+                          : selectedFeature === "Wildlife & Nature"
+                          ? "radial-gradient(ellipse, rgba(76, 175, 80, 0.35) 0%, rgba(76, 175, 80, 0.15) 50%, transparent 70%)"
+                          : selectedFeature === "Adventure"
+                          ? "radial-gradient(ellipse, rgba(255, 152, 0, 0.35) 0%, rgba(255, 152, 0, 0.15) 50%, transparent 70%)"
+                          : selectedFeature === "History & Culture"
+                          ? "radial-gradient(ellipse, rgba(156, 39, 176, 0.35) 0%, rgba(156, 39, 176, 0.15) 50%, transparent 70%)"
+                          : selectedFeature === "Lesser Travelled"
+                          ? "radial-gradient(ellipse, rgba(103, 58, 183, 0.35) 0%, rgba(103, 58, 183, 0.15) 50%, transparent 70%)"
+                          : "radial-gradient(ellipse, rgba(255, 87, 34, 0.35) 0%, rgba(255, 87, 34, 0.15) 50%, transparent 70%)",
+                        borderRadius: "50%",
+                        animation: "pulseGlow 2s ease-in-out infinite",
+                        pointerEvents: "none",
+                        zIndex: 3
+                      }}
+                    />
                   )}
 
-                  {/* Show place markers when feature is selected */}
+                  {/* ACCURATE Place Markers */}
                   {selectedFeature && (
                     <div className="places-overlay">
                       {mapFeatures[selectedFeature].places.map((place, index) => (
