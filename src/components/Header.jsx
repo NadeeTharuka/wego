@@ -4,21 +4,6 @@ import { Link } from 'react-router-dom'
 function Header() {
   return (
     <div>
-         {/* Spinner Start */}
-    {/* <div
-      id="spinner"
-      className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div
-        className="spinner-border text-primary"
-        style={{ width: "3rem", height: "3rem" }}
-        role="status"
-      >
-        <span className="sr-only">Loading...</span>
-      </div>
-    </div> */}
-    {/* Spinner End */}
-
     {/* Topbar Start */}
     <div className="container-fluid bg-dark px-5 d-none d-lg-block">
       <div className="row gx-0">
@@ -48,31 +33,31 @@ function Header() {
           >
             <a
               className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              to=""
+              href="/"
             >
               <i className="fab fa-twitter fw-normal" />
             </a>
             <a
               className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              to=""
+              href="/"
             >
               <i className="fab fa-facebook-f fw-normal" />
             </a>
             <a
               className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              to=""
+              href="/"
             >
               <i className="fab fa-linkedin-in fw-normal" />
             </a>
             <a
               className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              to=""
+              href="/"
             >
               <i className="fab fa-instagram fw-normal" />
             </a>
             <a
               className="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
-              to=""
+              href="/"
             >
               <i className="fab fa-youtube fw-normal" />
             </a>
@@ -81,22 +66,19 @@ function Header() {
       </div>
     </div>
     {/* Topbar End */}
+    
     {/* Navbar & Hero Start */}
     <div className="container-fluid position-relative p-0">
       <nav className="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
         <Link to="/" className="navbar-brand p-0">
           <h1 className="text-primary m-0">
-
-          <img
-                
-                src="assets/img/logofinal1.png"
-                alt=""
-                style={{ objectFit: "cover" }} 
-              />
-            
+            <img
+              src="assets/img/logofinal1.png"
+              alt="Opulent Tours Logo"
+              style={{ objectFit: "cover", height: "60px", width: "auto" }} 
+            />
             Opulent Tours
           </h1>
-          {/* <img src="img/logo.png" alt="Logo"> */}
         </Link>
         <button
           className="navbar-toggler"
@@ -114,19 +96,12 @@ function Header() {
             <Link to="/About" className="nav-item nav-link">
               About
             </Link>
-            {/* <Link to="/Services" className="nav-item nav-link">
-              Services
-            </Link> */}
-            {/* <Link to="/Packages" className="nav-item nav-link">
-              Packages
-            </Link> */}
-            
-                <Link to="/Tours" className="nav-item nav-link">
-                  Tours
-                </Link>
-                <Link to="/Booking" className="nav-item nav-link">
-                  Booking
-                </Link>
+            <Link to="/Tours" className="nav-item nav-link">
+              Tours
+            </Link>
+            <Link to="/Booking" className="nav-item nav-link">
+              Booking
+            </Link>
             <Link to="/Contact" className="nav-item nav-link">
               Contact
             </Link>
