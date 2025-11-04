@@ -1,5 +1,3 @@
-// src/pages/Tours.jsx
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./TourPackages.css";
@@ -164,36 +162,36 @@ const TourPackages = () => {
         </div>
       </div>
 
-      {/* Interactive Sri Lanka Map Section */}
+      {/* Interactive Sri Lanka Map Section - REDUCED SIZE */}
       <div className="container-xxl py-5" style={{ background: 'linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%)' }}>
         <div className="container">
-          <div className="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
+          <div className="text-center wow fadeInUp mb-4" data-wow-delay="0.1s">
             <h6 className="section-title bg-white text-center text-primary px-3">Our Island</h6>
-            <h1 className="mb-3">Sri Lanka</h1>
+            <h1 className="mb-2">Sri Lanka</h1>
             <p className="text-muted">Discover the pearl of the Indian Ocean - Hover over features to explore destinations</p>
           </div>
           
           <div className="row justify-content-center">
-            <div className="col-lg-12">
-              <div className="position-relative d-flex justify-content-center align-items-center" style={{ minHeight: "900px", padding: "4rem 0" }}>
+            <div className="col-lg-10">
+              <div className="position-relative d-flex justify-content-center align-items-center" style={{ minHeight: "650px", padding: "2rem 0" }}>
                 
                 {/* Left Side Features */}
                 <div 
                   className="position-absolute interactive-feature" 
-                  style={{ left: "5%", top: "20%", zIndex: 10 }}
+                  style={{ left: "5%", top: "18%", zIndex: 10 }}
                   onMouseEnter={() => handleFeatureHover("Popular Beaches")}
                   onMouseLeave={handleFeatureLeave}
                 >
-                  <div className="feature-card text-center" style={{ width: "160px", cursor: "pointer" }}>
+                  <div className="feature-card text-center" style={{ width: "140px", cursor: "pointer" }}>
                     <div className="feature-image-wrapper mb-2">
                       <img
                         src={mapFeatures["Popular Beaches"].image}
                         alt="Popular Beaches"
                         className="rounded-circle shadow"
-                        style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
+                        style={{ width: "75px", height: "75px", objectFit: "cover", border: "3px solid white" }}
                       />
                     </div>
-                    <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Popular Beaches</h6>
+                    <h6 className="fw-bold" style={{ fontSize: "0.85rem", margin: 0 }}>Popular Beaches</h6>
                   </div>
                 </div>
 
@@ -203,56 +201,56 @@ const TourPackages = () => {
                   onMouseEnter={() => handleFeatureHover("Wildlife & Nature")}
                   onMouseLeave={handleFeatureLeave}
                 >
-                  <div className="feature-card text-center" style={{ width: "160px", cursor: "pointer" }}>
+                  <div className="feature-card text-center" style={{ width: "140px", cursor: "pointer" }}>
                     <div className="feature-image-wrapper mb-2">
                       <img
                         src={mapFeatures["Wildlife & Nature"].image}
                         alt="Wildlife & Nature"
                         className="rounded-circle shadow"
-                        style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
+                        style={{ width: "75px", height: "75px", objectFit: "cover", border: "3px solid white" }}
                       />
                     </div>
-                    <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Wildlife & Nature</h6>
+                    <h6 className="fw-bold" style={{ fontSize: "0.85rem", margin: 0 }}>Wildlife & Nature</h6>
                   </div>
                 </div>
 
                 <div 
                   className="position-absolute interactive-feature" 
-                  style={{ left: "12%", bottom: "5%", zIndex: 10 }}
+                  style={{ left: "12%", bottom: "8%", zIndex: 10 }}
                   onMouseEnter={() => handleFeatureHover("Adventure")}
                   onMouseLeave={handleFeatureLeave}
                 >
-                  <div className="feature-card text-center" style={{ width: "160px", cursor: "pointer" }}>
+                  <div className="feature-card text-center" style={{ width: "140px", cursor: "pointer" }}>
                     <div className="feature-image-wrapper mb-2">
                       <img
                         src={mapFeatures["Adventure"].image}
                         alt="Adventure"
                         className="rounded-circle shadow"
-                        style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
+                        style={{ width: "75px", height: "75px", objectFit: "cover", border: "3px solid white" }}
                       />
                     </div>
-                    <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Adventure</h6>
+                    <h6 className="fw-bold" style={{ fontSize: "0.85rem", margin: 0 }}>Adventure</h6>
                   </div>
                 </div>
 
-                {/* Center - Local Topographical Sri Lanka Map */}
+                {/* Center - Enhanced Quality Sri Lanka Map */}
                 <div className="text-center" style={{ zIndex: 5, position: "relative" }}>
                   <img 
                     src="/assets/img/91a5c3ff-7781-4f6e-a4ff-cbe8d3bc8d20.png"
                     alt="Sri Lanka Topographical Map"
                     style={{ 
-                      width: "500px", 
+                      width: "380px", 
                       height: "auto", 
                       maxWidth: "100%",
-                      filter: "drop-shadow(0 10px 25px rgba(0,0,0,0.2))",
-                      borderRadius: "10px"
+                      filter: "drop-shadow(0 10px 25px rgba(0,0,0,0.2)) contrast(1.1) brightness(1.05)",
+                      borderRadius: "10px",
+                      imageRendering: "-webkit-optimize-contrast"
                     }}
                   />
 
                   {/* Highlighted Areas for Features */}
                   {selectedFeature && (
                     <>
-                      {/* Popular Beaches - South & West Coast Highlight */}
                       {selectedFeature === "Popular Beaches" && (
                         <div 
                           className="map-highlight beach-highlight"
@@ -270,7 +268,6 @@ const TourPackages = () => {
                         />
                       )}
 
-                      {/* Wildlife & Nature - Central & South Highlight */}
                       {selectedFeature === "Wildlife & Nature" && (
                         <div 
                           className="map-highlight wildlife-highlight"
@@ -288,7 +285,6 @@ const TourPackages = () => {
                         />
                       )}
 
-                      {/* Adventure - Central Highlands Highlight */}
                       {selectedFeature === "Adventure" && (
                         <div 
                           className="map-highlight adventure-highlight"
@@ -306,7 +302,6 @@ const TourPackages = () => {
                         />
                       )}
 
-                      {/* History & Culture - Cultural Triangle Highlight */}
                       {selectedFeature === "History & Culture" && (
                         <div 
                           className="map-highlight culture-highlight"
@@ -324,7 +319,6 @@ const TourPackages = () => {
                         />
                       )}
 
-                      {/* Lesser Travelled - North & East Highlight */}
                       {selectedFeature === "Lesser Travelled" && (
                         <div 
                           className="map-highlight remote-highlight"
@@ -342,7 +336,6 @@ const TourPackages = () => {
                         />
                       )}
 
-                      {/* Gastronomy - All Over Highlight */}
                       {selectedFeature === "Gastronomy" && (
                         <div 
                           className="map-highlight gastronomy-highlight"
@@ -382,9 +375,9 @@ const TourPackages = () => {
                             style={{
                               background: "linear-gradient(135deg, #06A3DA, #0585B3)",
                               color: "white",
-                              padding: "6px 12px",
-                              borderRadius: "20px",
-                              fontSize: "0.7rem",
+                              padding: "5px 10px",
+                              borderRadius: "18px",
+                              fontSize: "0.65rem",
                               fontWeight: "700",
                               whiteSpace: "nowrap",
                               boxShadow: "0 4px 15px rgba(6, 163, 218, 0.5)",
@@ -404,20 +397,20 @@ const TourPackages = () => {
                 {/* Right Side Features */}
                 <div 
                   className="position-absolute interactive-feature" 
-                  style={{ right: "5%", top: "20%", zIndex: 10 }}
+                  style={{ right: "5%", top: "18%", zIndex: 10 }}
                   onMouseEnter={() => handleFeatureHover("History & Culture")}
                   onMouseLeave={handleFeatureLeave}
                 >
-                  <div className="feature-card text-center" style={{ width: "160px", cursor: "pointer" }}>
+                  <div className="feature-card text-center" style={{ width: "140px", cursor: "pointer" }}>
                     <div className="feature-image-wrapper mb-2">
                       <img
                         src={mapFeatures["History & Culture"].image}
                         alt="History & Culture"
                         className="rounded-circle shadow"
-                        style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
+                        style={{ width: "75px", height: "75px", objectFit: "cover", border: "3px solid white" }}
                       />
                     </div>
-                    <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>History & Culture</h6>
+                    <h6 className="fw-bold" style={{ fontSize: "0.85rem", margin: 0 }}>History & Culture</h6>
                   </div>
                 </div>
 
@@ -427,35 +420,35 @@ const TourPackages = () => {
                   onMouseEnter={() => handleFeatureHover("Lesser Travelled")}
                   onMouseLeave={handleFeatureLeave}
                 >
-                  <div className="feature-card text-center" style={{ width: "160px", cursor: "pointer" }}>
+                  <div className="feature-card text-center" style={{ width: "140px", cursor: "pointer" }}>
                     <div className="feature-image-wrapper mb-2">
                       <img
                         src={mapFeatures["Lesser Travelled"].image}
                         alt="Lesser Travelled"
                         className="rounded-circle shadow"
-                        style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
+                        style={{ width: "75px", height: "75px", objectFit: "cover", border: "3px solid white" }}
                       />
                     </div>
-                    <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Lesser Travelled</h6>
+                    <h6 className="fw-bold" style={{ fontSize: "0.85rem", margin: 0 }}>Lesser Travelled</h6>
                   </div>
                 </div>
 
                 <div 
                   className="position-absolute interactive-feature" 
-                  style={{ right: "12%", bottom: "5%", zIndex: 10 }}
+                  style={{ right: "12%", bottom: "8%", zIndex: 10 }}
                   onMouseEnter={() => handleFeatureHover("Gastronomy")}
                   onMouseLeave={handleFeatureLeave}
                 >
-                  <div className="feature-card text-center" style={{ width: "160px", cursor: "pointer" }}>
+                  <div className="feature-card text-center" style={{ width: "140px", cursor: "pointer" }}>
                     <div className="feature-image-wrapper mb-2">
                       <img
                         src={mapFeatures["Gastronomy"].image}
                         alt="Gastronomy"
                         className="rounded-circle shadow"
-                        style={{ width: "90px", height: "90px", objectFit: "cover", border: "4px solid white" }}
+                        style={{ width: "75px", height: "75px", objectFit: "cover", border: "3px solid white" }}
                       />
                     </div>
-                    <h6 className="fw-bold" style={{ fontSize: "0.9rem", margin: 0 }}>Gastronomy</h6>
+                    <h6 className="fw-bold" style={{ fontSize: "0.85rem", margin: 0 }}>Gastronomy</h6>
                   </div>
                 </div>
 
@@ -465,7 +458,7 @@ const TourPackages = () => {
 
           {/* Selected Feature Places List */}
           {selectedFeature && (
-            <div className="row justify-content-center mt-4">
+            <div className="row justify-content-center mt-3">
               <div className="col-lg-10">
                 <div className="alert alert-info text-center" style={{ 
                   background: "linear-gradient(135deg, #06A3DA 0%, #0585B3 100%)",
