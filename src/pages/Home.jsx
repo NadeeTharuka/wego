@@ -7,25 +7,18 @@ export default function Home() {
         <div className="container py-5">
           <div className="row justify-content-center py-5">
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-              <h1 className="display-3 text-white mb-3 animated slideInDown">
-                Welcome to Opulent Tours
-              </h1>
-              <p className="fs-5 text-white mb-4 animated slideInDown">
+              <p className="fs-4 text-white mb-4 animated slideInDown" style={{ fontSize: '1.5rem !important' }}>
                 Gateway to the Magic of Sri Lanka
               </p>
-          
-        </div>
             </div>
           </div>
         </div>
+      </div>
       
       {/* Welcome Section */}
       <div className="container-xxl py-5">
         <div className="container">
           <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 className="section-title bg-white text-center text-primary pe-3">
-              Welcome
-            </h6>
             <h1 className="mb-4">Discover the Essence of Sri Lanka</h1>
           </div>
           <div className="row justify-content-center">
@@ -46,84 +39,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* About Start */}
-      <div className="container-xxl py-5">
-        <div className="container">
-          <div className="row g-5">
-            <div
-              className="col-lg-6 wow fadeInUp"
-              data-wow-delay="0.1s"
-              style={{ minHeight: 400 }}
-            >
-              <div className="position-relative h-100">
-                <img
-                  className="img-fluid position-absolute w-100 h-100"
-                  src="assets/img/BG7.png"
-                  alt=""
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-            </div>
-            <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-              <h6 className="section-title bg-white text-start text-primary pe-3">
-                About Us
-              </h6>
-              <h1 className="mb-4">
-                Welcome to <span className="text-primary">Opulent Tours</span>
-              </h1>
-              <p className="mb-4">
-                Based in Kalutara, Opulent Tours proudly stands as a leading Sri Lankan travel company, with over 15 years of experience in crafting unforgettable travel experiences. Our young and creative team combines local expertise with modern innovation, ensuring every journey is crafted with care, comfort, and a touch of luxury.
-              </p>
-              <p className="mb-4">
-                We design exceptional tours not only across Sri Lanka, but also to India and Thailand, offering everything from exotic getaways and cultural escapes to thrilling adventures. Each itinerary is tailor-made to reflect your style — whether you seek relaxation, exploration, or indulgence.
-              </p>
-              <div className="row gy-2 gx-4 mb-4">
-                <div className="col-sm-6">
-                  <p className="mb-0">
-                    <i className="fa fa-arrow-right text-primary me-2" />
-                    First Class Flights
-                  </p>
-                </div>
-                <div className="col-sm-6">
-                  <p className="mb-0">
-                    <i className="fa fa-arrow-right text-primary me-2" />
-                    Handpicked Hotels
-                  </p>
-                </div>
-                <div className="col-sm-6">
-                  <p className="mb-0">
-                    <i className="fa fa-arrow-right text-primary me-2" />5 Star
-                    Accommodations
-                  </p>
-                </div>
-                <div className="col-sm-6">
-                  <p className="mb-0">
-                    <i className="fa fa-arrow-right text-primary me-2" />
-                    Latest Model Vehicles
-                  </p>
-                </div>
-                <div className="col-sm-6">
-                  <p className="mb-0">
-                    <i className="fa fa-arrow-right text-primary me-2" />
-                    24/7 Customer Support
-                  </p>
-                </div>
-                <div className="col-sm-6">
-                  <p className="mb-0">
-                    <i className="fa fa-arrow-right text-primary me-2" />
-                    Professional Tour Guides
-                  </p>
-                </div>
-              </div>
-              <a className="btn btn-primary py-3 px-5 mt-2" href="/about">
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* About End */}
 
       {/* Service Start */}
       <div className="container-xxl py-5">
@@ -435,55 +350,6 @@ export default function Home() {
       </div>
       {/* Package End */}
 
-{/* Enquire Now CTA Section - FIXED */}
-<div className="container-xxl py-5">
-  <div className="container">
-    <div className="row justify-content-center">
-      <div className="col-lg-8 text-center">
-        <div 
-          className="p-5 rounded shadow-sm" 
-          style={{ 
-            background: 'linear-gradient(135deg, #ffffffff 0%, #ffffffff 100%)',
-            border: '2px solid #086AD8'
-          }}
-        >
-          <h3 className="mb-4" style={{ color: '#212529', fontWeight: '700' }}>
-            Ready to Plan Your Dream Vacation?
-          </h3>
-          <p className="mb-4" style={{ color: '#495057', fontSize: '1.05rem' }}>
-            Let us help you create the perfect travel experience tailored to your preferences
-          </p>
-          <p 
-            className="mb-4" 
-            style={{ 
-              fontSize: '1.3rem', 
-              fontWeight: '700', 
-              color: '#086AD8', 
-              fontStyle: 'italic',
-              textShadow: '0 1px 2px rgba(0,0,0,0.1)'
-            }}
-          >
-            Travel in Style, Live in Luxury — Because Ordinary Isn't Our Style.
-          </p>
-          <a 
-            href="/booking" 
-            className="btn btn-primary btn-lg px-5 py-3"
-            style={{
-              fontSize: '1.1rem',
-              fontWeight: '600',
-              boxShadow: '0 4px 15px rgba(8, 106, 216, 0.3)',
-              transition: 'all 0.3s ease'
-            }}
-          >
-            <i className="fa fa-calendar-check me-2"></i>
-            Enquire Now
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
       {/* Booking Start */}
       <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div className="container">
@@ -491,19 +357,15 @@ export default function Home() {
             <div className="row g-5 align-items-center">
               <div className="col-md-6 text-white">
                 <h6 className="text-white text-uppercase">Booking</h6>
-                <h1 className="text-white mb-4">Online Booking</h1>
+                <h1 className="text-white mb-4">Plan Your Dream Trip</h1>
                 <p className="mb-4">
-                  Experience seamless travel planning with Opulent Tours. Our online booking system makes it easy to reserve your dream vacation in just a few clicks.
-                </p>
-                <p className="mb-4">
-                  With over 15 years of expertise, we ensure every detail of your journey is handled with care and professionalism. From luxurious accommodations to exciting adventures, we've got you covered.
-                </p>
+                  You can customize our recommended tours or plan your dream trip by discussing your preferences with the friendly team at Opulent Tours.                </p>
                 <a className="btn btn-outline-light py-3 px-5 mt-2" href="/about">
                   Read More
                 </a>
               </div>
               <div className="col-md-6">
-                <h1 className="text-white mb-4">Book A Tour</h1>
+                <h1 className="text-white mb-4">Plan A Tour</h1>
                 <form>
                   <div className="row g-3">
                     <div className="col-md-6">
@@ -565,7 +427,7 @@ export default function Home() {
                     </div>
                     <div className="col-12">
                       <button className="btn btn-outline-light w-100 py-3" type="submit">
-                        Book Now
+                        Inquire Now
                       </button>
                     </div>
                   </div>
@@ -599,8 +461,7 @@ export default function Home() {
                 <hr className="w-25 mx-auto bg-primary mb-1" />
                 <hr className="w-50 mx-auto bg-primary mt-0" />
                 <p className="mb-0">
-                  Select from our curated destinations across Sri Lanka, India, and Thailand, or let us create a custom itinerary for you
-                </p>
+                  Select from our curated destinations across Sri Lanka, or let us create a custom itinerary just for                </p>
               </div>
             </div>
             <div className="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
