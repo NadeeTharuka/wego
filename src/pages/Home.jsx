@@ -7,9 +7,6 @@ export default function Home() {
         <div className="container py-5">
           <div className="row justify-content-center py-5">
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-              <h1 className="display-3 text-white mb-3 animated slideInDown">
-                Welcome to Opulent Tours
-              </h1>
               <p className="fs-5 text-white mb-4 animated slideInDown">
                 Gateway to the Magic of Sri Lanka
               </p>
