@@ -357,19 +357,15 @@ export default function Home() {
             <div className="row g-5 align-items-center">
               <div className="col-md-6 text-white">
                 <h6 className="text-white text-uppercase">Booking</h6>
-                <h1 className="text-white mb-4">Online Booking</h1>
+                <h1 className="text-white mb-4">Plan your Dream Trip</h1>
                 <p className="mb-4">
-                  Experience seamless travel planning with Opulent Tours. Our online booking system makes it easy to reserve your dream vacation in just a few clicks.
-                </p>
-                <p className="mb-4">
-                  With over 15 years of expertise, we ensure every detail of your journey is handled with care and professionalism. From luxurious accommodations to exciting adventures, we've got you covered.
-                </p>
+                  You can customize our recommended tours or plan your dream trip by discussing your preferences with the friendly team at Opulent Tours.                </p>
                 <a className="btn btn-outline-light py-3 px-5 mt-2" href="/about">
                   Read More
                 </a>
               </div>
               <div className="col-md-6">
-                <h1 className="text-white mb-4">Book A Tour</h1>
+                <h1 className="text-white mb-4">Plan A Tour</h1>
                 <form>
                   <div className="row g-3">
                     <div className="col-md-6">
@@ -431,7 +427,7 @@ export default function Home() {
                     </div>
                     <div className="col-12">
                       <button className="btn btn-outline-light w-100 py-3" type="submit">
-                        Book Now
+                        Inquire Now
                       </button>
                     </div>
                   </div>
@@ -465,8 +461,7 @@ export default function Home() {
                 <hr className="w-25 mx-auto bg-primary mb-1" />
                 <hr className="w-50 mx-auto bg-primary mt-0" />
                 <p className="mb-0">
-                  Select from our curated destinations across Sri Lanka, India, and Thailand, or let us create a custom itinerary for you
-                </p>
+                  Select from our curated destinations across Sri Lanka, or let us create a custom itinerary just for you                </p>
               </div>
             </div>
             <div className="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
