@@ -10,7 +10,6 @@ export default function Home() {
               <p className="fs-5 text-white mb-4 animated slideInDown">
                 Gateway to the Magic of Sri Lanka
               </p>
-          
         </div>
             </div>
           </div>
@@ -20,9 +19,6 @@ export default function Home() {
       <div className="container-xxl py-5">
         <div className="container">
           <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 className="section-title bg-white text-center text-primary pe-3">
-              Welcome
-            </h6>
             <h1 className="mb-4">Discover the Essence of Sri Lanka</h1>
           </div>
           <div className="row justify-content-center">
@@ -43,84 +39,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* About Start */}
-      <div className="container-xxl py-5">
-        <div className="container">
-          <div className="row g-5">
-            <div
-              className="col-lg-6 wow fadeInUp"
-              data-wow-delay="0.1s"
-              style={{ minHeight: 400 }}
-            >
-              <div className="position-relative h-100">
-                <img
-                  className="img-fluid position-absolute w-100 h-100"
-                  src="assets/img/BG7.png"
-                  alt=""
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-            </div>
-            <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-              <h6 className="section-title bg-white text-start text-primary pe-3">
-                About Us
-              </h6>
-              <h1 className="mb-4">
-                Welcome to <span className="text-primary">Opulent Tours</span>
-              </h1>
-              <p className="mb-4">
-                Based in Kalutara, Opulent Tours proudly stands as a leading Sri Lankan travel company, with over 15 years of experience in crafting unforgettable travel experiences. Our young and creative team combines local expertise with modern innovation, ensuring every journey is crafted with care, comfort, and a touch of luxury.
-              </p>
-              <p className="mb-4">
-                We design exceptional tours not only across Sri Lanka, but also to India and Thailand, offering everything from exotic getaways and cultural escapes to thrilling adventures. Each itinerary is tailor-made to reflect your style — whether you seek relaxation, exploration, or indulgence.
-              </p>
-              <div className="row gy-2 gx-4 mb-4">
-                <div className="col-sm-6">
-                  <p className="mb-0">
-                    <i className="fa fa-arrow-right text-primary me-2" />
-                    First Class Flights
-                  </p>
-                </div>
-                <div className="col-sm-6">
-                  <p className="mb-0">
-                    <i className="fa fa-arrow-right text-primary me-2" />
-                    Handpicked Hotels
-                  </p>
-                </div>
-                <div className="col-sm-6">
-                  <p className="mb-0">
-                    <i className="fa fa-arrow-right text-primary me-2" />5 Star
-                    Accommodations
-                  </p>
-                </div>
-                <div className="col-sm-6">
-                  <p className="mb-0">
-                    <i className="fa fa-arrow-right text-primary me-2" />
-                    Latest Model Vehicles
-                  </p>
-                </div>
-                <div className="col-sm-6">
-                  <p className="mb-0">
-                    <i className="fa fa-arrow-right text-primary me-2" />
-                    24/7 Customer Support
-                  </p>
-                </div>
-                <div className="col-sm-6">
-                  <p className="mb-0">
-                    <i className="fa fa-arrow-right text-primary me-2" />
-                    Professional Tour Guides
-                  </p>
-                </div>
-              </div>
-              <a className="btn btn-primary py-3 px-5 mt-2" href="/about">
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* About End */}
 
       {/* Service Start */}
       <div className="container-xxl py-5">
