@@ -69,14 +69,14 @@ function Packages() {
                 </p>
                 <div className="d-flex justify-content-center mb-2">
                   <a
-                    href="#"
+                    href="/tours"
                     className="btn btn-sm btn-primary px-3 border-end"
                     style={{ borderRadius: "30px 0 0 30px" }}
                   >
                     Read More
                   </a>
                   <a
-                    href="#"
+                    href="/booking"
                     className="btn btn-sm btn-primary px-3"
                     style={{ borderRadius: "0 30px 30px 0" }}
                   >
@@ -118,14 +118,14 @@ function Packages() {
                 </p>
                 <div className="d-flex justify-content-center mb-2">
                   <a
-                    href="#"
+                    href="/tours"
                     className="btn btn-sm btn-primary px-3 border-end"
                     style={{ borderRadius: "30px 0 0 30px" }}
                   >
                     Read More
                   </a>
                   <a
-                    href="#"
+                    href="/booking"
                     className="btn btn-sm btn-primary px-3"
                     style={{ borderRadius: "0 30px 30px 0" }}
                   >
@@ -167,14 +167,14 @@ function Packages() {
                 </p>
                 <div className="d-flex justify-content-center mb-2">
                   <a
-                    href="#"
+                    href="/tours"
                     className="btn btn-sm btn-primary px-3 border-end"
                     style={{ borderRadius: "30px 0 0 30px" }}
                   >
                     Read More
                   </a>
                   <a
-                    href="#"
+                    href="/booking"
                     className="btn btn-sm btn-primary px-3"
                     style={{ borderRadius: "0 30px 30px 0" }}
                   >
@@ -205,7 +205,7 @@ function Packages() {
                 Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
                 sed stet lorem sit clita duo justo magna dolore erat amet
               </p>
-              <a className="btn btn-outline-light py-3 px-5 mt-2" href="">
+              <a className="btn btn-outline-light py-3 px-5 mt-2" href="/about">
                 Read More
               </a>
             </div>
