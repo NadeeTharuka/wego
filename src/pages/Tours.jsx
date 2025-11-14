@@ -495,50 +495,9 @@ const TourPackages = () => {
           </div>
         </div>
       </section>
-
-      <TripSteps />
     </div>
   );
 };
 
-const TripSteps = () => {
-  const steps = [
-    { id: 1, icon: "fa fa-clipboard-list", description: "Give Us the Requirement." },
-    { id: 2, icon: "fa fa-envelope", description: "Few Tour Options will Email to You." },
-    { id: 3, icon: "fa fa-handshake", description: "Request for any Changes or If not proceed with the Payment." },
-    { id: 4, icon: "fa fa-bed", description: "Make a Reservation for Air, Hotels, Transport, Sightseeing, Guides, Etc." },
-    { id: 5, icon: "fa fa-file-check", description: "Within 72 Hours, Return Back to You with all Confirmation." },
-    { id: 6, icon: "fa fa-passport", description: "Process Visa." },
-    { id: 7, icon: "fa fa-plane-departure", description: "Enjoy your tour. Thank you." },
-  ];
-
-  return (
-    <div className="container-xxl py-5" style={{ backgroundColor: '#f8f9fa' }}>
-      <div className="container">
-        <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 className="section-title bg-white text-center text-primary px-3">How It Works</h6>
-          <h2 className="mb-5">How to create your trip in 7 easy steps</h2>
-        </div>
-        <div className="row g-4 justify-content-center">
-          {steps.map((step) => (
-            <div className="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" key={step.id} data-wow-delay={`0.${step.id}s`}>
-              <div className="text-center p-4 bg-white rounded shadow-sm h-100">
-                <div className="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle mb-3" style={{ width: '60px', height: '60px', fontSize: '18px', fontWeight: 'bold' }}>
-                  {step.id}
-                </div>
-                <div className="mb-3">
-                  <i className={`${step.icon} text-primary`} style={{ fontSize: '2.5rem' }}></i>
-                </div>
-                <p className="mb-0" style={{ fontSize: '14px', lineHeight: '1.5' }}>
-                  {step.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export default TourPackages;
