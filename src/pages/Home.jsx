@@ -239,7 +239,7 @@ export default function Home() {
           </div>
           <div className="row g-3">
             <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-              <a className="position-relative d-block overflow-hidden equal-box" href="">
+              <a className="position-relative d-block overflow-hidden equal-box" href="/tours">
                 <img className="img-fluid" src="assets/img/destination-2.jpg" alt="" />
                 <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
                   25% OFF
@@ -250,7 +250,7 @@ export default function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.5s">
-              <a className="position-relative d-block overflow-hidden equal-box" href="">
+              <a className="position-relative d-block overflow-hidden equal-box" href="/tours">
                 <img className="img-fluid" src="assets/img/destination-2.jpg" alt="" />
                 <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
                   35% OFF
@@ -261,7 +261,7 @@ export default function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-              <a className="position-relative d-block overflow-hidden equal-box" href="">
+              <a className="position-relative d-block overflow-hidden equal-box" href="/tours">
                 <img className="img-fluid" src="assets/img/destination-3.jpg" alt="" />
                 <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
                   10% OFF
