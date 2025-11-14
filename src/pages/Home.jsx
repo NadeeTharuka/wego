@@ -350,55 +350,6 @@ export default function Home() {
       </div>
       {/* Package End */}
 
-{/* Enquire Now CTA Section - FIXED */}
-<div className="container-xxl py-5">
-  <div className="container">
-    <div className="row justify-content-center">
-      <div className="col-lg-8 text-center">
-        <div 
-          className="p-5 rounded shadow-sm" 
-          style={{ 
-            background: 'linear-gradient(135deg, #ffffffff 0%, #ffffffff 100%)',
-            border: '2px solid #086AD8'
-          }}
-        >
-          <h3 className="mb-4" style={{ color: '#212529', fontWeight: '700' }}>
-            Ready to Plan Your Dream Vacation?
-          </h3>
-          <p className="mb-4" style={{ color: '#495057', fontSize: '1.05rem' }}>
-            Let us help you create the perfect travel experience tailored to your preferences
-          </p>
-          <p 
-            className="mb-4" 
-            style={{ 
-              fontSize: '1.3rem', 
-              fontWeight: '700', 
-              color: '#086AD8', 
-              fontStyle: 'italic',
-              textShadow: '0 1px 2px rgba(0,0,0,0.1)'
-            }}
-          >
-            Travel in Style, Live in Luxury — Because Ordinary Isn't Our Style.
-          </p>
-          <a 
-            href="/booking" 
-            className="btn btn-primary btn-lg px-5 py-3"
-            style={{
-              fontSize: '1.1rem',
-              fontWeight: '600',
-              boxShadow: '0 4px 15px rgba(8, 106, 216, 0.3)',
-              transition: 'all 0.3s ease'
-            }}
-          >
-            <i className="fa fa-calendar-check me-2"></i>
-            Enquire Now
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
       {/* Booking Start */}
       <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div className="container">
