@@ -65,48 +65,6 @@ function About() {
             <p className="mb-4" style={{ fontWeight: '600', color: '#086AD8' }}>
               At Opulent Tours, we believe travel should be as extraordinary as the destinations themselves.
             </p>
-
-            <div className="row gy-2 gx-4 mb-4">
-              <div className="col-sm-6">
-                <p className="mb-0">
-                  <i className="fa fa-arrow-right text-primary me-2" />
-                  First Class Flights
-                </p>
-              </div>
-              <div className="col-sm-6">
-                <p className="mb-0">
-                  <i className="fa fa-arrow-right text-primary me-2" />
-                  Handpicked Hotels
-                </p>
-              </div>
-              <div className="col-sm-6">
-                <p className="mb-0">
-                  <i className="fa fa-arrow-right text-primary me-2" />5 Star
-                  Accommodations
-                </p>
-              </div>
-              <div className="col-sm-6">
-                <p className="mb-0">
-                  <i className="fa fa-arrow-right text-primary me-2" />
-                  Latest Model Vehicles
-                </p>
-              </div>
-              <div className="col-sm-6">
-                <p className="mb-0">
-                  <i className="fa fa-arrow-right text-primary me-2" />
-                  Professional Tour Guides
-                </p>
-              </div>
-              <div className="col-sm-6">
-                <p className="mb-0">
-                  <i className="fa fa-arrow-right text-primary me-2" />
-                  24/7 Service
-                </p>
-              </div>
-            </div>
-            <a className="btn btn-primary py-3 px-5 mt-2" href="">
-              Read More
-            </a>
           </div>
         </div>
       </div>
