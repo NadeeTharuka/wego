@@ -7,13 +7,34 @@ export default function Home() {
         <div className="container py-5">
           <div className="row justify-content-center py-5">
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-              <p className="fs-5 text-white mb-4 animated slideInDown">
+              <p className="fs-4 text-white mb-4 animated slideInDown" style={{ fontWeight: '500' }}>
                 Gateway to the Magic of Sri Lanka
               </p>
-        </div>
+              <a 
+                href="/booking" 
+                className="btn btn-light btn-lg px-5 py-3 mt-3 animated slideInUp"
+                style={{ 
+                  borderRadius: '50px', 
+                  fontWeight: '700',
+                  fontSize: '1.2rem',
+                  boxShadow: '0 8px 20px rgba(0,0,0,0.2)',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.transform = 'translateY(-3px)';
+                  e.target.style.boxShadow = '0 12px 30px rgba(0,0,0,0.3)';
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.transform = 'translateY(0)';
+                  e.target.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+                }}
+              >
+                ENQUIRE NOW
+              </a>
             </div>
           </div>
         </div>
+      </div>
       
       {/* Welcome Section */}
       <div className="container-xxl py-5">
