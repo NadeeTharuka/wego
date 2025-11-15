@@ -1,3 +1,6 @@
+// FILE PATH: src/pages/Destination.jsx
+// COMPLETE WORKING CODE - All in one file
+
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
@@ -7,6 +10,16 @@ function Destination() {
   const location = useLocation();
   const navigate = useNavigate();
   const selectedPackage = location.state?.package;
+  const [expandedActivities, setExpandedActivities] = useState({});
+
+  // Toggle activity details
+  const toggleActivity = (dayIndex, activityIndex) => {
+    const key = `${dayIndex}-${activityIndex}`;
+    setExpandedActivities(prev => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
 
   // Place details mapping with images
   const placeDetails = {
@@ -43,13 +56,16 @@ function Destination() {
     "Negombo Fish Market": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Fishing Village": {
+      image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
     "Hamilton Dutch Canal": {
       image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     "Angurukaramulla Temple": {
       image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
-    "Anuradhapura": {
+    "Anuradhapura Ancient City": {
       image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     "Sri Maha Bodhiya": {
@@ -58,7 +74,7 @@ function Destination() {
     "Ruwanwelisaya": {
       image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
-    "Polonnaruwa": {
+    "Polonnaruwa Ancient City": {
       image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     "Nine Arch Bridge": {
@@ -79,13 +95,13 @@ function Destination() {
     "Hikkaduwa Coral Garden": {
       image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
-    "Turtle Farm": {
+    "Sea Turtle Hatchery": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     "Madu River Boat Ride": {
       image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
-    "Tea Plantation": {
+    "Tea Plantation Visit": {
       image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     "Udawalawe Safari": {
@@ -96,33 +112,38 @@ function Destination() {
     },
     "Ravana Falls": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Cinnamon Garden Visit": {
+      image: "https://images.unsplash.com/photo-1596040033229-a0b3b83f6258?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Fish Therapy": {
+      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Coastal Train Ride": {
+      image: "https://images.unsplash.com/photo-1586539195093-e683155f9b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Turtle Conservation Project": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Rumassala": {
+      image: "https://images.unsplash.com/photo-1580837119756-563d608dd119?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Unawatuna Beach": {
+      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Thissamaharama Ancient City": {
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Thissamaharama Lake": {
+      image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
-  };
-
-  // Extract place names from activities
-  const extractPlaces = (activities) => {
-    const places = [];
-    activities.forEach(activity => {
-      // Match known places
-      Object.keys(placeDetails).forEach(place => {
-        if (activity.includes(place) || activity.toLowerCase().includes(place.toLowerCase())) {
-          if (!places.find(p => p.name === place)) {
-            places.push({
-              name: place,
-              image: placeDetails[place].image
-            });
-          }
-        }
-      });
-    });
-    return places;
   };
 
   const handlePlaceClick = (placeName) => {
     navigate('/place-details', { state: { placeName } });
   };
 
-  // Comprehensive package details
+  // Comprehensive package details with all 6 packages
   const packageDetails = {
     "EXPLORE SRI LANKA IN 04 DAYS 03 NIGHTS": {
       program: [
@@ -162,12 +183,21 @@ function Destination() {
           day: "Day 04",
           title: "Colombo → Airport",
           activities: [
-            "Colombo City Tour",
-            "Gangaramaya Temple",
-            "Lotus Tower",
-            "Historic Fort Area",
-            "Galle Face Green",
-            "Independence Square",
+            {
+              name: "Colombo City Tour",
+              isExpandable: true,
+              subActivities: [
+                "Gangaramaya Temple",
+                "Historic Fort Area",
+                "Galle Face Green",
+                "Old Dutch Church",
+                "Independence Square",
+                "Colombo National Museum",
+                "BMICH",
+                "Kelaniya Temple",
+                "Lotus Tower"
+              ]
+            },
             "Departure to Airport"
           ]
         }
@@ -180,10 +210,12 @@ function Destination() {
           title: "Airport → Negombo",
           activities: [
             "Airport to Negombo",
-            "Negombo Fish Market / Fishing Village",
+            "Negombo Fish Market",
+            "Fishing Village",
             "Hamilton Dutch Canal exploration",
             "Angurukaramulla Temple",
             "St. Mary's Church",
+            "Negombo Lagoon",
             "Evening Negombo Lagoon Tour",
             "Overnight in Negombo"
           ]
@@ -223,7 +255,21 @@ function Destination() {
           day: "Day 05",
           title: "Colombo → Airport",
           activities: [
-            "Colombo City Tour",
+            {
+              name: "Colombo City Tour",
+              isExpandable: true,
+              subActivities: [
+                "Gangaramaya Temple",
+                "Historic Fort Area",
+                "Galle Face Green",
+                "Old Dutch Church",
+                "Independence Square",
+                "Colombo National Museum",
+                "BMICH",
+                "Kelaniya Temple",
+                "Lotus Tower"
+              ]
+            },
             "Major attractions visit",
             "Shopping opportunities",
             "Departure to Airport"
@@ -238,6 +284,7 @@ function Destination() {
           title: "Airport → Anuradhapura",
           activities: [
             "Airport to Anuradhapura",
+            "Anuradhapura Ancient City",
             "Sri Maha Bodhiya - Sacred Bodhi Tree",
             "Ruwanwelisaya Stupa",
             "Overnight in Anuradhapura"
@@ -278,7 +325,21 @@ function Destination() {
           day: "Day 05",
           title: "Colombo → Airport",
           activities: [
-            "Colombo City Tour",
+            {
+              name: "Colombo City Tour",
+              isExpandable: true,
+              subActivities: [
+                "Gangaramaya Temple",
+                "Historic Fort Area",
+                "Galle Face Green",
+                "Old Dutch Church",
+                "Independence Square",
+                "Colombo National Museum",
+                "BMICH",
+                "Kelaniya Temple",
+                "Lotus Tower"
+              ]
+            },
             "Historical and cultural sites",
             "Departure to Airport"
           ]
@@ -302,6 +363,7 @@ function Destination() {
           title: "Dambulla → Kandy",
           activities: [
             "Sigiriya Lion Rock Fortress",
+            "Sigiriya Village Tour",
             "Village Tour with Traditional Lunch",
             "Matale Spice Garden",
             "Overnight in Kandy"
@@ -313,6 +375,7 @@ function Destination() {
           activities: [
             "Temple of the Sacred Tooth Relic",
             "Kandyan Cultural Dance Show",
+            "Gem Shop Visit",
             "Journey to Hill Country",
             "Overnight in Nuwara Eliya"
           ]
@@ -342,10 +405,46 @@ function Destination() {
           day: "Day 06",
           title: "Hikkaduwa → Colombo",
           activities: [
-            "Turtle Conservation Project",
-            "Madu River Boat Safari",
-            "Cinnamon Garden Visit",
-            "Fish Therapy Experience",
+            {
+              name: "Turtle Conservation Project",
+              isExpandable: true,
+              subActivities: [
+                "Turtle Conservation Education",
+                "Baby Turtle Viewing",
+                "Release Ceremony",
+                "Multiple Turtle Species"
+              ]
+            },
+            {
+              name: "Madu River Boat Safari",
+              isExpandable: true,
+              subActivities: [
+                "Mangrove Exploration",
+                "Island Temple Visit",
+                "Cinnamon Garden Visit",
+                "Bird Watching"
+              ]
+            },
+            {
+              name: "Cinnamon Garden Visit",
+              isExpandable: true,
+              subActivities: [
+                "Cinnamon Harvesting Process",
+                "Traditional Methods",
+                "Spice Products",
+                "Guided Tour"
+              ]
+            },
+            {
+              name: "Fish Therapy",
+              isExpandable: true,
+              subActivities: [
+                "Natural Foot Spa",
+                "Therapeutic Experience",
+                "Garra Rufa Fish",
+                "Relaxation"
+              ]
+            },
             "Overnight in Colombo"
           ]
         },
@@ -353,7 +452,22 @@ function Destination() {
           day: "Day 07",
           title: "Colombo → Airport",
           activities: [
-            "Colombo City Tour and Shopping",
+            {
+              name: "Colombo City Tour",
+              isExpandable: true,
+              subActivities: [
+                "Gangaramaya Temple",
+                "Historic Fort Area",
+                "Galle Face Green",
+                "Old Dutch Church",
+                "Independence Square",
+                "Colombo National Museum",
+                "BMICH",
+                "Kelaniya Temple",
+                "Lotus Tower"
+              ]
+            },
+            "Shopping",
             "Final cultural experiences",
             "Departure to Airport"
           ]
@@ -378,6 +492,7 @@ function Destination() {
           title: "Negombo → Dambulla",
           activities: [
             "Negombo Fish Market",
+            "Negombo Lagoon",
             "Optional Mangrove Forest Boat Safari",
             "Pinnawala Elephant Orphanage",
             "Dambulla Cave Temple",
@@ -389,6 +504,7 @@ function Destination() {
           title: "Dambulla → Kandy",
           activities: [
             "Sigiriya Lion Rock Fortress",
+            "Sigiriya Village Tour",
             "Village Tour with cultural immersion",
             "Matale Spice Garden",
             "Overnight in Kandy"
@@ -400,7 +516,8 @@ function Destination() {
           activities: [
             "Temple of the Sacred Tooth Relic",
             "Kandyan Cultural Dance Show",
-            "Royal Botanic Gardens Peradeniya",
+            "Royal Botanical Garden",
+            "Gem Shop Visit",
             "Gem Museum visit",
             "Overnight in Kandy"
           ]
@@ -409,7 +526,7 @@ function Destination() {
           day: "Day 05",
           title: "Kandy → Nuwara Eliya",
           activities: [
-            "Tea Plantation Tour with factory visit",
+            "Tea Plantation Visit with factory visit",
             "Colonial Town exploration",
             "Tea-picking experience",
             "Overnight in Nuwara Eliya"
@@ -419,7 +536,7 @@ function Destination() {
           day: "Day 06",
           title: "Nuwara Eliya → Udawalawe",
           activities: [
-            "Scenic Mountain Train Ride",
+            "Scenic Mountain Train Ride through Central Highlands",
             "Udawalawe Safari - Wildlife conservation education",
             "Overnight in Udawalawe"
           ]
@@ -430,7 +547,7 @@ function Destination() {
           activities: [
             "Galle Fort UNESCO Site exploration",
             "Sea Turtle Hatchery",
-            "Cinnamon Garden visit",
+            "Cinnamon Garden Visit",
             "Fish Therapy experience",
             "Optional Madu River Boat Ride",
             "Overnight in Bentota"
@@ -440,8 +557,22 @@ function Destination() {
           day: "Day 08",
           title: "Bentota → Airport",
           activities: [
-            "Coastal Train Ride experience",
-            "Colombo City Tour",
+            "Coastal Train Ride",
+            {
+              name: "Colombo City Tour",
+              isExpandable: true,
+              subActivities: [
+                "Gangaramaya Temple",
+                "Historic Fort Area",
+                "Galle Face Green",
+                "Old Dutch Church",
+                "Independence Square",
+                "Colombo National Museum",
+                "BMICH",
+                "Kelaniya Temple",
+                "Lotus Tower"
+              ]
+            },
             "Final cultural and shopping experiences",
             "Departure to Airport"
           ]
@@ -455,6 +586,7 @@ function Destination() {
           title: "Airport → Negombo",
           activities: [
             "Arrival and hotel rest",
+            "Negombo Lagoon",
             "Evening Negombo Lagoon Tour",
             "Overnight in Negombo"
           ]
@@ -463,10 +595,25 @@ function Destination() {
           day: "Day 02",
           title: "Negombo → Hikkaduwa",
           activities: [
-            "Colombo City Tour",
+            {
+              name: "Colombo City Tour",
+              isExpandable: true,
+              subActivities: [
+                "Gangaramaya Temple",
+                "Historic Fort Area",
+                "Galle Face Green",
+                "Old Dutch Church",
+                "Independence Square",
+                "Colombo National Museum",
+                "BMICH",
+                "Kelaniya Temple",
+                "Lotus Tower"
+              ]
+            },
             "Major landmarks visit",
             "Turtle Conservation Project",
-            "Madu River Boat Safari with Cinnamon Tour",
+            "Madu River Boat Safari",
+            "Cinnamon Tour",
             "Overnight in Hikkaduwa"
           ]
         },
@@ -475,9 +622,11 @@ function Destination() {
           title: "Hikkaduwa → Yala",
           activities: [
             "Galle Fort exploration",
-            "Rumassala Japanese Peace Pagoda",
+            "Rumassala",
+            "Japanese Peace Pagoda",
             "Unawatuna Beach",
-            "Tissamaharama Ancient City and Lake",
+            "Thissamaharama Ancient City",
+            "Thissamaharama Lake",
             "Overnight in Yala"
           ]
         },
@@ -485,10 +634,46 @@ function Destination() {
           day: "Day 04",
           title: "Yala → Ella",
           activities: [
-            "Yala National Park Morning Safari",
-            "Buduruwagala Rock Temple",
-            "Ravana Waterfall",
-            "Optional Ravana Cave exploration",
+            {
+              name: "Yala National Park Morning Safari",
+              isExpandable: true,
+              subActivities: [
+                "Leopard Spotting",
+                "Elephant Herds",
+                "Bird Watching",
+                "Wildlife Photography"
+              ]
+            },
+            {
+              name: "Buduruwagala Rock Temple",
+              isExpandable: true,
+              subActivities: [
+                "Ancient Rock Carvings",
+                "Buddhist Statues",
+                "Historical Site",
+                "Serene Atmosphere"
+              ]
+            },
+            {
+              name: "Ravana Waterfall",
+              isExpandable: true,
+              subActivities: [
+                "Waterfall Views",
+                "Natural Pool",
+                "Photo Opportunities",
+                "Ramayana Legend"
+              ]
+            },
+            {
+              name: "Ravana Cave (Optional)",
+              isExpandable: true,
+              subActivities: [
+                "Ancient Cave",
+                "Historical Significance",
+                "Mountain Views",
+                "Ramayana Story"
+              ]
+            },
             "Overnight in Ella"
           ]
         },
@@ -507,8 +692,26 @@ function Destination() {
           day: "Day 06",
           title: "Ella → Nuwara Eliya",
           activities: [
-            "Famous Blue Train journey Ella to Nanu Oya",
-            "Gregory Lake activities",
+            {
+              name: "Blue Train Journey Ella to Nanu Oya",
+              isExpandable: true,
+              subActivities: [
+                "Scenic Train Ride",
+                "Tea Plantation Views",
+                "Mountain Landscapes",
+                "Photography Paradise"
+              ]
+            },
+            {
+              name: "Gregory Lake",
+              isExpandable: true,
+              subActivities: [
+                "Boating Activities",
+                "Lakeside Walking",
+                "Scenic Views",
+                "Relaxation"
+              ]
+            },
             "Nuwara Eliya walking city tour",
             "Overnight in Nuwara Eliya"
           ]
@@ -517,10 +720,20 @@ function Destination() {
           day: "Day 07",
           title: "Nuwara Eliya → Kandy",
           activities: [
-            "Horton Plains National Park",
-            "Tea Plantations and Factory tour",
+            {
+              name: "Horton Plains National Park",
+              isExpandable: true,
+              subActivities: [
+                "World's End",
+                "Baker's Falls",
+                "Highland Ecosystem",
+                "Trekking"
+              ]
+            },
+            "Tea Plantation & Factory Visit",
             "Ramboda Waterfall",
-            "Kandy Cultural Show and Temple visit",
+            "Kandy Cultural Show",
+            "Temple of Tooth Relic",
             "Overnight in Kandy"
           ]
         },
@@ -541,9 +754,10 @@ function Destination() {
           title: "Habarana → Sigiriya → Habarana",
           activities: [
             "Sigiriya Lion Rock Fortress climb",
-            "Hiriwadunna Village Tour with Cooking Class",
+            "Hiriwadunna Village Tour",
+            "Village Tour with Cooking Class",
             "Traditional lunch preparation",
-            "Minneriya/Kaudulla/Eco Park Safari",
+            "Minneriya/Kawdulla/Eco Park Wild Safari",
             "Overnight in Habarana"
           ]
         },
@@ -551,7 +765,7 @@ function Destination() {
           day: "Day 10",
           title: "Habarana → Polonnaruwa",
           activities: [
-            "Polonnaruwa Ancient Kingdom exploration by bicycle or car",
+            "Polonnaruwa Ancient City exploration by bicycle or car",
             "UNESCO World Heritage Site tour",
             "Overnight in Polonnaruwa"
           ]
@@ -561,7 +775,7 @@ function Destination() {
           title: "Polonnaruwa → Pasikuda",
           activities: [
             "Travel to East Coast",
-            "Beach leisure and water sports at Pasikuda",
+            "Beach Leisure/Water Sports at Pasikuda",
             "Overnight in Pasikuda"
           ]
         },
@@ -569,9 +783,36 @@ function Destination() {
           day: "Day 12",
           title: "Pasikuda → Trincomalee → Nilaveli",
           activities: [
-            "Koneswaram Temple",
-            "Pigeon Island National Park",
-            "Fort Frederick",
+            {
+              name: "Koneswaram Temple",
+              isExpandable: true,
+              subActivities: [
+                "Ancient Hindu Temple",
+                "Ocean Views",
+                "Spiritual Experience",
+                "Historical Architecture"
+              ]
+            },
+            {
+              name: "Pigeon Island National Park",
+              isExpandable: true,
+              subActivities: [
+                "Snorkeling Paradise",
+                "Coral Reefs",
+                "Marine Life",
+                "Beach Activities"
+              ]
+            },
+            {
+              name: "Fort Frederick",
+              isExpandable: true,
+              subActivities: [
+                "Colonial Fort",
+                "Historical Site",
+                "Ocean Views",
+                "Military Heritage"
+              ]
+            },
             "Overnight in Nilaveli"
           ]
         },
@@ -579,7 +820,16 @@ function Destination() {
           day: "Day 13",
           title: "Trincomalee → Dambulla",
           activities: [
-            "Leisure at Nilaveli Beach",
+            {
+              name: "Nilaveli Beach Leisure",
+              isExpandable: true,
+              subActivities: [
+                "Pristine Beach",
+                "Water Activities",
+                "Relaxation",
+                "Crystal Clear Waters"
+              ]
+            },
             "Return journey preparation",
             "Overnight in Dambulla"
           ]
@@ -595,6 +845,27 @@ function Destination() {
         }
       ]
     }
+  };
+
+  // Extract place names from activities
+  const extractPlaces = (activities) => {
+    const places = [];
+    activities.forEach(activity => {
+      const activityName = typeof activity === 'string' ? activity : activity.name;
+      
+      Object.keys(placeDetails).forEach(place => {
+        if (activityName.includes(place) || activityName.toLowerCase().includes(place.toLowerCase())) {
+          if (!places.find(p => p.name === place)) {
+            places.push({
+              name: place,
+              image: placeDetails[place].image,
+              isExpandable: typeof activity === 'object' && activity.isExpandable
+            });
+          }
+        }
+      });
+    });
+    return places;
   };
 
   const [formData, setFormData] = useState({
@@ -684,7 +955,6 @@ function Destination() {
       {selectedPackage ? (
         <div className="container py-5">
           <div className="row">
-            {/* Tour Details Section */}
             <div className="col-lg-8">
               <div className="tour-header mb-4">
                 <img
@@ -710,7 +980,6 @@ function Destination() {
                     </div>
                   </div>
                   
-                  {/* Package Highlights */}
                   {selectedPackage.highlights && (
                     <div className="highlights-section mb-4">
                       <h4 className="text-primary mb-3">
@@ -731,82 +1000,150 @@ function Destination() {
                 </div>
               </div>
 
-              {/* Detailed Itinerary with Place List */}
-{packageDetails[selectedPackage.name] && (
-  <div className="program-details">
-    <h3 className="text-primary mb-4">
-      <i className="fa fa-route me-2"></i>Detailed Itinerary
-    </h3>
-    
-    {packageDetails[selectedPackage.name].program.map((day, index) => {
-      const places = extractPlaces(day.activities);
-      
-      return (
-        <div key={index} className="day-section mb-4">
-          <div className="day-header bg-primary text-white p-3 rounded-top">
-            <h4 className="mb-1">
-              <i className="fa fa-calendar-day me-2"></i>
-              {day.day}
-            </h4>
-            <p className="mb-0 fs-6">{day.title}</p>
-          </div>
-          
-          <div className="day-content bg-light p-4 rounded-bottom">
-            {places.length > 0 ? (
-              <div className="places-list">
-                {places.map((place, placeIndex) => (
-                  <div 
-                    key={placeIndex} 
-                    className="place-item d-flex align-items-center justify-content-between mb-3 p-3 bg-white rounded shadow-sm"
-                    style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}
-                    onMouseEnter={(e) => e.currentTarget.style.transform = 'translateX(5px)'}
-                    onMouseLeave={(e) => e.currentTarget.style.transform = 'translateX(0)'}
-                  >
-                    <div className="d-flex align-items-center">
-                      <div 
-                        className="place-circle bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
-                        style={{ width: '40px', height: '40px', minWidth: '40px' }}
-                      >
-                        <i className="fa fa-map-marker-alt"></i>
-                      </div>
-                      <div>
-                        <h6 className="mb-0 fw-semibold">{place.name}</h6>
-                      </div>
-                    </div>
-                    <button 
-                      className="btn btn-outline-primary btn-sm rounded-circle"
-                      onClick={() => handlePlaceClick(place.name)}
-                      style={{ width: '35px', height: '35px', padding: '0' }}
-                      title="View Details"
-                    >
-                      <i className="fa fa-plus"></i>
-                    </button>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="activities mb-3">
-                <h5 className="text-secondary mb-3">
-                  <i className="fa fa-list me-2"></i>Activities
-                </h5>
-                <ul className="list-unstyled">
-                  {day.activities.map((activity, idx) => (
-                    <li key={idx} className="mb-2 d-flex align-items-start">
-                      <i className="fa fa-chevron-right text-primary me-2 mt-1"></i>
-                      <span>{activity}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        </div>
-      );
-    })}
-  </div>
-)}
+              {packageDetails[selectedPackage.name] && (
+                <div className="program-details">
+                  <h3 className="text-primary mb-4">
+                    <i className="fa fa-route me-2"></i>Detailed Itinerary
+                  </h3>
+                  
+                  {packageDetails[selectedPackage.name].program.map((day, dayIndex) => {
+                    const places = extractPlaces(day.activities);
+                    
+                    return (
+                      <div key={dayIndex} className="day-section mb-4">
+                        <div className="day-header bg-primary text-white p-3 rounded-top">
+                          <h4 className="mb-1">
+                            <i className="fa fa-calendar-day me-2"></i>
+                            {day.day}
+                          </h4>
+                          <p className="mb-0 fs-6">{day.title}</p>
+                        </div>
+                        
+                        <div className="day-content bg-light p-4 rounded-bottom">
+                          {places.length > 0 ? (
+                            <div className="places-list">
+                              {day.activities.map((activity, activityIndex) => {
+                                const isExpandableActivity = typeof activity === 'object' && activity.isExpandable;
+                                const activityName = typeof activity === 'string' ? activity : activity.name;
+                                const key = `${dayIndex}-${activityIndex}`;
+                                const isExpanded = expandedActivities[key];
+                                
+                                const hasPlaceDetail = Object.keys(placeDetails).some(place => 
+                                  activityName.includes(place) || activityName.toLowerCase().includes(place.toLowerCase())
+                                );
 
-              {/* What's Included Section */}
+                                if (isExpandableActivity && activity.subActivities) {
+                                  return (
+                                    <div key={activityIndex} className="mb-3">
+                                      <div 
+                                        className="place-item d-flex align-items-center justify-content-between p-3 bg-white rounded shadow-sm"
+                                        style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}
+                                      >
+                                        <div className="d-flex align-items-center flex-grow-1">
+                                          <div 
+                                            className="place-circle bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                            style={{ width: '40px', height: '40px', minWidth: '40px' }}
+                                          >
+                                            <i className="fa fa-map-marker-alt"></i>
+                                          </div>
+                                          <div className="flex-grow-1">
+                                            <h6 className="mb-0 fw-semibold">{activityName}</h6>
+                                          </div>
+                                        </div>
+                                        <div className="d-flex gap-2">
+                                          {hasPlaceDetail && (
+                                            <button 
+                                              className="btn btn-outline-primary btn-sm rounded-circle"
+                                              onClick={() => handlePlaceClick(activityName)}
+                                              style={{ width: '35px', height: '35px', padding: '0' }}
+                                              title="View Place Details"
+                                            >
+                                              <i className="fa fa-info"></i>
+                                            </button>
+                                          )}
+                                          <button 
+                                            className="btn btn-outline-success btn-sm rounded-circle"
+                                            onClick={() => toggleActivity(dayIndex, activityIndex)}
+                                            style={{ width: '35px', height: '35px', padding: '0' }}
+                                            title={isExpanded ? "Collapse" : "Expand Activities"}
+                                          >
+                                            <i className={`fa fa-chevron-${isExpanded ? 'up' : 'down'}`}></i>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      
+                                      {isExpanded && (
+                                        <div className="mt-2 ms-4 ps-3 border-start border-3 border-primary">
+                                          {activity.subActivities.map((subActivity, subIndex) => (
+                                            <div key={subIndex} className="py-2 px-3 bg-white rounded mb-2 shadow-sm">
+                                              <i className="fa fa-check-circle text-success me-2"></i>
+                                              <span>{subActivity}</span>
+                                            </div>
+                                          ))}
+                                        </div>
+                                      )}
+                                    </div>
+                                  );
+                                } else if (hasPlaceDetail) {
+                                  return (
+                                    <div 
+                                      key={activityIndex} 
+                                      className="place-item d-flex align-items-center justify-content-between mb-3 p-3 bg-white rounded shadow-sm"
+                                      style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}
+                                    >
+                                      <div className="d-flex align-items-center">
+                                        <div 
+                                          className="place-circle bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                          style={{ width: '40px', height: '40px', minWidth: '40px' }}
+                                        >
+                                          <i className="fa fa-map-marker-alt"></i>
+                                        </div>
+                                        <div>
+                                          <h6 className="mb-0 fw-semibold">{activityName}</h6>
+                                        </div>
+                                      </div>
+                                      <button 
+                                        className="btn btn-outline-primary btn-sm rounded-circle"
+                                        onClick={() => handlePlaceClick(activityName)}
+                                        style={{ width: '35px', height: '35px', padding: '0' }}
+                                        title="View Details"
+                                      >
+                                        <i className="fa fa-plus"></i>
+                                      </button>
+                                    </div>
+                                  );
+                                } else {
+                                  return (
+                                    <div key={activityIndex} className="mb-2 p-2 bg-white rounded">
+                                      <i className="fa fa-chevron-right text-primary me-2"></i>
+                                      <span>{activityName}</span>
+                                    </div>
+                                  );
+                                }
+                              })}
+                            </div>
+                          ) : (
+                            <div className="activities mb-3">
+                              <h5 className="text-secondary mb-3">
+                                <i className="fa fa-list me-2"></i>Activities
+                              </h5>
+                              <ul className="list-unstyled">
+                                {day.activities.map((activity, idx) => (
+                                  <li key={idx} className="mb-2 d-flex align-items-start">
+                                    <i className="fa fa-chevron-right text-primary me-2 mt-1"></i>
+                                    <span>{typeof activity === 'string' ? activity : activity.name}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+
               <div className="inclusions-section mt-5">
                 <div className="row">
                   <div className="col-md-6">
@@ -841,9 +1178,17 @@ function Destination() {
                   </div>
                 </div>
               </div>
+              
+              <div className="text-center mt-4">
+                <button 
+                  onClick={() => navigate('/tours')} 
+                  className="btn btn-primary btn-lg"
+                >
+                  <i className="fa fa-arrow-left me-2"></i>View All Tours
+                </button>
+              </div>
             </div>
 
-            {/* Booking Form Sidebar */}
             <div className="col-lg-4">
               <div className="booking-sidebar sticky-top">
                 <div className="booking-card bg-light p-4 rounded shadow">
@@ -969,7 +1314,6 @@ function Destination() {
                   </form>
                 </div>
 
-                {/* Additional Info */}
                 <div className="additional-info mt-4">
                   <div className="info-card bg-white p-4 rounded shadow-sm">
                     <h6 className="text-primary mb-3">
