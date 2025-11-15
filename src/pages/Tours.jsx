@@ -57,115 +57,60 @@ const TourPackages = () => {
     }
   ];
 
-  // ACCURATE MAP COORDINATES - Based on real Sri Lanka geography
   const mapFeatures = {
     "Popular Beaches": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200",
-      highlightArea: {
-        // West & South coast beaches
-        top: "48%",
-        left: "8%",
-        width: "35%",
-        height: "48%"
-      },
+      highlightArea: { top: "48%", left: "8%", width: "35%", height: "48%" },
       places: [
         { name: "Negombo", position: { top: "48%", left: "20%" } },
         { name: "Mount Lavinia", position: { top: "53%", left: "22%" } },
         { name: "Bentota", position: { top: "58%", left: "20%" } },
         { name: "Hikkaduwa", position: { top: "63%", left: "21%" } },
         { name: "Unawatuna", position: { top: "69%", left: "25%" } },
-        { name: "Mirissa", position: { top: "72%", left: "23%" } },
-        { name: "Tangalle", position: { top: "76%", left: "28%" } },
-        { name: "Arugam Bay", position: { top: "70%", right: "14%" } }
+        { name: "Mirissa", position: { top: "72%", left: "23%" } }
       ]
     },
     "Wildlife & Nature": {
       image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=200",
-      highlightArea: {
-        // South and Southeast - National Parks
-        top: "60%",
-        left: "20%",
-        width: "55%",
-        height: "35%"
-      },
+      highlightArea: { top: "60%", left: "20%", width: "55%", height: "35%" },
       places: [
         { name: "Yala National Park", position: { top: "78%", left: "40%" } },
         { name: "Udawalawe", position: { top: "68%", left: "28%" } },
-        { name: "Bundala", position: { top: "80%", left: "36%" } },
-        { name: "Minneriya", position: { top: "42%", left: "35%" } },
-        { name: "Kaudulla", position: { top: "38%", left: "36%" } },
-        { name: "Sinharaja Forest", position: { top: "62%", left: "25%" } }
+        { name: "Minneriya", position: { top: "42%", left: "35%" } }
       ]
     },
     "Adventure": {
       image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=200",
-      highlightArea: {
-        // Central Highlands - Hill Country
-        top: "45%",
-        left: "24%",
-        width: "30%",
-        height: "25%"
-      },
+      highlightArea: { top: "45%", left: "24%", width: "30%", height: "25%" },
       places: [
         { name: "Ella Rock", position: { top: "62%", left: "36%" } },
         { name: "Adam's Peak", position: { top: "56%", left: "28%" } },
-        { name: "Horton Plains", position: { top: "58%", left: "33%" } },
-        { name: "Knuckles Range", position: { top: "48%", left: "32%" } },
-        { name: "Kitulgala Rafting", position: { top: "52%", left: "27%" } }
+        { name: "Horton Plains", position: { top: "58%", left: "33%" } }
       ]
     },
     "History & Culture": {
       image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=200",
-      highlightArea: {
-        // Cultural Triangle - North Central
-        top: "28%",
-        left: "26%",
-        width: "35%",
-        height: "30%"
-      },
+      highlightArea: { top: "28%", left: "26%", width: "35%", height: "30%" },
       places: [
         { name: "Anuradhapura", position: { top: "32%", left: "32%" } },
-        { name: "Polonnaruwa", position: { top: "38%", left: "38%" } },
         { name: "Sigiriya", position: { top: "40%", left: "34%" } },
-        { name: "Dambulla", position: { top: "42%", left: "32%" } },
-        { name: "Kandy", position: { top: "50%", left: "31%" } },
-        { name: "Galle Fort", position: { top: "69%", left: "26%" } }
+        { name: "Kandy", position: { top: "50%", left: "31%" } }
       ]
     },
     "Lesser Travelled": {
       image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=200",
-      highlightArea: {
-        // Northern & Eastern regions
-        top: "8%",
-        left: "28%",
-        width: "48%",
-        height: "48%"
-      },
+      highlightArea: { top: "8%", left: "28%", width: "48%", height: "48%" },
       places: [
         { name: "Jaffna", position: { top: "10%", left: "34%" } },
-        { name: "Mannar", position: { top: "22%", left: "26%" } },
-        { name: "Trincomalee", position: { top: "34%", right: "12%" } },
-        { name: "Batticaloa", position: { top: "50%", right: "10%" } },
-        { name: "Mullaitivu", position: { top: "18%", left: "36%" } },
-        { name: "Vavuniya", position: { top: "28%", left: "32%" } }
+        { name: "Trincomalee", position: { top: "34%", right: "12%" } }
       ]
     },
     "Gastronomy": {
       image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=200",
-      highlightArea: {
-        // Major cities and culinary hotspots - spread across island
-        top: "30%",
-        left: "18%",
-        width: "60%",
-        height: "60%"
-      },
+      highlightArea: { top: "30%", left: "18%", width: "60%", height: "60%" },
       places: [
         { name: "Colombo", position: { top: "52%", left: "24%" } },
-        { name: "Galle", position: { top: "69%", left: "26%" } },
-        { name: "Jaffna", position: { top: "10%", left: "34%" } },
-        { name: "Kandy", position: { top: "50%", left: "31%" } },
-        { name: "Matale Spices", position: { top: "46%", left: "31%" } },
-        { name: "Negombo", position: { top: "48%", left: "20%" } }
+        { name: "Galle", position: { top: "69%", left: "26%" } }
       ]
     }
   };
@@ -201,114 +146,141 @@ const TourPackages = () => {
         </div>
       </div>
 
-      {/* Interactive Sri Lanka Map Section - ACCURATE POSITIONING */}
-      <div className="container-xxl py-5" style={{ background: 'linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%)' }}>
-        <div className="container">
-          <div className="text-center wow fadeInUp mb-4" data-wow-delay="0.1s">
+      {/* Interactive Sri Lanka Map - MAXIMIZED WITH BEACH */}
+      <div 
+        className="container-fluid py-5" 
+        style={{ 
+          background: 'linear-gradient(135deg, rgba(176, 224, 230, 0.3) 0%, rgba(135, 206, 235, 0.4) 50%, rgba(70, 130, 180, 0.3) 100%)',
+          position: 'relative',
+          overflow: 'hidden'
+        }}
+      >
+        {/* Beach Wave Effect */}
+        <div style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          width: '100%',
+          height: '150px',
+          background: 'linear-gradient(to top, rgba(135, 206, 235, 0.5), transparent)',
+          zIndex: 1
+        }} />
+        
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div className="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
             <h6 className="section-title bg-white text-center text-primary px-3">Our Island</h6>
-            <h1 className="mb-2">Sri Lanka</h1>
-            <p className="text-muted">Discover the pearl of the Indian Ocean - Hover over features to explore destinations</p>
+            <h1 className="mb-2" style={{ fontSize: '2.8rem', fontWeight: '700' }}>Sri Lanka</h1>
+            <p className="text-muted" style={{ fontSize: '1.15rem' }}>Discover the pearl of the Indian Ocean</p>
           </div>
           
           <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div className="position-relative d-flex justify-content-center align-items-center" style={{ minHeight: "650px", padding: "2rem 0" }}>
+            <div className="col-12">
+              <div className="position-relative d-flex justify-content-center align-items-center" style={{ minHeight: "900px", padding: "3rem 0" }}>
                 
-                {/* Left Side Features */}
+                {/* LEFT FEATURES - MAXIMIZED */}
                 <div 
                   className="position-absolute interactive-feature" 
-                  style={{ left: "5%", top: "18%", zIndex: 10 }}
+                  style={{ left: "1%", top: "12%", zIndex: 10 }}
                   onMouseEnter={() => handleFeatureHover("Popular Beaches")}
                   onMouseLeave={handleFeatureLeave}
                 >
-                  <div className="feature-card text-center" style={{ width: "140px", cursor: "pointer" }}>
-                    <div className="feature-image-wrapper mb-2">
-                      <img
-                        src={mapFeatures["Popular Beaches"].image}
-                        alt="Popular Beaches"
-                        className="rounded-circle shadow"
-                        style={{ width: "75px", height: "75px", objectFit: "cover", border: "3px solid white" }}
-                      />
-                    </div>
-                    <h6 className="fw-bold" style={{ fontSize: "0.85rem", margin: 0 }}>Popular Beaches</h6>
+                  <div className="feature-card text-center" style={{ 
+                    width: "220px", 
+                    padding: "25px",
+                    background: "rgba(255, 255, 255, 0.98)",
+                    borderRadius: "25px",
+                    boxShadow: "0 10px 40px rgba(0,0,0,0.2)",
+                    cursor: "pointer"
+                  }}>
+                    <img
+                      src={mapFeatures["Popular Beaches"].image}
+                      alt="Popular Beaches"
+                      className="rounded-circle shadow mb-3"
+                      style={{ width: "130px", height: "130px", objectFit: "cover", border: "5px solid white" }}
+                    />
+                    <h6 className="fw-bold" style={{ fontSize: "1.2rem", margin: 0, color: "#06A3DA" }}>Popular Beaches</h6>
                   </div>
                 </div>
 
                 <div 
                   className="position-absolute interactive-feature" 
-                  style={{ left: "3%", top: "48%", zIndex: 10 }}
+                  style={{ left: "0%", top: "42%", zIndex: 10 }}
                   onMouseEnter={() => handleFeatureHover("Wildlife & Nature")}
                   onMouseLeave={handleFeatureLeave}
                 >
-                  <div className="feature-card text-center" style={{ width: "140px", cursor: "pointer" }}>
-                    <div className="feature-image-wrapper mb-2">
-                      <img
-                        src={mapFeatures["Wildlife & Nature"].image}
-                        alt="Wildlife & Nature"
-                        className="rounded-circle shadow"
-                        style={{ width: "75px", height: "75px", objectFit: "cover", border: "3px solid white" }}
-                      />
-                    </div>
-                    <h6 className="fw-bold" style={{ fontSize: "0.85rem", margin: 0 }}>Wildlife & Nature</h6>
+                  <div className="feature-card text-center" style={{ 
+                    width: "220px",
+                    padding: "25px",
+                    background: "rgba(255, 255, 255, 0.98)",
+                    borderRadius: "25px",
+                    boxShadow: "0 10px 40px rgba(0,0,0,0.2)",
+                    cursor: "pointer"
+                  }}>
+                    <img
+                      src={mapFeatures["Wildlife & Nature"].image}
+                      alt="Wildlife"
+                      className="rounded-circle shadow mb-3"
+                      style={{ width: "130px", height: "130px", objectFit: "cover", border: "5px solid white" }}
+                    />
+                    <h6 className="fw-bold" style={{ fontSize: "1.2rem", margin: 0, color: "#4CAF50" }}>Wildlife & Nature</h6>
                   </div>
                 </div>
 
                 <div 
                   className="position-absolute interactive-feature" 
-                  style={{ left: "12%", bottom: "8%", zIndex: 10 }}
+                  style={{ left: "7%", bottom: "2%", zIndex: 10 }}
                   onMouseEnter={() => handleFeatureHover("Adventure")}
                   onMouseLeave={handleFeatureLeave}
                 >
-                  <div className="feature-card text-center" style={{ width: "140px", cursor: "pointer" }}>
-                    <div className="feature-image-wrapper mb-2">
-                      <img
-                        src={mapFeatures["Adventure"].image}
-                        alt="Adventure"
-                        className="rounded-circle shadow"
-                        style={{ width: "75px", height: "75px", objectFit: "cover", border: "3px solid white" }}
-                      />
-                    </div>
-                    <h6 className="fw-bold" style={{ fontSize: "0.85rem", margin: 0 }}>Adventure</h6>
+                  <div className="feature-card text-center" style={{ 
+                    width: "220px",
+                    padding: "25px",
+                    background: "rgba(255, 255, 255, 0.98)",
+                    borderRadius: "25px",
+                    boxShadow: "0 10px 40px rgba(0,0,0,0.2)",
+                    cursor: "pointer"
+                  }}>
+                    <img
+                      src={mapFeatures["Adventure"].image}
+                      alt="Adventure"
+                      className="rounded-circle shadow mb-3"
+                      style={{ width: "130px", height: "130px", objectFit: "cover", border: "5px solid white" }}
+                    />
+                    <h6 className="fw-bold" style={{ fontSize: "1.2rem", margin: 0, color: "#FF9800" }}>Adventure</h6>
                   </div>
                 </div>
 
-                {/* Center - Enhanced Quality Sri Lanka Map */}
+                {/* CENTER - MAXIMIZED MAP */}
                 <div className="text-center" style={{ zIndex: 5, position: "relative" }}>
                   <img 
                     src="/assets/img/91a5c3ff-7781-4f6e-a4ff-cbe8d3bc8d20.png"
-                    alt="Sri Lanka Topographical Map"
+                    alt="Sri Lanka Map"
                     style={{ 
-                      width: "380px", 
+                      width: "600px", 
                       height: "auto", 
                       maxWidth: "100%",
-                      filter: "drop-shadow(0 10px 25px rgba(0,0,0,0.2)) contrast(1.1) brightness(1.05)",
-                      borderRadius: "10px",
-                      imageRendering: "-webkit-optimize-contrast"
+                      filter: "drop-shadow(0 20px 50px rgba(0,0,0,0.3)) contrast(1.2) brightness(1.1) saturate(1.15)",
+                      borderRadius: "20px"
                     }}
                   />
 
-                  {/* ACCURATE Highlighted Areas for Features */}
                   {selectedFeature && mapFeatures[selectedFeature].highlightArea && (
                     <div 
-                      className={`map-highlight ${selectedFeature.toLowerCase().replace(/\s+/g, '-').replace('&', '')}-highlight`}
+                      className={`map-highlight`}
                       style={{
                         position: "absolute",
-                        top: mapFeatures[selectedFeature].highlightArea.top,
-                        left: mapFeatures[selectedFeature].highlightArea.left,
-                        right: mapFeatures[selectedFeature].highlightArea.right,
-                        width: mapFeatures[selectedFeature].highlightArea.width,
-                        height: mapFeatures[selectedFeature].highlightArea.height,
+                        ...mapFeatures[selectedFeature].highlightArea,
                         background: selectedFeature === "Popular Beaches" 
-                          ? "radial-gradient(ellipse, rgba(6, 163, 218, 0.35) 0%, rgba(6, 163, 218, 0.15) 50%, transparent 70%)"
+                          ? "radial-gradient(ellipse, rgba(6, 163, 218, 0.45) 0%, rgba(6, 163, 218, 0.25) 50%, transparent 70%)"
                           : selectedFeature === "Wildlife & Nature"
-                          ? "radial-gradient(ellipse, rgba(76, 175, 80, 0.35) 0%, rgba(76, 175, 80, 0.15) 50%, transparent 70%)"
+                          ? "radial-gradient(ellipse, rgba(76, 175, 80, 0.45) 0%, rgba(76, 175, 80, 0.25) 50%, transparent 70%)"
                           : selectedFeature === "Adventure"
-                          ? "radial-gradient(ellipse, rgba(255, 152, 0, 0.35) 0%, rgba(255, 152, 0, 0.15) 50%, transparent 70%)"
+                          ? "radial-gradient(ellipse, rgba(255, 152, 0, 0.45) 0%, rgba(255, 152, 0, 0.25) 50%, transparent 70%)"
                           : selectedFeature === "History & Culture"
-                          ? "radial-gradient(ellipse, rgba(156, 39, 176, 0.35) 0%, rgba(156, 39, 176, 0.15) 50%, transparent 70%)"
+                          ? "radial-gradient(ellipse, rgba(156, 39, 176, 0.45) 0%, rgba(156, 39, 176, 0.25) 50%, transparent 70%)"
                           : selectedFeature === "Lesser Travelled"
-                          ? "radial-gradient(ellipse, rgba(103, 58, 183, 0.35) 0%, rgba(103, 58, 183, 0.15) 50%, transparent 70%)"
-                          : "radial-gradient(ellipse, rgba(255, 87, 34, 0.35) 0%, rgba(255, 87, 34, 0.15) 50%, transparent 70%)",
+                          ? "radial-gradient(ellipse, rgba(103, 58, 183, 0.45) 0%, rgba(103, 58, 183, 0.25) 50%, transparent 70%)"
+                          : "radial-gradient(ellipse, rgba(255, 87, 34, 0.45) 0%, rgba(255, 87, 34, 0.25) 50%, transparent 70%)",
                         borderRadius: "50%",
                         animation: "pulseGlow 2s ease-in-out infinite",
                         pointerEvents: "none",
@@ -317,13 +289,11 @@ const TourPackages = () => {
                     />
                   )}
 
-                  {/* ACCURATE Place Markers */}
                   {selectedFeature && (
                     <div className="places-overlay">
                       {mapFeatures[selectedFeature].places.map((place, index) => (
                         <div
                           key={index}
-                          className="place-marker"
                           style={{
                             position: "absolute",
                             ...place.position,
@@ -333,21 +303,19 @@ const TourPackages = () => {
                           }}
                         >
                           <div 
-                            className="place-pin"
                             style={{
                               background: "linear-gradient(135deg, #06A3DA, #0585B3)",
                               color: "white",
-                              padding: "5px 10px",
-                              borderRadius: "18px",
-                              fontSize: "0.65rem",
+                              padding: "10px 16px",
+                              borderRadius: "25px",
+                              fontSize: "0.9rem",
                               fontWeight: "700",
                               whiteSpace: "nowrap",
-                              boxShadow: "0 4px 15px rgba(6, 163, 218, 0.5)",
-                              border: "2px solid white",
-                              position: "relative"
+                              boxShadow: "0 8px 25px rgba(6, 163, 218, 0.7)",
+                              border: "3px solid white"
                             }}
                           >
-                            <i className="fa fa-map-marker-alt me-1"></i>
+                            <i className="fa fa-map-marker-alt me-2"></i>
                             {place.name}
                           </div>
                         </div>
@@ -356,61 +324,76 @@ const TourPackages = () => {
                   )}
                 </div>
 
-                {/* Right Side Features */}
+                {/* RIGHT FEATURES - MAXIMIZED */}
                 <div 
                   className="position-absolute interactive-feature" 
-                  style={{ right: "5%", top: "18%", zIndex: 10 }}
+                  style={{ right: "1%", top: "12%", zIndex: 10 }}
                   onMouseEnter={() => handleFeatureHover("History & Culture")}
                   onMouseLeave={handleFeatureLeave}
                 >
-                  <div className="feature-card text-center" style={{ width: "140px", cursor: "pointer" }}>
-                    <div className="feature-image-wrapper mb-2">
-                      <img
-                        src={mapFeatures["History & Culture"].image}
-                        alt="History & Culture"
-                        className="rounded-circle shadow"
-                        style={{ width: "75px", height: "75px", objectFit: "cover", border: "3px solid white" }}
-                      />
-                    </div>
-                    <h6 className="fw-bold" style={{ fontSize: "0.85rem", margin: 0 }}>History & Culture</h6>
+                  <div className="feature-card text-center" style={{ 
+                    width: "220px",
+                    padding: "25px",
+                    background: "rgba(255, 255, 255, 0.98)",
+                    borderRadius: "25px",
+                    boxShadow: "0 10px 40px rgba(0,0,0,0.2)",
+                    cursor: "pointer"
+                  }}>
+                    <img
+                      src={mapFeatures["History & Culture"].image}
+                      alt="History"
+                      className="rounded-circle shadow mb-3"
+                      style={{ width: "130px", height: "130px", objectFit: "cover", border: "5px solid white" }}
+                    />
+                    <h6 className="fw-bold" style={{ fontSize: "1.2rem", margin: 0, color: "#9C27B0" }}>History & Culture</h6>
                   </div>
                 </div>
 
                 <div 
                   className="position-absolute interactive-feature" 
-                  style={{ right: "3%", top: "48%", zIndex: 10 }}
+                  style={{ right: "0%", top: "42%", zIndex: 10 }}
                   onMouseEnter={() => handleFeatureHover("Lesser Travelled")}
                   onMouseLeave={handleFeatureLeave}
                 >
-                  <div className="feature-card text-center" style={{ width: "140px", cursor: "pointer" }}>
-                    <div className="feature-image-wrapper mb-2">
-                      <img
-                        src={mapFeatures["Lesser Travelled"].image}
-                        alt="Lesser Travelled"
-                        className="rounded-circle shadow"
-                        style={{ width: "75px", height: "75px", objectFit: "cover", border: "3px solid white" }}
-                      />
-                    </div>
-                    <h6 className="fw-bold" style={{ fontSize: "0.85rem", margin: 0 }}>Lesser Travelled</h6>
+                  <div className="feature-card text-center" style={{ 
+                    width: "220px",
+                    padding: "25px",
+                    background: "rgba(255, 255, 255, 0.98)",
+                    borderRadius: "25px",
+                    boxShadow: "0 10px 40px rgba(0,0,0,0.2)",
+                    cursor: "pointer"
+                  }}>
+                    <img
+                      src={mapFeatures["Lesser Travelled"].image}
+                      alt="Hidden Gems"
+                      className="rounded-circle shadow mb-3"
+                      style={{ width: "130px", height: "130px", objectFit: "cover", border: "5px solid white" }}
+                    />
+                    <h6 className="fw-bold" style={{ fontSize: "1.2rem", margin: 0, color: "#673AB7" }}>Lesser Travelled</h6>
                   </div>
                 </div>
 
                 <div 
                   className="position-absolute interactive-feature" 
-                  style={{ right: "12%", bottom: "8%", zIndex: 10 }}
+                  style={{ right: "7%", bottom: "2%", zIndex: 10 }}
                   onMouseEnter={() => handleFeatureHover("Gastronomy")}
                   onMouseLeave={handleFeatureLeave}
                 >
-                  <div className="feature-card text-center" style={{ width: "140px", cursor: "pointer" }}>
-                    <div className="feature-image-wrapper mb-2">
-                      <img
-                        src={mapFeatures["Gastronomy"].image}
-                        alt="Gastronomy"
-                        className="rounded-circle shadow"
-                        style={{ width: "75px", height: "75px", objectFit: "cover", border: "3px solid white" }}
-                      />
-                    </div>
-                    <h6 className="fw-bold" style={{ fontSize: "0.85rem", margin: 0 }}>Gastronomy</h6>
+                  <div className="feature-card text-center" style={{ 
+                    width: "220px",
+                    padding: "25px",
+                    background: "rgba(255, 255, 255, 0.98)",
+                    borderRadius: "25px",
+                    boxShadow: "0 10px 40px rgba(0,0,0,0.2)",
+                    cursor: "pointer"
+                  }}>
+                    <img
+                      src={mapFeatures["Gastronomy"].image}
+                      alt="Food"
+                      className="rounded-circle shadow mb-3"
+                      style={{ width: "130px", height: "130px", objectFit: "cover", border: "5px solid white" }}
+                    />
+                    <h6 className="fw-bold" style={{ fontSize: "1.2rem", margin: 0, color: "#FF5722" }}>Gastronomy</h6>
                   </div>
                 </div>
 
@@ -418,33 +401,37 @@ const TourPackages = () => {
             </div>
           </div>
 
-          {/* Selected Feature Places List */}
           {selectedFeature && (
-            <div className="row justify-content-center mt-3">
+            <div className="row justify-content-center mt-4">
               <div className="col-lg-10">
-                <div className="alert alert-info text-center" style={{ 
+                <div style={{ 
                   background: "linear-gradient(135deg, #06A3DA 0%, #0585B3 100%)",
                   color: "white",
                   border: "none",
-                  borderRadius: "15px",
-                  boxShadow: "0 4px 20px rgba(6, 163, 218, 0.3)"
+                  borderRadius: "25px",
+                  boxShadow: "0 10px 40px rgba(6, 163, 218, 0.5)",
+                  padding: "30px",
+                  textAlign: "center"
                 }}>
-                  <h5 className="mb-3">
+                  <h5 style={{ fontSize: "1.6rem", fontWeight: "700", marginBottom: "20px" }}>
                     <i className="fa fa-info-circle me-2"></i>
                     Exploring: {selectedFeature}
                   </h5>
-                  <div className="d-flex flex-wrap justify-content-center gap-2">
+                  <div className="d-flex flex-wrap justify-content-center gap-3">
                     {mapFeatures[selectedFeature].places.map((place, index) => (
                       <span 
                         key={index} 
-                        className="badge bg-white text-primary"
                         style={{ 
-                          padding: "8px 15px", 
-                          fontSize: "0.9rem",
-                          fontWeight: "600"
+                          padding: "14px 24px", 
+                          fontSize: "1.05rem",
+                          fontWeight: "700",
+                          borderRadius: "30px",
+                          background: "white",
+                          color: "#06A3DA",
+                          display: "inline-block"
                         }}
                       >
-                        <i className="fa fa-map-marker-alt me-1"></i>
+                        <i className="fa fa-map-marker-alt me-2"></i>
                         {place.name}
                       </span>
                     ))}
@@ -498,6 +485,5 @@ const TourPackages = () => {
     </div>
   );
 };
-
 
 export default TourPackages;
