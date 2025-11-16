@@ -112,30 +112,6 @@ function Destination() {
     },
     "Ravana Falls": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    "Cinnamon Garden Visit": {
-      image: "https://images.unsplash.com/photo-1596040033229-a0b3b83f6258?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    "Fish Therapy": {
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    "Coastal Train Ride": {
-      image: "https://images.unsplash.com/photo-1586539195093-e683155f9b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    "Turtle Conservation Project": {
-      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    "Rumassala": {
-      image: "https://images.unsplash.com/photo-1580837119756-563d608dd119?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    "Unawatuna Beach": {
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    "Thissamaharama Ancient City": {
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    "Thissamaharama Lake": {
-      image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   };
 
@@ -143,8 +119,242 @@ function Destination() {
     navigate('/place-details', { state: { placeName } });
   };
 
-  // Comprehensive package details with all 6 packages
+  // Comprehensive package details with all 7 packages
   const packageDetails = {
+    "ULTIMATE EXPLORER - 10 DAYS 09 NIGHTS": {
+      program: [
+        {
+          day: "Day 01",
+          title: "Airport → Sigiriya",
+          activities: [
+            "Negombo Fish Market",
+            "Pinnawala Elephant Orphanage",
+            {
+              name: "Sigiriya Village Tour with Sri Lankan Cooking Class",
+              isExpandable: true,
+              subActivities: [
+                "Traditional Village Tour",
+                "Sri Lankan Cooking Class",
+                "Authentic Traditional Lunch",
+                "Cultural Immersion Experience"
+              ]
+            },
+            "Pidurangala Sunset View",
+            "Overnight in Sigiriya (Activities depend on arrival time)"
+          ]
+        },
+        {
+          day: "Day 02",
+          title: "Sigiriya → Polonnaruwa → Habarana",
+          activities: [
+            "Sigiriya Lion Rock Fortress - UNESCO World Heritage Site",
+            {
+              name: "Polonnaruwa Ancient Kingdom Exploration",
+              isExpandable: true,
+              subActivities: [
+                "Bicycle Tour Option",
+                "Car Tour Option",
+                "Gal Vihara Rock Temple",
+                "Royal Palace Ruins"
+              ]
+            },
+            {
+              name: "Minneriya/Kaudulla/Eco Park Wild Safari",
+              isExpandable: true,
+              subActivities: [
+                "Elephant Gathering",
+                "Wildlife Photography",
+                "Bird Watching",
+                "Jeep Safari Experience"
+              ]
+            },
+            "Overnight in Habarana"
+          ]
+        },
+        {
+          day: "Day 03",
+          title: "Habarana → Kandy",
+          activities: [
+            "Dambulla Cave Temple - UNESCO World Heritage Site",
+            "Nalanda Gedige Temple",
+            "Matale Hindu Temple",
+            "Kandyan Cultural Dance Show",
+            "Temple of the Sacred Tooth Relic (Dalada Maligawa)",
+            "Overnight in Kandy"
+          ]
+        },
+        {
+          day: "Day 04",
+          title: "Kandy → Nuwara Eliya",
+          activities: [
+            "Peradeniya Botanical Garden",
+            "Ramboda Waterfall",
+            {
+              name: "Tea Factory & Tea Plantation Tour",
+              isExpandable: true,
+              subActivities: [
+                "Tea Plucking Experience",
+                "Factory Visit & Processing",
+                "Tea Tasting Session",
+                "Learn Traditional Tea Making"
+              ]
+            },
+            "Walking City Tour of Nuwara Eliya",
+            "Overnight in Nuwara Eliya"
+          ]
+        },
+        {
+          day: "Day 05",
+          title: "Nuwara Eliya → Ella",
+          activities: [
+            {
+              name: "Horton Plains National Park",
+              isExpandable: true,
+              subActivities: [
+                "World's End Viewpoint",
+                "Baker's Falls",
+                "Highland Ecosystem Trekking",
+                "Endemic Flora & Fauna"
+              ]
+            },
+            {
+              name: "Blue Train Journey - Nanu Oya to Ella",
+              isExpandable: true,
+              subActivities: [
+                "World's Most Scenic Train Ride",
+                "Tea Plantation Panoramic Views",
+                "Mountain Landscapes",
+                "Photography Paradise"
+              ]
+            },
+            "Nine Arch Bridge",
+            "Overnight in Ella"
+          ]
+        },
+        {
+          day: "Day 06",
+          title: "Ella Full Day Exploration",
+          activities: [
+            "Little Adam's Peak Hike",
+            "Ravana Cave",
+            "Ella Rock Challenging Hike",
+            {
+              name: "Secret Waterfall Swimming",
+              isExpandable: true,
+              subActivities: [
+                "Hidden Waterfall Trek",
+                "Natural Pool Swimming",
+                "Nature Photography",
+                "Refreshing Experience"
+              ]
+            },
+            "Overnight in Ella"
+          ]
+        },
+        {
+          day: "Day 07",
+          title: "Ella → Yala",
+          activities: [
+            "Ravana Falls",
+            {
+              name: "Buduruwagala Rock Temple",
+              isExpandable: true,
+              subActivities: [
+                "Ancient Rock Carvings",
+                "7 Buddha Statues - 51 feet tall",
+                "Archaeological Site",
+                "Peaceful Meditation Spot"
+              ]
+            },
+            {
+              name: "Yala National Park Safari",
+              isExpandable: true,
+              subActivities: [
+                "Leopard Spotting",
+                "Elephant Herds",
+                "Sloth Bears",
+                "Bird Watching & Wildlife Photography"
+              ]
+            },
+            "Overnight in Yala"
+          ]
+        },
+        {
+          day: "Day 08",
+          title: "Yala → Mirissa",
+          activities: [
+            "Tissamaharama Lake",
+            "Goyambokka Beach",
+            {
+              name: "Dondra Lighthouse",
+              isExpandable: true,
+              subActivities: [
+                "Southernmost Point of Sri Lanka",
+                "Historic Lighthouse (162 feet tall)",
+                "Panoramic Ocean Views",
+                "Photography Opportunities"
+              ]
+            },
+            "Mirissa Beach Relaxation",
+            "Overnight in Mirissa"
+          ]
+        },
+        {
+          day: "Day 09",
+          title: "Mirissa → Hikkaduwa",
+          activities: [
+            {
+              name: "Whale Watching at Mirissa",
+              isExpandable: true,
+              subActivities: [
+                "Blue Whale Sightings",
+                "Dolphin Pods",
+                "Marine Life Boat Tour",
+                "Ocean Adventure"
+              ]
+            },
+            "Coconut Tree Hill",
+            "Weligama Beach",
+            "Unawatuna Beach",
+            "Galle Dutch Fort - UNESCO World Heritage Site",
+            "Overnight in Hikkaduwa"
+          ]
+        },
+        {
+          day: "Day 10",
+          title: "Hikkaduwa → Airport/Negombo",
+          activities: [
+            {
+              name: "Hikkaduwa Beach Activities",
+              isExpandable: true,
+              subActivities: [
+                "Snorkeling with Turtles",
+                "Scuba Diving",
+                "Surfing",
+                "Beach Relaxation"
+              ]
+            },
+            "Turtle Conservation Project",
+            {
+              name: "Colombo City Tour",
+              isExpandable: true,
+              subActivities: [
+                "Gangaramaya Temple",
+                "Lotus Tower",
+                "Historic Fort Area",
+                "Galle Face Green",
+                "Old Dutch Church",
+                "Independence Square",
+                "Colombo National Museum",
+                "Jami Ul-Alfar Mosque"
+              ]
+            },
+            "Negombo Lagoon Tour (time permitting)",
+            "Departure to Airport (Activities depend on departure time)"
+          ]
+        }
+      ]
+    },
     "EXPLORE SRI LANKA IN 04 DAYS 03 NIGHTS": {
       program: [
         {

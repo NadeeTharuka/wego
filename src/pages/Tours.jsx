@@ -54,6 +54,14 @@ const TourPackages = () => {
       duration: "14 Days 13 Nights",
       price: "$2499",
       highlights: ["Complete Sri Lanka Discovery", "All Major Destinations", "Adventure & Relaxation", "Cultural Immersion"]
+    },
+    {
+      id: 7,
+      name: "ULTIMATE EXPLORER - 10 DAYS 09 NIGHTS",
+      image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+      duration: "10 Days 9 Nights",
+      price: "$1899",
+      highlights: ["Whale Watching", "Scenic Train Ride", "Village Cooking Class", "Multiple Safari Adventures"]
     }
   ];
 
@@ -146,7 +154,7 @@ const TourPackages = () => {
         </div>
       </div>
 
-      {/* Interactive Sri Lanka Map - MAXIMIZED WITH BEACH */}
+      {/* Interactive Sri Lanka Map */}
       <div 
         className="container-fluid py-5" 
         style={{ 
@@ -155,7 +163,6 @@ const TourPackages = () => {
           overflow: 'hidden'
         }}
       >
-        {/* Beach Wave Effect */}
         <div style={{
           position: 'absolute',
           bottom: 0,
@@ -177,7 +184,7 @@ const TourPackages = () => {
             <div className="col-12">
               <div className="position-relative d-flex justify-content-center align-items-center" style={{ minHeight: "900px", padding: "3rem 0" }}>
                 
-                {/* LEFT FEATURES - MAXIMIZED */}
+                {/* LEFT FEATURES */}
                 <div 
                   className="position-absolute interactive-feature" 
                   style={{ left: "1%", top: "12%", zIndex: 10 }}
@@ -250,7 +257,7 @@ const TourPackages = () => {
                   </div>
                 </div>
 
-                {/* CENTER - MAXIMIZED MAP */}
+                {/* CENTER MAP */}
                 <div className="text-center" style={{ zIndex: 5, position: "relative" }}>
                   <img 
                     src="/assets/img/91a5c3ff-7781-4f6e-a4ff-cbe8d3bc8d20.png"
@@ -324,7 +331,7 @@ const TourPackages = () => {
                   )}
                 </div>
 
-                {/* RIGHT FEATURES - MAXIMIZED */}
+                {/* RIGHT FEATURES */}
                 <div 
                   className="position-absolute interactive-feature" 
                   style={{ right: "1%", top: "12%", zIndex: 10 }}
