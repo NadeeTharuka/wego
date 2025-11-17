@@ -3,12 +3,24 @@ import React from 'react'
 export default function Home() {
   return (
     <div>
-      <div className="container-fluid bg-primary py-5 mb-5 hero-header">
+      <div 
+        className="container-fluid bg-primary py-5 mb-5 hero-header"
+        style={{
+          background: `linear-gradient(rgba(20, 20, 31, 0.5), rgba(20, 20, 31, 0.5)), url('https://images.unsplash.com/photo-1570789210967-2cac24afeb00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`,
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          minHeight: '60vh'
+        }}
+      >
         <div className="container py-5">
           <div className="row justify-content-center py-5">
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-              <p className="fs-4 text-white mb-4 animated slideInDown" style={{ fontWeight: '500' }}>
-                Gateway to the Magic of Sri Lanka
+              <p className="fs-4 text-white mb-4 animated slideInDown" style={{ 
+                fontWeight: '500',
+                textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+              }}>
+                Gateway to the Pearl of the Indian Ocean
               </p>
               <a 
                 href="/booking" 
@@ -54,7 +66,7 @@ export default function Home() {
                 Let us guide you through Sri Lanka's wonders, where every journey tells a story, and every moment becomes a cherished memory.
               </p>
               <p className="text-center" style={{ fontSize: '1.2rem', fontWeight: '600', color: '#086AD8' }}>
-                Opulent Tours – Where every journey begins with the magic of Sri Lanka.
+                Opulent Tours — Where every journey begins with the magic of Sri Lanka.
               </p>
             </div>
           </div>
@@ -380,79 +392,78 @@ export default function Home() {
                 <h6 className="text-white text-uppercase">Booking</h6>
                 <h1 className="text-white mb-4">Plan your Dream Trip</h1>
                 <p className="mb-4">
-                  You can customize our recommended tours or plan your dream trip by discussing your preferences with the friendly team at Opulent Tours.                </p>
+                  You can customize our recommended tours or plan your dream trip by discussing your preferences with the friendly team at Opulent Tours.
+                </p>
                 <a className="btn btn-outline-light py-3 px-5 mt-2" href="/about">
                   Read More
                 </a>
               </div>
               <div className="col-md-6">
                 <h1 className="text-white mb-4">Plan A Tour</h1>
-                <form>
-                  <div className="row g-3">
-                    <div className="col-md-6">
-                      <div className="form-floating">
-                        <input
-                          type="text"
-                          className="form-control bg-transparent"
-                          id="name"
-                          placeholder="Your Name"
-                        />
-                        <label htmlFor="name">Your Name</label>
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-floating">
-                        <input
-                          type="email"
-                          className="form-control bg-transparent"
-                          id="email"
-                          placeholder="Your Email"
-                        />
-                        <label htmlFor="email">Your Email</label>
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-floating date" id="date3" data-target-input="nearest">
-                        <input
-                          type="text"
-                          className="form-control bg-transparent datetimepicker-input"
-                          id="datetime"
-                          placeholder="Date & Time"
-                          data-target="#date3"
-                          data-toggle="datetimepicker"
-                        />
-                        <label htmlFor="datetime">Date &amp; Time</label>
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-floating">
-                        <select className="form-select bg-transparent" id="select1">
-                          <option value={1}>Sri Lanka</option>
-                          <option value={2}>India</option>
-                          <option value={3}>Thailand</option>
-                        </select>
-                        <label htmlFor="select1">Destination</label>
-                      </div>
-                    </div>
-                    <div className="col-12">
-                      <div className="form-floating">
-                        <textarea
-                          className="form-control bg-transparent"
-                          placeholder="Special Request"
-                          id="message"
-                          style={{ height: 100 }}
-                          defaultValue={""}
-                        />
-                        <label htmlFor="message">Special Request</label>
-                      </div>
-                    </div>
-                    <div className="col-12">
-                      <button className="btn btn-outline-light w-100 py-3" type="submit">
-                        Inquire Now
-                      </button>
+                <div className="row g-3">
+                  <div className="col-md-6">
+                    <div className="form-floating">
+                      <input
+                        type="text"
+                        className="form-control bg-transparent"
+                        id="name"
+                        placeholder="Your Name"
+                      />
+                      <label htmlFor="name">Your Name</label>
                     </div>
                   </div>
-                </form>
+                  <div className="col-md-6">
+                    <div className="form-floating">
+                      <input
+                        type="email"
+                        className="form-control bg-transparent"
+                        id="email"
+                        placeholder="Your Email"
+                      />
+                      <label htmlFor="email">Your Email</label>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="form-floating date" id="date3" data-target-input="nearest">
+                      <input
+                        type="text"
+                        className="form-control bg-transparent datetimepicker-input"
+                        id="datetime"
+                        placeholder="Date & Time"
+                        data-target="#date3"
+                        data-toggle="datetimepicker"
+                      />
+                      <label htmlFor="datetime">Date &amp; Time</label>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="form-floating">
+                      <select className="form-select bg-transparent" id="select1">
+                        <option value={1}>Sri Lanka</option>
+                        <option value={2}>India</option>
+                        <option value={3}>Thailand</option>
+                      </select>
+                      <label htmlFor="select1">Destination</label>
+                    </div>
+                  </div>
+                  <div className="col-12">
+                    <div className="form-floating">
+                      <textarea
+                        className="form-control bg-transparent"
+                        placeholder="Special Request"
+                        id="message"
+                        style={{ height: 100 }}
+                        defaultValue={""}
+                      />
+                      <label htmlFor="message">Special Request</label>
+                    </div>
+                  </div>
+                  <div className="col-12">
+                    <button className="btn btn-outline-light w-100 py-3" type="button">
+                      Inquire Now
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -482,7 +493,8 @@ export default function Home() {
                 <hr className="w-25 mx-auto bg-primary mb-1" />
                 <hr className="w-50 mx-auto bg-primary mt-0" />
                 <p className="mb-0">
-                  Select from our curated destinations across Sri Lanka, or let us create a custom itinerary just for you                </p>
+                  Select from our curated destinations across Sri Lanka, or let us create a custom itinerary just for you
+                </p>
               </div>
             </div>
             <div className="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
