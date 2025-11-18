@@ -1,6 +1,3 @@
-// FILE PATH: src/pages/Destination.jsx
-// COMPLETE WORKING CODE - All in one file
-
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
