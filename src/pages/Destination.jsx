@@ -1,3 +1,6 @@
+// FILE PATH: src/pages/Destination.jsx
+// UPDATED WITH COLLAPSIBLE DAY DETAILS
+
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
@@ -8,6 +11,15 @@ function Destination() {
   const navigate = useNavigate();
   const selectedPackage = location.state?.package;
   const [expandedActivities, setExpandedActivities] = useState({});
+  const [expandedDays, setExpandedDays] = useState({});
+
+  // Toggle day expansion
+  const toggleDay = (dayIndex) => {
+    setExpandedDays(prev => ({
+      ...prev,
+      [dayIndex]: !prev[dayIndex]
+    }));
+  };
 
   // Toggle activity details
   const toggleActivity = (dayIndex, activityIndex) => {
@@ -1214,20 +1226,32 @@ function Destination() {
                   </h3>
                   
                   {packageDetails[selectedPackage.name].program.map((day, dayIndex) => {
-                    const places = extractPlaces(day.activities);
+                    const isDayExpanded = expandedDays[dayIndex];
                     
                     return (
                       <div key={dayIndex} className="day-section mb-4">
-                        <div className="day-header bg-primary text-white p-3 rounded-top">
-                          <h4 className="mb-1">
-                            <i className="fa fa-calendar-day me-2"></i>
-                            {day.day}
-                          </h4>
-                          <p className="mb-0 fs-6">{day.title}</p>
+                        <div 
+                          className="day-header bg-primary text-white p-3 rounded d-flex justify-content-between align-items-center"
+                          style={{ cursor: 'pointer' }}
+                          onClick={() => toggleDay(dayIndex)}
+                        >
+                          <div>
+                            <h4 className="mb-1">
+                              <i className="fa fa-calendar-day me-2"></i>
+                              {day.day}
+                            </h4>
+                            <p className="mb-0 fs-6">{day.title}</p>
+                          </div>
+                          <button 
+                            className="btn btn-light rounded-circle"
+                            style={{ width: '40px', height: '40px', padding: '0' }}
+                          >
+                            <i className={`fa fa-${isDayExpanded ? 'minus' : 'plus'}`}></i>
+                          </button>
                         </div>
                         
-                        <div className="day-content bg-light p-4 rounded-bottom">
-                          {places.length > 0 ? (
+                        {isDayExpanded && (
+                          <div className="day-content bg-light p-4 rounded-bottom">
                             <div className="places-list">
                               {day.activities.map((activity, activityIndex) => {
                                 const isExpandableActivity = typeof activity === 'object' && activity.isExpandable;
@@ -1329,22 +1353,8 @@ function Destination() {
                                 }
                               })}
                             </div>
-                          ) : (
-                            <div className="activities mb-3">
-                              <h5 className="text-secondary mb-3">
-                                <i className="fa fa-list me-2"></i>Activities
-                              </h5>
-                              <ul className="list-unstyled">
-                                {day.activities.map((activity, idx) => (
-                                  <li key={idx} className="mb-2 d-flex align-items-start">
-                                    <i className="fa fa-chevron-right text-primary me-2 mt-1"></i>
-                                    <span>{typeof activity === 'string' ? activity : activity.name}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
-                        </div>
+                          </div>
+                        )}
                       </div>
                     );
                   })}
