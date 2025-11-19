@@ -1,5 +1,5 @@
 // FILE PATH: src/pages/Tours.jsx
-// UPDATED WITH NEW PACKAGE 07
+// UPDATED WITH FIXED PACKAGE 06 IMAGE
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -37,7 +37,7 @@ const TourPackages = () => {
     {
       id: 4,
       name: "ANCIENT CITIES TOUR - 05 DAYS 04 NIGHTS",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+      image: "https://images.unsplash.com/photo-1568322445389-f64ac2515020?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
       duration: "5 Days 4 Nights",
       price: "$825",
       highlights: ["Anuradhapura UNESCO Site", "Polonnaruwa Ancient City", "Sri Maha Bodhiya", "Historical Monuments"]
@@ -53,7 +53,7 @@ const TourPackages = () => {
     {
       id: 6,
       name: "COMPREHENSIVE TOUR - 08 DAYS 07 NIGHTS",
-      image: "https://images.unsplash.com/photo-1588417837058-c8884bfb5b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200",
+      image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
       duration: "8 Days 7 Nights",
       price: "$1599",
       highlights: ["Complete Island Experience", "Wildlife & Cultural Sites", "Beaches & Mountains", "All UNESCO Sites"]
