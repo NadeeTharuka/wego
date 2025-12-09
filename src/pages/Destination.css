@@ -1,3 +1,5 @@
+/* FILE PATH: src/pages/Destination.css */
+
 .hero-header {
   background: linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
     url('https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200');
@@ -134,7 +136,7 @@
   transform: translateX(5px);
 }
 
-/* Inclusions Section */
+/* Inclusions Section - FIXED COLORS */
 .inclusions-section {
   margin-top: 3rem;
 }
@@ -142,6 +144,38 @@
 .included-section,
 .excluded-section {
   transition: all 0.3s ease;
+}
+
+.included-section {
+  background: rgba(40, 167, 69, 0.08) !important;
+}
+
+.included-section h5 {
+  color: #28a745 !important;
+}
+
+.included-section ul li {
+  color: #212529 !important;
+}
+
+.included-section .fa-check {
+  color: #28a745 !important;
+}
+
+.excluded-section {
+  background: rgba(220, 53, 69, 0.08) !important;
+}
+
+.excluded-section h5 {
+  color: #dc3545 !important;
+}
+
+.excluded-section ul li {
+  color: #212529 !important;
+}
+
+.excluded-section .fa-times {
+  color: #dc3545 !important;
 }
 
 .included-section:hover {
@@ -161,7 +195,7 @@
 
 .booking-card {
   border-radius: 15px;
-  border: 1px solid #e9ecef;
+  border: 1px solid #151515;
   transition: all 0.3s ease;
 }
 
@@ -169,19 +203,38 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15) !important;
 }
 
+/* Price Display - FIXED COLORS */
 .price-display {
   border-radius: 10px;
   transition: all 0.3s ease;
+  background: #ffffff !important;
+  border: 2px solid #e9ecef;
+}
+
+.price-display .price-label {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.price-display .price-note {
+  color: #ffffff !important;
+}
+
+.price-display .price-amount {
+  color: #ffffff !important;
+  font-weight: 700;
 }
 
 .price-display:hover {
   background: linear-gradient(45deg, #06A3DA, #0585B3) !important;
-  color: white !important;
+  border-color: #06A3DA;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(6, 163, 218, 0.3);
 }
 
 .price-display:hover .price-label,
 .price-display:hover .price-note {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
 }
 
 .price-display:hover .price-amount {
