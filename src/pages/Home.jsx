@@ -4,21 +4,25 @@ export default function Home() {
   return (
     <div>
       <div 
-        className="container-fluid bg-primary py-5 mb-5 hero-header"
+        className="container-fluid bg-primary mb-5 hero-header"
         style={{
           background: `linear-gradient(rgba(20, 20, 31, 0.5), rgba(20, 20, 31, 0.5)), url('https://images.unsplash.com/photo-1570789210967-2cac24afeb00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`,
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
-          minHeight: '60vh'
+          minHeight: '60vh',
+          paddingTop: '5rem',
+          paddingBottom: '5rem'
         }}
       >
         <div className="container py-5">
           <div className="row justify-content-center py-5">
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-              <p className="fs-4 text-white mb-4 animated slideInDown" style={{ 
+              <p className="text-white mb-4 animated slideInDown" style={{ 
                 fontWeight: '500',
-                textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+                textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+                fontSize: '3rem',
+                lineHeight: '1.4'
               }}>
                 Gateway to the Pearl of the Indian Ocean
               </p>
@@ -41,7 +45,7 @@ export default function Home() {
                   e.target.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
                 }}
               >
-                ENQUIRE NOW
+                INQUIRE NOW
               </a>
             </div>
           </div>
@@ -56,16 +60,16 @@ export default function Home() {
           </div>
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <p className="text-center mb-4" style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#6c757d' }}>
+              <p className="text-center mb-4" style={{ fontSize: '1.25rem', lineHeight: '2', color: '#555' }}>
                 Discover the essence of Sri Lanka with <strong>Opulent Tours</strong>, your trusted travel companion, backed by over 15 years of experience and a young, creative team dedicated to crafting unforgettable journeys.
               </p>
-              <p className="text-center mb-4" style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#6c757d' }}>
+              <p className="text-center mb-4" style={{ fontSize: '1.25rem', lineHeight: '2', color: '#555' }}>
                 From misty mountain peaks to golden beaches, from ancient cities to lush tea gardens, Sri Lanka is a land where beauty, culture, and adventure come together in perfect harmony. At Opulent Tours, we take pride in showcasing the island's timeless charm through personalized travel experiences that reflect warmth, authenticity, and comfort.
               </p>
-              <p className="text-center mb-4" style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#6c757d' }}>
+              <p className="text-center mb-4" style={{ fontSize: '1.25rem', lineHeight: '2', color: '#555' }}>
                 Let us guide you through Sri Lanka's wonders, where every journey tells a story, and every moment becomes a cherished memory.
               </p>
-              <p className="text-center" style={{ fontSize: '1.2rem', fontWeight: '600', color: '#086AD8' }}>
+              <p className="text-center" style={{ fontSize: '1.3rem', fontWeight: '600', color: '#086AD8' }}>
                 Opulent Tours — Where every journey begins with the magic of Sri Lanka.
               </p>
             </div>
@@ -77,9 +81,6 @@ export default function Home() {
       <div className="container-xxl py-5">
         <div className="container">
           <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 className="section-title bg-white text-center text-primary px-3">
-              Services
-            </h6>
             <h1 className="mb-5">Our Services</h1>
           </div>
           <div className="row g-4">
@@ -180,10 +181,7 @@ export default function Home() {
       <div className="container-xxl py-5 destination">
         <div className="container">
           <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 className="section-title bg-white text-center text-primary px-3">
-              Destination
-            </h6>
-            <h1 className="mb-5">Special Offers Just for You</h1>
+            <h1 className="mb-5">Special One Day Tours</h1>
           </div>
           <div className="row g-3">
             <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
