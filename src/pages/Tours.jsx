@@ -1,6 +1,3 @@
-// FILE PATH: src/pages/Tours.jsx
-// MAP SECTION REMOVED - MOVED TO HOME PAGE
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./TourPackages.css";
@@ -9,17 +6,9 @@ const TourPackages = () => {
   const navigate = useNavigate();
 
   const sriLankaTourPackages = [
-    {
-      id: 1,
-      name: "ULTIMATE EXPLORER - 10 DAYS 09 NIGHTS",
-      image: "https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
-      duration: "10 Days 9 Nights",
-      price: "$1899",
-      highlights: ["Complete Island Experience", "UNESCO Sites", "Wildlife Safari", "Beach & Mountains", "Cultural Immersion"]
-    },
-    {
+            {
       id: 2,
-      name: "EXPLORE SRI LANKA IN 04 DAYS 03 NIGHTS",
+      name: "EXPLORE SRI LANKA - 04 DAYS 03 NIGHTS",
       image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
       duration: "4 Days 3 Nights",
       price: "$599",
@@ -27,7 +16,7 @@ const TourPackages = () => {
     },
     {
       id: 3,
-      name: "EXPLORE SRI LANKA IN 05 DAYS 04 NIGHTS",
+      name: "EXPLORE SRI LANKA - 05 DAYS 04 NIGHTS",
       image: "https://images.unsplash.com/photo-1570789210967-2cac24afeb00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200",
       duration: "5 Days 4 Nights",
       price: "$749",
@@ -56,6 +45,14 @@ const TourPackages = () => {
       duration: "8 Days 7 Nights",
       price: "$1599",
       highlights: ["Complete Island Experience", "Wildlife & Cultural Sites", "Beaches & Mountains", "All UNESCO Sites"]
+    },
+    {
+      id: 1,
+      name: "ULTIMATE EXPLORER - 10 DAYS 09 NIGHTS",
+      image: "https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+      duration: "10 Days 9 Nights",
+      price: "$1899",
+      highlights: ["Complete Island Experience", "UNESCO Sites", "Wildlife Safari", "Beach & Mountains", "Cultural Immersion"]
     },
     {
       id: 7,
@@ -94,7 +91,6 @@ const TourPackages = () => {
       <section className="tour-packages py-5">
         <div className="container">
           <div className="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <h6 className="section-title bg-white text-center text-primary px-3">Tour Packages</h6>
             <h2 className="display-5">Sri Lanka Tour Packages</h2>
             <p className="text-muted">Choose your perfect adventure</p>
           </div>
