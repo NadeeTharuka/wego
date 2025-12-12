@@ -1,11 +1,4 @@
-/* ============================================
-   OPULENT TOURS - GLOBAL STYLES
-   FILE: src/index.css (CREATE THIS FILE)
-   ============================================ */
-
-/* ========================================
-   1. LOGO AND TITLE STYLING - BLUE COLOR
-   ======================================== */
+/* 1. LOGO AND TITLE STYLING - BLUE COLOR*/
 
 /* Change "Opulent Tours" text color to blue */
 .navbar-brand,
@@ -50,9 +43,12 @@
     background-color: #086AD8 !important;
 }
 
-/* ========================================
-   2. ENHANCED MAP IMAGE QUALITY
-   ======================================== */
+.navbar {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+/* 2. ENHANCED MAP IMAGE QUALITY */
 
 img[alt*="Sri Lanka"],
 img[alt*="Map"],
@@ -66,9 +62,7 @@ img[src*="91a5c3ff-7781-4f6e-a4ff-cbe8d3bc8d20"] {
     backface-visibility: hidden;
 }
 
-/* ========================================
-   3. RESPONSIVE ADJUSTMENTS
-   ======================================== */
+/* 3. RESPONSIVE ADJUSTMENTS */
 
 @media (max-width: 992px) {
     .navbar-brand h1 {
@@ -103,9 +97,7 @@ img[src*="91a5c3ff-7781-4f6e-a4ff-cbe8d3bc8d20"] {
     }
 }
 
-/* ========================================
-   4. HIGH DPI / RETINA DISPLAY
-   ======================================== */
+/* 4. HIGH DPI / RETINA DISPLAY */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
        only screen and (min-resolution: 192dpi) {
