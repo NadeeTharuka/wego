@@ -1,6 +1,54 @@
+// File Path: src/pages/Home.jsx
+
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
+  const navigate = useNavigate();
+
+  const oneDayTours = [
+    {
+      id: 1,
+      name: "Yala Safari",
+      image: "assets/img/yala-safari.jpg",
+      price: "$85",
+      description: "Experience the wild heart of Sri Lanka with world-famous wildlife safaris"
+    },
+    {
+      id: 2,
+      name: "Kandy & Pinnawala",
+      image: "assets/img/kandy-pinnawala.jpg",
+      price: "$95",
+      description: "Discover the cultural soul and gentle giants of Sri Lanka"
+    },
+    {
+      id: 3,
+      name: "Sigiriya & Dambulla",
+      image: "assets/img/sigiriya-dambulla.jpg",
+      price: "$75",
+      description: "Step into the ancient wonders of Sri Lanka's UNESCO World Heritage Sites"
+    },
+    {
+      id: 4,
+      name: "Galle Fort",
+      image: "assets/img/galle-fort.jpg",
+      price: "$65",
+      description: "Explore the timeless beauty of Sri Lanka's most picturesque coastal city"
+    },
+    {
+      id: 5,
+      name: "Whale Watching",
+      image: "assets/img/whale-watching.jpg",
+      price: "$90",
+      description: "Set sail into the deep blue and meet the gentle giants of the ocean"
+    }
+  ];
+
+  // Function to handle navigation to tour details
+  const handleViewOneDayTour = (tour) => {
+    navigate('/one-day-tour-details', { state: { tour } });
+  };
+
   return (
     <div>
       <div 
@@ -177,50 +225,69 @@ export default function Home() {
       </div>
       {/* Service End */}
 
-      {/* Destination Start */}
-      <div className="container-xxl py-5 destination">
+      {/* Special One Day Tours Start */}
+      <div className="container-xxl py-5">
         <div className="container">
           <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 className="section-title bg-white text-center text-primary px-3">
+              One Day Tours
+            </h6>
             <h1 className="mb-5">Special One Day Tours</h1>
           </div>
-          <div className="row g-3">
-            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-              <a className="position-relative d-block overflow-hidden equal-box" href="/tours">
-                <img className="img-fluid" src="assets/img/destination-2.jpg" alt="" />
-                <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                  25% OFF
+          <div className="row g-4 justify-content-center">
+            {oneDayTours.map((tour, index) => (
+              <div key={tour.id} className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay={`0.${index + 1}s`}>
+                <div className="package-item">
+                  <div className="overflow-hidden">
+                    <img className="img-fluid" src={tour.image} alt={tour.name} />
+                  </div>
+                  <div className="d-flex border-bottom">
+                    <small className="flex-fill text-center border-end py-2">
+                      <i className="fa fa-map-marker-alt text-primary me-2" />
+                      Sri Lanka
+                    </small>
+                    <small className="flex-fill text-center border-end py-2">
+                      <i className="fa fa-calendar-alt text-primary me-2" />1 Day
+                    </small>
+                    <small className="flex-fill text-center py-2">
+                      <i className="fa fa-user text-primary me-2" />Any Group
+                    </small>
+                  </div>
+                  <div className="text-center p-4">
+                    <h3 className="mb-0">{tour.price}</h3>
+                    <div className="mb-3">
+                      <small className="fa fa-star text-primary" />
+                      <small className="fa fa-star text-primary" />
+                      <small className="fa fa-star text-primary" />
+                      <small className="fa fa-star text-primary" />
+                      <small className="fa fa-star text-primary" />
+                    </div>
+                    <h5 className="mb-3">{tour.name}</h5>
+                    <p>{tour.description}</p>
+                    <div className="d-flex justify-content-center mb-2">
+                      <button
+                        onClick={() => handleViewOneDayTour(tour)}
+                        className="btn btn-sm btn-primary px-3 border-end"
+                        style={{ borderRadius: "30px 0 0 30px" }}
+                      >
+                        Read More
+                      </button>
+                      <a
+                        href="/booking"
+                        className="btn btn-sm btn-primary px-3"
+                        style={{ borderRadius: "0 30px 30px 0" }}
+                      >
+                        Book Now
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div className="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                  India
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.5s">
-              <a className="position-relative d-block overflow-hidden equal-box" href="/tours">
-                <img className="img-fluid" src="assets/img/destination-2.jpg" alt="" />
-                <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                  35% OFF
-                </div>
-                <div className="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                  Thailand
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-              <a className="position-relative d-block overflow-hidden equal-box" href="/tours">
-                <img className="img-fluid" src="assets/img/destination-3.jpg" alt="" />
-                <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                  10% OFF
-                </div>
-                <div className="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                  Sri Lanka
-                </div>
-              </a>
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-      {/* Destination End */}
+      {/* Special One Day Tours End */}
 
       {/* Package Start */}
       <div className="container-xxl py-5">

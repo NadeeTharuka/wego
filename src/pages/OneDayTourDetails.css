@@ -1,0 +1,436 @@
+/* One Day Tour Details Page Styles */
+
+.one-day-tour-details {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tour-hero {
+  position: relative;
+  padding: 100px 0;
+  transition: all 0.3s ease;
+}
+
+.tour-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  z-index: 1;
+}
+
+.tour-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.tour-introduction {
+  transition: all 0.3s ease;
+  border-left: 4px solid #06A3DA;
+}
+
+.tour-introduction:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.tour-invite {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(6, 163, 218, 0.3);
+}
+
+.tour-invite:hover {
+  box-shadow: 0 8px 30px rgba(6, 163, 218, 0.4);
+  transform: translateY(-3px);
+}
+
+.tour-highlights .highlight-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.tour-highlights .highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  border-color: #06A3DA;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(6, 163, 218, 0.05) 100%) !important;
+}
+
+.highlight-icon {
+  min-width: 50px;
+}
+
+.tour-highlights .highlight-card:hover .highlight-icon i {
+  transform: scale(1.1) rotate(5deg);
+  transition: transform 0.3s ease;
+}
+
+/* Tour Info Cards */
+.tour-info-section .info-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.tour-info-section .info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+  border-color: #06A3DA;
+}
+
+.tour-info-section .info-card h4 {
+  border-bottom: 2px solid #06A3DA;
+  padding-bottom: 10px;
+}
+
+.tour-info-section .info-card ul li {
+  padding: 8px 0;
+  transition: all 0.2s ease;
+}
+
+.tour-info-section .info-card ul li:hover {
+  padding-left: 10px;
+  color: #06A3DA;
+}
+
+/* Photo Gallery */
+.tour-gallery {
+  margin-top: 3rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  transform: translateY(-5px);
+}
+
+.gallery-item img {
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.15);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 20px 10px 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-caption {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Booking CTA */
+.booking-cta {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(6, 163, 218, 0.1), transparent);
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+}
+
+.booking-cta:hover::before {
+  left: 100%;
+}
+
+.booking-cta:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.booking-cta .btn {
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.booking-cta .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(6, 163, 218, 0.3);
+}
+
+/* Back Button */
+.btn-outline-primary {
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 4px 15px rgba(6, 163, 218, 0.2);
+}
+
+/* Section Headings */
+.one-day-tour-details h2 {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.one-day-tour-details h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(45deg, #06A3DA, #0585B3);
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .tour-gallery .col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tour-hero {
+    min-height: 50vh !important;
+    padding: 80px 0;
+  }
+  
+  .display-3 {
+    font-size: 2rem;
+  }
+  
+  .tour-introduction,
+  .tour-invite,
+  .booking-cta {
+    padding: 2rem !important;
+  }
+  
+  .tour-highlights .highlight-card {
+    padding: 1.5rem !important;
+  }
+  
+  .tour-info-section .info-card {
+    padding: 1.5rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .gallery-item img {
+    height: 200px !important;
+  }
+  
+  .tour-gallery .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .tour-hero {
+    padding: 60px 0;
+  }
+  
+  .display-3 {
+    font-size: 1.75rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+  
+  .tour-introduction,
+  .tour-invite {
+    padding: 1.5rem !important;
+  }
+  
+  .tour-invite .fs-5 {
+    font-size: 1rem !important;
+  }
+  
+  .booking-cta {
+    padding: 2rem 1rem !important;
+  }
+  
+  .booking-cta .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .highlight-card {
+    padding: 1rem !important;
+  }
+  
+  .highlight-icon {
+    min-width: 40px;
+  }
+  
+  .highlight-icon i {
+    font-size: 1.5rem !important;
+  }
+  
+  .one-day-tour-details h2 {
+    font-size: 1.5rem;
+  }
+  
+  .one-day-tour-details h4 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Animation */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.slideInDown {
+  animation-name: slideInDown;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Fade in animation for content */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tour-introduction,
+.tour-invite,
+.tour-highlights,
+.tour-info-section,
+.tour-gallery,
+.booking-cta {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* List styling */
+.info-card ul {
+  padding-left: 0;
+}
+
+.info-card ul li {
+  list-style: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.info-card ul li:last-child {
+  border-bottom: none;
+}
+
+/* Icon animations */
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.highlight-card:hover .fa {
+  animation: iconBounce 0.6s ease;
+}
+
+/* Print Styles */
+@media print {
+  .tour-hero,
+  .btn,
+  button,
+  .booking-cta {
+    display: none !important;
+  }
+  
+  .tour-introduction,
+  .tour-invite,
+  .tour-highlights {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+  }
+  
+  .gallery-item {
+    page-break-inside: avoid;
+  }
+}
+
+/* Loading state */
+.gallery-item img {
+  background: #f0f0f0;
+}
+
+/* Accessibility improvements */
+.gallery-item:focus,
+.highlight-card:focus,
+.btn:focus {
+  outline: 3px solid #06A3DA;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .tour-hero {
+    background: #000 !important;
+  }
+  
+  .tour-hero h1 {
+    text-shadow: 2px 2px 4px #000;
+  }
+  
+  .btn-primary {
+    background: #000 !important;
+    border: 2px solid #fff !important;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
