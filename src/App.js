@@ -13,6 +13,7 @@ import Error from './pages/Error'
 import Contact from './pages/Contact'
 import Tours from './pages/Tours'
 import PlaceDetails from './pages/PlaceDetails';
+import OneDayTourDetails from './pages/OneDayTourDetails';
 
 export default function App() {
   return (
@@ -31,6 +32,8 @@ export default function App() {
         <Route path='/error' element={<Error/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path="/place-details" element={<PlaceDetails />} />
+        <Route path="/one-day-tour-details" element={<OneDayTourDetails />} />
+        <Route path="/destination" element={<Destination />} />
         </Routes>
         <Footer />
     </div>
