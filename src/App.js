@@ -14,6 +14,8 @@ import Contact from './pages/Contact'
 import Tours from './pages/Tours'
 import PlaceDetails from './pages/PlaceDetails';
 import OneDayTourDetails from './pages/OneDayTourDetails';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
 
 export default function App() {
   return (
@@ -34,6 +36,8 @@ export default function App() {
         <Route path="/place-details" element={<PlaceDetails />} />
         <Route path="/one-day-tour-details" element={<OneDayTourDetails />} />
         <Route path="/destination" element={<Destination />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
         </Routes>
         <Footer />
     </div>
