@@ -284,8 +284,6 @@ export default function Home() {
       </div>
       {/* Special One Day Tours End */}
 
-      
-
       {/* Booking Start */}
       <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div className="container">
