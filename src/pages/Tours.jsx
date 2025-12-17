@@ -6,65 +6,397 @@ const TourPackages = () => {
   const navigate = useNavigate();
 
   const sriLankaTourPackages = [
-            {
+    {
       id: 2,
       name: "EXPLORE SRI LANKA - 04 DAYS 03 NIGHTS",
-      image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+      image: "assets/img/explore-sri-lanka-4days.jpg",
       duration: "4 Days 3 Nights",
       price: "$599",
-      highlights: ["Dambulla Cave Temple", "Sigiriya Lion Rock", "Temple of Sacred Tooth", "Colombo City Tour"]
+      highlights: ["Dambulla Cave Temple", "Sigiriya Lion Rock", "Temple of Sacred Tooth", "Colombo City Tour"],
+      itinerary: [
+        {
+          day: "Day 01",
+          title: "Arrival & Colombo City Tour",
+          description: "Arrive at Bandaranaike International Airport. Transfer to Colombo and enjoy a city tour including Galle Face Green, Gangaramaya Temple, and Independence Square.",
+          places: ["Colombo City Tour", "Galle Face", "Independence Square"]
+        },
+        {
+          day: "Day 02",
+          title: "Dambulla & Sigiriya",
+          description: "Travel to Dambulla to visit the Cave Temple. Proceed to Sigiriya and climb the Lion Rock Fortress.",
+          places: ["Dambulla Royal Cave Temple and Golden Temple", "Sigiriya Lion Rock Fortress"]
+        },
+        {
+          day: "Day 03",
+          title: "Kandy Cultural Experience",
+          description: "Visit the Temple of the Sacred Tooth Relic in Kandy. Enjoy a cultural dance show in the evening.",
+          places: ["Sri Dalada Maligawa (The Temple of the Sacred Tooth Relic)", "Kandyan Cultural Dance Show"]
+        },
+        {
+          day: "Day 04",
+          title: "Departure",
+          description: "Enjoy breakfast at the hotel. Transfer to the airport for your departure flight.",
+          places: []
+        }
+      ]
     },
     {
       id: 3,
       name: "EXPLORE SRI LANKA - 05 DAYS 04 NIGHTS",
-      image: "https://images.unsplash.com/photo-1570789210967-2cac24afeb00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+      image: "assets/img/explore-sri-lanka-5days.jpg",
       duration: "5 Days 4 Nights",
       price: "$749",
-      highlights: ["Negombo Beach", "Pinnawala Elephant Orphanage", "Cultural Dance Show", "Spice Garden"]
+      highlights: ["Negombo Beach", "Pinnawala Elephant Orphanage", "Cultural Dance Show", "Spice Garden"],
+      itinerary: [
+        {
+          day: "Day 01",
+          title: "Arrival & Negombo",
+          description: "Arrive at Bandaranaike International Airport. Transfer to Negombo and enjoy the beach and fish market.",
+          places: ["Negombo Fish Market", "Negombo Beach"]
+        },
+        {
+          day: "Day 02",
+          title: "Pinnawala & Matale",
+          description: "Visit Pinnawala Elephant Orphanage. Proceed to Matale to explore a spice garden.",
+          places: ["Pinnawala Elephant Orphanage", "Matale Spice Garden"]
+        },
+        {
+          day: "Day 03",
+          title: "Kandy Cultural Experience",
+          description: "Visit the Temple of the Sacred Tooth Relic in Kandy. Enjoy a cultural dance show in the evening.",
+          places: ["Sri Dalada Maligawa (The Temple of the Sacred Tooth Relic)", "Kandyan Cultural Dance Show"]
+        },
+        {
+          day: "Day 04",
+          title: "Peradeniya & Departure",
+          description: "Visit Peradeniya Botanical Garden. Transfer to the airport for your departure flight.",
+          places: ["Peradeniya Botanical Garden"]
+        },
+        {
+          day: "Day 05",
+          title: "Departure",
+          description: "Enjoy breakfast at the hotel. Transfer to the airport for your departure flight.",
+          places: []
+        }
+      ]
     },
     {
       id: 4,
       name: "ANCIENT CITIES TOUR - 05 DAYS 04 NIGHTS",
-      image: "https://images.unsplash.com/photo-1568322445389-f64ac2515020?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+      image: "assets/img/ancient-cities-tour.jpg",
       duration: "5 Days 4 Nights",
       price: "$825",
-      highlights: ["Anuradhapura UNESCO Site", "Polonnaruwa Ancient City", "Sri Maha Bodhiya", "Historical Monuments"]
+      highlights: ["Anuradhapura UNESCO Site", "Polonnaruwa Ancient City", "Sri Maha Bodhiya", "Historical Monuments"],
+      itinerary: [
+        {
+          day: "Day 01",
+          title: "Arrival & Anuradhapura",
+          description: "Arrive at Bandaranaike International Airport. Transfer to Anuradhapura and explore the ancient city.",
+          places: ["Anuradhapura", "Sri Maha Bodhiya", "Ruwanweliseya"]
+        },
+        {
+          day: "Day 02",
+          title: "Anuradhapura Exploration",
+          description: "Continue exploring Anuradhapura including Mihintale and Isurumuniya Temple.",
+          places: ["Mihinthale", "Isurumuniya", "Thuparamaya"]
+        },
+        {
+          day: "Day 03",
+          title: "Polonnaruwa Ancient City",
+          description: "Travel to Polonnaruwa and explore the ancient city ruins.",
+          places: ["Polonnaruwa"]
+        },
+        {
+          day: "Day 04",
+          title: "Return to Colombo",
+          description: "Travel back to Colombo. Enjoy a city tour in the afternoon.",
+          places: ["Colombo City Tour", "Galle Face"]
+        },
+        {
+          day: "Day 05",
+          title: "Departure",
+          description: "Enjoy breakfast at the hotel. Transfer to the airport for your departure flight.",
+          places: []
+        }
+      ]
     },
     {
       id: 5,
       name: "HILL COUNTRY & BEACHES - 07 DAYS 06 NIGHTS",
-      image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+      image: "assets/img/hill-country-beaches.jpg",
       duration: "7 Days 6 Nights",
       price: "$1299",
-      highlights: ["Nuwara Eliya Tea Plantations", "Nine Arch Bridge", "Yala Safari", "Galle Fort"]
+      highlights: ["Nuwara Eliya Tea Plantations", "Nine Arch Bridge", "Yala Safari", "Galle Fort"],
+      itinerary: [
+        {
+          day: "Day 01",
+          title: "Arrival & Kandy",
+          description: "Arrive at Bandaranaike International Airport. Transfer to Kandy and visit the Temple of the Sacred Tooth Relic.",
+          places: ["Sri Dalada Maligawa (The Temple of the Sacred Tooth Relic)"]
+        },
+        {
+          day: "Day 02",
+          title: "Nuwara Eliya",
+          description: "Travel to Nuwara Eliya. Visit a tea plantation and factory. Enjoy Gregory Park and boat safari.",
+          places: ["Tea Plantation and Factory visit", "Gregory Park and Boat Safari", "Nuwara Eliya City Tour"]
+        },
+        {
+          day: "Day 03",
+          title: "Ella Exploration",
+          description: "Travel to Ella. Visit Nine Arch Bridge and enjoy Ella Rock hike.",
+          places: ["Nine Arch Bridge", "Ella Rock Hike"]
+        },
+        {
+          day: "Day 04",
+          title: "Yala Safari",
+          description: "Travel to Yala and enjoy an exciting wildlife safari.",
+          places: ["Yala Safari"]
+        },
+        {
+          day: "Day 05",
+          title: "Mirissa & Beaches",
+          description: "Travel to Mirissa. Enjoy whale watching and relax on the beach.",
+          places: ["Whale Watching", "Mirissa Beach"]
+        },
+        {
+          day: "Day 06",
+          title: "Galle Fort",
+          description: "Travel to Galle and explore the historic Galle Fort.",
+          places: ["Galle Fort", "Old Dutch Church (Galle)"]
+        },
+        {
+          day: "Day 07",
+          title: "Departure",
+          description: "Enjoy breakfast at the hotel. Transfer to the airport for your departure flight.",
+          places: []
+        }
+      ]
     },
     {
       id: 6,
       name: "COMPREHENSIVE TOUR - 08 DAYS 07 NIGHTS",
-      image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      image: "assets/img/comprehensive-tour.jpg",
       duration: "8 Days 7 Nights",
       price: "$1599",
-      highlights: ["Complete Island Experience", "Wildlife & Cultural Sites", "Beaches & Mountains", "All UNESCO Sites"]
+      highlights: ["Complete Island Experience", "Wildlife & Cultural Sites", "Beaches & Mountains", "All UNESCO Sites"],
+      itinerary: [
+        {
+          day: "Day 01",
+          title: "Arrival & Negombo",
+          description: "Arrive at Bandaranaike International Airport. Transfer to Negombo and enjoy the beach.",
+          places: ["Negombo Beach", "Negombo Fish Market"]
+        },
+        {
+          day: "Day 02",
+          title: "Anuradhapura",
+          description: "Travel to Anuradhapura and explore the ancient city.",
+          places: ["Anuradhapura", "Sri Maha Bodhiya", "Ruwanweliseya"]
+        },
+        {
+          day: "Day 03",
+          title: "Polonnaruwa & Sigiriya",
+          description: "Travel to Polonnaruwa and explore the ancient city. Proceed to Sigiriya and climb the Lion Rock.",
+          places: ["Polonnaruwa", "Sigiriya Lion Rock Fortress"]
+        },
+        {
+          day: "Day 04",
+          title: "Kandy",
+          description: "Travel to Kandy. Visit the Temple of the Sacred Tooth Relic and enjoy a cultural dance show.",
+          places: ["Sri Dalada Maligawa (The Temple of the Sacred Tooth Relic)", "Kandyan Cultural Dance Show"]
+        },
+        {
+          day: "Day 05",
+          title: "Nuwara Eliya",
+          description: "Travel to Nuwara Eliya. Visit a tea plantation and Gregory Park.",
+          places: ["Tea Plantation and Factory visit", "Gregory Park and Boat Safari", "Nuwara Eliya City Tour"]
+        },
+        {
+          day: "Day 06",
+          title: "Ella & Yala",
+          description: "Travel to Ella and visit Nine Arch Bridge. Proceed to Yala for safari.",
+          places: ["Nine Arch Bridge", "Yala Safari"]
+        },
+        {
+          day: "Day 07",
+          title: "Galle & Beaches",
+          description: "Travel to Galle and explore the fort. Enjoy beach time in Unawatuna.",
+          places: ["Galle Fort", "Unawatuna Beach"]
+        },
+        {
+          day: "Day 08",
+          title: "Departure",
+          description: "Enjoy breakfast at the hotel. Transfer to the airport for your departure flight.",
+          places: []
+        }
+      ]
     },
     {
       id: 1,
       name: "ULTIMATE EXPLORER - 10 DAYS 09 NIGHTS",
-      image: "https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+      image: "assets/img/ultimate-explorer.jpg",
       duration: "10 Days 9 Nights",
       price: "$1899",
-      highlights: ["Complete Island Experience", "UNESCO Sites", "Wildlife Safari", "Beach & Mountains", "Cultural Immersion"]
+      highlights: ["Complete Island Experience", "UNESCO Sites", "Wildlife Safari", "Beach & Mountains", "Cultural Immersion"],
+      itinerary: [
+        {
+          day: "Day 01",
+          title: "Arrival & Negombo",
+          description: "Arrive at Bandaranaike International Airport. Transfer to Negombo and enjoy the beach.",
+          places: ["Negombo Beach", "Negombo Fish Market"]
+        },
+        {
+          day: "Day 02",
+          title: "Anuradhapura",
+          description: "Travel to Anuradhapura and explore the ancient city.",
+          places: ["Anuradhapura", "Sri Maha Bodhiya", "Ruwanweliseya", "Mihinthale"]
+        },
+        {
+          day: "Day 03",
+          title: "Polonnaruwa",
+          description: "Travel to Polonnaruwa and explore the ancient city.",
+          places: ["Polonnaruwa"]
+        },
+        {
+          day: "Day 04",
+          title: "Sigiriya & Dambulla",
+          description: "Climb Sigiriya Lion Rock. Visit Dambulla Cave Temple.",
+          places: ["Sigiriya Lion Rock Fortress", "Dambulla Royal Cave Temple and Golden Temple"]
+        },
+        {
+          day: "Day 05",
+          title: "Kandy",
+          description: "Travel to Kandy. Visit the Temple of the Sacred Tooth Relic and enjoy a cultural dance show.",
+          places: ["Sri Dalada Maligawa (The Temple of the Sacred Tooth Relic)", "Kandyan Cultural Dance Show", "Peradeniya Botanical Garden"]
+        },
+        {
+          day: "Day 06",
+          title: "Nuwara Eliya",
+          description: "Travel to Nuwara Eliya. Visit a tea plantation and Gregory Park.",
+          places: ["Tea Plantation and Factory visit", "Gregory Park and Boat Safari", "Nuwara Eliya City Tour", "Ambewela"]
+        },
+        {
+          day: "Day 07",
+          title: "Ella & Horton Plains",
+          description: "Travel to Ella. Visit Nine Arch Bridge and Ella Rock. Optional visit to Horton Plains.",
+          places: ["Nine Arch Bridge", "Ella Rock Hike", "Horton Plains"]
+        },
+        {
+          day: "Day 08",
+          title: "Yala & Mirissa",
+          description: "Travel to Yala for safari. Proceed to Mirissa for beach time.",
+          places: ["Yala Safari", "Mirissa Beach", "Whale Watching"]
+        },
+        {
+          day: "Day 09",
+          title: "Galle & Colombo",
+          description: "Travel to Galle and explore the fort. Return to Colombo for city tour.",
+          places: ["Galle Fort", "Colombo City Tour", "Lotus Tower"]
+        },
+        {
+          day: "Day 10",
+          title: "Departure",
+          description: "Enjoy breakfast at the hotel. Transfer to the airport for your departure flight.",
+          places: []
+        }
+      ]
     },
     {
       id: 7,
       name: "GRAND ADVENTURE - 14 DAYS 13 NIGHTS",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200",
+      image: "assets/img/grand-adventure.jpg",
       duration: "14 Days 13 Nights",
       price: "$2499",
-      highlights: ["Complete Sri Lanka Discovery", "All Major Destinations", "Adventure & Relaxation", "Cultural Immersion"]
+      highlights: ["Complete Sri Lanka Discovery", "All Major Destinations", "Adventure & Relaxation", "Cultural Immersion"],
+      itinerary: [
+        {
+          day: "Day 01",
+          title: "Arrival & Negombo",
+          description: "Arrive at Bandaranaike International Airport. Transfer to Negombo and enjoy the beach.",
+          places: ["Negombo Beach", "Negombo Fish Market", "Hamilton Canal"]
+        },
+        {
+          day: "Day 02",
+          title: "Anuradhapura",
+          description: "Travel to Anuradhapura and explore the ancient city.",
+          places: ["Anuradhapura", "Sri Maha Bodhiya", "Ruwanweliseya", "Mihinthale", "Isurumuniya", "Thuparamaya"]
+        },
+        {
+          day: "Day 03",
+          title: "Anuradhapura Exploration",
+          description: "Continue exploring Anuradhapura and its surroundings.",
+          places: ["Anuradhapura"]
+        },
+        {
+          day: "Day 04",
+          title: "Polonnaruwa",
+          description: "Travel to Polonnaruwa and explore the ancient city.",
+          places: ["Polonnaruwa"]
+        },
+        {
+          day: "Day 05",
+          title: "Sigiriya & Dambulla",
+          description: "Climb Sigiriya Lion Rock. Visit Dambulla Cave Temple. Enjoy village tour.",
+          places: ["Sigiriya Lion Rock Fortress", "Dambulla Royal Cave Temple and Golden Temple", "Village Tours"]
+        },
+        {
+          day: "Day 06",
+          title: "Kandy",
+          description: "Travel to Kandy. Visit the Temple of the Sacred Tooth Relic and enjoy a cultural dance show.",
+          places: ["Sri Dalada Maligawa (The Temple of the Sacred Tooth Relic)", "Kandyan Cultural Dance Show", "Peradeniya Botanical Garden", "Gem Museum, Kandy"]
+        },
+        {
+          day: "Day 07",
+          title: "Nuwara Eliya",
+          description: "Travel to Nuwara Eliya. Visit a tea plantation and Gregory Park.",
+          places: ["Tea Plantation and Factory visit", "Gregory Park and Boat Safari", "Nuwara Eliya City Tour", "Ambewela"]
+        },
+        {
+          day: "Day 08",
+          title: "Ella & Haputale",
+          description: "Travel to Ella. Visit Nine Arch Bridge and Ella Rock. Proceed to Haputale.",
+          places: ["Nine Arch Bridge", "Ella Rock Hike", "Ravana Falls", "Ravana Cave"]
+        },
+        {
+          day: "Day 09",
+          title: "Horton Plains & Train Ride",
+          description: "Visit Horton Plains National Park. Enjoy scenic train ride through hill country.",
+          places: ["Horton Plains", "Train ride through Sri Lanka's central highlands"]
+        },
+        {
+          day: "Day 10",
+          title: "Yala & Tissamaharama",
+          description: "Travel to Yala for safari. Visit Tissamaharama Lake and ancient city.",
+          places: ["Yala Safari", "Tissamaharama Lake", "Tissamaharama Ancient City"]
+        },
+        {
+          day: "Day 11",
+          title: "Mirissa & Beaches",
+          description: "Travel to Mirissa. Enjoy whale watching and beach time.",
+          places: ["Whale Watching", "Mirissa Beach", "Coconut Tree Hill"]
+        },
+        {
+          day: "Day 12",
+          title: "Galle & Unawatuna",
+          description: "Travel to Galle and explore the fort. Enjoy Unawatuna beach.",
+          places: ["Galle Fort", "Old Dutch Church (Galle)", "Unawatuna Beach", "Rumassala Temple"]
+        },
+        {
+          day: "Day 13",
+          title: "Colombo",
+          description: "Return to Colombo. Enjoy city tour and visit Lotus Tower.",
+          places: ["Colombo City Tour", "Lotus Tower", "Gangaramaya Temple", "Independence Square"]
+        },
+        {
+          day: "Day 14",
+          title: "Departure",
+          description: "Enjoy breakfast at the hotel. Transfer to the airport for your departure flight.",
+          places: []
+        }
+      ]
     }
   ];
 
-  // Special One Day Tours - Added from Home page
+  // Special One Day Tours
   const oneDayTours = [
     {
       id: 1,
@@ -107,7 +439,6 @@ const TourPackages = () => {
     navigate('/destination', { state: { package: pkg } });
   };
 
-  // Function to handle navigation to one day tour details
   const handleViewOneDayTour = (tour) => {
     navigate('/one-day-tour-details', { state: { tour } });
   };
@@ -170,7 +501,7 @@ const TourPackages = () => {
         </div>
       </section>
 
-      {/* Special One Day Tours Section - Added from Home page */}
+      {/* Special One Day Tours Section */}
       <div className="container-xxl py-5">
         <div className="container">
           <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
