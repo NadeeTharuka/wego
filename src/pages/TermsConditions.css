@@ -1,0 +1,59 @@
+/* FILE PATH: src/pages/TermsConditions.css */
+.terms-content {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.terms-content h2 {
+  color: #086AD8;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #086AD8;
+}
+
+.terms-content h3 {
+  color: #086AD8;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.terms-content h4 {
+  color: #086AD8;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.terms-content p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.terms-content ul {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.terms-content ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.terms-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-header {
+    min-height: 30vh !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  
+  .display-3 {
+    font-size: 2rem;
+  }
+}
