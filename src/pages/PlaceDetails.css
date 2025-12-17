@@ -1,133 +1,142 @@
-/* Place Details Page Styles */
-
-.place-hero {
-  position: relative;
-  padding: 100px 0;
+.place-details-container {
+    padding: 2rem 0;
 }
 
-.place-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+.place-details-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.place-hero .container {
-  position: relative;
-  z-index: 1;
+.place-details-card:hover {
+    transform: translateY(-5px);
 }
 
-.place-main-image {
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
-}
-
-.place-main-image img {
-  transition: transform 0.3s ease;
-}
-
-.place-main-image:hover img {
-  transform: scale(1.05);
-}
-
-.place-description {
-  background: white;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.place-highlights {
-  background: white;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.highlight-card {
-  transition: all 0.3s ease;
-  border: 1px solid #e9ecef;
-}
-
-.highlight-card:hover {
-  background: linear-gradient(45deg, #06A3DA, #0585B3) !important;
-  color: white;
-  transform: translateX(5px);
-  border-color: transparent;
-}
-
-.highlight-card:hover i {
-  color: white !important;
-}
-
-.contact-cta {
-  transition: all 0.3s ease;
-}
-
-.contact-cta:hover {
-  box-shadow: 0 8px 25px rgba(6, 163, 218, 0.2);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .place-hero {
-    min-height: 40vh !important;
-    padding: 60px 0;
-  }
-  
-  .display-3 {
-    font-size: 2rem;
-  }
-  
-  .place-description,
-  .place-highlights {
-    padding: 1.5rem;
-  }
-  
-  .contact-cta {
-    padding: 2rem !important;
-  }
-  
-  .contact-cta .btn {
+.place-details-image {
     width: 100%;
-    margin-bottom: 0.5rem;
-  }
+    height: 400px;
+    object-fit: cover;
 }
 
-@media (max-width: 576px) {
-  .place-main-image img {
-    max-height: 300px !important;
-  }
-  
-  .lead {
+.place-details-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.place-details-description {
     font-size: 1rem;
-  }
-  
-  .highlight-card {
-    padding: 1rem !important;
-  }
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 2rem;
 }
 
-/* Animation */
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
+.place-details-highlights-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #06A3DA;
+    margin-bottom: 1rem;
 }
 
-.slideInDown {
-  animation-name: slideInDown;
+.place-details-highlights {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 2rem;
 }
 
-@keyframes slideInDown {
-  from {
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-  }
+.place-details-highlights li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.place-details-highlights li:last-child {
+    border-bottom: none;
+}
+
+.place-details-highlights i {
+    color: #06A3DA;
+    margin-right: 0.5rem;
+}
+
+.place-details-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.place-details-back-btn {
+    background-color: transparent;
+    border: 1px solid #06A3DA;
+    color: #06A3DA;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.place-details-back-btn:hover {
+    background-color: #06A3DA;
+    color: white;
+    text-decoration: none;
+}
+
+.place-details-book-btn {
+    background-color: #06A3DA;
+    border: none;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.place-details-book-btn:hover {
+    background-color: #0585B3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(6, 163, 218, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+.not-found-container {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.not-found-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.not-found-container p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.not-found-back-btn {
+    background-color: #06A3DA;
+    border: none;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.not-found-back-btn:hover {
+    background-color: #0585B3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(6, 163, 218, 0.3);
 }
