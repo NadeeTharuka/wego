@@ -112,7 +112,7 @@ export default function Home() {
     navigate('/destination', { state: { package: pkg } });
   };
 
-  return (
+return (
     <div>
       <div 
         className="container-fluid bg-primary mb-5 hero-header"
@@ -129,13 +129,23 @@ export default function Home() {
         <div className="container py-5">
           <div className="row justify-content-center py-5">
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-              <p className="text-white mb-4 animated slideInDown" style={{ 
+              <h1 className="text-white mb-4 animated slideInDown" style={{ 
                 fontWeight: '500',
                 textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
                 fontSize: '3rem',
                 lineHeight: '1.4'
               }}>
                 Gateway to the Pearl of the Indian Ocean
+              </h1>
+              <p className="text-white mb-4 animated slideInDown" style={{ 
+                color: '#ffffff',
+                textShadow: 'none',
+                filter: 'none',
+                fontSize: '1.5rem',
+                fontWeight: '400',
+                marginBottom: '2rem'
+              }}>
+                Where Your Journey Begins
               </p>
               <a 
                 href="/booking" 
