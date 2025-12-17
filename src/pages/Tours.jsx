@@ -135,7 +135,7 @@ const TourPackages = () => {
       <section className="tour-packages py-5">
         <div className="container">
           <div className="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <h2 className="display-5">Sri Lanka Tour Packages</h2>
+            <h2 className="display-5">Recommended Tour Packages by Opulent</h2>
             <p className="text-muted">Choose your perfect adventure</p>
           </div>
           
