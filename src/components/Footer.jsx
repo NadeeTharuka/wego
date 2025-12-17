@@ -18,10 +18,10 @@ export default function Footer() {
               <a className="btn btn-link" href="/contact">
                 Contact Us
               </a>
-              <a className="btn btn-link" href="/privacy">
+              <a className="btn btn-link" href="/privacy-policy">
                 Privacy Policy
               </a>
-              <a className="btn btn-link" href="/terms">
+              <a className="btn btn-link" href="/terms-conditions">
                 Terms &amp; Condition
               </a>
               <a className="btn btn-link" href="/faq">
@@ -32,7 +32,7 @@ export default function Footer() {
               <h4 className="text-white mb-3">Contact</h4>
               <p className="mb-2">
                 <i className="fa fa-map-marker-alt me-3" />
-                123 Street, New York, USA
+                Duwa Temple Road, Kalutara South, Sri Lanka
               </p>
               <p className="mb-2">
                 <i className="fa fa-phone-alt me-3" />
@@ -143,8 +143,8 @@ export default function Footer() {
               <div className="col-md-6 text-center text-md-end">
                 <div className="footer-menu">
                   <a href="/">Home</a>
-                  <a href="/cookies">Cookies</a>
-                  <a href="/help">Help</a>
+                  <a href="/privacy-policy">Privacy Policy</a>
+                  <a href="/terms-conditions">Terms</a>
                   <a href="/faq">FQAs</a>
                 </div>
               </div>
