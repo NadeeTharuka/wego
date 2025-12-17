@@ -60,36 +60,42 @@
     text-align: center;
 }
 
+/* Updated grid to show 3 boxes per row */
 .packages-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
+/* Reduced package box size */
 .package {
     background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .package:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .package-image-container {
     position: relative;
     overflow: hidden;
+    height: 180px;
 }
 
 .package-img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -104,61 +110,68 @@
     right: 0;
     background: rgba(6, 163, 218, 0.9);
     color: white;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-bottom-left-radius: 8px;
 }
 
 .package-price {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
 .package-content {
-    padding: 1.5rem;
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .package-title {
-    font-size: 1.1rem;
-    margin: 0 0 1rem 0;
+    font-size: 0.95rem;
+    margin: 0 0 0.75rem 0;
     color: #333;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.3;
+    min-height: 40px;
 }
 
 .package-duration {
     color: #666;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
 }
 
 .package-highlights {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    flex: 1;
 }
 
 .highlight-tag {
     display: inline-block;
     background: #e3f2fd;
     color: #1976d2;
-    padding: 4px 8px;
+    padding: 3px 7px;
     margin: 2px;
-    border-radius: 12px;
-    font-size: 0.8rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
     border: 1px solid #bbdefb;
 }
 
 .view-button {
     display: block;
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     background: #06A3DA;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    font-size: 0.85rem;
+    margin-top: auto;
 }
 
 .view-button:hover {
@@ -223,226 +236,13 @@
     margin: 0;
 }
 
-/* Interactive Map Section Styles */
-.map-container {
-  position: relative;
-  padding: 2rem 0;
-}
-
-.interactive-feature {
-  transition: all 0.3s ease;
-}
-
-.interactive-feature:hover .feature-card {
-  transform: scale(1.1);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
-}
-
-.interactive-feature:hover .feature-image-wrapper img {
-  border-color: #06A3DA !important;
-  box-shadow: 0 0 0 4px rgba(6, 163, 218, 0.3);
-}
-
-.feature-marker {
-  position: relative;
-  z-index: 10;
-  animation: fadeInUp 0.6s ease-out;
-}
-
-.feature-circle {
-  transition: all 0.3s ease;
-  border: 3px solid #fff !important;
-}
-
-.feature-circle:hover {
-  transform: scale(1.15);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
-  border-color: #06A3DA !important;
-}
-
-.feature-marker small {
-  background: white;
-  padding: 4px 12px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  display: inline-block;
-  white-space: nowrap;
-}
-
-/* Feature Cards - No Overlap */
-.feature-card {
-  animation: fadeInUp 0.8s ease-out;
-  transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 10px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.feature-card h6 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.feature-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  z-index: 20 !important;
-}
-
-.feature-image-wrapper img {
-  transition: all 0.3s ease;
-}
-
-.feature-card:hover .feature-image-wrapper img {
-  transform: scale(1.1);
-  border-color: #06A3DA !important;
-}
-
-/* Place Markers on Map */
-.place-marker {
-  animation: placePopIn 0.4s ease-out;
-}
-
-.place-pin {
-  position: relative;
-  animation: bounce 1s ease-in-out infinite;
-}
-
-.place-pin::before {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 12px solid #06A3DA;
-}
-
-/* Animations */
-@keyframes placePopIn {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
-  }
-  60% {
-    transform: translate(-50%, -50%) scale(1.1);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+/* Responsive Design - Updated breakpoints */
+@media (max-width: 1400px) {
+  .packages-grid {
+    max-width: 1200px;
   }
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* SVG Map Animation */
-svg path {
-  animation: fadeIn 1s ease-out;
-}
-
-/* Responsive adjustments for map */
-@media (max-width: 1200px) {
-  .position-absolute[style*="left"] {
-    left: 2% !important;
-  }
-  
-  .position-absolute[style*="right"] {
-    right: 2% !important;
-  }
-  
-  .feature-card {
-    width: 140px !important;
-  }
-  
-  .feature-image-wrapper img {
-    width: 75px !important;
-    height: 75px !important;
-  }
-}
-
-@media (max-width: 992px) {
-  .feature-card {
-    width: 140px !important;
-  }
-  
-  .feature-image-wrapper img {
-    width: 80px !important;
-    height: 80px !important;
-  }
-  
-  .feature-card h6 {
-    font-size: 0.85rem;
-  }
-
-  .place-pin {
-    font-size: 0.65rem !important;
-    padding: 6px 10px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .position-absolute[style*="bottom"] {
-    display: none;
-  }
-  
-  .text-center img[alt="Sri Lanka Map"] {
-    width: 250px !important;
-  }
-
-  .place-marker {
-    font-size: 0.6rem;
-  }
-
-  .place-pin {
-    padding: 5px 8px !important;
-    font-size: 0.6rem !important;
-  }
-
-  .feature-circle {
-    width: 60px !important;
-    height: 60px !important;
-    padding: 8px !important;
-  }
-  
-  .feature-marker small {
-    font-size: 0.75rem;
-  }
-}
-
-/* Responsive Design */
 @media (max-width: 1200px) {
   .packages-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -455,6 +255,10 @@ svg path {
     grid-template-columns: 1fr;
     padding: 1rem;
     gap: 1rem;
+  }
+  
+  .package-image-container {
+    height: 200px;
   }
   
   .package-content {
@@ -482,7 +286,12 @@ svg path {
   }
   
   .package-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    min-height: 35px;
+  }
+  
+  .package-image-container {
+    height: 180px;
   }
 }
 
@@ -501,177 +310,4 @@ svg path {
 
 .interactive-feature:hover {
   animation: pulse 1.5s infinite;
-}
-
-
-/* Map Highlight Areas Animation */
-.map-highlight {
-  transition: all 0.5s ease-in-out;
-  z-index: 3;
-}
-
-/* Pulsing Glow Animation */
-@keyframes pulseGlow {
-  0% {
-    opacity: 0.6;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.9;
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 0.6;
-    transform: scale(1);
-  }
-}
-
-/* Beach Highlight - Coastal Shimmer Effect */
-.beach-highlight {
-  animation: pulseGlow 2s ease-in-out infinite, waveShimmer 3s ease-in-out infinite;
-}
-
-@keyframes waveShimmer {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(6, 163, 218, 0.4), 
-                0 0 40px rgba(6, 163, 218, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(6, 163, 218, 0.6), 
-                0 0 60px rgba(6, 163, 218, 0.3);
-  }
-}
-
-/* Wildlife Highlight - Nature Pulse Effect */
-.wildlife-highlight {
-  animation: pulseGlow 2s ease-in-out infinite, naturePulse 4s ease-in-out infinite;
-}
-
-@keyframes naturePulse {
-  0%, 100% {
-    box-shadow: 0 0 25px rgba(76, 175, 80, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 45px rgba(76, 175, 80, 0.6);
-  }
-}
-
-/* Adventure Highlight - Mountain Peak Effect */
-.adventure-highlight {
-  animation: pulseGlow 2s ease-in-out infinite, mountainGlow 3s ease-in-out infinite;
-}
-
-@keyframes mountainGlow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(255, 152, 0, 0.5), 
-                inset 0 0 20px rgba(255, 152, 0, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(255, 152, 0, 0.7), 
-                inset 0 0 30px rgba(255, 152, 0, 0.3);
-  }
-}
-
-/* Culture Highlight - Ancient Aura Effect */
-.culture-highlight {
-  animation: pulseGlow 2s ease-in-out infinite, ancientAura 3.5s ease-in-out infinite;
-}
-
-@keyframes ancientAura {
-  0%, 100% {
-    box-shadow: 0 0 25px rgba(156, 39, 176, 0.4), 
-                0 0 50px rgba(156, 39, 176, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(156, 39, 176, 0.6), 
-                0 0 70px rgba(156, 39, 176, 0.3);
-  }
-}
-
-/* Remote Areas Highlight - Mystical Glow */
-.remote-highlight {
-  animation: pulseGlow 2s ease-in-out infinite, mysticalGlow 4s ease-in-out infinite;
-}
-
-@keyframes mysticalGlow {
-  0%, 100% {
-    box-shadow: 0 0 30px rgba(103, 58, 183, 0.5);
-    filter: brightness(1);
-  }
-  50% {
-    box-shadow: 0 0 50px rgba(103, 58, 183, 0.7);
-    filter: brightness(1.2);
-  }
-}
-
-/* Gastronomy Highlight - Flavorful Burst Effect */
-.gastronomy-highlight {
-  animation: pulseGlow 2s ease-in-out infinite, flavorBurst 3s ease-in-out infinite;
-}
-
-@keyframes flavorBurst {
-  0%, 100% {
-    box-shadow: 0 0 25px rgba(255, 87, 34, 0.5), 
-                0 0 45px rgba(255, 87, 34, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(255, 87, 34, 0.7), 
-                0 0 70px rgba(255, 87, 34, 0.4);
-  }
-}
-
-/* Enhanced Interactive Feature Hover Effects */
-.interactive-feature {
-  transition: all 0.3s ease;
-}
-
-.interactive-feature:hover {
-  transform: scale(1.05);
-}
-
-.interactive-feature:hover .feature-card {
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
-  transform: translateY(-5px);
-}
-
-/* Ripple Effect on Feature Selection */
-@keyframes rippleEffect {
-  0% {
-    box-shadow: 0 0 0 0 rgba(6, 163, 218, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 0 20px rgba(6, 163, 218, 0.3);
-  }
-  100% {
-    box-shadow: 0 0 0 40px rgba(6, 163, 218, 0);
-  }
-}
-
-/* Add ripple to feature cards when selected */
-.feature-card.active {
-  animation: rippleEffect 1.5s ease-out infinite;
-}
-
-/* Smooth transitions for all highlights */
-.map-highlight {
-  will-change: transform, opacity;
-  transition: opacity 0.5s ease-in-out;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .map-highlight {
-    opacity: 0.7;
-  }
-  
-  @keyframes pulseGlow {
-    0%, 100% {
-      opacity: 0.5;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.8;
-      transform: scale(1.03);
-    }
-  }
 }
