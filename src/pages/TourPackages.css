@@ -311,3 +311,71 @@
 .interactive-feature:hover {
   animation: pulse 1.5s infinite;
 }
+
+/* Itinerary Section Styles */
+.itinerary-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.itinerary-day {
+    margin-bottom: 1.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.itinerary-header {
+    background-color: #06A3DA;
+    color: white;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itinerary-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.itinerary-content {
+    padding: 1rem;
+    display: none;
+}
+
+.itinerary-content.active {
+    display: block;
+}
+
+.itinerary-places {
+    margin-top: 0.75rem;
+}
+
+.itinerary-places span {
+    display: inline-block;
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 3px 7px;
+    margin: 2px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    border: 1px solid #bbdefb;
+    cursor: pointer;
+}
+
+.itinerary-places span:hover {
+    background: #1976d2;
+    color: white;
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon.active {
+    transform: rotate(180deg);
+}
