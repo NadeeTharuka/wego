@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './OneDayTourDetails.css';
 
@@ -6,6 +6,7 @@ function OneDayTourDetails() {
   const location = useLocation();
   const navigate = useNavigate();
   const tour = location.state?.tour;
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -354,6 +355,18 @@ function OneDayTourDetails() {
     }
   };
 
+  const goToPrevious = () => {
+    setCurrentImageIndex(prevIndex => 
+      prevIndex === 0 ? details.gallery.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex(prevIndex => 
+      prevIndex === details.gallery.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   if (!tour || !tourDetails[tour.name]) {
     return (
       <div className="container text-center py-5">
@@ -533,28 +546,51 @@ function OneDayTourDetails() {
               <h2 className="text-primary mb-4">
                 <i className="fa fa-images me-2"></i>Photo Gallery
               </h2>
-              <div className="row g-3">
-                {details.gallery.map((image, index) => (
-                  <div key={index} className="col-md-6 col-lg-3">
-                    <div className="gallery-item rounded overflow-hidden shadow position-relative">
-                      <img 
-                        src={image.src} 
-                        alt={image.caption}
-                        className="img-fluid w-100"
-                        style={{ 
-                          height: '250px', 
-                          objectFit: 'cover',
-                          transition: 'transform 0.3s ease'
-                        }}
-                      />
-                      <div className="gallery-overlay">
-                        <p className="gallery-caption text-white m-0 p-2 text-center">
-                          {image.caption}
-                        </p>
-                      </div>
-                    </div>
+              
+              <div className="carousel-container position-relative">
+                {/* Left Arrow */}
+                <button 
+                  className="carousel-control carousel-control-prev"
+                  onClick={goToPrevious}
+                >
+                  <i className="fa fa-chevron-left fa-2x"></i>
+                </button>
+                
+                {/* Current Image */}
+                <div className="carousel-image-container">
+                  <img 
+                    src={details.gallery[currentImageIndex].src} 
+                    alt={details.gallery[currentImageIndex].caption}
+                    className="img-fluid rounded shadow"
+                    style={{ 
+                      height: '500px', 
+                      objectFit: 'cover',
+                      width: '100%'
+                    }}
+                  />
+                  <div className="carousel-caption">
+                    <p className="text-white mb-0">{details.gallery[currentImageIndex].caption}</p>
                   </div>
-                ))}
+                </div>
+                
+                {/* Right Arrow */}
+                <button 
+                  className="carousel-control carousel-control-next"
+                  onClick={goToNext}
+                >
+                  <i className="fa fa-chevron-right fa-2x"></i>
+                </button>
+                
+                {/* Image Indicators */}
+                <div className="carousel-indicators">
+                  {details.gallery.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
+                      onClick={() => setCurrentImageIndex(index)}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
 
