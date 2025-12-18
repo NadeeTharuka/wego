@@ -60,7 +60,6 @@ function OneDayTourDetails() {
         { src: "assets/img/yala-landscape.jpg", caption: "Diverse Yala Landscapes" },
         { src: "assets/img/yala-birds.jpg", caption: "Colorful Birdlife" },
         { src: "assets/img/yala-sloth-bear.jpg", caption: "Rare Sloth Bear Sighting" },
-        { src: "assets/img/yala-crocodile.jpg", caption: "Crocodiles in Freshwater Lakes" },
         { src: "assets/img/yala-deer.jpg", caption: "Spotted Deer Grazing" },
         { src: "assets/img/yala-beach.jpg", caption: "Coastal Beauty of Yala" }
       ],
