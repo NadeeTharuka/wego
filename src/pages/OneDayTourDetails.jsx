@@ -18,45 +18,17 @@ function OneDayTourDetails() {
       introduction: "Yala National Park, the most iconic wildlife destination in Sri Lanka, is a breathtaking blend of coastal beauty, dry forests, and rich biodiversity. Known for having one of the highest leopard densities in the world, Yala offers travelers a rare opportunity to witness majestic wildlife roaming freely in their natural habitat. Its rugged landscapes, ancient ruins, and tranquil lagoons make it a must-visit destination for nature lovers and adventure seekers.",
       invite: "Experience the wild heart of Sri Lanka! Join us on an unforgettable journey through Yala's untamed wilderness—where every turn reveals a new encounter, every sunrise paints a new memory, and every safari brings you closer to the wonders of nature. Let us take you on a world-class wildlife adventure in Yala!",
       highlights: [
-        {
-          icon: "fa-binoculars",
-          title: "World-Famous Wildlife Safaris",
-          description: "Spot leopards, elephants, crocodiles, sloth bears, deer, and over 200 bird species"
-        },
-        {
-          icon: "fa-paw",
-          title: "One of the Highest Leopard Populations Globally",
-          description: "A dream destination for photographers and wildlife enthusiasts"
-        },
-        {
-          icon: "fa-tree",
-          title: "Diverse Landscapes",
-          description: "From dense jungle and thorn forests to golden beaches and freshwater lakes"
-        },
-        {
-          icon: "fa-water",
-          title: "Scenic Coastal Views",
-          description: "Enjoy the untouched beauty of the Indian Ocean bordering the park"
-        },
-        {
-          icon: "fa-gopuram",
-          title: "Ancient Cultural Sites",
-          description: "Visit Sithulpawwa Buddhist monastery and other archaeological treasures hidden within the park"
-        },
-        {
-          icon: "fa-dove",
-          title: "Birdwatching Paradise",
-          description: "Home to vibrant resident and migratory birds, ideal for nature lovers"
-        },
-        {
-          icon: "fa-leaf",
-          title: "Eco-Friendly Travel Experiences",
-          description: "Sustainable safaris with minimal environmental impact"
-        }
+        { icon: "fa-binoculars", title: "World-Famous Wildlife Safaris", description: "Spot leopards, elephants, crocodiles, sloth bears, deer, and over 200 bird species" },
+        { icon: "fa-paw", title: "One of the Highest Leopard Populations Globally", description: "A dream destination for photographers and wildlife enthusiasts" },
+        { icon: "fa-tree", title: "Diverse Landscapes", description: "From dense jungle and thorn forests to golden beaches and freshwater lakes" },
+        { icon: "fa-water", title: "Scenic Coastal Views", description: "Enjoy the untouched beauty of the Indian Ocean bordering the park" },
+        { icon: "fa-gopuram", title: "Ancient Cultural Sites", description: "Visit Sithulpawwa Buddhist monastery and other archaeological treasures hidden within the park" },
+        { icon: "fa-dove", title: "Birdwatching Paradise", description: "Home to vibrant resident and migratory birds, ideal for nature lovers" },
+        { icon: "fa-leaf", title: "Eco-Friendly Travel Experiences", description: "Sustainable safaris with minimal environmental impact" }
       ],
       gallery: [
-        { src: "assets/img/yala-leopard.jpg", caption: "Majestic Leopard in Natural Habitat" },
-        { src: "assets/img/yala-elephants.jpg", caption: "Elephant Herds Roaming Freely" },
+        { src: "assets/img/yala-leopard.jpg", caption: "Majestic Leopard" },
+        { src: "assets/img/yala-elephants.jpg", caption: "Elephant Herds" },
         { src: "assets/img/yala-landscape.jpg", caption: "Diverse Yala Landscapes" },
         { src: "assets/img/yala-birds.jpg", caption: "Colorful Birdlife" },
         { src: "assets/img/yala-sloth-bear.jpg", caption: "Rare Sloth Bear Sighting" },
@@ -75,51 +47,15 @@ function OneDayTourDetails() {
       introduction: "Kandy, the cultural capital of Sri Lanka, is a city of charm, history, and spiritual significance. Surrounded by misty hills and centered around the beautiful Kandy Lake, the city is home to the world-renowned Temple of the Sacred Tooth Relic, vibrant traditions, and captivating cultural performances. Just a short drive away lies the Pinnawala Elephant Orphanage, where visitors can enjoy heartwarming encounters with rescued elephants and witness daily routines such as feeding and river bathing. Together, Kandy and Pinnawala offer a rich blend of culture, nature, and unforgettable experiences.",
       invite: "Discover the cultural soul and gentle giants of Sri Lanka! Join us as we take you through the sacred heritage of Kandy and the inspiring beauty of Pinnawala. Let us create a memorable escape filled with culture, nature, and warm Sri Lankan hospitality.",
       highlights: [
-        {
-          icon: "fa-gopuram",
-          title: "Temple of the Sacred Tooth Relic",
-          description: "One of the most sacred Buddhist sites in the world"
-        },
-        {
-          icon: "fa-water",
-          title: "Kandy Lake & City Walk",
-          description: "A peaceful stroll surrounded by colonial charm and scenic views"
-        },
-        {
-          icon: "fa-leaf",
-          title: "Royal Botanical Gardens - Peradeniya",
-          description: "A world-class garden showcasing rare orchids and tropical flora"
-        },
-        {
-          icon: "fa-music",
-          title: "Kandy Cultural Dance Show",
-          description: "A lively performance of traditional music, dance, and fire acts"
-        },
-        {
-          icon: "fa-mountain",
-          title: "Scenic Hill Country Surroundings",
-          description: "Misty mountains, tea plantations, and refreshing climates"
-        },
-        {
-          icon: "fa-elephant",
-          title: "Pinnawala Elephant Orphanage",
-          description: "Sanctuary for rescued elephants with daily feeding and river bathing"
-        },
-        {
-          icon: "fa-heart",
-          title: "Elephant Bathing at the Maha Oya River",
-          description: "A heartwarming sight of herds relaxing and playing in the water"
-        },
-        {
-          icon: "fa-users",
-          title: "Close-Up Elephant Encounters",
-          description: "Safe and memorable viewing opportunities for all ages"
-        },
-        {
-          icon: "fa-child",
-          title: "Family-Friendly Attraction",
-          description: "Ideal stop for nature lovers, wildlife enthusiasts, and kids"
-        }
+        { icon: "fa-gopuram", title: "Temple of the Sacred Tooth Relic", description: "One of the most sacred Buddhist sites in the world" },
+        { icon: "fa-water", title: "Kandy Lake & City Walk", description: "A peaceful stroll surrounded by colonial charm and scenic views" },
+        { icon: "fa-leaf", title: "Royal Botanical Gardens - Peradeniya", description: "A world-class garden showcasing rare orchids and tropical flora" },
+        { icon: "fa-music", title: "Kandy Cultural Dance Show", description: "A lively performance of traditional music, dance, and fire acts" },
+        { icon: "fa-mountain", title: "Scenic Hill Country Surroundings", description: "Misty mountains, tea plantations, and refreshing climates" },
+        { icon: "fa-elephant", title: "Pinnawala Elephant Orphanage", description: "Sanctuary for rescued elephants with daily feeding and river bathing" },
+        { icon: "fa-heart", title: "Elephant Bathing at the Maha Oya River", description: "A heartwarming sight of herds relaxing and playing in the water" },
+        { icon: "fa-users", title: "Close-Up Elephant Encounters", description: "Safe and memorable viewing opportunities for all ages" },
+        { icon: "fa-child", title: "Family-Friendly Attraction", description: "Ideal stop for nature lovers, wildlife enthusiasts, and kids" }
       ],
       gallery: [
         { src: "assets/img/kandy-temple.jpg", caption: "Temple of the Sacred Tooth Relic" },
@@ -127,8 +63,6 @@ function OneDayTourDetails() {
         { src: "assets/img/kandy-botanical.jpg", caption: "Royal Botanical Gardens" },
         { src: "assets/img/kandy-dance.jpg", caption: "Traditional Cultural Dance" },
         { src: "assets/img/pinnawala-elephants.jpg", caption: "Elephants at Pinnawala" },
-        { src: "assets/img/pinnawala-bathing.jpg", caption: "River Bathing Experience" },
-        { src: "assets/img/pinnawala-feeding.jpg", caption: "Feeding Baby Elephants" },
         { src: "assets/img/kandy-city.jpg", caption: "Kandy City Panorama" }
       ],
       tourDetails: {
@@ -143,61 +77,22 @@ function OneDayTourDetails() {
       introduction: "Sigiriya and Dambulla, two UNESCO World Heritage Sites, form the cultural heart of Sri Lanka's ancient kingdom. Sigiriya, known as the 'Lion Rock,' is an ancient rock fortress and one of Sri Lanka's most iconic landmarks. Built in the 5th century AD by King Kashyapa I, it served as a royal palace atop a 200-meter rock for strategic defense. After his death, the site was abandoned as a royal residence and later used as a Buddhist monastery until the 14th century. Dambulla, famed for its 5 magnificent cave temples, features over 150 Buddha statues and centuries-old murals that tell the story of Sri Lanka's spiritual heritage. The Dambulla Cave Temples, dating back to the 1st century BCE, are renowned for their exquisite Sinhala art and sculpture.",
       invite: "Step into the ancient wonders of Sri Lanka! Join us on an unforgettable journey to explore the majestic Sigiriya Fortress and the sacred Dambulla Cave Temples. Let us guide you through a world of kings, legends, and timeless beauty.",
       highlights: [
-        {
-          icon: "fa-mountain",
-          title: "Sigiriya - Lion Rock Fortress",
-          description: "UNESCO World Heritage Site - One of the most remarkable archaeological wonders in Asia"
-        },
-        {
-          icon: "fa-landmark",
-          title: "5th Century Royal Palace",
-          description: "200-meter rock fortress - Climb to the top to explore King Kashyapa's royal citadel"
-        },
-        {
-          icon: "fa-paint-brush",
-          title: "Famous Lion's Gate",
-          description: "Once a grand entrance shaped like a lion, now marked by its remaining paws"
-        },
-        {
-          icon: "fa-palette",
-          title: "Sigiriya Frescoes",
-          description: "Beautifully preserved ancient paintings of the 'Sigiriya Damsels'"
-        },
-        {
-          icon: "fa-book",
-          title: "Mirror Wall",
-          description: "Polished wall inscribed with ancient visitors' writings"
-        },
-        {
-          icon: "fa-water",
-          title: "Advanced Hydraulic Systems",
-          description: "The surrounding water gardens showcase ancient engineering"
-        },
-        {
-          icon: "fa-gopuram",
-          title: "Dambulla Cave Temple Complex",
-          description: "UNESCO World Heritage Site dating back to 1st century BCE"
-        },
-        {
-          icon: "fa-praying-hands",
-          title: "Five Sacred Caves",
-          description: "Over 150 Buddha statues with intricately painted ceilings"
-        },
-        {
-          icon: "fa-history",
-          title: "Ancient Sinhala Sculptures",
-          description: "Exquisite art developed during Anuradhapura and Polonnaruwa periods"
-        }
+        { icon: "fa-mountain", title: "Sigiriya - Lion Rock Fortress", description: "UNESCO World Heritage Site - One of the most remarkable archaeological wonders in Asia" },
+        { icon: "fa-landmark", title: "5th Century Royal Palace", description: "200-meter rock fortress - Climb to the top to explore King Kashyapa's royal citadel" },
+        { icon: "fa-paint-brush", title: "Famous Lion's Gate", description: "Once a grand entrance shaped like a lion, now marked by its remaining paws" },
+        { icon: "fa-palette", title: "Sigiriya Frescoes", description: "Beautifully preserved ancient paintings of the 'Sigiriya Damsels'" },
+        { icon: "fa-book", title: "Mirror Wall", description: "Polished wall inscribed with ancient visitors' writings" },
+        { icon: "fa-water", title: "Advanced Hydraulic Systems", description: "The surrounding water gardens showcase ancient engineering" },
+        { icon: "fa-gopuram", title: "Dambulla Cave Temple Complex", description: "UNESCO World Heritage Site dating back to 1st century BCE" },
+        { icon: "fa-praying-hands", title: "Five Sacred Caves", description: "Over 150 Buddha statues with intricately painted ceilings" },
+        { icon: "fa-history", title: "Ancient Sinhala Sculptures", description: "Exquisite art developed during Anuradhapura and Polonnaruwa periods" }
       ],
       gallery: [
         { src: "assets/img/sigiriya-rock.jpg", caption: "Majestic Sigiriya Lion Rock" },
         { src: "assets/img/sigiriya-frescoes.jpg", caption: "Ancient Sigiriya Frescoes" },
-        { src: "assets/img/sigiriya-lions-paw.jpg", caption: "Lion's Gate Entrance" },
         { src: "assets/img/sigiriya-gardens.jpg", caption: "Water Gardens" },
-        { src: "assets/img/sigiriya-mirror-wall.jpg", caption: "Historic Mirror Wall" },
         { src: "assets/img/dambulla-caves.jpg", caption: "Dambulla Cave Temples" },
         { src: "assets/img/dambulla-buddha.jpg", caption: "Buddha Statues Inside Caves" },
-        { src: "assets/img/dambulla-paintings.jpg", caption: "Ancient Cave Paintings" }
       ],
       tourDetails: {
         duration: "Full Day (7-8 hours)",
@@ -211,65 +106,21 @@ function OneDayTourDetails() {
       introduction: "Galle, located along Sri Lanka's stunning southern coastline, is a city where colonial charm meets tropical beauty. Its highlight, the iconic Galle Dutch Fort, is a UNESCO World Heritage Site and one of the best-preserved colonial-era forts in Asia. Originally built by the Portuguese in the 16th century and later expanded by the Dutch in the 17th century, the fort showcases a blend of European architecture and South Asian culture. Its thick stone walls enclose a vibrant town with cobbled streets, historic buildings, boutique shops, and cafes. Key attractions within the fort include the Dutch Reformed Church, Galle Lighthouse, and the Maritime Museum. With golden beaches, vibrant culture, and a relaxed coastal atmosphere, Galle offers an unforgettable blend of history and seaside serenity.",
       invite: "Explore the timeless beauty of Galle! Walk along ancient ramparts, soak in breathtaking ocean views, and discover the rich heritage of Sri Lanka's most picturesque coastal city. Join us for a journey that blends history, culture, and coastal charm.",
       highlights: [
-        {
-          icon: "fa-fort-awesome",
-          title: "Galle Fort & Heritage",
-          description: "UNESCO World Heritage Dutch Fort - A beautifully preserved 16th-century fortress"
-        },
-        {
-          icon: "fa-lightbulb",
-          title: "Galle Lighthouse",
-          description: "The iconic landmark offering scenic coastal views"
-        },
-        {
-          icon: "fa-building",
-          title: "Colonial Streets & Architecture",
-          description: "European-style buildings, boutique shops, and cosy cafés"
-        },
-        {
-          icon: "fa-landmark",
-          title: "Historical Museums",
-          description: "Maritime Museum and Dutch Hospital precinct"
-        },
-        {
-          icon: "fa-umbrella-beach",
-          title: "Stunning Beaches Nearby",
-          description: "Unawatuna, Jungle Beach, and Dalawella"
-        },
-        {
-          icon: "fa-walking",
-          title: "Oceanfront Ramparts",
-          description: "Perfect for sunset walks and photography"
-        },
-        {
-          icon: "fa-turtle",
-          title: "Turtle Conservation Experiences",
-          description: "Visit nearby hatcheries along the coast"
-        },
-        {
-          icon: "fa-coffee",
-          title: "Café Culture",
-          description: "Trendy restaurants, gelato shops, and coffee spots"
-        },
-        {
-          icon: "fa-shopping-bag",
-          title: "Handicrafts & Boutiques",
-          description: "Jewelry, art galleries, clothing, and souvenirs"
-        },
-        {
-          icon: "fa-heart",
-          title: "Relaxed Coastal Atmosphere",
-          description: "Ideal for couples, families, and culture lovers"
-        }
+        { icon: "fa-fort-awesome", title: "Galle Fort & Heritage", description: "UNESCO World Heritage Dutch Fort - A beautifully preserved 16th-century fortress" },
+        { icon: "fa-lightbulb", title: "Galle Lighthouse", description: "The iconic landmark offering scenic coastal views" },
+        { icon: "fa-building", title: "Colonial Streets & Architecture", description: "European-style buildings, boutique shops, and cosy cafés" },
+        { icon: "fa-landmark", title: "Historical Museums", description: "Maritime Museum and Dutch Hospital precinct" },
+        { icon: "fa-umbrella-beach", title: "Stunning Beaches Nearby", description: "Unawatuna, Jungle Beach, and Dalawella" },
+        { icon: "fa-walking", title: "Oceanfront Ramparts", description: "Perfect for sunset walks and photography" },
+        { icon: "fa-turtle", title: "Turtle Conservation Experiences", description: "Visit nearby hatcheries along the coast" },
+        { icon: "fa-coffee", title: "Café Culture", description: "Trendy restaurants, gelato shops, and coffee spots" },
+        { icon: "fa-shopping-bag", title: "Handicrafts & Boutiques", description: "Jewelry, art galleries, clothing, and souvenirs" },
+        { icon: "fa-heart", title: "Relaxed Coastal Atmosphere", description: "Ideal for couples, families, and culture lovers" }
       ],
       gallery: [
-        { src: "assets/img/galle-fort-aerial.jpg", caption: "Aerial View of Galle Fort" },
         { src: "assets/img/galle-lighthouse.jpg", caption: "Historic Galle Lighthouse" },
         { src: "assets/img/galle-streets.jpg", caption: "Cobblestone Streets" },
-        { src: "assets/img/galle-ramparts.jpg", caption: "Fort Ramparts Walk" },
-        { src: "assets/img/galle-church.jpg", caption: "Dutch Reformed Church" },
         { src: "assets/img/galle-beach.jpg", caption: "Beaches Near Galle" },
-        { src: "assets/img/galle-shops.jpg", caption: "Boutique Shops & Cafes" },
         { src: "assets/img/galle-sunset.jpg", caption: "Sunset at Galle Fort" }
       ],
       tourDetails: {
@@ -284,66 +135,22 @@ function OneDayTourDetails() {
       introduction: "Sri Lanka is one of the best places in the world to witness majestic marine life up close. From the southern coast—especially Mirissa—travelers can spot blue whales, sperm whales, spinner dolphins, and other incredible ocean giants. The warm tropical waters and rich marine ecosystem create ideal conditions for unforgettable whale-watching experiences, attracting marine enthusiasts from around the globe. Blue whales - Sri Lanka is one of the few places on Earth where you can reliably spot the largest animal ever to live. Mirissa's calm seas and rich marine waters make it one of Asia's top whale watching destinations.",
       invite: "Set sail into the deep blue and meet the gentle giants of the ocean! Join us for a thrilling and eco-friendly whale watching tour, where every moment brings excitement, serenity, and breathtaking natural beauty. Let us take you on an unforgettable ocean adventure in Sri Lanka.",
       highlights: [
-        {
-          icon: "fa-water",
-          title: "World-Class Marine Encounters - Blue Whales",
-          description: "Sri Lanka is one of the few places on Earth where you can reliably spot the largest animal ever to live"
-        },
-        {
-          icon: "fa-fish",
-          title: "Sperm Whales",
-          description: "Known for their deep dives and impressive size"
-        },
-        {
-          icon: "fa-swimmer",
-          title: "Spinner & Bottlenose Dolphins",
-          description: "Often seen dancing and playing beside the boats"
-        },
-        {
-          icon: "fa-ship",
-          title: "Ideal Whale Watching Hub - Mirissa",
-          description: "Calm seas and rich marine waters make Mirissa one of Asia's top whale watching destinations"
-        },
-        {
-          icon: "fa-clock",
-          title: "Best Timing",
-          description: "Early morning departures ensure the best sightings and serene ocean views"
-        },
-        {
-          icon: "fa-sun",
-          title: "Nature, Relaxation & Adventure",
-          description: "Breathtaking sunrise over the Indian Ocean"
-        },
-        {
-          icon: "fa-camera",
-          title: "Photography Opportunities",
-          description: "Opportunity for wildlife photography and videography"
-        },
-        {
-          icon: "fa-users",
-          title: "Suitable for Everyone",
-          description: "Suitable for families, couples, adventure lovers, and nature enthusiasts"
-        },
-        {
-          icon: "fa-leaf",
-          title: "Eco-Friendly Experience",
-          description: "Responsible whale watching practices to protect marine life"
-        },
-        {
-          icon: "fa-user-tie",
-          title: "Expert Guides",
-          description: "Expert guides trained in marine conservation"
-        }
+        { icon: "fa-water", title: "World-Class Marine Encounters - Blue Whales", description: "Sri Lanka is one of the few places on Earth where you can reliably spot the largest animal ever to live" },
+        { icon: "fa-fish", title: "Sperm Whales", description: "Known for their deep dives and impressive size" },
+        { icon: "fa-swimmer", title: "Spinner & Bottlenose Dolphins", description: "Often seen dancing and playing beside the boats" },
+        { icon: "fa-ship", title: "Ideal Whale Watching Hub - Mirissa", description: "Calm seas and rich marine waters make Mirissa one of Asia's top whale watching destinations" },
+        { icon: "fa-clock", title: "Best Timing", description: "Early morning departures ensure the best sightings and serene ocean views" },
+        { icon: "fa-sun", title: "Nature, Relaxation & Adventure", description: "Breathtaking sunrise over the Indian Ocean" },
+        { icon: "fa-camera", title: "Photography Opportunities", description: "Opportunity for wildlife photography and videography" },
+        { icon: "fa-users", title: "Suitable for Everyone", description: "Suitable for families, couples, adventure lovers, and nature enthusiasts" },
+        { icon: "fa-leaf", title: "Eco-Friendly Experience", description: "Responsible whale watching practices to protect marine life" },
+        { icon: "fa-user-tie", title: "Expert Guides", description: "Expert guides trained in marine conservation" }
       ],
       gallery: [
         { src: "assets/img/whale-blue.jpg", caption: "Blue Whale Breach" },
         { src: "assets/img/whale-sperm.jpg", caption: "Sperm Whale Diving" },
         { src: "assets/img/whale-dolphins.jpg", caption: "Playful Dolphins" },
         { src: "assets/img/whale-boat.jpg", caption: "Whale Watching Boat" },
-        { src: "assets/img/whale-tail.jpg", caption: "Whale Tail Splash" },
-        { src: "assets/img/whale-sunrise.jpg", caption: "Ocean Sunrise" },
-        { src: "assets/img/whale-group.jpg", caption: "Dolphin Pod" },
-        { src: "assets/img/whale-sunset.jpg", caption: "Mirissa Sunset" }
       ],
       tourDetails: {
         duration: "Half Day (4-5 hours)",
@@ -401,6 +208,7 @@ function OneDayTourDetails() {
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${details.headerImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
           minHeight: '60vh',
           display: 'flex',
           alignItems: 'center',
@@ -560,11 +368,12 @@ function OneDayTourDetails() {
                   <img 
                     src={details.gallery[currentImageIndex].src} 
                     alt={details.gallery[currentImageIndex].caption}
-                    className="img-fluid rounded shadow"
+                    className="img-fluid rounded shadow gallery-image"
                     style={{ 
-                      height: '500px', 
+                      height: '350px', 
                       objectFit: 'cover',
-                      width: '100%'
+                      width: '100%',
+                      imageRendering: 'auto'
                     }}
                   />
                   <div className="carousel-caption">

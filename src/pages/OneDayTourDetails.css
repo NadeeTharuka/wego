@@ -8,6 +8,8 @@
   position: relative;
   padding: 100px 0;
   transition: all 0.3s ease;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
 }
 
 .tour-hero::before {
@@ -99,44 +101,111 @@
   margin-top: 3rem;
 }
 
-.gallery-item {
-  overflow: hidden;
-  transition: all 0.3s ease;
+.gallery-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  object-position: center;
+}
+
+.carousel-container {
   position: relative;
-  cursor: pointer;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  max-width: 600px; /* Width remains unchanged */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.gallery-item:hover {
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
-  transform: translateY(-5px);
-}
-
-.gallery-item img {
-  transition: transform 0.4s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.15);
-}
-
-.gallery-overlay {
+.carousel-control {
   position: absolute;
-  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control-prev {
+  left: 15px;
+}
+
+.carousel-control-next {
+  right: 15px;
+}
+
+.carousel-image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 15px;
+  text-align: center;
+  z-index: 5;
+  max-width: 80%;
+  background: none;
+}
+
+.carousel-caption p {
+  margin: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 15px;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  padding: 20px 10px 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  z-index: 6;
 }
 
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.gallery-caption {
-  font-size: 0.9rem;
-  font-weight: 500;
+.indicator.active {
+  background-color: #06A3DA;
+}
+
+.tour-gallery {
+  margin-bottom: 40px;
 }
 
 /* Booking CTA */
@@ -206,9 +275,8 @@
 
 /* Responsive Design */
 @media (max-width: 992px) {
-  .tour-gallery .col-lg-3 {
-    flex: 0 0 50%;
-    max-width: 50%;
+  .gallery-image {
+    height: 300px !important; /* Increased height for tablets */
   }
 }
 
@@ -216,6 +284,7 @@
   .tour-hero {
     min-height: 50vh !important;
     padding: 80px 0;
+    background-attachment: scroll;
   }
   
   .display-3 {
@@ -237,13 +306,30 @@
     margin-bottom: 1rem;
   }
   
-  .gallery-item img {
-    height: 200px !important;
+  .carousel-container {
+    max-width: 100%; /* Full width on mobile */
+    padding: 0 15px;
   }
   
-  .tour-gallery .col-md-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
+  .gallery-image {
+    height: 250px !important; /* Increased height for mobile */
+  }
+  
+  .carousel-control {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-control-prev {
+    left: 5px;
+  }
+  
+  .carousel-control-next {
+    right: 5px;
+  }
+  
+  .carousel-caption p {
+    font-size: 14px;
   }
 }
 
@@ -296,6 +382,19 @@
   
   .one-day-tour-details h4 {
     font-size: 1.2rem;
+  }
+  
+  .gallery-image {
+    height: 200px !important; /* Increased height for small mobile */
+  }
+  
+  .carousel-control {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .carousel-caption p {
+    font-size: 12px;
   }
 }
 
@@ -390,114 +489,18 @@ html {
     page-break-inside: avoid;
   }
   
-  .gallery-item {
+  .gallery-image {
     page-break-inside: avoid;
   }
 }
 
-/* Carousel Styles */
-.carousel-container {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  padding-bottom: 20px;
-}
-
-.carousel-control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  transition: background-color 0.3s ease;
-}
-
-.carousel-control:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.carousel-control-prev {
-  left: 10px;
-}
-
-.carousel-control-next {
-  right: 10px;
-}
-
-.carousel-image-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-caption {
-  position: absolute;
-  top: 15px; /* Position from top */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center horizontally */
-  padding: 8px 15px; /* Padding for text */
-  text-align: center;
-  z-index: 5;
-  max-width: 80%; /* Limit width */
-  background: none; /* Remove background */
-}
-
-.carousel-caption p {
-  margin: 0;
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Add text shadow for readability */
-}
-
-.carousel-indicators {
-  position: absolute;
-  bottom: 15px; /* Keep at the bottom */
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  z-index: 6;
-}
-
-.indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.indicator.active {
-  background-color: #06A3DA;
-}
-
-.tour-gallery {
-  margin-bottom: 40px;
-}
-
 /* Loading state */
-.gallery-item img {
+.gallery-image {
   background: #f0f0f0;
 }
 
 /* Accessibility improvements */
-.gallery-item:focus,
+.gallery-image:focus,
 .highlight-card:focus,
 .btn:focus {
   outline: 3px solid #06A3DA;
