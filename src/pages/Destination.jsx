@@ -1,6 +1,3 @@
-// FILE PATH: src/pages/Destination.jsx
-// UPDATED WITH COLLAPSIBLE DAY DETAILS
-
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
@@ -502,7 +499,6 @@ function Destination() {
           day: "Day 01",
           title: "Airport → Anuradhapura",
           activities: [
-            "Airport to Anuradhapura",
             "Anuradhapura Ancient City",
             "Sri Maha Bodhiya - Sacred Bodhi Tree",
             "Ruwanwelisaya Stupa",
