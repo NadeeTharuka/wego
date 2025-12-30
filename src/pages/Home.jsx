@@ -1,7 +1,12 @@
-import React from 'react'
+// Home.jsx
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const navigate = useNavigate();
 
   const oneDayTours = [
