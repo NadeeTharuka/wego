@@ -8,7 +8,16 @@ function PlaceDetails() {
   const placeName = location.state?.placeName;
 
   useEffect(() => {
+    // Add class to body to style navbar specifically for this page
+    document.body.classList.add('place-details-page');
+    
+    // Scroll to top
     window.scrollTo(0, 0);
+    
+    // Clean up when component unmounts
+    return () => {
+      document.body.classList.remove('place-details-page');
+    };
   }, []);
 
   const allPlaceDetails = {
