@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import './Destination.css';
@@ -9,6 +9,18 @@ function Destination() {
   const selectedPackage = location.state?.package;
   const [expandedActivities, setExpandedActivities] = useState({});
   const [expandedDays, setExpandedDays] = useState({});
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // Restore expanded state when returning from PlaceDetails
+  useEffect(() => {
+    if (location.state?.expandedDays) {
+      setExpandedDays(location.state.expandedDays);
+    }
+  }, [location.state?.expandedDays]);
 
   // Toggle day expansion
   const toggleDay = (dayIndex) => {
@@ -36,13 +48,13 @@ function Destination() {
       image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     "Sigiriya Lion Rock Fortress": {
-      image: "https://images.unsplash.com/photo-1588417837058-c8884bfb5b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1588417837058-c6e485096f2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     "Sigiriya Village Tour": {
       image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     "Matale Spice Garden": {
-      image: "https://images.unsplash.com/photo-1596040033229-a0b3b83f6258?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     "Temple of the Sacred Tooth Relic": {
       image: "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
@@ -122,7 +134,13 @@ function Destination() {
   };
 
   const handlePlaceClick = (placeName) => {
-    navigate('/place-details', { state: { placeName } });
+    navigate('/place-details', { 
+      state: { 
+        placeName,
+        fromDestination: true,
+        expandedDays: expandedDays
+      } 
+    });
   };
 
   // Comprehensive package details with all 7 packages
