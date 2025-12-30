@@ -493,17 +493,30 @@ function PlaceDetails() {
       ]
     },
     "Sri Maha Bodhiya": {
-      image: "assets/img/sri-maha-bodhiya.jpg",
-      description: "Sri Maha Bodhiya, located in Anuradhapura, Sri Lanka, is one of the most sacred Buddhist sites in the world. It is home to a sacred fig tree (Ficus religiosa) that is believed to be a direct descendant of the original Bodhi tree under which Siddhartha Gautama attained enlightenment. Planted in 288 BCE by Sanghamitta Theri, the tree has become a symbol of peace and spiritual significance for Buddhists. The site attracts thousands of pilgrims and visitors each year, who come to pay homage and engage in meditation beneath its sprawling branches.",
-      highlights: [
-        "Most sacred Buddhist site",
-        "Planted in 288 BCE",
-        "Direct Bodhi tree descendant",
-        "Pilgrimage destination",
-        "Symbol of enlightenment",
-        "Ancient religious site"
-      ]
-    },
+  image: "assets/img/sri-maha-bodhiya.jpg",
+  description: "Sri Maha Bodhiya, located in Anuradhapura, Sri Lanka, is one of the most sacred Buddhist sites in the world. It is home to a sacred fig tree (Ficus religiosa) that is believed to be a direct descendant of the original Bodhi tree under which Siddhartha Gautama attained enlightenment. Planted in 288 BCE by Sanghamitta Theri, the tree has become a symbol of peace and spiritual significance for Buddhists. The site attracts thousands of pilgrims and visitors each year, who come to pay homage and engage in meditation beneath its sprawling branches.",
+  highlights: [
+    "Most sacred Buddhist site",
+    "Planted in 288 BCE",
+    "Direct Bodhi tree descendant",
+    "Pilgrimage destination",
+    "Symbol of enlightenment",
+    "Ancient religious site"
+  ]
+},
+
+"Sri Maha Bodhi": {
+  image: "assets/img/sri-maha-bodhiya.jpg",
+  description: "Sri Maha Bodhi, located in Anuradhapura, Sri Lanka, is one of the most sacred Buddhist sites in the world. It is home to a sacred fig tree (Ficus religiosa) that is believed to be a direct descendant of the original Bodhi tree under which Siddhartha Gautama attained enlightenment. Planted in 288 BCE by Sanghamitta Theri, the tree has become a symbol of peace and spiritual significance for Buddhists. The site attracts thousands of pilgrims and visitors each year, who come to pay homage and engage in meditation beneath its sprawling branches.",
+  highlights: [
+    "Most sacred Buddhist site",
+    "Planted in 288 BCE",
+    "Direct Bodhi tree descendant",
+    "Pilgrimage destination",
+    "Symbol of enlightenment",
+    "Ancient religious site"
+  ]
+},
     "Thuparamaya": {
       image: "assets/img/thuparamaya.jpg",
       description: "Thuparamaya in Anuradhapura is Sri Lanka's oldest stupa, built in the 3rd century BCE by King Devanampiya Tissa. It enshrines a relic of the Buddha and remains an important pilgrimage site. The stupa is surrounded by a serene compound of stone pillars and ancient ruins, providing a peaceful atmosphere for meditation and reflection. Visitors gain insight into early Buddhist architecture, Sri Lanka's spiritual heritage, and the enduring legacy of Anuradhapura as a sacred city.",
@@ -841,18 +854,32 @@ function PlaceDetails() {
         "Coastal paradise"
       ]
     },
-    "Anuradhapura": {
-      image: "assets/img/anuradhapura.jpg",
-      description: "Anuradhapura is one of the ancient capitals of Sri Lanka, famous for its well-preserved ruins of an ancient Sri Lankan civilization. The city, now a UNESCO World Heritage Site, was the center of Theravada Buddhism for many centuries. It features magnificent stupas, ancient pools, and temple complexes that showcase the architectural prowess of ancient Sri Lanka. The sacred Sri Maha Bodhi tree, believed to be a sapling from the original Bodhi tree under which Buddha attained enlightenment, is a major pilgrimage site.",
-      highlights: [
-        "UNESCO World Heritage Site",
-        "Ancient ruins",
-        "Magnificent stupas",
-        "Sacred Sri Maha Bodhi tree",
-        "Ancient pools",
-        "Temple complexes"
-      ]
-    },
+    "Anuradhapura Ancient City": {
+  image: "assets/img/anuradhapura.jpg",
+  description: "Anuradhapura is one of the ancient capitals of Sri Lanka, famous for its well-preserved ruins of an ancient Sri Lankan civilization. The city, now a UNESCO World Heritage Site, was the center of Theravada Buddhism for many centuries. It features magnificent stupas, ancient pools, and temple complexes that showcase the architectural prowess of ancient Sri Lanka. The sacred Sri Maha Bodhi tree, believed to be a sapling from the original Bodhi tree under which Buddha attained enlightenment, is a major pilgrimage site.",
+  highlights: [
+    "UNESCO World Heritage Site",
+    "Ancient capital of Sri Lanka",
+    "Magnificent stupas and dagobas",
+    "Sacred Sri Maha Bodhi tree",
+    "Ancient pools and reservoirs",
+    "Temple complexes and monasteries",
+    "Archaeological treasures",
+    "Buddhist pilgrimage site"
+  ]
+},
+"Anuradhapura": {
+  image: "assets/img/anuradhapura.jpg",
+  description: "Anuradhapura is one of the ancient capitals of Sri Lanka, famous for its well-preserved ruins of an ancient Sri Lankan civilization. The city, now a UNESCO World Heritage Site, was the center of Theravada Buddhism for many centuries. It features magnificent stupas, ancient pools, and temple complexes that showcase the architectural prowess of ancient Sri Lanka. The sacred Sri Maha Bodhi tree, believed to be a sapling from the original Bodhi tree under which Buddha attained enlightenment, is a major pilgrimage site.",
+  highlights: [
+    "UNESCO World Heritage Site",
+    "Ancient ruins",
+    "Magnificent stupas",
+    "Sacred Sri Maha Bodhi tree",
+    "Ancient pools",
+    "Temple complexes"
+  ]
+},
     "Gal Vihara": {
       image: "assets/img/gal-vihara.jpg",
       description: "Gal Vihara, located in Polonnaruwa, is a rock temple of the Buddha, famous for its four colossal statues carved out of a single granite rock. Dating back to the 12th century, it consists of a standing Buddha, a reclining Buddha, and two seated Buddha images. The statues are considered masterpieces of Sri Lankan Buddhist art, showcasing exceptional craftsmanship and attention to detail. The serene atmosphere and historical significance make Gal Vihara a must-visit site in Polonnaruwa.",
