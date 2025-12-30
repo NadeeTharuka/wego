@@ -1,6 +1,11 @@
-import React from 'react'
+// Contact.jsx
+import React, { useEffect } from 'react'
 
 function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
         <div className="container-fluid bg-primary py-5 mb-5 hero-header">
