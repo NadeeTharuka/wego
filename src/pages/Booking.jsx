@@ -1,6 +1,11 @@
-import React from 'react'
+// Booking.jsx
+import React, { useEffect } from 'react'
 
 function Booking() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
         <div className="container-fluid bg-primary py-5 mb-5 hero-header">
