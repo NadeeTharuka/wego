@@ -480,7 +480,7 @@ function PlaceDetails() {
         "Pilgrimage destination"
       ]
     },
-    "Ruwanweliseya": {
+    "Ruwanweliseya Stupa": {
       image: "assets/img/ruwanweliseya.jpg",
       description: "Ruwanwalisaya, located in Anuradhapura, Sri Lanka, is a significant stupa built by King Dutugemunu in the 2nd century BCE. Standing about 55 meters tall, it is one of the largest stupas in the world and is believed to house relics of the Buddha. Renowned for its striking white dome and surrounding gardens, Ruwanwalisaya is a UNESCO World Heritage Site and a major pilgrimage destination for Buddhists, reflecting Sri Lanka's rich cultural and religious heritage.",
       highlights: [
@@ -492,22 +492,9 @@ function PlaceDetails() {
         "Major pilgrimage site"
       ]
     },
-    "Sri Maha Bodhiya": {
+    "Sri Maha Bodhiya - Sacred Bodhi Tree": {
   image: "assets/img/sri-maha-bodhiya.jpg",
   description: "Sri Maha Bodhiya, located in Anuradhapura, Sri Lanka, is one of the most sacred Buddhist sites in the world. It is home to a sacred fig tree (Ficus religiosa) that is believed to be a direct descendant of the original Bodhi tree under which Siddhartha Gautama attained enlightenment. Planted in 288 BCE by Sanghamitta Theri, the tree has become a symbol of peace and spiritual significance for Buddhists. The site attracts thousands of pilgrims and visitors each year, who come to pay homage and engage in meditation beneath its sprawling branches.",
-  highlights: [
-    "Most sacred Buddhist site",
-    "Planted in 288 BCE",
-    "Direct Bodhi tree descendant",
-    "Pilgrimage destination",
-    "Symbol of enlightenment",
-    "Ancient religious site"
-  ]
-},
-
-"Sri Maha Bodhi": {
-  image: "assets/img/sri-maha-bodhiya.jpg",
-  description: "Sri Maha Bodhi, located in Anuradhapura, Sri Lanka, is one of the most sacred Buddhist sites in the world. It is home to a sacred fig tree (Ficus religiosa) that is believed to be a direct descendant of the original Bodhi tree under which Siddhartha Gautama attained enlightenment. Planted in 288 BCE by Sanghamitta Theri, the tree has become a symbol of peace and spiritual significance for Buddhists. The site attracts thousands of pilgrims and visitors each year, who come to pay homage and engage in meditation beneath its sprawling branches.",
   highlights: [
     "Most sacred Buddhist site",
     "Planted in 288 BCE",
@@ -1050,35 +1037,82 @@ function PlaceDetails() {
     }
   };
 
-  // Create a mapping from normalized place name to the details
-  const placeDetailsMap = {};
-  Object.keys(allPlaceDetails).forEach(key => {
-    const normalizedKey = key.trim().toLowerCase();
-    placeDetailsMap[normalizedKey] = allPlaceDetails[key];
-  });
-
-  let placeDetails;
-  if (placeName) {
-    const normalizedPlaceName = placeName.trim().toLowerCase();
-    placeDetails = placeDetailsMap[normalizedPlaceName];
+  // SMART MATCHING FUNCTION - Replace your existing matching logic with this:
+  const findPlaceDetails = (searchName) => {
+    if (!searchName) return null;
     
-    if (!placeDetails) {
-      // Create a default entry for this place
-      placeDetails = {
-        image: "assets/img/default-place.jpg",
-        description: `Information about ${placeName} is currently being updated. Please check back later for more details about this wonderful destination in Sri Lanka. This place is known for its unique charm and is a must-visit for travelers exploring the beautiful island of Sri Lanka.`,
-        highlights: [
-          "Beautiful scenery",
-          "Cultural significance",
-          "Local cuisine",
-          "Friendly people",
-          "Unique experiences"
-        ]
-      };
+    const normalizedSearch = searchName.trim().toLowerCase();
+    
+    // Step 1: Try exact match first
+    for (const key of Object.keys(allPlaceDetails)) {
+      if (key.trim().toLowerCase() === normalizedSearch) {
+        return allPlaceDetails[key];
+      }
     }
-  }
+    
+    // Step 2: Try partial match (if search contains key or vice versa)
+    for (const key of Object.keys(allPlaceDetails)) {
+      const normalizedKey = key.trim().toLowerCase();
+      // Check if either contains the other
+      if (normalizedSearch.includes(normalizedKey) || normalizedKey.includes(normalizedSearch)) {
+        return allPlaceDetails[key];
+      }
+    }
+    
+    // Step 3: Try matching without common words
+    const removeCommonWords = (str) => {
+      const commonWords = ['the', 'of', 'and', 'in', 'at', 'to', 'a', 'an', '-', '–', 
+                           'temple', 'church', 'fort', 'beach', 'lake', 'park', 'garden',
+                           'sacred', 'ancient', 'city', 'royal', 'old', 'historic'];
+      return str.split(/\s+/).filter(word => 
+        !commonWords.includes(word.toLowerCase()) && word.length > 2
+      ).join(' ');
+    };
+    
+    const cleanedSearch = removeCommonWords(normalizedSearch);
+    
+    for (const key of Object.keys(allPlaceDetails)) {
+      const cleanedKey = removeCommonWords(key.trim().toLowerCase());
+      if (cleanedSearch && cleanedKey && 
+          (cleanedSearch.includes(cleanedKey) || cleanedKey.includes(cleanedSearch))) {
+        return allPlaceDetails[key];
+      }
+    }
+    
+    // Step 4: Try word-by-word matching (find keys that share significant words)
+    const searchWords = normalizedSearch.split(/\s+/).filter(w => w.length > 3);
+    
+    for (const key of Object.keys(allPlaceDetails)) {
+      const keyWords = key.trim().toLowerCase().split(/\s+/).filter(w => w.length > 3);
+      const matchingWords = searchWords.filter(sw => 
+        keyWords.some(kw => kw.includes(sw) || sw.includes(kw))
+      );
+      
+      // If more than half the words match, it's probably the right place
+      if (matchingWords.length >= Math.min(searchWords.length, keyWords.length) / 2) {
+        return allPlaceDetails[key];
+      }
+    }
+    
+    return null;
+  };
 
-  if (!placeName || !placeDetails) {
+  const placeDetails = findPlaceDetails(placeName);
+
+  // If still no match, create default entry
+  const finalPlaceDetails = placeDetails || {
+    image: "assets/img/default-place.jpg",
+    description: `Information about ${placeName} is currently being updated. Please check back later for more details about this wonderful destination in Sri Lanka. This place is known for its unique charm and is a must-visit for travelers exploring the beautiful island of Sri Lanka.`,
+    highlights: [
+      "Beautiful scenery",
+      "Cultural significance",
+      "Local cuisine",
+      "Friendly people",
+      "Unique experiences"
+    ]
+  };
+
+  if (!placeName) {
     return (
       <div className="container py-5 text-center not-found-container">
         <h2>Place Not Found</h2>
@@ -1099,17 +1133,17 @@ function PlaceDetails() {
         <div className="col-lg-8 mx-auto">
           <div className="card place-details-card">
             <img 
-              src={placeDetails.image} 
+              src={finalPlaceDetails.image} 
               className="card-img-top place-details-image" 
               alt={placeName} 
             />
             <div className="card-body">
               <h1 className="place-details-title">{placeName}</h1>
-              <p className="place-details-description">{placeDetails.description}</p>
+              <p className="place-details-description">{finalPlaceDetails.description}</p>
               
               <h3 className="place-details-highlights-title">Highlights</h3>
               <ul className="place-details-highlights">
-                {placeDetails.highlights.map((highlight, index) => (
+                {finalPlaceDetails.highlights.map((highlight, index) => (
                   <li key={index}>
                     <i className="fas fa-check-circle text-primary me-2"></i>
                     {highlight}
