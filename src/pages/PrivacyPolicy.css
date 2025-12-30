@@ -1,5 +1,5 @@
 .place-details-container {
-    padding: 2rem 0;
+    padding: 120px 0 2rem 0; /* Added top padding to create space between navbar and image */
 }
 
 .place-details-card {
@@ -33,25 +33,24 @@
     margin-bottom: 2rem;
 }
 
-.place-details-highlights {
-    margin-bottom: 2rem;
-}
-
-.place-details-highlights h3 {
+.place-details-highlights-title {
     font-size: 1.5rem;
     font-weight: 600;
     color: #06A3DA;
     margin-bottom: 1rem;
 }
 
-.place-details-highlights ul {
+.place-details-highlights {
     list-style-type: none;
     padding: 0;
+    margin-bottom: 2rem;
 }
 
 .place-details-highlights li {
     padding: 0.5rem 0;
     border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
 }
 
 .place-details-highlights li:last-child {
@@ -77,11 +76,15 @@
     border-radius: 30px;
     font-weight: 500;
     transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
 }
 
 .place-details-back-btn:hover {
     background-color: #06A3DA;
     color: white;
+    text-decoration: none;
 }
 
 .place-details-book-btn {
@@ -92,17 +95,22 @@
     border-radius: 30px;
     font-weight: 500;
     transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
 }
 
 .place-details-book-btn:hover {
     background-color: #0585B3;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(6, 163, 218, 0.3);
+    color: white;
+    text-decoration: none;
 }
 
 .not-found-container {
     text-align: center;
-    padding: 3rem 0;
+    padding: 120px 0 3rem 0; /* Added top padding to create space between navbar and content */
 }
 
 .not-found-container h2 {
@@ -131,4 +139,29 @@
     background-color: #0585B3;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(6, 163, 218, 0.3);
+}
+
+/* Navbar styles for PlaceDetails page only */
+body.place-details-page .navbar {
+    background-color: #fff !important;
+}
+
+body.place-details-page .navbar-brand {
+    color: #000 !important;
+}
+
+body.place-details-page .navbar-nav .nav-link {
+    color: #000 !important;
+}
+
+body.place-details-page .navbar-nav .nav-link:hover {
+    color: #06A3DA !important;
+}
+
+body.place-details-page .navbar-toggler {
+    border-color: #000 !important;
+}
+
+body.place-details-page .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgb%280, 0, 0%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
