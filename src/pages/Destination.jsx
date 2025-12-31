@@ -9,6 +9,7 @@ function Destination() {
   const selectedPackage = location.state?.package;
   const [expandedActivities, setExpandedActivities] = useState({});
   const [expandedDays, setExpandedDays] = useState({});
+  const [scrollToDay, setScrollToDay] = useState(null);
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -19,8 +20,28 @@ function Destination() {
   useEffect(() => {
     if (location.state?.expandedDays) {
       setExpandedDays(location.state.expandedDays);
+      
+      // If we have a specific day to scroll to, do that
+      if (location.state?.scrollToDay !== undefined) {
+        setScrollToDay(location.state.scrollToDay);
+      }
     }
-  }, [location.state?.expandedDays]);
+  }, [location.state?.expandedDays, location.state?.scrollToDay]);
+
+  // Scroll to the specific day after component renders
+  useEffect(() => {
+    if (scrollToDay !== null) {
+      const timer = setTimeout(() => {
+        const dayElement = document.getElementById(`day-${scrollToDay}`);
+        if (dayElement) {
+          dayElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        setScrollToDay(null); // Reset after scrolling
+      }, 300); // Small delay to ensure DOM is fully rendered
+      
+      return () => clearTimeout(timer);
+    }
+  }, [scrollToDay]);
 
   // Toggle day expansion
   const toggleDay = (dayIndex) => {
@@ -133,12 +154,14 @@ function Destination() {
     }
   };
 
-  const handlePlaceClick = (placeName) => {
+  const handlePlaceClick = (placeName, dayIndex) => {
     navigate('/place-details', { 
       state: { 
         placeName,
         fromDestination: true,
-        expandedDays: expandedDays
+        expandedDays: expandedDays,
+        dayIndex: dayIndex,
+        package: selectedPackage  // Add this line to preserve the package
       } 
     });
   };
@@ -1243,7 +1266,7 @@ function Destination() {
                     const isDayExpanded = expandedDays[dayIndex];
                     
                     return (
-                      <div key={dayIndex} className="day-section mb-4">
+                      <div key={dayIndex} className="day-section mb-4" id={`day-${dayIndex}`}>
                         <div 
                           className="day-header bg-primary text-white p-3 rounded d-flex justify-content-between align-items-center"
                           style={{ cursor: 'pointer' }}
@@ -1299,7 +1322,7 @@ function Destination() {
                                           {hasPlaceDetail && (
                                             <button 
                                               className="btn btn-outline-primary btn-sm rounded-circle"
-                                              onClick={() => handlePlaceClick(activityName)}
+                                              onClick={() => handlePlaceClick(activityName, dayIndex)}
                                               style={{ width: '35px', height: '35px', padding: '0' }}
                                               title="View Place Details"
                                             >
@@ -1349,7 +1372,7 @@ function Destination() {
                                       </div>
                                       <button 
                                         className="btn btn-outline-primary btn-sm rounded-circle"
-                                        onClick={() => handlePlaceClick(activityName)}
+                                        onClick={() => handlePlaceClick(activityName, dayIndex)}
                                         style={{ width: '35px', height: '35px', padding: '0' }}
                                         title="View Details"
                                       >
