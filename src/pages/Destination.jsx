@@ -1,3 +1,5 @@
+// Destination.jsx
+
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
@@ -151,6 +153,36 @@ function Destination() {
     },
     "Ravana Falls": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Historic Fort Area": {
+      image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Galle Face Green": {
+      image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Old Dutch Church": {
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Independence Square": {
+      image: "https://images.unsplash.com/photo-1605536968169-738c98afd7bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Colombo National Museum": {
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "St. Mary's Church": {
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Negombo Lagoon Tour": {
+      image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "BMICH": {
+      image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Kelaniya Temple": {
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Peradeniya Botanical Garden": {
+      image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   };
 
@@ -402,7 +434,7 @@ function Destination() {
         }
       ]
     },
-    "EXPLORE SRI LANKA IN 04 DAYS 03 NIGHTS": {
+    "EXPLORE SRI LANKA - 04 DAYS 03 NIGHTS": {
       program: [
         {
           day: "Day 01",
@@ -460,30 +492,28 @@ function Destination() {
         }
       ]
     },
-    "EXPLORE SRI LANKA IN 05 DAYS 04 NIGHTS": {
+    "EXPLORE SRI LANKA - 05 DAYS 04 NIGHTS": {
       program: [
         {
           day: "Day 01",
           title: "Airport → Negombo",
           activities: [
             "Airport to Negombo",
-            "Negombo Fish Market",
-            "Fishing Village",
-            "Hamilton Dutch Canal exploration",
+            "Negombo Fish Market / Fishing Village",
+            "Hamilton Dutch Canal – Explore Dutch Colonial history",
             "Angurukaramulla Temple",
             "St. Mary's Church",
-            "Negombo Lagoon",
             "Evening Negombo Lagoon Tour",
-            "Overnight in Negombo"
+            "Overnight in Negombo (First day activities depend on arrival time)"
           ]
         },
         {
           day: "Day 02",
           title: "Negombo → Dambulla",
           activities: [
-            "Short break at hotel during journey",
+            "Short break at a hotel during the journey",
             "Pinnawala Elephant Orphanage",
-            "Dambulla Cave Temple - UNESCO World Heritage Site",
+            "Dambulla Cave Temple – UNESCO World Heritage Site",
             "Overnight in Dambulla"
           ]
         },
@@ -491,8 +521,8 @@ function Destination() {
           day: "Day 03",
           title: "Dambulla → Kandy",
           activities: [
-            "Sigiriya Lion Rock Fortress - UNESCO Site",
-            "Sigiriya Village Tour with Traditional Lunch",
+            "Sigiriya Lion Rock Fortress",
+            "Sigiriya Village Tour",
             "Matale Spice Garden",
             "Overnight in Kandy"
           ]
@@ -517,19 +547,15 @@ function Destination() {
               isExpandable: true,
               subActivities: [
                 "Gangaramaya Temple",
+                "Lotus Tower",
                 "Historic Fort Area",
                 "Galle Face Green",
                 "Old Dutch Church",
                 "Independence Square",
-                "Colombo National Museum",
-                "BMICH",
-                "Kelaniya Temple",
-                "Lotus Tower"
+                "Colombo National Museum"
               ]
             },
-            "Major attractions visit",
-            "Shopping opportunities",
-            "Departure to Airport"
+            "Departure to Airport (Last day activities depend on departure time)"
           ]
         }
       ]
