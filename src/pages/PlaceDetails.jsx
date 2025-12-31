@@ -1,3 +1,5 @@
+// PlaceDetails.jsx
+
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './PlaceDetails.css';
@@ -37,7 +39,7 @@ function PlaceDetails() {
         "Coastal views"
       ]
     },
-    "Historic Fort Areas Colombo": {
+    "Historic Fort Area": {
       image: "/assets/img/historic-fort-colombo.jpg",
       description: "The historic fort areas of Sri Lanka are remarkable reminders of the island's colonial past. Built mainly by the Portuguese, Dutch, and British between the 16th and 19th centuries, these forts served as military strongholds, administrative centers, and trading hubs. Among the most famous are the Galle Fort, a UNESCO World Heritage Site known for its well-preserved Dutch architecture; the Colombo Fort, once the heart of colonial administration; and forts in Jaffna, Trincomalee, Batticaloa, and Matara, which highlight the strategic importance of Sri Lanka's coastal cities. Today, these historic fortifications not only showcase a blend of European and local influences but also stand as vibrant cultural and tourist attractions, offering visitors a glimpse into the island's layered history.",
       highlights: [
@@ -121,7 +123,7 @@ function PlaceDetails() {
         "Recreational activities"
       ]
     },
-    "Old Dutch Church in Colombo": {
+    "Old Dutch Church": {
       image: "/assets/img/old-dutch-church-colombo.jpg",
       description: "The Old Dutch Church in Colombo, known as Wolvendaal Church, is one of the oldest Protestant churches in Sri Lanka, built by the Dutch between 1749 and 1757. Located in Pettah, it is famous for its Doric-style architecture, thick stone walls, and Greek-cross design. The interior features beautiful Dutch-era woodwork, old tombstones of colonial governors, and Sri Lanka's oldest organ. Remarkably, it is still an active church, holding services in English, Sinhala, and Tamil, and stands as a well-preserved symbol of Colombo's colonial heritage.",
       highlights: [
@@ -169,7 +171,7 @@ function PlaceDetails() {
         "Peaceful boat rides"
       ]
     },
-    "St. Mary's Church (Negombo)": {
+    "St. Mary's Church": {
       image: "/assets/img/st-marys-church-negombo.jpg",
       description: "St. Mary's Church in Negombo is one of the largest and most visually striking Catholic churches in Sri Lanka. Built during the Dutch and Portuguese colonial periods, it features neoclassical architecture with intricately painted ceilings, ornate altars, and colorful stained-glass windows. Beyond its religious function, it is a cultural landmark, offering insight into Negombo's colonial history, Christian heritage, and vibrant artistic traditions.",
       highlights: [
