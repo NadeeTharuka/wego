@@ -1,6 +1,6 @@
 // Destination.jsx
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import './Destination.css';
@@ -12,37 +12,81 @@ function Destination() {
   const [expandedActivities, setExpandedActivities] = useState({});
   const [expandedDays, setExpandedDays] = useState({});
   const [scrollToDay, setScrollToDay] = useState(null);
-
-  // Scroll to top when component mounts
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const hasScrolled = useRef(false);
+  const scrollTimeoutRef = useRef(null);
+  const pageContentRef = useRef(null);
 
   // Restore expanded state when returning from PlaceDetails
   useEffect(() => {
-    if (location.state?.expandedDays) {
+    if (location.state?.expandedDays && location.state?.scrollToDay !== undefined) {
+      // Coming back from PlaceDetails - restore state and scroll instantly
       setExpandedDays(location.state.expandedDays);
-      
-      // If we have a specific day to scroll to, do that
-      if (location.state?.scrollToDay !== undefined) {
-        setScrollToDay(location.state.scrollToDay);
-      }
+      setScrollToDay(location.state.scrollToDay);
+    } else {
+      // Normal page load - scroll to top
+      window.scrollTo(0, 0);
     }
   }, [location.state?.expandedDays, location.state?.scrollToDay]);
 
-  // Scroll to the specific day after component renders
+  // Scroll to the specific day INSTANTLY without any animation
   useEffect(() => {
-    if (scrollToDay !== null) {
-      const timer = setTimeout(() => {
-        const dayElement = document.getElementById(`day-${scrollToDay}`);
-        if (dayElement) {
-          dayElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        setScrollToDay(null); // Reset after scrolling
-      }, 300); // Small delay to ensure DOM is fully rendered
+    if (scrollToDay !== null && !hasScrolled.current) {
+      hasScrolled.current = true;
       
-      return () => clearTimeout(timer);
+      // Clear any existing timeouts
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+      
+      // Use a synchronous approach to instantly jump to the element
+      const dayElement = document.getElementById(`day-${scrollToDay}`);
+      if (dayElement) {
+        // Get the element's position
+        const elementPosition = dayElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - (window.innerHeight / 2) + (dayElement.clientHeight / 2);
+        
+        // Disable smooth scrolling
+        document.documentElement.style.scrollBehavior = 'auto';
+        document.body.style.scrollBehavior = 'auto';
+        
+        // Instantly set the scroll position
+        window.scrollTo(0, offsetPosition);
+        
+        // Restore smooth scrolling after a tiny delay
+        scrollTimeoutRef.current = setTimeout(() => {
+          document.documentElement.style.scrollBehavior = '';
+          document.body.style.scrollBehavior = '';
+          setScrollToDay(null); // Reset after scrolling
+          hasScrolled.current = false;
+        }, 10);
+      } else {
+        // If element not found, try again after a short delay
+        scrollTimeoutRef.current = setTimeout(() => {
+          const retryElement = document.getElementById(`day-${scrollToDay}`);
+          if (retryElement) {
+            const elementPosition = retryElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - (window.innerHeight / 2) + (retryElement.clientHeight / 2);
+            
+            document.documentElement.style.scrollBehavior = 'auto';
+            document.body.style.scrollBehavior = 'auto';
+            window.scrollTo(0, offsetPosition);
+            
+            setTimeout(() => {
+              document.documentElement.style.scrollBehavior = '';
+              document.body.style.scrollBehavior = '';
+            }, 10);
+          }
+          setScrollToDay(null);
+          hasScrolled.current = false;
+        }, 100);
+      }
     }
+    
+    return () => {
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+    };
   }, [scrollToDay]);
 
   // Toggle day expansion
@@ -1231,7 +1275,7 @@ function Destination() {
       </div>
 
       {selectedPackage ? (
-        <div className="container py-5">
+        <div className="container py-5" ref={pageContentRef}>
           <div className="row">
             <div className="col-lg-8">
               <div className="tour-header mb-4">
