@@ -36,7 +36,7 @@ export default function Footer() {
               </p>
               <p className="mb-2">
                 <i className="fa fa-phone-alt me-3" />
-                +94 71 534 5060
+              +94 74 234 3484
               </p>
               <p className="mb-2">
                 <i className="fa fa-envelope me-3" />
