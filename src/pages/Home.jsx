@@ -147,7 +147,7 @@ export default function Home() {
                 color: '#ffffff',
                 textShadow: 'none',
                 filter: 'none',
-                fontSize: '1.5rem',
+                fontSize: '2.0rem',
                 fontWeight: '400',
                 marginBottom: '2rem'
               }}>

@@ -16,6 +16,7 @@ import PlaceDetails from './pages/PlaceDetails';
 import OneDayTourDetails from './pages/OneDayTourDetails';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
+import WhatsAppFloat from './pages/WhatsAppFloat';
 
 export default function App() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/terms-conditions" element={<TermsConditions />} />
         </Routes>
         <Footer />
+        <WhatsAppFloat />
     </div>
   )
 }
