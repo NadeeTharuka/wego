@@ -1298,7 +1298,7 @@ function Destination() {
                     </div>
                     <div className="meta-item">
                       <i className="fa fa-users text-primary me-2"></i>
-                      <span className="fw-semibold">Group Size:</span> 2-15 people
+                      <span className="fw-semibold">Group Size:</span> 1-15 people
                     </div>
                   </div>
                   
