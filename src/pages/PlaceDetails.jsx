@@ -268,6 +268,18 @@ function PlaceDetails() {
       ]
     },
     "Sigiriya Village Tour with Traditional Lunch": {
+      image: "/assets/img/village-tours-lunch.jpg",
+      description: "Village tours in Sigiriya offer a glimpse into traditional Sri Lankan rural life. These tours typically include a bullock cart ride, a boat ride on a serene lake, and a walk-through paddy fields and local farms. Visitors can experience traditional cooking, visit a village home, and interact with local villagers, learning about their customs and daily activities. The tours provide an authentic cultural experience, set against the backdrop of Sigiriya's natural beauty, including the iconic Sigiriya Rock Fortress.",
+      highlights: [
+        "Bullock cart ride",
+        "Traditional cooking class",
+        "Boat ride on village lake",
+        "Walk through paddy fields",
+        "Village home visit",
+        "Cultural interaction"
+      ]
+    },
+     "Sigiriya Village Tour": {
       image: "/assets/img/village-tours.jpg",
       description: "Village tours in Sigiriya offer a glimpse into traditional Sri Lankan rural life. These tours typically include a bullock cart ride, a boat ride on a serene lake, and a walk-through paddy fields and local farms. Visitors can experience traditional cooking, visit a village home, and interact with local villagers, learning about their customs and daily activities. The tours provide an authentic cultural experience, set against the backdrop of Sigiriya's natural beauty, including the iconic Sigiriya Rock Fortress.",
       highlights: [
