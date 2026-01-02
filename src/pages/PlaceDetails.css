@@ -1,22 +1,28 @@
 .place-details-container {
-    padding: 2rem 0;
+    padding-top: 0; /* Remove top padding */
 }
 
-.place-details-card {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.place-details-card:hover {
-    transform: translateY(-5px);
+.place-details-image-container {
+    width: 100%;
+    position: relative;
+    margin-top: 80px; /* Add top margin to push image down below navbar */
+    margin-bottom: 2rem;
 }
 
 .place-details-image {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: 400px; /* Keep the original height you wanted */
+    display: block;
+    object-fit: cover; /* Use cover to fill the container while maintaining aspect ratio */
+    object-position: center; /* Center the image within the container */
+}
+
+.place-details-content {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .place-details-title {
@@ -135,8 +141,7 @@
     transition: all 0.3s ease;
 }
 
-.not-found-back-btn:hover {
-    background-color: #0585B3;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(6, 163, 218, 0.3);
+/* Add this to ensure the navbar doesn't overlap with the content */
+.place-details-page .navbar {
+    position: relative !important;
 }
