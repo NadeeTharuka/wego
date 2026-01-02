@@ -14,11 +14,10 @@ function Header() {
           >
             <small className="me-3 text-light">
               <i className="fa fa-map-marker-alt me-2" />
-              123 Street, Kalutara South, SriLanka
-            </small>
+                Duwa Temple Road, Kalutara South, Sri Lanka            </small>
             <small className="me-3 text-light">
               <i className="fa fa-phone-alt me-2" />
-              +94 71 534 5060
+              +94 74 234 3484
             </small>
             <small className="text-light">
               <i className="fa fa-envelope-open me-2" />
@@ -71,11 +70,31 @@ function Header() {
     <div className="container-fluid position-relative p-0">
       <nav className="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
         <Link to="/" className="navbar-brand p-0">
-          <h1 className="text-primary m-0">
+          <h1 
+            className="m-0 d-flex align-items-center"
+            style={{
+              fontFamily: 'Playfair Display, Georgia, serif',
+              fontWeight: '700',
+              fontSize: '2.5rem',
+              letterSpacing: '1px',
+              textTransform: 'capitalize',
+              background: 'linear-gradient(45deg, #0d6efd, #0a58ca)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              textShadow: '0px 2px 4px rgba(0,0,0,0.1)',
+              position: 'relative',
+              display: 'inline-block'
+            }}
+          >
             <img
               src="assets/img/logofinal1.png"
               alt="Opulent Tours Logo"
-              style={{ objectFit: "cover", height: "60px", width: "auto" }} 
+              style={{ 
+                objectFit: "cover", 
+                height: "70px", 
+                width: "auto",
+                marginRight: "12px"
+              }} 
             />
             Opulent Tours
           </h1>
