@@ -304,6 +304,46 @@ export default function Home() {
       </div>
       {/* Service End */}
 
+      {/* Sri Lanka Tour Packages Section - Updated with local images */}
+      <section className="tour-packages py-5">
+        <div className="container">
+          <div className="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h2 className="display-5">Sri Lanka Tour Packages</h2>
+            <p className="text-muted">Choose your perfect adventure</p>
+          </div>
+          
+          <div className="packages-grid">
+            {sriLankaTourPackages.map((pkg) => (
+              <div className="package wow fadeInUp" key={pkg.id} data-wow-delay={`0.${pkg.id}s`}>
+                <div className="package-image-container">
+                  <img src={pkg.image} alt={pkg.name} className="package-img" />
+                  <div className="package-overlay">
+                    <div className="package-price">{pkg.price}</div>
+                  </div>
+                </div>
+                <div className="package-content">
+                  <h3 className="package-title">{pkg.name}</h3>
+                  <div className="package-duration">
+                    <i className="fa fa-clock text-primary me-2"></i>
+                    {pkg.duration}
+                  </div>
+                  <div className="package-highlights">
+                    {pkg.highlights.map((highlight, index) => (
+                      <span key={index} className="highlight-tag">{highlight}</span>
+                    ))}
+                  </div>
+                  <button className="view-button" onClick={() => handleViewPackage(pkg)}>
+                    <i className="fa fa-eye me-2"></i>
+                    View Package Details
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Sri Lanka Tour Packages Section End */}
+
       {/* Special One Day Tours Start */}
       <div className="container-xxl py-5">
         <div className="container">
@@ -364,46 +404,6 @@ export default function Home() {
         </div>
       </div>
       {/* Special One Day Tours End */}
-
-      {/* Sri Lanka Tour Packages Section - Updated with local images */}
-      <section className="tour-packages py-5">
-        <div className="container">
-          <div className="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <h2 className="display-5">Sri Lanka Tour Packages</h2>
-            <p className="text-muted">Choose your perfect adventure</p>
-          </div>
-          
-          <div className="packages-grid">
-            {sriLankaTourPackages.map((pkg) => (
-              <div className="package wow fadeInUp" key={pkg.id} data-wow-delay={`0.${pkg.id}s`}>
-                <div className="package-image-container">
-                  <img src={pkg.image} alt={pkg.name} className="package-img" />
-                  <div className="package-overlay">
-                    <div className="package-price">{pkg.price}</div>
-                  </div>
-                </div>
-                <div className="package-content">
-                  <h3 className="package-title">{pkg.name}</h3>
-                  <div className="package-duration">
-                    <i className="fa fa-clock text-primary me-2"></i>
-                    {pkg.duration}
-                  </div>
-                  <div className="package-highlights">
-                    {pkg.highlights.map((highlight, index) => (
-                      <span key={index} className="highlight-tag">{highlight}</span>
-                    ))}
-                  </div>
-                  <button className="view-button" onClick={() => handleViewPackage(pkg)}>
-                    <i className="fa fa-eye me-2"></i>
-                    View Package Details
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Sri Lanka Tour Packages Section End */}
 
       {/* Booking Start */}
       <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
