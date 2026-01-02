@@ -440,8 +440,6 @@ function Destination() {
           day: "Day 01",
           title: "Airport → Dambulla",
           activities: [
-            "Airport to Dambulla",
-            "Taking a short break at hotel during the journey",
             "Pinnawala Elephant Orphanage",
             "Dambulla Cave Temple - UNESCO World Heritage Site",
             "Overnight in Dambulla"
@@ -498,12 +496,10 @@ function Destination() {
           day: "Day 01",
           title: "Airport → Negombo",
           activities: [
-            "Airport to Negombo",
             "Negombo Fish Market / Fishing Village",
             "Hamilton Dutch Canal – Explore Dutch Colonial history",
             "Angurukaramulla Temple",
             "St. Mary's Church",
-            "Evening Negombo Lagoon Tour",
             "Overnight in Negombo (First day activities depend on arrival time)"
           ]
         },
