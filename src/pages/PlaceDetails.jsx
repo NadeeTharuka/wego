@@ -579,6 +579,18 @@ function PlaceDetails() {
         "Advanced architecture"
       ]
     },
+     "Polonnaruwa Ancient City exploration by bicycle or car": {
+      image: "/assets/img/polonnaruwa-ancient.jpg",
+      description: "Polonnaruwa is an ancient city in Sri Lanka that served as the country's second capital after Anuradhapura. Established in the 11th century, it flourished under the rule of King Parakramabahu I during the 12th century. The city is renowned for its well-preserved ruins, which include impressive Buddhist temples, stupas, and palaces, reflecting the advanced engineering and artistry of the era. Key attractions in Polonnaruwa include the Gal Vihara, a rock temple featuring four magnificent Buddha statues, the Royal Palace, and the intricate stone carvings at the Rankot Vihara. The city is also part of the UNESCO World Heritage Site, showcasing its historical and cultural significance. Surrounded by lush greenery and wildlife, Polonnaruwa offers visitors a glimpse into Sri Lanka's rich heritage and ancient civilization.",
+      highlights: [
+        "UNESCO World Heritage Site",
+        "Second ancient capital",
+        "12th century golden age",
+        "Gal Vihara rock temple",
+        "Royal Palace ruins",
+        "Advanced architecture"
+      ]
+    },
     "Tissamaharama Lake": {
       image: "/assets/img/tissamaharama-lake.jpg",
       description: "Tissamaharama Lake, or Tissa Wewa, is an ancient reservoir surrounded by greenery and abundant birdlife. It offers peaceful boat rides, especially at sunrise and sunset, when the waters reflect the surrounding flora and sky. Visitors can spot herons, pelicans, and cormorants, while enjoying the tranquility of the lake. Its historical significance, scenic beauty, and proximity to Tissamaharama town and local temples make it a favored stop for travelers seeking both nature and culture.",
