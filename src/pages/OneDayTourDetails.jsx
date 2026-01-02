@@ -1,3 +1,4 @@
+// OneDayTourDetails.jsx
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './OneDayTourDetails.css';
@@ -270,7 +271,7 @@ function OneDayTourDetails() {
               <h2 className="text-primary mb-4">
                 <i className="fa fa-info-circle me-2"></i>Introduction
               </h2>
-              <p className="lead" style={{ lineHeight: '1.8', textAlign: 'justify' }}>
+              <p className="lead" style={{ lineHeight: '1.8', textAlign: 'justify', color: '#333' }}>
                 {details.introduction}
               </p>
             </div>
@@ -302,8 +303,8 @@ function OneDayTourDetails() {
                           <i className={`fa ${highlight.icon} fa-2x text-primary`}></i>
                         </div>
                         <div>
-                          <h5 className="mb-2">{highlight.title}</h5>
-                          <p className="text-muted mb-0">{highlight.description}</p>
+                          <h5 className="mb-2" style={{color: '#333'}}>{highlight.title}</h5>
+                          <p className="mb-0" style={{color: '#333'}}>{highlight.description}</p>
                         </div>
                       </div>
                     </div>
@@ -322,7 +323,7 @@ function OneDayTourDetails() {
                     </h4>
                     <ul className="list-unstyled">
                       {details.tourDetails.included.map((item, index) => (
-                        <li key={index} className="mb-2">
+                        <li key={index} className="mb-2" style={{color: '#333'}}>
                           <i className="fa fa-check text-success me-2"></i>
                           {item}
                         </li>
@@ -337,7 +338,7 @@ function OneDayTourDetails() {
                     </h4>
                     <ul className="list-unstyled">
                       {details.tourDetails.whatToBring.map((item, index) => (
-                        <li key={index} className="mb-2">
+                        <li key={index} className="mb-2" style={{color: '#333'}}>
                           <i className="fa fa-arrow-right text-primary me-2"></i>
                           {item}
                         </li>
