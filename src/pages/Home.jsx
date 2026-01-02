@@ -411,7 +411,7 @@ export default function Home() {
           <div className="booking p-5">
             <div className="row g-5 align-items-center">
               <div className="col-md-6 text-white">
-                <h1 className="text-white mb-4">Plan your Dream Trip</h1>
+                <h1 className="text-white mb-4">Customize / Plan your Dream Trip</h1>
                 <p className="mb-4">
                   You can customize our recommended tours or plan your dream trip by discussing your preferences with the friendly team at Opulent Tours.
                 </p>
