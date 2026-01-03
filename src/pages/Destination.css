@@ -1,10 +1,15 @@
 .hero-header {
   background: linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
-    url('https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200');
+    url('https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 60vh;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Tour Header Section */
