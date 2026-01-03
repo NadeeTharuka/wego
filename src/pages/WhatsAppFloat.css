@@ -7,63 +7,55 @@
 }
 
 .whatsapp-button {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 50px;
+  min-width: 50px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   position: relative;
+  overflow: hidden;
+  padding: 0;
 }
 
 .whatsapp-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+  min-width: 260px;
+  padding: 0 20px;
+  justify-content: flex-start;
+  gap: 12px;
 }
 
 .whatsapp-button i {
   color: white;
   font-size: 26px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
-/* Tooltip */
+/* Text that appears on hover */
 .whatsapp-tooltip {
-  position: absolute;
-  right: 75px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: white;
-  color: #333;
-  padding: 10px 15px;
-  border-radius: 8px;
-  white-space: nowrap;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
+  color: white;
   font-size: 14px;
   font-weight: 500;
-}
-
-.whatsapp-tooltip::after {
-  content: '';
-  position: absolute;
-  right: -8px;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 8px solid transparent;
-  border-left-color: white;
+  white-space: nowrap;
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.3px;
 }
 
 .whatsapp-button:hover .whatsapp-tooltip {
   opacity: 1;
-  visibility: visible;
-  right: 80px;
+  max-width: 200px;
+  margin-left: 0;
 }
 
 /* Animation */
@@ -80,6 +72,10 @@
   animation: pulse 2s infinite;
 }
 
+.whatsapp-button:hover {
+  animation: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .whatsapp-float {
@@ -92,13 +88,27 @@
     height: 50px;
   }
   
+  .whatsapp-button:hover {
+    min-width: 240px;
+    padding: 0 18px;
+  }
+  
   .whatsapp-button i {
     font-size: 26px;
   }
   
   .whatsapp-tooltip {
-    right: 65px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-button:hover {
+    min-width: 220px;
+    padding: 0 15px;
+  }
+  
+  .whatsapp-tooltip {
     font-size: 12px;
-    padding: 8px 12px;
   }
 }
