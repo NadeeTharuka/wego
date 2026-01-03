@@ -46,6 +46,27 @@
   box-shadow: none !important;
 }
 
+/* REMOVE SCROLL TO TOP ARROW BUTTON */
+.back-to-top,
+a[href="#"],
+button[onclick*="scrollTo"],
+.scroll-to-top,
+.btn-lg-square {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Additional selectors to catch any scroll-to-top variations */
+[class*="scroll-top"],
+[class*="back-top"],
+[id*="scroll-top"],
+[id*="back-top"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+
 /* 2. ENHANCED MAP IMAGE QUALITY */
 
 img[alt*="Sri Lanka"],
