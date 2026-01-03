@@ -8,6 +8,7 @@ function OneDayTourDetails() {
   const navigate = useNavigate();
   const tour = location.state?.tour;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -162,16 +163,40 @@ function OneDayTourDetails() {
     }
   };
 
+  // Auto-play functionality
+  useEffect(() => {
+    if (!tour || !tourDetails[tour.name] || isPaused) return;
+    
+    const details = tourDetails[tour.name];
+    const interval = setInterval(() => {
+      setCurrentImageIndex(prevIndex => 
+        prevIndex === details.gallery.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 2000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [tour, isPaused, tourDetails]);
+
   const goToPrevious = () => {
+    setIsPaused(true);
     setCurrentImageIndex(prevIndex => 
       prevIndex === 0 ? details.gallery.length - 1 : prevIndex - 1
     );
+    setTimeout(() => setIsPaused(false), 8000); // Resume auto-play after 8 seconds
   };
 
   const goToNext = () => {
+    setIsPaused(true);
     setCurrentImageIndex(prevIndex => 
       prevIndex === details.gallery.length - 1 ? 0 : prevIndex + 1
     );
+    setTimeout(() => setIsPaused(false), 8000); // Resume auto-play after 8 seconds
+  };
+
+  const handleIndicatorClick = (index) => {
+    setIsPaused(true);
+    setCurrentImageIndex(index);
+    setTimeout(() => setIsPaused(false), 8000); // Resume auto-play after 8 seconds
   };
 
   if (!tour || !tourDetails[tour.name]) {
@@ -349,17 +374,14 @@ function OneDayTourDetails() {
               </div>
             </div>
 
-            {/* Photo Gallery */}
+            {/* Auto-play Photo Gallery - NO HEADING */}
             <div className="tour-gallery mb-5">
-              <h2 className="text-primary mb-4">
-                <i className="fa fa-images me-2"></i>Photo Gallery
-              </h2>
-              
               <div className="carousel-container position-relative">
                 {/* Left Arrow */}
                 <button 
                   className="carousel-control carousel-control-prev"
                   onClick={goToPrevious}
+                  aria-label="Previous image"
                 >
                   <i className="fa fa-chevron-left fa-2x"></i>
                 </button>
@@ -386,6 +408,7 @@ function OneDayTourDetails() {
                 <button 
                   className="carousel-control carousel-control-next"
                   onClick={goToNext}
+                  aria-label="Next image"
                 >
                   <i className="fa fa-chevron-right fa-2x"></i>
                 </button>
@@ -396,7 +419,8 @@ function OneDayTourDetails() {
                     <button
                       key={index}
                       className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
-                      onClick={() => setCurrentImageIndex(index)}
+                      onClick={() => handleIndicatorClick(index)}
+                      aria-label={`Go to image ${index + 1}`}
                     />
                   ))}
                 </div>
