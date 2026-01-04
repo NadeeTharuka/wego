@@ -145,3 +145,7 @@
 .place-details-page .navbar {
     position: relative !important;
 }
+
+.place-details-page .navbar-nav .nav-link {
+    color: #000000 !important;
+}
