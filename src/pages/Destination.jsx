@@ -106,7 +106,7 @@ function Destination() {
     }));
   };
 
-  // Place details mapping with images
+  // Place details mapping with images - COMPREHENSIVE LIST
   const placeDetails = {
     "Pinnawala Elephant Orphanage": {
       image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
@@ -183,7 +183,10 @@ function Destination() {
     "Sea Turtle Hatchery": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
-    "Madu River Boat Ride": {
+    "Madu River Boat Safari": {
+      image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Madhu River Boat Safari": {
       image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     "Tea Plantation Visit": {
@@ -907,9 +910,12 @@ function Destination() {
           day: "Day 01",
           title: "Airport → Negombo",
           activities: [
-            "Arrival and hotel rest",
-            "Negombo Lagoon",
-            "Evening Negombo Lagoon Tour",
+           "Negombo Fish Market / Fishing Village",
+            "Hamilton Dutch Canal – Explore Dutch Colonial history",
+            "Angurukaramulla Temple",
+            "St. Mary's Church",
+            "Overnight in Negombo (First day activities depend on arrival time)",
+            "Negombo Lagoon Tour(Optional)",
             "Overnight in Negombo"
           ]
         },
@@ -932,11 +938,8 @@ function Destination() {
                 "Lotus Tower"
               ]
             },
-            "Major landmarks visit",
-            "Turtle Conservation Project",
-            "Madu River Boat Safari",
-            "Cinnamon Tour",
-            "Overnight in Hikkaduwa"
+            "Sea Turtle Hatchery",
+            "Madhu River Boat Safari",
           ]
         },
         {
@@ -1169,23 +1172,37 @@ function Destination() {
     }
   };
 
-  // Extract place names from activities
+  // Extract place names from activities - IMPROVED FUNCTION
   const extractPlaces = (activities) => {
     const places = [];
     activities.forEach(activity => {
       const activityName = typeof activity === 'string' ? activity : activity.name;
       
-      Object.keys(placeDetails).forEach(place => {
-        if (activityName.includes(place) || activityName.toLowerCase().includes(place.toLowerCase())) {
-          if (!places.find(p => p.name === place)) {
-            places.push({
-              name: place,
-              image: placeDetails[place].image,
-              isExpandable: typeof activity === 'object' && activity.isExpandable
-            });
-          }
+      // Direct exact match first
+      if (placeDetails[activityName]) {
+        if (!places.find(p => p.name === activityName)) {
+          places.push({
+            name: activityName,
+            image: placeDetails[activityName].image,
+            isExpandable: typeof activity === 'object' && activity.isExpandable
+          });
         }
-      });
+      } else {
+        // Try to find a partial match for activity names that might have slight variations
+        Object.keys(placeDetails).forEach(place => {
+          // Check if the activity contains the place name or vice versa (case-insensitive)
+          if (activityName.toLowerCase().includes(place.toLowerCase()) || 
+              place.toLowerCase().includes(activityName.toLowerCase())) {
+            if (!places.find(p => p.name === place)) {
+              places.push({
+                name: place,
+                image: placeDetails[place].image,
+                isExpandable: typeof activity === 'object' && activity.isExpandable
+              });
+            }
+          }
+        });
+      }
     });
     return places;
   };
@@ -1374,8 +1391,10 @@ function Destination() {
                                 const key = `${dayIndex}-${activityIndex}`;
                                 const isExpanded = expandedActivities[key];
                                 
+                                // Check if this activity has place details
                                 const hasPlaceDetail = Object.keys(placeDetails).some(place => 
-                                  activityName.includes(place) || activityName.toLowerCase().includes(place.toLowerCase())
+                                  activityName.toLowerCase().includes(place.toLowerCase()) || 
+                                  place.toLowerCase().includes(activityName.toLowerCase())
                                 );
 
                                 if (isExpandableActivity && activity.subActivities) {
