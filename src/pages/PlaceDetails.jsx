@@ -1096,11 +1096,100 @@ function PlaceDetails() {
         "Tea plantation backdrop",
         "Viewpoint access"
       ]
+    },
+     "Rumassala": {
+      image: "/assets/img/rumassala-temple.jpg",
+      description: "Rumassala, also known as 'Buona Vista' (meaning 'Good View' in Portuguese), is a mystical hill located near Unawatuna in Galle, rising about 60 meters above sea level. This rainforested promontory is steeped in legend from the Ramayana epic, where it is believed that the monkey god Hanuman dropped a fragment of the Himalayan mountain here while searching for life-saving herbs. The hill possesses a unique ecosystem with rare medicinal plants not found elsewhere in Sri Lanka, and scientists have discovered magnetic anomalies suggesting possible meteorite origins. During colonial times, it served as a strategic vantage point for monitoring maritime activity. Today, visitors can explore the Japanese Peace Pagoda at the summit, hike through lush forests, visit the hidden Jungle Beach, and enjoy panoramic views of the Indian Ocean and Galle Fort.",
+      highlights: [
+        "Ramayana legend connection",
+        "Unique medicinal plants",
+        "Japanese Peace Pagoda at summit",
+        "Panoramic ocean views",
+        "Hidden Jungle Beach access",
+        "Magnetic anomalies and mysteries",
+        "Colonial-era cemetery",
+        "Rich biodiversity and wildlife"
+      ]
+    },
+
+    "Japanese Peace Pagoda": {
+      image: "/assets/img/japanese-peace-pagoda.jpg",
+      description: "The Japanese Peace Pagoda, officially known as Sama Ceitya, is a striking white Buddhist stupa located atop Rumassala Hill near Unawatuna. Built on February 23, 2004, by the Japanese Buddhist order Nipponzan Myohoji, it stands as a symbol of peace and harmony, constructed during Sri Lanka's civil conflict to promote non-violence. This is one of five peace pagodas built in Sri Lanka (others are in Sri Pada, Bandarawela, Walapane, and Ampara) and part of a global network of over 80 peace pagodas worldwide. The brilliant white stupa is surrounded by gold-painted Buddha statues and offers breathtaking panoramic views of Galle Bay, the southern coastline, and the Indian Ocean. Visitors can walk around the shrine, meditate in its tranquil atmosphere, and witness spectacular sunsets. The pagoda represents the enduring spiritual bond between Japan and Sri Lanka and serves as a testament to Buddhist values of peace and compassion.",
+      highlights: [
+        "Symbol of peace and harmony",
+        "Built by Japanese Buddhist monks in 2004",
+        "Stunning white stupa design",
+        "Panoramic views of Galle Bay",
+        "Gold-painted Buddha statues",
+        "Spectacular sunset viewpoint",
+        "One of five pagodas in Sri Lanka",
+        "Spiritual meditation site"
+      ]
+    },
+
+    "Unawatuna Beach": {
+      image: "/assets/img/unawatuna-beach.jpg",
+      description: "Unawatuna Beach, located just a few kilometers from Galle, is one of Sri Lanka's most popular coastal destinations. Famous for its golden sandy shores, calm turquoise waters, and palm-fringed bay, it is perfect for swimming, snorkeling, diving, and sunbathing. The name 'Unawatuna' is believed to derive from the Sinhala phrase 'Unna Wetuna,' meaning 'here it fell,' referring to the Ramayana legend of Hanuman dropping a fragment of the Himalayan mountain. The area is lively, with numerous beachfront cafés, restaurants, and shops, making it ideal for both relaxation and vibrant nightlife. Visitors can also explore nearby attractions such as the Japanese Peace Pagoda, Jungle Beach, and Rumassala Hill, offering opportunities for scenic walks and panoramic views. The bay is protected by a reef, making it one of the safest swimming spots on Sri Lanka's southern coast. With its combination of natural beauty, water activities, and cultural sites, Unawatuna Beach remains a must-visit destination.",
+      highlights: [
+        "Golden sandy beach",
+        "Calm turquoise waters",
+        "Protected bay for safe swimming",
+        "Water sports and diving",
+        "Beachfront cafés and restaurants",
+        "Vibrant nightlife",
+        "Nearby Japanese Peace Pagoda",
+        "Ramayana legend connection"
+      ]
+    },
+
+    "Thissamaharama Ancient City": {
+      image: "/assets/img/thissamaharama-ancient-city.jpg",
+      description: "Tissamaharama, located in the southern part of Sri Lanka, was once a thriving capital of the Ruhuna Kingdom dating back to the 3rd century BC. Built during the reign of King Kavan Tissa (the father of the legendary King Dutugemunu), it served as an important political, cultural, and religious center of ancient Sri Lanka. The city is renowned for its massive Tissamaharama Stupa (Yatala Dagoba), one of the largest ancient stupas in the country, ancient monasteries, and vast irrigation reservoirs that highlight the advanced engineering skills of early Sri Lankan civilization. The ancient reservoir system, including the Tissa Wewa (Tissamaharama Lake), demonstrates sophisticated hydraulic engineering from over 2,000 years ago. Archaeological excavations have revealed palace ruins, monastic complexes, and inscriptions that provide valuable insights into the island's early kingdoms. Today, Tissamaharama is a peaceful town surrounded by paddy fields and lakes, serving as a gateway to Yala National Park while offering travelers a glimpse into Sri Lanka's rich historical heritage.",
+      highlights: [
+        "Ancient capital of Ruhuna Kingdom",
+        "3rd century BC heritage",
+        "Tissamaharama Stupa (Yatala Dagoba)",
+        "King Kavan Tissa's legacy",
+        "Ancient irrigation systems",
+        "Archaeological significance",
+        "Gateway to Yala National Park",
+        "Historic monasteries and ruins"
+      ]
+    },
+
+    "Thissamaharama Lake": {
+      image: "/assets/img/thissamaharama-lake.jpg",
+      description: "Tissamaharama Lake, also known as Tissa Wewa, is an ancient man-made reservoir dating back to the 3rd century BC, built during the reign of King Kavan Tissa as part of the sophisticated irrigation system of the Ruhuna Kingdom. Spanning a significant area, this scenic lake is surrounded by lush greenery and abundant birdlife, making it a haven for nature lovers and bird watchers. The reservoir continues to serve agricultural purposes while providing a tranquil setting for relaxation and recreation. Visitors can enjoy peaceful boat rides, especially during sunrise and sunset when the waters beautifully reflect the surrounding flora and sky. The lake attracts a diverse array of water birds including herons, pelicans, cormorants, egrets, and painted storks. The walking path around the lake offers stunning views of the ancient stupa and surrounding landscape. Its historical significance, scenic beauty, and proximity to Tissamaharama town, local temples, and Yala National Park make it a favored stop for travelers seeking both natural beauty and cultural heritage.",
+      highlights: [
+        "Ancient reservoir from 3rd century BC",
+        "Built by King Kavan Tissa",
+        "Abundant birdlife and wildlife",
+        "Scenic boat rides",
+        "Spectacular sunrise/sunset views",
+        "Walking paths with lake views",
+        "Historical irrigation engineering",
+        "Tranquil natural atmosphere"
+      ]
+    },
+
+    "Overnight in Yala": {
+      image: "/assets/img/yala-accommodation.jpg",
+      description: "Staying overnight near Yala National Park offers an immersive wildlife experience in one of Sri Lanka's most biodiverse regions. Accommodations range from luxury safari lodges and eco-resorts to comfortable guesthouses, many designed to blend harmoniously with the natural environment. Evening and early morning are the best times for wildlife viewing, and staying nearby allows you to participate in both sunset and sunrise safari drives when animals are most active. Many lodges offer elevated viewing platforms, campfire gatherings, and traditional Sri Lankan dining experiences. The area around Yala provides a unique opportunity to hear the sounds of the wild at night and wake up to the calls of jungle birds.",
+      highlights: [
+        "Close proximity to Yala National Park",
+        "Luxury safari lodges available",
+        "Early morning safari access",
+        "Sunset and evening game drives",
+        "Immersive wildlife experience",
+        "Eco-friendly accommodations",
+        "Traditional Sri Lankan hospitality",
+        "Jungle ambiance and sounds"
+      ]
     }
   };
 
   // SMART MATCHING FUNCTION
-  const findPlaceDetails = (searchName) => {
+   const findPlaceDetails = (searchName) => {
     if (!searchName) return null;
     
     const normalizedSearch = searchName.trim().toLowerCase();
@@ -1112,10 +1201,9 @@ function PlaceDetails() {
       }
     }
     
-    // Step 2: Try partial match (if search contains key or vice versa)
+    // Step 2: Try partial match
     for (const key of Object.keys(allPlaceDetails)) {
       const normalizedKey = key.trim().toLowerCase();
-      // Check if either contains the other
       if (normalizedSearch.includes(normalizedKey) || normalizedKey.includes(normalizedSearch)) {
         return allPlaceDetails[key];
       }
@@ -1125,7 +1213,7 @@ function PlaceDetails() {
     const removeCommonWords = (str) => {
       const commonWords = ['the', 'of', 'and', 'in', 'at', 'to', 'a', 'an', '-', '–', 
                            'temple', 'church', 'fort', 'beach', 'lake', 'park', 'garden',
-                           'sacred', 'ancient', 'city', 'royal', 'old', 'historic'];
+                           'sacred', 'ancient', 'city', 'royal', 'old', 'historic', 'overnight'];
       return str.split(/\s+/).filter(word => 
         !commonWords.includes(word.toLowerCase()) && word.length > 2
       ).join(' ');
@@ -1141,7 +1229,7 @@ function PlaceDetails() {
       }
     }
     
-    // Step 4: Try word-by-word matching (find keys that share significant words)
+    // Step 4: Word-by-word matching
     const searchWords = normalizedSearch.split(/\s+/).filter(w => w.length > 3);
     
     for (const key of Object.keys(allPlaceDetails)) {
@@ -1150,7 +1238,6 @@ function PlaceDetails() {
         keyWords.some(kw => kw.includes(sw) || sw.includes(kw))
       );
       
-      // If more than half the words match, it's probably the right place
       if (matchingWords.length >= Math.min(searchWords.length, keyWords.length) / 2) {
         return allPlaceDetails[key];
       }
@@ -1161,7 +1248,6 @@ function PlaceDetails() {
 
   const placeDetails = findPlaceDetails(placeName);
 
-  // If still no match, create default entry
   const finalPlaceDetails = placeDetails || {
     image: "/assets/img/default-place.jpg",
     description: `Information about ${placeName} is currently being updated. Please check back later for more details about this wonderful destination in Sri Lanka. This place is known for its unique charm and is a must-visit for travelers exploring the beautiful island of Sri Lanka.`,
@@ -1176,16 +1262,14 @@ function PlaceDetails() {
 
   const handleBackClick = () => {
     if (fromDestination) {
-      // If we came from destination page, go back with state
       navigate('/destination', { 
         state: { 
-          package: selectedPackage, // Include the package information
+          package: selectedPackage,
           expandedDays: expandedDays,
           scrollToDay: dayIndex
         } 
       });
     } else {
-      // Otherwise just go back
       navigate(-1);
     }
   };
@@ -1215,7 +1299,6 @@ function PlaceDetails() {
               className="card-img-top place-details-image" 
               alt={placeName} 
               onError={(e) => {
-                // Fallback to a default image if the specific image fails to load
                 e.target.onerror = null; 
                 e.target.src = "/assets/img/default-place.jpg";
               }}
@@ -1252,5 +1335,6 @@ function PlaceDetails() {
     </div>
   );
 }
+
 
 export default PlaceDetails;

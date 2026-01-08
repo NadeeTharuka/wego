@@ -230,7 +230,26 @@ function Destination() {
     },
     "Peradeniya Botanical Garden": {
       image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    }
+    },
+     "Rumassala": {
+    image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  "Japanese Peace Pagoda": {
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  "Unawatuna Beach": {
+    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  "Thissamaharama Ancient City": {
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  "Thissamaharama Lake": {
+    image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  "Overnight in Yala": {
+    image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  }
+  
   };
 
   const handlePlaceClick = (placeName, dayIndex) => {
