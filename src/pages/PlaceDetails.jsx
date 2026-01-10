@@ -505,7 +505,33 @@ function PlaceDetails() {
         "Scenic hiking trails"
       ]
     },
+    "Horton Plains National Park": {
+      image: "/assets/img/horton-plains.jpg",
+      description: "Horton Plains National Park, a UNESCO World Heritage Site, is a misty plateau in Sri Lanka's central highlands. Famous for 'World's End,' a dramatic cliff drop of 880 meters, the park also features Baker's Falls and diverse wildlife, including sambar deer, wild boar, leopards, and endemic birds like the Sri Lanka white-eye. Early morning treks offer a breathtaking 'sea of clouds' effect over surrounding mountains. Walking trails pass through cloud forests, grassy plains, and scenic streams, making it ideal for hiking, photography, and nature enthusiasts.",
+      highlights: [
+        "UNESCO World Heritage Site",
+        "World's End viewpoint",
+        "Baker's Falls",
+        "Highland Ecosystem",
+        "Trekking",
+        "Diverse wildlife",
+        "Cloud forests",
+        "Scenic hiking trails"
+      ]
+    },
     "Tea Plantation and Factory visit": {
+      image: "/assets/img/tea-plantation-factory.jpg",
+      description: "Sri Lanka's tea story dates back to the 19th century, when British planter James Taylor introduced tea cultivation in 1867 in Kandy. What began as a small experiment soon transformed the island into one of the world's leading tea exporters, giving birth to the world-renowned 'Ceylon Tea.' Today, the rolling green plantations remain an iconic part of the central highlands. A visit to a tea plantation and factory lets you walk through these scenic landscapes, learn the art of tea plucking, and explore the fascinating process of tea production—from withering and rolling to drying and grading. The experience often concludes with a tea tasting session, where you can enjoy the rich flavors of authentic Ceylon Tea while overlooking breathtaking mountain views.",
+      highlights: [
+        "Historic tea cultivation",
+        "Scenic plantations",
+        "Tea plucking demonstration",
+        "Production process",
+        "Tea tasting session",
+        "Mountain views"
+      ]
+    },
+    "Tea Plantation & Factory Visit": {
       image: "/assets/img/tea-plantation-factory.jpg",
       description: "Sri Lanka's tea story dates back to the 19th century, when British planter James Taylor introduced tea cultivation in 1867 in Kandy. What began as a small experiment soon transformed the island into one of the world's leading tea exporters, giving birth to the world-renowned 'Ceylon Tea.' Today, the rolling green plantations remain an iconic part of the central highlands. A visit to a tea plantation and factory lets you walk through these scenic landscapes, learn the art of tea plucking, and explore the fascinating process of tea production—from withering and rolling to drying and grading. The experience often concludes with a tea tasting session, where you can enjoy the rich flavors of authentic Ceylon Tea while overlooking breathtaking mountain views.",
       highlights: [
@@ -1228,21 +1254,175 @@ function PlaceDetails() {
         "Jungle ambiance and sounds"
       ]
     },
-    // Add this entry to the allPlaceDetails object in PlaceDetails.js
-"Little Adam's Peak": {
-  image: "/assets/img/little-adams-peak.jpg",
-  description: "Little Adam's Peak is a popular hiking destination in Ella, Sri Lanka, offering breathtaking panoramic views of the surrounding countryside. Despite its name referencing the sacred Adam's Peak (Sri Pada), this is a much easier and shorter trek, making it accessible to most fitness levels. The trail winds through lush tea plantations and offers stunning vistas of Ella Gap, the Ella Rock, and the vast plains below. At the summit, you'll find a small Buddhist shrine and a flagpole, where visitors often leave prayer flags. The hike typically takes about 1-2 hours round trip and is particularly beautiful during sunrise or sunset when the landscape is bathed in golden light. The area around Little Adam's Peak is also known for its diverse birdlife and colorful butterflies, making it a paradise for nature enthusiasts and photographers.",
-  highlights: [
-    "Easy hiking trail suitable for all fitness levels",
-    "Panoramic views of Ella Gap and surrounding landscapes",
-    "Tea plantation scenery",
-    "Buddhist shrine at the summit",
-    "Perfect for sunrise and sunset photography",
-    "Rich biodiversity with birds and butterflies",
-    "Short 1-2 hour round trip hike",
-    "Stunning 360-degree views from the top"
-  ]
-}
+    "Little Adam's Peak": {
+      image: "/assets/img/little-adams-peak.jpg",
+      description: "Little Adam's Peak is a popular hiking destination in Ella, Sri Lanka, offering breathtaking panoramic views of the surrounding countryside. Despite its name referencing the sacred Adam's Peak (Sri Pada), this is a much easier and shorter trek, making it accessible to most fitness levels. The trail winds through lush tea plantations and offers stunning vistas of Ella Gap, the Ella Rock, and the vast plains below. At the summit, you'll find a small Buddhist shrine and a flagpole, where visitors often leave prayer flags. The hike typically takes about 1-2 hours round trip and is particularly beautiful during sunrise or sunset when the landscape is bathed in golden light. The area around Little Adam's Peak is also known for its diverse birdlife and colorful butterflies, making it a paradise for nature enthusiasts and photographers.",
+      highlights: [
+        "Easy hiking trail suitable for all fitness levels",
+        "Panoramic views of Ella Gap and surrounding landscapes",
+        "Tea plantation scenery",
+        "Buddhist shrine at the summit",
+        "Perfect for sunrise and sunset photography",
+        "Rich biodiversity with birds and butterflies",
+        "Short 1-2 hour round trip hike",
+        "Stunning 360-degree views from the top"
+      ]
+    },
+    "Kandy Cultural Show": {
+      image: "/assets/img/kandyan-cultural-dance.jpg",
+      description: "The Kandy Cultural Show is a vibrant performance that showcases Sri Lanka's rich traditional dance heritage. Held in the cultural capital of Kandy, this captivating show features a variety of dance forms that have been passed down through generations. The performance includes the famous Kandyan dance, known for its elegant movements and elaborate costumes, as well as fire walking, fire eating, and traditional drumming. Dancers adorned in colorful traditional costumes perform intricate choreography that tells stories from Sri Lankan folklore and history. The show provides visitors with an immersive cultural experience, offering insight into the island's artistic traditions and spiritual practices. The rhythmic beats of traditional drums combined with the graceful movements of the dancers create a mesmerizing spectacle that appeals to audiences of all ages.",
+      highlights: [
+        "Traditional Kandyan dance performances",
+        "Colorful costumes and elaborate masks",
+        "Fire walking and fire eating demonstrations",
+        "Traditional drumming and music",
+        "Cultural storytelling through dance",
+        "Authentic Sri Lankan cultural experience",
+        "Perfect introduction to local traditions",
+        "Evening entertainment in cultural capital"
+      ]
+    },
+    "Temple of Tooth Relic": {
+      image: "/assets/img/temple-of-sacred-tooth.jpg",
+      description: "The Temple of the Sacred Tooth Relic, or Sri Dalada Maligawa, is one of the most sacred Buddhist sites in Sri Lanka. Located in the heart of Kandy, this magnificent temple houses the sacred tooth relic of the Buddha, which is believed to have been brought to Sri Lanka in the 4th century AD. The temple complex is part of the former royal palace and showcases exquisite Kandyan architecture with intricate wood carvings, golden canopies, and beautiful paintings. The relic is kept in a golden casket and is displayed during special ceremonies. Daily rituals and offerings are performed throughout the day, accompanied by traditional drumming and chanting. The temple is a UNESCO World Heritage Site and the focal point of the famous Esala Perahera, a grand procession held annually in July or August. Visitors can explore the temple's museum, which displays a collection of artifacts related to the relic's history, and witness the spiritual atmosphere that permeates this sacred site.",
+      highlights: [
+        "Sacred tooth relic of Buddha",
+        "UNESCO World Heritage Site",
+        "Exquisite Kandyan architecture",
+        "Daily rituals and ceremonies",
+        "Traditional drumming and chanting",
+        "Museum with historical artifacts",
+        "Focal point of Esala Perahera festival",
+        "Spiritual and cultural significance"
+      ]
+    },
+    "Overnight in Kandy": {
+      image: "/assets/img/kandy-city.jpg",
+      description: "Kandy, nestled amidst lush green hills at an elevation of 500 meters above sea level, is Sri Lanka's cultural capital and a UNESCO World Heritage Site. An overnight stay in Kandy offers visitors the opportunity to immerse themselves in the city's rich cultural heritage and natural beauty. The city is home to the sacred Temple of the Tooth Relic, where visitors can witness evening ceremonies and experience the spiritual atmosphere. Accommodations in Kandy range from luxury hotels with stunning lake views to charming boutique properties nestled in tea plantations. The city's cool climate provides a refreshing break from the tropical heat of the coast. Evening cultural shows featuring traditional Kandyan dance are popular among visitors. The city center offers shopping for local handicrafts, gems, and spices, while the surrounding area is dotted with tea plantations and spice gardens that can be explored the next day. A night in Kandy is not just about rest but an integral part of the Sri Lankan cultural experience.",
+      highlights: [
+        "Cultural capital of Sri Lanka",
+        "UNESCO World Heritage Site",
+        "Cool hill country climate",
+        "Accommodations with lake and mountain views",
+        "Evening cultural shows",
+        "Shopping for local handicrafts and gems",
+        "Proximity to tea plantations and spice gardens",
+        "Authentic Sri Lankan dining experiences"
+      ]
+    },
+    // NEW ADDITIONS
+    "Matale Hindu Temple": {
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description: "The Matale Hindu Temple, officially known as the Sri Muthumariamman Temple, is a vibrant and sacred Hindu shrine located in the heart of Matale town. This colorful temple is dedicated to Goddess Muthumariamman, a form of Goddess Parvati, and is an important religious center for the local Hindu community. The temple features stunning Dravidian architecture with intricately carved gopurams (towering gateways), colorful statues of Hindu deities, and elaborate religious artwork. The temple comes alive during festivals, especially the annual Thai Pongal celebration and Navaratri, when devotees gather to offer prayers and participate in traditional ceremonies. The peaceful atmosphere, combined with the temple's architectural beauty and spiritual significance, makes it a must-visit cultural site for those exploring Sri Lanka's diverse religious heritage.",
+      highlights: [
+        "Vibrant Dravidian architecture",
+        "Dedicated to Goddess Muthumariamman",
+        "Intricate gopurams and religious artwork",
+        "Colorful Hindu deity statues",
+        "Annual Thai Pongal celebrations",
+        "Navaratri festival ceremonies",
+        "Peaceful spiritual atmosphere",
+        "Important Hindu cultural center"
+      ]
+    },
+    "Nalanda Gedige Temple": {
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description: "Nalanda Gedige is an ancient stone temple located near Matale, Sri Lanka, dating back to the 8th-10th century. This remarkable archaeological site showcases a unique blend of Buddhist and Hindu architectural styles, making it one of the most interesting historical monuments in Sri Lanka. The temple features a stone building with intricate carvings, a mandapa (hall), and a sanctum, all constructed using precise stone-cutting techniques without mortar. The site gained fame for being perfectly centered on the island, and interestingly, it was moved from its original location in 1982 when the Bowatenne Tank was created, to protect it from flooding. The temple's carvings depict both Buddhist and Hindu motifs, reflecting the religious harmony that existed in ancient Sri Lanka. Surrounded by lush paddy fields and coconut plantations, Nalanda Gedige offers visitors a glimpse into the island's ancient architectural prowess and cultural synthesis.",
+      highlights: [
+        "Ancient stone temple from 8th-10th century",
+        "Unique blend of Buddhist and Hindu architecture",
+        "Precise stone construction without mortar",
+        "Relocated in 1982 to preserve from flooding",
+        "Intricate carvings with religious motifs",
+        "Perfectly centered on Sri Lanka",
+        "Archaeological significance",
+        "Scenic rural surroundings"
+      ]
+    },
+    "Minneriya/Kawdulla/Eco Park Wild Safari": {
+      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description: "The Minneriya/Kaudulla/Eco Park Wild Safari offers an unforgettable wildlife experience in Sri Lanka's North Central Province. These three national parks are renowned for hosting one of the world's most spectacular wildlife phenomena - 'The Gathering,' where hundreds of Asian elephants congregate during the dry season (July to October) around the ancient reservoirs. Minneriya National Park is famous for its large elephant gatherings, Kaudulla offers excellent leopard and sloth bear sightings, while Eco Park provides a more intimate wildlife experience with diverse bird species. The safari takes you through diverse landscapes including dry zone forests, grasslands, and wetlands, home to elephants, leopards, sloth bears, sambar deer, wild buffalo, and over 160 species of birds. Experienced guides and drivers help track wildlife and share insights about animal behavior and conservation efforts. The best time for safaris is early morning or late afternoon when animals are most active.",
+      highlights: [
+        "Witness 'The Gathering' of hundreds of elephants",
+        "Three premier national parks in one experience",
+        "Excellent leopard and sloth bear sightings",
+        "Diverse ecosystems and landscapes",
+        "Over 160 bird species",
+        "Ancient reservoirs and historical sites",
+        "Experienced wildlife guides",
+        "Best viewing times: early morning and late afternoon"
+      ]
+    },
+    "Beach Leisure/Water Sports at Pasikuda": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description: "Pasikuda Bay, located on Sri Lanka's east coast, is a pristine tropical paradise renowned for its calm, turquoise waters and one of the longest stretches of shallow reef-lined coastlines in the world. The bay's unique geography creates a natural swimming pool-like environment with waters rarely exceeding waist-deep for hundreds of meters, making it ideal for families and safe swimming enthusiasts. The beach offers a perfect blend of relaxation and adventure, with opportunities for sunbathing on the soft golden sand, beach volleyball, and building sandcastles. Water sports enthusiasts can enjoy jet skiing, banana boat rides, windsurfing, and kayaking in the protected waters. The area also features some of Sri Lanka's best snorkeling spots, with vibrant coral reefs teeming with colorful marine life just offshore. Several luxury resorts and boutique hotels line the beach, offering world-class amenities, spa treatments, and exquisite dining experiences with fresh seafood. The bay is particularly beautiful during sunrise and sunset, creating perfect opportunities for photography and romantic walks along the shore.",
+      highlights: [
+        "One of the world's longest shallow reef coastlines",
+        "Natural swimming pool-like calm waters",
+        "Safe for families and children",
+        "Wide range of water sports activities",
+        "Excellent snorkeling with coral reefs",
+        "Luxury beachfront resorts",
+        "Perfect for sunrise and sunset photography",
+        "Fresh seafood dining experiences"
+      ]
+    },
+    "Koneswaram Temple": {
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description: "Koneswaram Temple, also known as Thirukoneswaram Kovil, is a sacred Hindu temple perched dramatically on Swami Rock, a cliff overlooking the Indian Ocean in Trincomalee. This ancient temple, dedicated to Lord Shiva, is one of the five Iswarams (abodes of Shiva) in Sri Lanka and holds immense religious significance for Hindus worldwide. The temple features stunning Dravidian architecture with colorful gopurams, intricate stone carvings, and sacred shrines. The location offers breathtaking panoramic views of the ocean and the natural harbor below. According to legend, the temple was originally built thousands of years ago and was destroyed by Portuguese colonists in the 17th century, with sacred items thrown into the sea. The modern temple was rebuilt in the 1950s and continues to be an important pilgrimage site. The nearby Lover's Leap, where a Dutch princess allegedly jumped to her death after being forbidden to marry a local, adds to the area's mystique. The temple is particularly vibrant during the annual Mahashivaratri festival when thousands of devotees gather for special prayers and ceremonies.",
+      highlights: [
+        "Ancient Hindu temple dedicated to Lord Shiva",
+        "One of the five sacred Iswarams of Sri Lanka",
+        "Dramatic cliff-top location with ocean views",
+        "Stunning Dravidian architecture",
+        "Important pilgrimage site for Hindus",
+        "Annual Mahashivaratri festival celebrations",
+        "Lover's Leap viewpoint nearby",
+        "Rich historical and religious significance"
+      ]
+    },
+    "Pigeon Island National Park": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description: "Pigeon Island National Park, located just off the coast of Nilaveli near Trincomalee, is a marine paradise comprising two islands - Pigeon Island and Small Pigeon Island. This protected area, established in 2003, is renowned for having some of the best coral reefs in Sri Lanka, making it a premier destination for snorkeling and diving. The park's crystal-clear waters offer visibility of up to 20 meters, revealing a vibrant underwater world teeming with over 100 species of coral and 300 species of reef fish. The islands are named after the rock pigeon which nests here, and visitors can also spot various marine turtles including the endangered hawksbill and green turtles. The larger island features a beautiful white sand beach perfect for relaxation between snorkeling sessions, while the surrounding waters are home to blacktip reef sharks, sea snakes, and occasionally even dolphins. The park offers guided snorkeling tours where marine biologists provide insights into the coral ecosystem and conservation efforts. The best time to visit is from April to October when the sea is calm and visibility is at its peak.",
+      highlights: [
+        "Premier snorkeling and diving destination",
+        "Over 100 coral species and 300 reef fish species",
+        "Crystal-clear waters with up to 20m visibility",
+        "Habitat for endangered sea turtles",
+        "Blacktip reef shark sightings",
+        "Two beautiful islands with white sand beaches",
+        "Guided marine biology tours available",
+        "Best visited April to October"
+      ]
+    },
+    "Fort Frederick": {
+      image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description: "Fort Frederick, also known as Fort Trincomalee, is a historic fortification located on the promontory of Swami Rock in Trincomalee. Built by the Portuguese in 1623 and later captured by the Dutch in 1639 and the British in 1795, this fort has witnessed centuries of colonial history and strategic military importance. The fort encompasses the entire Swami Rock area, including the sacred Koneswaram Temple site, and offers commanding views of Trincomalee's natural harbor - one of the world's finest deep-water harbors. The fort's massive stone walls, bastions, and ancient cannons stand as testaments to its military past. Within the fort premises, visitors can explore colonial-era buildings, a British war cemetery, and enjoy the peaceful atmosphere of the grounds. The fort's strategic location made it a crucial naval base throughout history, controlling access to the east coast of Sri Lanka. Today, it serves as a military installation but is open to tourists who wish to explore its historical significance and enjoy the spectacular views of the Indian Ocean and the harbor below.",
+      highlights: [
+        "Built by Portuguese in 1623, later captured by Dutch and British",
+        "Strategic location on Swami Rock with harbor views",
+        "Massive stone walls and ancient fortifications",
+        "Contains the sacred Koneswaram Temple site",
+        "One of the world's finest natural harbor viewpoints",
+        "British war cemetery within the premises",
+        "Active military installation open to tourists",
+        "Rich colonial military history"
+      ]
+    },
+    "Nilaveli Beach Leisure": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description: "Nilaveli Beach, located on Sri Lanka's pristine east coast near Trincomalee, is a breathtaking stretch of golden sand that consistently ranks among the world's most beautiful beaches. The beach is famous for its powdery white sand, crystal-clear turquoise waters, and serene atmosphere, making it an ideal destination for relaxation and water activities. Unlike many crowded beaches, Nilaveli maintains a tranquil vibe with plenty of space to unwind. The gentle slope of the beach and calm waters make it perfect for swimming, while the offshore Pigeon Island offers world-class snorkeling and diving opportunities just a short boat ride away. Beach shacks and resorts line the shore, serving fresh seafood and tropical drinks. The beach is particularly spectacular during sunrise when the golden light illuminates the sand, creating perfect photo opportunities. Visitors can enjoy beach volleyball, build sandcastles, or simply relax under the shade of palm trees. The area also offers boat trips to Pigeon Island, dolphin watching tours, and deep-sea fishing excursions. With its combination of natural beauty, water activities, and peaceful ambiance, Nilaveli Beach provides the perfect tropical escape.",
+      highlights: [
+        "Pristine golden sand beach with crystal-clear waters",
+        "Consistently ranked among world's most beautiful beaches",
+        "Perfect for swimming with gentle slope and calm waters",
+        "Gateway to Pigeon Island National Park for snorkeling",
+        "Tranquil atmosphere with plenty of space",
+        "Fresh seafood beach shacks and resorts",
+        "Spectacular sunrise photography opportunities",
+        "Dolphin watching and deep-sea fishing excursions"
+      ]
+    }
   };
 
   // SMART MATCHING FUNCTION
