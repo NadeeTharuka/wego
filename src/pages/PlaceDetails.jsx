@@ -497,12 +497,20 @@ function PlaceDetails() {
       image: "/assets/img/buduruwagala.jpg",
       description: "Buduruwagala is an ancient Buddhist site located near Wellawaya, Sri Lanka. It is renowned for its impressive rock-cut statues, including a colossal standing Buddha figure that is about 16 meters tall—the tallest rock-carved Buddha in the country. Surrounding the main statue are six smaller figures, believed to represent Bodhisattvas and deities, dating back to the 9th–10th century during the Mahayana Buddhist period. Set amidst a tranquil forest with a serene reservoir nearby, Buduruwagala offers visitors both spiritual significance and natural beauty, making it a unique stop for those exploring Sri Lanka's cultural and historic heritage.",
       highlights: [
-        "Ancient Buddhist site",
-        "16-meter tall Buddha statue",
-        "Rock-cut sculptures",
-        "Mahayana period",
-        "Tranquil forest setting",
-        "Historic reservoir"
+        "Ancient Rock Carvings",
+        "Buddhist Statues",
+        "Historical Site",
+        "Serene Atmosphere"
+      ]
+    },
+    "Buduruwagala Rock Temple": {
+      image: "/assets/img/buduruwagala.jpg",
+      description: "Buduruwagala Rock Temple is an ancient Buddhist site located near Wellawaya in the Monaragala District of Sri Lanka. Dating back to the 9th-10th century, this remarkable site features seven magnificent figures carved into a massive rock face. The central statue is a 16-meter tall Buddha image, the tallest rock-carved Buddha in Sri Lanka, flanked by three figures on each side believed to be Bodhisattvas. The site showcases exquisite ancient craftsmanship with detailed carvings that have weathered centuries. The name 'Buduruwagala' means 'the rock of the Buddha sculpture' in Sinhala. The temple is set in a tranquil forest environment with a small ancient reservoir nearby, creating a peaceful atmosphere perfect for meditation and reflection. Historically significant as an example of Mahayana Buddhist influence in Sri Lanka, Buduruwagala offers visitors a unique glimpse into the island's religious and artistic heritage.",
+      highlights: [
+        "Ancient Rock Carvings",
+        "Buddhist Statues",
+        "Historical Site",
+        "Serene Atmosphere"
       ]
     },
     "Isurumuniya": {
