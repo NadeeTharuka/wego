@@ -1227,7 +1227,22 @@ function PlaceDetails() {
         "Traditional Sri Lankan hospitality",
         "Jungle ambiance and sounds"
       ]
-    }
+    },
+    // Add this entry to the allPlaceDetails object in PlaceDetails.js
+"Little Adam's Peak": {
+  image: "/assets/img/little-adams-peak.jpg",
+  description: "Little Adam's Peak is a popular hiking destination in Ella, Sri Lanka, offering breathtaking panoramic views of the surrounding countryside. Despite its name referencing the sacred Adam's Peak (Sri Pada), this is a much easier and shorter trek, making it accessible to most fitness levels. The trail winds through lush tea plantations and offers stunning vistas of Ella Gap, the Ella Rock, and the vast plains below. At the summit, you'll find a small Buddhist shrine and a flagpole, where visitors often leave prayer flags. The hike typically takes about 1-2 hours round trip and is particularly beautiful during sunrise or sunset when the landscape is bathed in golden light. The area around Little Adam's Peak is also known for its diverse birdlife and colorful butterflies, making it a paradise for nature enthusiasts and photographers.",
+  highlights: [
+    "Easy hiking trail suitable for all fitness levels",
+    "Panoramic views of Ella Gap and surrounding landscapes",
+    "Tea plantation scenery",
+    "Buddhist shrine at the summit",
+    "Perfect for sunrise and sunset photography",
+    "Rich biodiversity with birds and butterflies",
+    "Short 1-2 hour round trip hike",
+    "Stunning 360-degree views from the top"
+  ]
+}
   };
 
   // SMART MATCHING FUNCTION
