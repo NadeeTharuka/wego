@@ -1,5 +1,3 @@
-// PlaceDetails.jsx
-
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './PlaceDetails.css';
@@ -820,15 +818,27 @@ function PlaceDetails() {
       ]
     },
     "Yala Safari": {
-      image: "/assets/img/yala-safari.jpg",
-      description: "Yala Safari, located in Yala National Park in southeastern Sri Lanka, offers an exhilarating wildlife experience. Yala is the most visited and second-largest national park in Sri Lanka, known for its rich biodiversity and dense population of leopards. During a Yala Safari, visitors can explore the park's diverse ecosystems, which include forests, grasslands, and wetlands, home to animals like elephants, sloth bears, crocodiles, and a wide variety of birds. The park is especially renowned for providing one of the best chances to see leopards in the wild. Safari tours typically take place in open-top jeeps, allowing for close encounters with wildlife while enjoying the park's natural beauty.",
+      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description: "Yala National Park, located in southeastern Sri Lanka, is the country's most visited and second-largest national park. It's renowned for its diverse ecosystems ranging from moist monsoon forests to freshwater and marine wetlands. The park is famous for having one of the highest leopard densities in the world, making it one of the best places to spot these elusive big cats. In addition to leopards, Yala is home to a wide variety of wildlife including elephants, sloth bears, crocodiles, and numerous bird species. The park offers both morning and afternoon safari experiences in 4x4 vehicles with experienced guides who help visitors spot and identify wildlife in their natural habitat.",
       highlights: [
-        "Leopard sightings",
+        "Leopard Spotting",
+        "Elephant Herds",
+        "Bird Watching",
+        "Wildlife Photography",
         "Diverse ecosystems",
-        "Elephant populations",
-        "Bird watching",
-        "Safari jeep tours",
-        "Natural beauty"
+        "Experienced guides"
+      ]
+    },
+    "Yala National Park Morning Safari": {
+      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description: "Yala National Park, located in southeastern Sri Lanka, is the country's most visited and second-largest national park. It's renowned for its diverse ecosystems ranging from moist monsoon forests to freshwater and marine wetlands. The park is famous for having one of the highest leopard densities in the world, making it one of the best places to spot these elusive big cats. In addition to leopards, Yala is home to a wide variety of wildlife including elephants, sloth bears, crocodiles, and numerous bird species. The morning safari offers the best opportunity to spot wildlife as animals are most active during the cooler hours of the day. Experienced guides accompany visitors in 4x4 vehicles, helping them spot and identify wildlife in their natural habitat.",
+      highlights: [
+        "Leopard Spotting",
+        "Elephant Herds",
+        "Bird Watching",
+        "Wildlife Photography",
+        "Best wildlife viewing time",
+        "Experienced guides"
       ]
     },
     "Weligama Beach": {
@@ -1335,6 +1345,5 @@ function PlaceDetails() {
     </div>
   );
 }
-
 
 export default PlaceDetails;
