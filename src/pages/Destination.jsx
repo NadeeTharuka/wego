@@ -193,6 +193,9 @@ function Destination() {
     "Tea Plantation Visit": {
       image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Tea Plantation & Factory Visit": {
+      image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
     "Udawalawe Safari": {
       image: "https://images.unsplash.com/photo-1535083783855-76ae62b2914e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -238,32 +241,70 @@ function Destination() {
     "Peradeniya Botanical Garden": {
       image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
-     "Rumassala": {
-    image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  "Japanese Peace Pagoda": {
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  "Unawatuna Beach": {
-    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  "Thissamaharama Ancient City": {
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  "Thissamaharama Lake": {
-    image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  "Overnight in Yala": {
-    image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  "Buduruwagala Rock Temple": {
-    image: "https://images.unsplash.com/photo-1596428669978-1a27c8c7b5a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  // Add this entry to the placeDetails object in Destination.js
-"Little Adam's Peak": {
-  image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-}
-  
+    "Rumassala": {
+      image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Japanese Peace Pagoda": {
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Unawatuna Beach": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Thissamaharama Ancient City": {
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Thissamaharama Lake": {
+      image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Overnight in Yala": {
+      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Buduruwagala Rock Temple": {
+      image: "https://images.unsplash.com/photo-1596428669978-1a27c8c7b5a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Little Adam's Peak": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Horton Plains National Park": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Ramboda Waterfall": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Kandy Cultural Show": {
+      image: "https://images.unsplash.com/photo-1524230659092-07f99a75c013?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Temple of Tooth Relic": {
+      image: "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Overnight in Kandy": {
+      image: "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    // NEW ADDITIONS
+    "Matale Hindu Temple": {
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Nalanda Gedige Temple": {
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Minneriya/Kawdulla/Eco Park Wild Safari": {
+      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Beach Leisure/Water Sports at Pasikuda": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Koneswaram Temple": {
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Pigeon Island National Park": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Fort Frederick": {
+      image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Nilaveli Beach Leisure": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
   };
 
   const handlePlaceClick = (placeName, dayIndex) => {
@@ -1051,13 +1092,8 @@ function Destination() {
           activities: [
             {
               name: "Horton Plains National Park",
-              isExpandable: true,
-              subActivities: [
-                "World's End",
-                "Baker's Falls",
-                "Highland Ecosystem",
-                "Trekking"
-              ]
+              isExpandable: false, // Changed to false to remove sub-activities
+              subActivities: [] // Empty sub-activities array
             },
             "Tea Plantation & Factory Visit",
             "Ramboda Waterfall",
@@ -1074,7 +1110,6 @@ function Destination() {
             "Matale Hindu Temple",
             "Nalanda Gedige Temple",
             "Dambulla Cave Temple",
-            "Pidurangala Sunset View",
             "Overnight in Habarana"
           ]
         },
@@ -1083,9 +1118,7 @@ function Destination() {
           title: "Habarana → Sigiriya → Habarana",
           activities: [
             "Sigiriya Lion Rock Fortress climb",
-            "Hiriwadunna Village Tour",
-            "Village Tour with Cooking Class",
-            "Traditional lunch preparation",
+            "Village Tour",
             "Minneriya/Kawdulla/Eco Park Wild Safari",
             "Overnight in Habarana"
           ]
@@ -1094,8 +1127,7 @@ function Destination() {
           day: "Day 10",
           title: "Habarana → Polonnaruwa",
           activities: [
-            "Polonnaruwa Ancient City exploration by bicycle or car",
-            "UNESCO World Heritage Site tour",
+            "Polonnaruwa Ancient City",
             "Overnight in Polonnaruwa"
           ]
         },
@@ -1103,7 +1135,6 @@ function Destination() {
           day: "Day 11",
           title: "Polonnaruwa → Pasikuda",
           activities: [
-            "Travel to East Coast",
             "Beach Leisure/Water Sports at Pasikuda",
             "Overnight in Pasikuda"
           ]
@@ -1115,32 +1146,14 @@ function Destination() {
             {
               name: "Koneswaram Temple",
               isExpandable: true,
-              subActivities: [
-                "Ancient Hindu Temple",
-                "Ocean Views",
-                "Spiritual Experience",
-                "Historical Architecture"
-              ]
             },
             {
               name: "Pigeon Island National Park",
               isExpandable: true,
-              subActivities: [
-                "Snorkeling Paradise",
-                "Coral Reefs",
-                "Marine Life",
-                "Beach Activities"
-              ]
             },
             {
               name: "Fort Frederick",
               isExpandable: true,
-              subActivities: [
-                "Colonial Fort",
-                "Historical Site",
-                "Ocean Views",
-                "Military Heritage"
-              ]
             },
             "Overnight in Nilaveli"
           ]
@@ -1152,14 +1165,7 @@ function Destination() {
             {
               name: "Nilaveli Beach Leisure",
               isExpandable: true,
-              subActivities: [
-                "Pristine Beach",
-                "Water Activities",
-                "Relaxation",
-                "Crystal Clear Waters"
-              ]
             },
-            "Return journey preparation",
             "Overnight in Dambulla"
           ]
         },
@@ -1167,8 +1173,7 @@ function Destination() {
           day: "Day 14",
           title: "Dambulla → Airport",
           activities: [
-            "Final Dambulla Cave Temple visit",
-            "Journey to airport",
+            "Dambulla Cave Temple",
             "Departure"
           ]
         }
