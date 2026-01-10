@@ -202,6 +202,12 @@ function Destination() {
     "Ravana Falls": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Ravana Waterfall": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Ravana Cave (Optional)": {
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
     "Historic Fort Area": {
       image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -985,23 +991,13 @@ function Destination() {
             },
             {
               name: "Ravana Waterfall",
-              isExpandable: true,
-              subActivities: [
-                "Waterfall Views",
-                "Natural Pool",
-                "Photo Opportunities",
-                "Ramayana Legend"
-              ]
+              isExpandable: false, // Changed to false to remove sub-activities
+              subActivities: [] // Empty sub-activities array
             },
             {
               name: "Ravana Cave (Optional)",
-              isExpandable: true,
-              subActivities: [
-                "Ancient Cave",
-                "Historical Significance",
-                "Mountain Views",
-                "Ramayana Story"
-              ]
+              isExpandable: false, // Changed to false to remove sub-activities
+              subActivities: [] // Empty sub-activities array
             },
             "Overnight in Ella"
           ]
@@ -1010,10 +1006,10 @@ function Destination() {
           day: "Day 05",
           title: "Ella Full Day",
           activities: [
-            "Little Adam's Peak hike",
+            "Little Adam's Peak",
             "Nine Arch Bridge photography",
             "Ella Rock challenging hike",
-            "Secret Waterfall swimming",
+            "Secret Waterfall swimming (Optional) ",
             "Overnight in Ella"
           ]
         },
