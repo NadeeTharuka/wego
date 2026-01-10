@@ -457,6 +457,30 @@ function PlaceDetails() {
         "Photography hotspot"
       ]
     },
+    "Ravana Waterfall": {
+      image: "/assets/img/ravana-falls.jpg",
+      description: "Ravana Waterfall, located near Ella in Sri Lanka, is one of the island's most popular and picturesque waterfalls. With a height of approximately 25 meters, it cascades down a series of rock formations, creating a beautiful natural spectacle. The waterfall is named after the legendary King Ravana from the Hindu epic Ramayana, who is said to have used this area as a hiding place. Surrounded by lush greenery and tea plantations, the waterfall offers a serene environment for visitors. The natural pool at the base of the falls is perfect for a refreshing swim, and the area is a popular spot for photography, especially during the rainy season when the water flow is at its peak.",
+      highlights: [
+        "Waterfall Views",
+        "Natural Pool",
+        "Photo Opportunities",
+        "Ramayana Legend",
+        "Scenic Beauty",
+        "Refreshing Swim"
+      ]
+    },
+    "Ravana Cave (Optional)": {
+      image: "/assets/img/ravana-cave.jpg",
+      description: "Ravana Cave, located near Ella in Sri Lanka, is an ancient cave system shrouded in myth and legend. According to the Ramayana epic, this cave is believed to have been one of the hideouts of King Ravana during his conflict with Lord Rama. The cave features fascinating rock formations and offers stunning panoramic views of the surrounding Ella landscape and the Ella Gap. To reach the cave, visitors must undertake a moderate trek through tea plantations and forested areas, making it an adventurous experience. The cave's historical significance, coupled with its natural beauty and the breathtaking vistas from its entrance, makes it a must-visit site for those interested in Sri Lanka's rich mythology and natural wonders.",
+      highlights: [
+        "Ancient Cave",
+        "Historical Significance",
+        "Mountain Views",
+        "Ramayana Story",
+        "Scenic Trek",
+        "Mythological Connection"
+      ]
+    },
     "Secret Waterfalls": {
       image: "/assets/img/secret-waterfalls.jpg",
       description: "Hidden waterfalls in Sri Lanka's hill country provide off-the-beaten-path escapes. Often reached by trekking through tea plantations, jungles, or remote villages, these waterfalls offer pristine swimming pools and tranquil surroundings. Visitors can enjoy swimming, meditation, and photography in peaceful natural settings. These secret spots give a sense of discovery and solitude, appealing to hikers, adventure seekers, and those seeking quiet moments in nature.",
