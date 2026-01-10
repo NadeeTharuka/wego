@@ -258,7 +258,11 @@ function Destination() {
   },
   "Buduruwagala Rock Temple": {
     image: "https://images.unsplash.com/photo-1596428669978-1a27c8c7b5a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }
+  },
+  // Add this entry to the placeDetails object in Destination.js
+"Little Adam's Peak": {
+  image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+}
   
   };
 
