@@ -1,8 +1,14 @@
-/* Change "Opulent Tours" text color to blue */
+/* Import elegant fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap');
+
+/* Change "Opulent Tours" text color to blue with elegant font */
 .navbar-brand,
 .navbar-brand h1,
 .navbar-brand .text-primary {
     color: #086AD8 !important;
+    font-family: 'Playfair Display', 'Cormorant Garamond', serif !important;
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
 }
 
 /* Add spacing between logo and "Opulent Tours" text */
