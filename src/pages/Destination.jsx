@@ -1,5 +1,3 @@
-// Destination.jsx
-
 import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
@@ -172,6 +170,9 @@ function Destination() {
       image: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     "Yala Safari": {
+      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Yala National Park Morning Safari": {
       image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     "Galle Fort": {
@@ -978,16 +979,7 @@ function Destination() {
           day: "Day 04",
           title: "Yala → Ella",
           activities: [
-            {
-              name: "Yala National Park Morning Safari",
-              isExpandable: true,
-              subActivities: [
-                "Leopard Spotting",
-                "Elephant Herds",
-                "Bird Watching",
-                "Wildlife Photography"
-              ]
-            },
+            "Yala National Park Morning Safari",
             {
               name: "Buduruwagala Rock Temple",
               isExpandable: true,
