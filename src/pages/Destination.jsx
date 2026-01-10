@@ -1022,7 +1022,7 @@ function Destination() {
           title: "Ella → Nuwara Eliya",
           activities: [
             {
-              name: "Blue Train Journey Ella to Nanu Oya",
+              name: "Blue Train Journey",
               isExpandable: true,
               subActivities: [
                 "Scenic Train Ride",
