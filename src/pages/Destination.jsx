@@ -249,6 +249,9 @@ function Destination() {
   },
   "Overnight in Yala": {
     image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  "Buduruwagala Rock Temple": {
+    image: "https://images.unsplash.com/photo-1596428669978-1a27c8c7b5a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   }
   
   };
@@ -404,13 +407,8 @@ function Destination() {
             "Ravana Falls",
             {
               name: "Buduruwagala Rock Temple",
-              isExpandable: true,
-              subActivities: [
-                "Ancient Rock Carvings",
-                "7 Buddha Statues - 51 feet tall",
-                "Archaeological Site",
-                "Peaceful Meditation Spot"
-              ]
+              isExpandable: false, // Changed to false to remove sub-activities
+              subActivities: [] // Empty sub-activities array
             },
             {
               name: "Yala National Park Safari",
@@ -982,13 +980,8 @@ function Destination() {
             "Yala National Park Morning Safari",
             {
               name: "Buduruwagala Rock Temple",
-              isExpandable: true,
-              subActivities: [
-                "Ancient Rock Carvings",
-                "Buddhist Statues",
-                "Historical Site",
-                "Serene Atmosphere"
-              ]
+              isExpandable: false, // Changed to false to remove sub-activities
+              subActivities: [] // Empty sub-activities array
             },
             {
               name: "Ravana Waterfall",
