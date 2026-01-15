@@ -8,15 +8,19 @@ function Booking() {
 
   return (
     <div>
-        <div className="container-fluid bg-primary py-5 mb-5 hero-header"
+<div className="container-fluid bg-primary py-5 mb-5 hero-header"
   style={{
-    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)), url("assets/img/booking-hero.jpg")',
+    backgroundImage: 'url("assets/img/booking-hero.jpg")',
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     minHeight: '95vh',
     paddingTop: '8rem',
-    paddingBottom: '8rem'
+    paddingBottom: '8rem',
+    imageRendering: 'crisp-edges',
+    WebkitImageRendering: 'crisp-edges',
+    transform: 'translateZ(0)',
+    backfaceVisibility: 'hidden'
   }}
 >
   <div className="container py-5">

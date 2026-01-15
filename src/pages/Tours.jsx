@@ -453,13 +453,17 @@ const TourPackages = () => {
       {/* Hero Header */}
 <div className="container-fluid bg-primary py-5 mb-5 hero-header"
   style={{
-    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)), url("assets/img/tours-hero.jpg")',
+    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.3), rgba(20, 20, 31, 0.3)), url("assets/img/tours-hero.jpg")',
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     minHeight: '95vh',
     paddingTop: '8rem',
-    paddingBottom: '8rem'
+    paddingBottom: '8rem',
+    imageRendering: 'crisp-edges',
+    WebkitImageRendering: 'crisp-edges',
+    transform: 'translateZ(0)',
+    backfaceVisibility: 'hidden'
   }}
 >
         <div className="container py-5">

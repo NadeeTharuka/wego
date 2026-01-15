@@ -120,16 +120,20 @@ export default function Home() {
   return (
     <div>
       {/* Hero Header */}
-   <div 
+<div 
   className="container-fluid bg-primary mb-5 hero-header"
   style={{
-    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.5), rgba(20, 20, 31, 0.5)), url("assets/img/home-hero.jpg")',
+    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.2), rgba(20, 20, 31, 0.2)), url("assets/img/home-hero.jpg")',
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     minHeight: '80vh',
     paddingTop: '4rem',
-    paddingBottom: '2rem'
+    paddingBottom: '2rem',
+    imageRendering: 'crisp-edges',
+    WebkitImageRendering: 'crisp-edges',
+    transform: 'translateZ(0)',
+    backfaceVisibility: 'hidden'
   }}
 >
         <div className="container py-5">

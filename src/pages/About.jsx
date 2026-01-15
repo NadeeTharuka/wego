@@ -11,7 +11,7 @@ function About() {
 <div 
   className="container-fluid bg-primary py-5 mb-5 hero-header"
   style={{
-    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)), url("assets/img/about-hero.jpg")',
+    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.3), rgba(20, 20, 31, 0.3)), url("assets/img/about-hero.jpg")',
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
@@ -66,7 +66,6 @@ function About() {
     objectFit: "cover",
     imageRendering: 'crisp-edges',
     WebkitImageRendering: 'crisp-edges',
-    filter: 'contrast(1.1) brightness(1.05) saturate(1.1)',
     transform: 'translateZ(0)',
     backfaceVisibility: 'hidden'
   }}

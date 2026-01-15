@@ -213,3 +213,53 @@ body > div > a:not(.whatsapp-button) {
     border-bottom: none !important;
     box-shadow: none !important;
 }
+
+/* ============================================================= */
+/* IMAGE QUALITY ENHANCEMENT - DISPLAY ORIGINAL IMAGES
+/* ============================================================= */
+
+/* Improve background image rendering quality */
+.hero-header,
+.container-fluid.bg-primary {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+/* Ensure images are displayed at original quality */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    max-width: 100%;
+    height: auto;
+}
+
+/* For high DPI displays */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi) {
+    .hero-header {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+}
+
+/* Enhance image sharpness and clarity */
+.hero-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-position: inherit;
+    background-repeat: inherit;
+    background-size: inherit;
+    filter: contrast(1.1) brightness(1.05) saturate(1.1);
+    z-index: -1;
+}
