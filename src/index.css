@@ -114,18 +114,35 @@ body > div > a:not(.whatsapp-button) {
     box-shadow: none !important;
 }
 
-/* 2. ENHANCED MAP IMAGE QUALITY */
-
-img[alt*="Sri Lanka"],
-img[alt*="Map"],
-img[src*="91a5c3ff-7781-4f6e-a4ff-cbe8d3bc8d20"] {
+.hero-header {
     image-rendering: -webkit-optimize-contrast;
-    image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
-    filter: contrast(1.15) brightness(1.08) saturate(1.1) drop-shadow(0 10px 25px rgba(0,0,0,0.2));
+}
+
+/* Ensure hero images display in original quality */
+.hero-header,
+.container-fluid.bg-primary {
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/* Responsive hero heights */
+@media (max-width: 768px) {
+    .hero-header {
+        min-height: 50vh !important;
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-header {
+        min-height: 40vh !important;
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+    }
 }
 
 /* 3. RESPONSIVE ADJUSTMENTS */

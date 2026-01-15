@@ -120,18 +120,18 @@ export default function Home() {
   return (
     <div>
       {/* Hero Header */}
-      <div 
-        className="container-fluid bg-primary mb-5 hero-header"
-        style={{
-          background: `linear-gradient(rgba(20, 20, 31, 0.5), rgba(20, 20, 31, 0.5)), url('https://images.unsplash.com/photo-1570789210967-2cac24afeb00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`,
-          backgroundPosition: 'center center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          minHeight: '60vh',
-          paddingTop: '5rem',
-          paddingBottom: '5rem'
-        }}
-      >
+   <div 
+  className="container-fluid bg-primary mb-5 hero-header"
+  style={{
+    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.5), rgba(20, 20, 31, 0.5)), url("assets/img/home-hero.jpg")',
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    minHeight: '80vh',
+    paddingTop: '4rem',
+    paddingBottom: '2rem'
+  }}
+>
         <div className="container py-5">
           <div className="row justify-content-center py-5">
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">

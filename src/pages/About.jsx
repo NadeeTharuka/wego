@@ -8,16 +8,18 @@ function About() {
 
   return (
     <div>
-      <div 
+<div 
   className="container-fluid bg-primary py-5 mb-5 hero-header"
   style={{
-    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)), url("https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200")',
+    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)), url("assets/img/about-hero.jpg")',
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
+    minHeight: '95vh',
+    paddingTop: '8rem',
+    paddingBottom: '8rem',
     imageRendering: 'crisp-edges',
-    imageRendering: '-webkit-optimize-contrast',
-    filter: 'contrast(1.1) brightness(1.05) saturate(1.1)',
+    WebkitImageRendering: 'crisp-edges',
     transform: 'translateZ(0)',
     backfaceVisibility: 'hidden'
   }}
@@ -56,20 +58,19 @@ function About() {
               style={{ minHeight: 400 }}
             >
               <div className="position-relative h-100">
-                <img
-                  className="img-fluid position-absolute w-100 h-100"
-                  src="assets/img/about.jpg"
-                  alt=""
-                  style={{ 
-                    objectFit: "cover",
-                    imageRendering: 'crisp-edges',
-                    imageRendering: '-webkit-optimize-contrast',
-                    filter: 'contrast(1.1) brightness(1.05) saturate(1.1)',
-                    transform: 'translateZ(0)',
-                    backfaceVisibility: 'hidden',
-                    WebkitFontSmoothing: 'antialiased'
-                  }}
-                />
+<img
+  className="img-fluid position-absolute w-100 h-100"
+  src="assets/img/about.jpg"
+  alt="About Opulent Tours"
+  style={{ 
+    objectFit: "cover",
+    imageRendering: 'crisp-edges',
+    WebkitImageRendering: 'crisp-edges',
+    filter: 'contrast(1.1) brightness(1.05) saturate(1.1)',
+    transform: 'translateZ(0)',
+    backfaceVisibility: 'hidden'
+  }}
+/>
               </div>
             </div>
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
