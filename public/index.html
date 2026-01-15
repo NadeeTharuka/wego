@@ -1,6 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- CRITICAL: Block arrow button before anything loads -->
+    <style>
+      .back-to-top,
+      .btn-lg-square,
+      a.btn.btn-primary.btn-square.back-to-top,
+      a.btn.btn-lg.btn-primary.btn-lg-square.back-to-top,
+      [class*="back-to-top"],
+      [class*="scroll-top"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        position: absolute !important;
+        left: -9999px !important;
+        width: 0 !important;
+        height: 0 !important;
+        pointer-events: none !important;
+      }
+    </style>
+
+    <script>
+      // Prevent back-to-top button from ever appearing
+      (function() {
+        'use strict';
+        
+        // Remove button immediately when DOM loads
+        const removeButton = () => {
+          const buttons = document.querySelectorAll('.back-to-top, .btn-lg-square, [class*="scroll-top"]');
+          buttons.forEach(btn => {
+            if (!btn.closest('.whatsapp-float')) {
+              btn.remove();
+            }
+          });
+        };
+        
+        // Run as soon as possible
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', function() {
+            removeButton();
+            setTimeout(removeButton, 0);
+            setTimeout(removeButton, 10);
+            setTimeout(removeButton, 50);
+            setTimeout(removeButton, 100);
+            setTimeout(removeButton, 500);
+          });
+        } else {
+          removeButton();
+        }
+
+        // Monitor and block any attempts to add the button
+        if (typeof MutationObserver !== 'undefined') {
+          const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+              mutation.addedNodes.forEach(function(node) {
+                if (node.nodeType === 1) {
+                  if (node.classList && (
+                    node.classList.contains('back-to-top') || 
+                    node.classList.contains('btn-lg-square')
+                  )) {
+                    if (!node.closest('.whatsapp-float')) {
+                      node.style.display = 'none';
+                      node.remove();
+                    }
+                  }
+                }
+              });
+            });
+          });
+
+          const startObserver = () => {
+            if (document.body) {
+              observer.observe(document.body, {
+                childList: true,
+                subtree: true
+              });
+            }
+          };
+
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', startObserver);
+          } else {
+            startObserver();
+          }
+        }
+      })();
+    </script>
+
     <meta charset="utf-8">
     <title>Opulent Tours</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -32,8 +118,11 @@
     <link href="assets/css/style.css" rel="stylesheet">
    </head>
    <body>
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <!-- REMOVED: Back to Top button -->
+        <!-- The arrow button that was here has been permanently removed -->
+        
+        <div id="root"></div>
+
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -47,7 +136,6 @@
     
         <!-- Template Javascript -->
         <script src="assets/js/main.js"></script>
-        <div id="root"></div>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         

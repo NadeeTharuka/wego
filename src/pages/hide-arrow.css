@@ -1,0 +1,50 @@
+/* ============================================================= */
+/* THIS FILE MUST LOAD FIRST TO PREVENT THE ARROW FLASH */
+/* ============================================================= */
+
+/* Aggressively hide any element that could be a scroll-to-top button */
+.back-to-top,
+a[href="#"],
+button[onclick*="scrollTo"],
+.scroll-to-top,
+.btn-lg-square,
+.back-top,
+.scrollup,
+.scrollToTop,
+.scrollToTopBtn,
+.scrollTop,
+.back-to-top-btn,
+.scroll-btn,
+.arrow-up,
+.up-arrow,
+.scroll-arrow,
+.back-to-top-wrapper,
+.back-to-top-container,
+.scroll-to-top-container,
+.btn-back-to-top,
+.btn-scroll-top,
+.floating-arrow,
+.arrow-float,
+[class*="scroll-top"],
+[class*="back-top"],
+[class*="scrollToTop"],
+[class*="arrow-up"],
+[id*="scroll-top"],
+[id*="back-top"],
+[id*="scrollToTop"],
+[id*="arrow-up"],
+#scrollUp,
+#backToTop,
+#scrollTopBtn {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    z-index: -9999 !important;
+}

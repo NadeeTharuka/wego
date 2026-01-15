@@ -1,133 +1,54 @@
-/* Import elegant fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap');
+/* CRITICAL: Add this at the VERY TOP of your index.css file */
+/* This prevents the arrow icon from EVER appearing, even during page load */
 
-/* Change "Opulent Tours" text color to blue with elegant font */
-.navbar-brand,
-.navbar-brand h1,
-.navbar-brand .text-primary {
-    color: #086AD8 !important;
-    font-family: 'Playfair Display', 'Cormorant Garamond', serif !important;
-    font-weight: 600 !important;
-    letter-spacing: 1px !important;
-}
-
-/* Add spacing between logo and "Opulent Tours" text */
-.navbar-brand h1 {
-    display: flex !important;
-    align-items: center !important;
-    gap: 15px !important;
-    margin: 0 !important;
-}
-
-.navbar-brand h1 img {
-    margin-right: 0 !important;
-}
-
-/* Override any green colors */
-.text-success {
-    color: #086AD8 !important;
-}
-
-/* Ensure all primary colors use blue theme */
-.text-primary {
-    color: #086AD8 !important;
-}
-
-.btn-primary {
-    background-color: #086AD8 !important;
-    border-color: #086AD8 !important;
-}
-
-.btn-primary:hover {
-    background-color: #0651A8 !important;
-    border-color: #0651A8 !important;
-}
-
-.bg-primary {
-    background-color: #086AD8 !important;
-}
-
-.navbar {
-  border-bottom: 0 !important;
-  box-shadow: none !important;
-}
-
-/* REMOVE SCROLL TO TOP ARROW BUTTON */
+/* Immediate hide - prevents flash on load */
 .back-to-top,
-a[href="#"],
-button[onclick*="scrollTo"],
-.scroll-to-top,
-.btn-lg-square {
+.btn-lg-square,
+a.btn.btn-primary.btn-square.back-to-top,
+a.btn.btn-lg.btn-primary.btn-lg-square.back-to-top {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
     pointer-events: none !important;
 }
 
-/* Additional selectors to catch any scroll-to-top variations */
-[class*="scroll-top"],
-[class*="back-top"],
-[id*="scroll-top"],
-[id*="back-top"] {
+/* Hide any button with arrow-up icon in bottom-right area */
+a[class*="back-to-top"],
+button[class*="back-to-top"],
+.btn-square[href="#"],
+.btn-lg-square[href="#"] {
     display: none !important;
     visibility: hidden !important;
 }
 
-/* 2. ENHANCED MAP IMAGE QUALITY */
-
-img[alt*="Sri Lanka"],
-img[alt*="Map"],
-img[src*="91a5c3ff-7781-4f6e-a4ff-cbe8d3bc8d20"] {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
-    filter: contrast(1.15) brightness(1.08) saturate(1.1) drop-shadow(0 10px 25px rgba(0,0,0,0.2));
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
+/* Prevent any fixed/absolute positioned elements from showing in bottom-right EXCEPT WhatsApp */
+body > a:not(.whatsapp-button),
+body > div > a:not(.whatsapp-button) {
+    position: static !important;
 }
 
-/* 3. RESPONSIVE ADJUSTMENTS */
-
-@media (max-width: 992px) {
-    .navbar-brand h1 {
-        gap: 10px !important;
-        font-size: 1.5rem !important;
-    }
-    
-    .navbar-brand h1 img {
-        max-width: 50px;
-    }
+/* Force hide using multiple selectors */
+*[class*="back-to-top"],
+*[id*="back-to-top"],
+*[class*="scroll-top"],
+*[id*="scroll-top"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
 }
 
-@media (max-width: 768px) {
-    .navbar-brand h1 {
-        gap: 8px !important;
-        font-size: 1.2rem !important;
-    }
-    
-    .navbar-brand h1 img {
-        max-width: 40px;
-    }
-    
-    img[alt*="Sri Lanka Map"] {
-        width: 280px !important;
-    }
+/* Ensure WhatsApp button is always visible */
+.whatsapp-float,
+.whatsapp-button {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
-@media (max-width: 576px) {
-    .navbar-brand h1 {
-        gap: 6px !important;
-        font-size: 1rem !important;
-    }
-}
-
-/* 4. HIGH DPI / RETINA DISPLAY */
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-       only screen and (min-resolution: 192dpi) {
-    img[alt*="Sri Lanka"],
-    img[alt*="Map"] {
-        filter: contrast(1.2) brightness(1.1) saturate(1.15);
-    }
+.whatsapp-button {
+    display: flex !important;
 }
