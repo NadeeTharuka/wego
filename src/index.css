@@ -1,5 +1,7 @@
-/* CRITICAL: Add this at the VERY TOP of your index.css file */
+/* ============================================================= */
+/* CRITICAL: HIDE ARROW ICON - MUST BE AT THE VERY TOP */
 /* This prevents the arrow icon from EVER appearing, even during page load */
+/* ============================================================= */
 
 /* Immediate hide - prevents flash on load */
 .back-to-top,
@@ -51,4 +53,146 @@ body > div > a:not(.whatsapp-button) {
 
 .whatsapp-button {
     display: flex !important;
+}
+
+
+/* ============================================================= */
+/* REST OF YOUR WEBSITE STYLING */
+/* ============================================================= */
+
+/* Import elegant fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap');
+
+/* Change "Opulent Tours" text color to blue with elegant font */
+.navbar-brand,
+.navbar-brand h1,
+.navbar-brand .text-primary {
+    color: #086AD8 !important;
+    font-family: 'Playfair Display', 'Cormorant Garamond', serif !important;
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
+}
+
+/* Add spacing between logo and "Opulent Tours" text */
+.navbar-brand h1 {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin: 0 !important;
+}
+
+.navbar-brand h1 img {
+    margin-right: 0 !important;
+}
+
+/* Override any green colors */
+.text-success {
+    color: #086AD8 !important;
+}
+
+/* Ensure all primary colors use blue theme */
+.text-primary {
+    color: #086AD8 !important;
+}
+
+.btn-primary {
+    background-color: #086AD8 !important;
+    border-color: #086AD8 !important;
+}
+
+.btn-primary:hover {
+    background-color: #0651A8 !important;
+    border-color: #0651A8 !important;
+}
+
+.bg-primary {
+    background-color: #086AD8 !important;
+}
+
+.navbar {
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+}
+
+/* 2. ENHANCED MAP IMAGE QUALITY */
+
+img[alt*="Sri Lanka"],
+img[alt*="Map"],
+img[src*="91a5c3ff-7781-4f6e-a4ff-cbe8d3bc8d20"] {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    filter: contrast(1.15) brightness(1.08) saturate(1.1) drop-shadow(0 10px 25px rgba(0,0,0,0.2));
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* 3. RESPONSIVE ADJUSTMENTS */
+
+@media (max-width: 992px) {
+    .navbar-brand h1 {
+        gap: 10px !important;
+        font-size: 1.5rem !important;
+    }
+    
+    .navbar-brand h1 img {
+        max-width: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand h1 {
+        gap: 8px !important;
+        font-size: 1.2rem !important;
+    }
+    
+    .navbar-brand h1 img {
+        max-width: 40px;
+    }
+    
+    img[alt*="Sri Lanka Map"] {
+        width: 280px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand h1 {
+        gap: 6px !important;
+        font-size: 1rem !important;
+    }
+}
+
+/* 4. HIGH DPI / RETINA DISPLAY */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi) {
+    img[alt*="Sri Lanka"],
+    img[alt*="Map"] {
+        filter: contrast(1.2) brightness(1.1) saturate(1.15);
+    }
+}
+
+
+/* ============================================================= */
+/* REMOVE ASH LINE UNDER NAVBAR */
+/* ============================================================= */
+.navbar,
+.navbar::after,
+.navbar::before,
+.container-fluid.position-relative,
+.container-fluid.position-relative::after,
+.container-fluid.position-relative::before {
+    border-bottom: none !important;
+    border-top: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+/* Also target any potential inner containers */
+.navbar .container-fluid,
+.navbar .container {
+    border-bottom: none !important;
+    box-shadow: none !important;
 }
