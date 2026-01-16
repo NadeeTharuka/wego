@@ -1,4 +1,4 @@
-// Booking.jsx
+// Booking.jsx - Fixed version
 import React, { useEffect } from 'react'
 
 function Booking() {
@@ -128,7 +128,8 @@ function Booking() {
               <p className="mb-4">
                 You can customize our recommended tours or plan your dream trip by discussing your preferences with the friendly team at Opulent Tours.
               </p>
-              <a className="btn btn-outline-light py-3 px-5 mt-2" href="">
+              {/* FIXED: Changed href from empty string to /tours */}
+              <a className="btn btn-outline-light py-3 px-5 mt-2" href="/tours">
                 Read More
               </a>
             </div>
