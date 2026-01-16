@@ -1281,7 +1281,6 @@ function Destination() {
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    imageRendering: 'crisp-edges',
     imageRendering: '-webkit-optimize-contrast',
     filter: 'contrast(1.1) brightness(1.05) saturate(1.1)',
     transform: 'translateZ(0)',
