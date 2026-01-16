@@ -1340,7 +1340,7 @@ function PlaceDetails() {
       ]
     },
     "Minneriya/Kawdulla/Eco Park Wild Safari": {
-      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/minneriya-wild-safari.jpg",
       description: "The Minneriya/Kaudulla/Eco Park Wild Safari offers an unforgettable wildlife experience in Sri Lanka's North Central Province. These three national parks are renowned for hosting one of the world's most spectacular wildlife phenomena - 'The Gathering,' where hundreds of Asian elephants congregate during the dry season (July to October) around the ancient reservoirs. Minneriya National Park is famous for its large elephant gatherings, Kaudulla offers excellent leopard and sloth bear sightings, while Eco Park provides a more intimate wildlife experience with diverse bird species. The safari takes you through diverse landscapes including dry zone forests, grasslands, and wetlands, home to elephants, leopards, sloth bears, sambar deer, wild buffalo, and over 160 species of birds. Experienced guides and drivers help track wildlife and share insights about animal behavior and conservation efforts. The best time for safaris is early morning or late afternoon when animals are most active.",
       highlights: [
         "Witness 'The Gathering' of hundreds of elephants",
@@ -1354,7 +1354,7 @@ function PlaceDetails() {
       ]
     },
     "Beach Leisure/Water Sports at Pasikuda": {
-      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/beach-leisure-pasikuda.jpg",
       description: "Pasikuda Bay, located on Sri Lanka's east coast, is a pristine tropical paradise renowned for its calm, turquoise waters and one of the longest stretches of shallow reef-lined coastlines in the world. The bay's unique geography creates a natural swimming pool-like environment with waters rarely exceeding waist-deep for hundreds of meters, making it ideal for families and safe swimming enthusiasts. The beach offers a perfect blend of relaxation and adventure, with opportunities for sunbathing on the soft golden sand, beach volleyball, and building sandcastles. Water sports enthusiasts can enjoy jet skiing, banana boat rides, windsurfing, and kayaking in the protected waters. The area also features some of Sri Lanka's best snorkeling spots, with vibrant coral reefs teeming with colorful marine life just offshore. Several luxury resorts and boutique hotels line the beach, offering world-class amenities, spa treatments, and exquisite dining experiences with fresh seafood. The bay is particularly beautiful during sunrise and sunset, creating perfect opportunities for photography and romantic walks along the shore.",
       highlights: [
         "One of the world's longest shallow reef coastlines",
@@ -1368,7 +1368,7 @@ function PlaceDetails() {
       ]
     },
     "Koneswaram Temple": {
-      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/koneshwaram-temple.jpg",
       description: "Koneswaram Temple, also known as Thirukoneswaram Kovil, is a sacred Hindu temple perched dramatically on Swami Rock, a cliff overlooking the Indian Ocean in Trincomalee. This ancient temple, dedicated to Lord Shiva, is one of the five Iswarams (abodes of Shiva) in Sri Lanka and holds immense religious significance for Hindus worldwide. The temple features stunning Dravidian architecture with colorful gopurams, intricate stone carvings, and sacred shrines. The location offers breathtaking panoramic views of the ocean and the natural harbor below. According to legend, the temple was originally built thousands of years ago and was destroyed by Portuguese colonists in the 17th century, with sacred items thrown into the sea. The modern temple was rebuilt in the 1950s and continues to be an important pilgrimage site. The nearby Lover's Leap, where a Dutch princess allegedly jumped to her death after being forbidden to marry a local, adds to the area's mystique. The temple is particularly vibrant during the annual Mahashivaratri festival when thousands of devotees gather for special prayers and ceremonies.",
       highlights: [
         "Ancient Hindu temple dedicated to Lord Shiva",
@@ -1382,7 +1382,7 @@ function PlaceDetails() {
       ]
     },
     "Pigeon Island National Park": {
-      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/pigeon-island.jpg",
       description: "Pigeon Island National Park, located just off the coast of Nilaveli near Trincomalee, is a marine paradise comprising two islands - Pigeon Island and Small Pigeon Island. This protected area, established in 2003, is renowned for having some of the best coral reefs in Sri Lanka, making it a premier destination for snorkeling and diving. The park's crystal-clear waters offer visibility of up to 20 meters, revealing a vibrant underwater world teeming with over 100 species of coral and 300 species of reef fish. The islands are named after the rock pigeon which nests here, and visitors can also spot various marine turtles including the endangered hawksbill and green turtles. The larger island features a beautiful white sand beach perfect for relaxation between snorkeling sessions, while the surrounding waters are home to blacktip reef sharks, sea snakes, and occasionally even dolphins. The park offers guided snorkeling tours where marine biologists provide insights into the coral ecosystem and conservation efforts. The best time to visit is from April to October when the sea is calm and visibility is at its peak.",
       highlights: [
         "Premier snorkeling and diving destination",
@@ -1396,7 +1396,7 @@ function PlaceDetails() {
       ]
     },
     "Fort Frederick": {
-      image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/fort-frederick.jpg",
       description: "Fort Frederick, also known as Fort Trincomalee, is a historic fortification located on the promontory of Swami Rock in Trincomalee. Built by the Portuguese in 1623 and later captured by the Dutch in 1639 and the British in 1795, this fort has witnessed centuries of colonial history and strategic military importance. The fort encompasses the entire Swami Rock area, including the sacred Koneswaram Temple site, and offers commanding views of Trincomalee's natural harbor - one of the world's finest deep-water harbors. The fort's massive stone walls, bastions, and ancient cannons stand as testaments to its military past. Within the fort premises, visitors can explore colonial-era buildings, a British war cemetery, and enjoy the peaceful atmosphere of the grounds. The fort's strategic location made it a crucial naval base throughout history, controlling access to the east coast of Sri Lanka. Today, it serves as a military installation but is open to tourists who wish to explore its historical significance and enjoy the spectacular views of the Indian Ocean and the harbor below.",
       highlights: [
         "Built by Portuguese in 1623, later captured by Dutch and British",
@@ -1410,7 +1410,7 @@ function PlaceDetails() {
       ]
     },
     "Nilaveli Beach Leisure": {
-      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/nilaveli-beach-leisure.jpg",
       description: "Nilaveli Beach, located on Sri Lanka's pristine east coast near Trincomalee, is a breathtaking stretch of golden sand that consistently ranks among the world's most beautiful beaches. The beach is famous for its powdery white sand, crystal-clear turquoise waters, and serene atmosphere, making it an ideal destination for relaxation and water activities. Unlike many crowded beaches, Nilaveli maintains a tranquil vibe with plenty of space to unwind. The gentle slope of the beach and calm waters make it perfect for swimming, while the offshore Pigeon Island offers world-class snorkeling and diving opportunities just a short boat ride away. Beach shacks and resorts line the shore, serving fresh seafood and tropical drinks. The beach is particularly spectacular during sunrise when the golden light illuminates the sand, creating perfect photo opportunities. Visitors can enjoy beach volleyball, build sandcastles, or simply relax under the shade of palm trees. The area also offers boat trips to Pigeon Island, dolphin watching tours, and deep-sea fishing excursions. With its combination of natural beauty, water activities, and peaceful ambiance, Nilaveli Beach provides the perfect tropical escape.",
       highlights: [
         "Pristine golden sand beach with crystal-clear waters",
