@@ -61,11 +61,11 @@ function OneDayTourDetails() {
       ],
       gallery: [
         { src: "assets/img/kandy-temple.jpg", caption: "Temple of the Sacred Tooth Relic" },
-        { src: "assets/img/kandy-lake.jpg", caption: "Serene Kandy Lake" },
-        { src: "assets/img/kandy-botanical.jpg", caption: "Royal Botanical Gardens" },
-        { src: "assets/img/kandy-dance.jpg", caption: "Traditional Cultural Dance" },
+        { src: "assets/img/kandy-lake-serene.jpg", caption: "Serene Kandy Lake" },
+        { src: "assets/img/kandy-botanical-garden.jpg", caption: "Royal Botanical Gardens" },
+        { src: "assets/img/kandy-traditional-dance.jpg", caption: "Traditional Cultural Dance" },
         { src: "assets/img/pinnawala-elephants.jpg", caption: "Elephants at Pinnawala" },
-        { src: "assets/img/kandy-city.jpg", caption: "Kandy City Panorama" }
+        { src: "assets/img/kandy-city-panorama.jpg", caption: "Kandy City Panorama" }
       ],
       tourDetails: {
         duration: "Full Day (8-9 hours)",
@@ -92,9 +92,9 @@ function OneDayTourDetails() {
       gallery: [
         { src: "assets/img/sigiriya-rock.jpg", caption: "Majestic Sigiriya Lion Rock" },
         { src: "assets/img/sigiriya-frescoes.jpg", caption: "Ancient Sigiriya Frescoes" },
-        { src: "assets/img/sigiriya-gardens.jpg", caption: "Water Gardens" },
+        { src: "assets/img/sigiriya-water-gardens.jpg", caption: "Water Gardens" },
         { src: "assets/img/dambulla-caves.jpg", caption: "Dambulla Cave Temples" },
-        { src: "assets/img/dambulla-buddha.jpg", caption: "Buddha Statues Inside Caves" },
+        { src: "assets/img/dambulla-buddha-statues.jpg", caption: "Buddha Statues Inside Caves" },
       ],
       tourDetails: {
         duration: "Full Day (7-8 hours)",
@@ -120,9 +120,9 @@ function OneDayTourDetails() {
         { icon: "fa-heart", title: "Relaxed Coastal Atmosphere", description: "Ideal for couples, families, and culture lovers" }
       ],
       gallery: [
-        { src: "assets/img/galle-lighthouse.jpg", caption: "Historic Galle Lighthouse" },
-        { src: "assets/img/galle-streets.jpg", caption: "Cobblestone Streets" },
-        { src: "assets/img/galle-beach.jpg", caption: "Beaches Near Galle" },
+        { src: "assets/img/galle-historic-lighthouse.jpg", caption: "Historic Galle Lighthouse" },
+        { src: "assets/img/galle-street.jpg", caption: "Cobblestone Streets" },
+        { src: "assets/img/galle-near-beach.jpg", caption: "Beaches Near Galle" },
         { src: "assets/img/galle-sunset.jpg", caption: "Sunset at Galle Fort" }
       ],
       tourDetails: {
@@ -149,7 +149,7 @@ function OneDayTourDetails() {
         { icon: "fa-user-tie", title: "Expert Guides", description: "Expert guides trained in marine conservation" }
       ],
       gallery: [
-        { src: "assets/img/whale-blue.jpg", caption: "Blue Whale Breach" },
+        { src: "assets/img/whale-blue-breach.jpg", caption: "Blue Whale Breach" },
         { src: "assets/img/whale-sperm.jpg", caption: "Sperm Whale Diving" },
         { src: "assets/img/whale-dolphins.jpg", caption: "Playful Dolphins" },
         { src: "assets/img/whale-boat.jpg", caption: "Whale Watching Boat" },
