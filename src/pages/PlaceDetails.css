@@ -15,6 +15,10 @@
     display: block;
     object-fit: cover; /* Use cover to fill the container while maintaining aspect ratio */
     object-position: center; /* Center the image within the container */
+    image-rendering: -webkit-optimize-contrast; /* Improve rendering quality */
+    image-rendering: crisp-edges;
+    backface-visibility: hidden; /* Prevent blur on transforms */
+    -webkit-backface-visibility: hidden;
 }
 
 .place-details-content {

@@ -1312,7 +1312,7 @@ function PlaceDetails() {
     },
     // NEW ADDITIONS
     "Matale Hindu Temple": {
-      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/matale-hindu-temple.jpg",
       description: "The Matale Hindu Temple, officially known as the Sri Muthumariamman Temple, is a vibrant and sacred Hindu shrine located in the heart of Matale town. This colorful temple is dedicated to Goddess Muthumariamman, a form of Goddess Parvati, and is an important religious center for the local Hindu community. The temple features stunning Dravidian architecture with intricately carved gopurams (towering gateways), colorful statues of Hindu deities, and elaborate religious artwork. The temple comes alive during festivals, especially the annual Thai Pongal celebration and Navaratri, when devotees gather to offer prayers and participate in traditional ceremonies. The peaceful atmosphere, combined with the temple's architectural beauty and spiritual significance, makes it a must-visit cultural site for those exploring Sri Lanka's diverse religious heritage.",
       highlights: [
         "Vibrant Dravidian architecture",
@@ -1326,7 +1326,7 @@ function PlaceDetails() {
       ]
     },
     "Nalanda Gedige Temple": {
-      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/nalanda-gedige-temple.jpg",
       description: "Nalanda Gedige is an ancient stone temple located near Matale, Sri Lanka, dating back to the 8th-10th century. This remarkable archaeological site showcases a unique blend of Buddhist and Hindu architectural styles, making it one of the most interesting historical monuments in Sri Lanka. The temple features a stone building with intricate carvings, a mandapa (hall), and a sanctum, all constructed using precise stone-cutting techniques without mortar. The site gained fame for being perfectly centered on the island, and interestingly, it was moved from its original location in 1982 when the Bowatenne Tank was created, to protect it from flooding. The temple's carvings depict both Buddhist and Hindu motifs, reflecting the religious harmony that existed in ancient Sri Lanka. Surrounded by lush paddy fields and coconut plantations, Nalanda Gedige offers visitors a glimpse into the island's ancient architectural prowess and cultural synthesis.",
       highlights: [
         "Ancient stone temple from 8th-10th century",
