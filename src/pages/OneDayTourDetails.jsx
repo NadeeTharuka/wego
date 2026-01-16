@@ -172,7 +172,7 @@ function OneDayTourDetails() {
       setCurrentImageIndex(prevIndex => 
         prevIndex === details.gallery.length - 1 ? 0 : prevIndex + 1
       );
-    }, 2000); // Change image every 4 seconds
+    }, 4000); // Change image every 4 seconds
 
     return () => clearInterval(interval);
   }, [tour, isPaused, tourDetails]);
@@ -231,14 +231,17 @@ function OneDayTourDetails() {
       <div 
         className="tour-hero"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${details.headerImage})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${details.headerImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           minHeight: '60vh',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          imageRendering: 'auto',
+          imageRendering: '-webkit-optimize-contrast',
+          filter: 'contrast(1.05) brightness(1.02)'
         }}
       >
         <div className="container">
@@ -396,7 +399,9 @@ function OneDayTourDetails() {
                       height: '350px', 
                       objectFit: 'cover',
                       width: '100%',
-                      imageRendering: 'auto'
+                      imageRendering: 'auto',
+                      imageRendering: '-webkit-optimize-contrast',
+                      filter: 'contrast(1.05) brightness(1.02)'
                     }}
                   />
                   <div className="carousel-caption">
