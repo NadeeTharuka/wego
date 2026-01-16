@@ -10,6 +10,9 @@
   transition: all 0.3s ease;
   background-attachment: fixed;
   background-blend-mode: overlay;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: auto;
+  filter: contrast(1.05) brightness(1.02);
 }
 
 .tour-hero::before {
@@ -103,11 +106,17 @@
 
 .gallery-image {
   image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
+  filter: contrast(1.05) brightness(1.02);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transform: translateZ(0);
   object-position: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.02);
+  filter: contrast(1.08) brightness(1.04);
 }
 
 .carousel-container {
