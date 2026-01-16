@@ -16,7 +16,7 @@ const TourPackages = () => {
       name: "EXPLORE SRI LANKA - 04 DAYS 03 NIGHTS",
       image: "assets/img/explore-sri-lanka-4days.jpg",
       duration: "4 Days 3 Nights",
-      price: "$599",
+      price: "$400",
       highlights: ["Dambulla Cave Temple", "Sigiriya Lion Rock", "Temple of Sacred Tooth", "Colombo City Tour"],
       itinerary: [
         {
@@ -50,7 +50,7 @@ const TourPackages = () => {
       name: "EXPLORE SRI LANKA - 05 DAYS 04 NIGHTS",
       image: "assets/img/explore-sri-lanka-5days.jpg",
       duration: "5 Days 4 Nights",
-      price: "$749",
+      price: "$460",
       highlights: ["Negombo Beach", "Pinnawala Elephant Orphanage", "Cultural Dance Show", "Spice Garden"],
       itinerary: [
         {
@@ -90,7 +90,7 @@ const TourPackages = () => {
       name: "ANCIENT CITIES TOUR - 05 DAYS 04 NIGHTS",
       image: "assets/img/ancient-cities-tour.jpg",
       duration: "5 Days 4 Nights",
-      price: "$825",
+      price: "$500",
       highlights: ["Anuradhapura UNESCO Site", "Polonnaruwa Ancient City", "Sri Maha Bodhiya", "Historical Monuments"],
       itinerary: [
         {
@@ -130,7 +130,7 @@ const TourPackages = () => {
       name: "HILL COUNTRY & BEACHES - 07 DAYS 06 NIGHTS",
       image: "assets/img/hill-country-beaches.jpg",
       duration: "7 Days 6 Nights",
-      price: "$1299",
+      price: "$710",
       highlights: ["Nuwara Eliya Tea Plantations", "Nine Arch Bridge", "Yala Safari", "Galle Fort"],
       itinerary: [
         {
@@ -182,7 +182,7 @@ const TourPackages = () => {
       name: "COMPREHENSIVE TOUR - 08 DAYS 07 NIGHTS",
       image: "assets/img/comprehensive-tour.jpg",
       duration: "8 Days 7 Nights",
-      price: "$1599",
+      price: "$750",
       highlights: ["Complete Island Experience", "Wildlife & Cultural Sites", "Beaches & Mountains", "All UNESCO Sites"],
       itinerary: [
         {
@@ -240,7 +240,7 @@ const TourPackages = () => {
       name: "ULTIMATE EXPLORER - 10 DAYS 09 NIGHTS",
       image: "assets/img/ultimate-explorer.jpg",
       duration: "10 Days 9 Nights",
-      price: "$1899",
+      price: "$890",
       highlights: ["Complete Island Experience", "UNESCO Sites", "Wildlife Safari", "Beach & Mountains", "Cultural Immersion"],
       itinerary: [
         {
@@ -310,7 +310,7 @@ const TourPackages = () => {
       name: "GRAND ADVENTURE - 14 DAYS 13 NIGHTS",
       image: "assets/img/grand-adventure.jpg",
       duration: "14 Days 13 Nights",
-      price: "$2499",
+      price: "$1040",
       highlights: ["Complete Sri Lanka Discovery", "All Major Destinations", "Adventure & Relaxation", "Cultural Immersion"],
       itinerary: [
         {
