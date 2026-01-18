@@ -178,6 +178,9 @@ function Destination() {
     "Galle Fort": {
       image: "https://images.unsplash.com/photo-1580837119756-563d608dd119?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Galle Dutch Fort - UNESCO World Heritage Site": {
+      image: "https://images.unsplash.com/photo-1580837119756-563d608dd119?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
     "Hikkaduwa Coral Garden": {
       image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -304,6 +307,29 @@ function Destination() {
     },
     "Nilaveli Beach Leisure": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    // DAY 08 PLACES
+    "Tissamaharama Lake": {
+      image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Goyambokka Beach": {
+      image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Dondra Lighthouse": {
+      image: "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Mirissa Beach Relaxation": {
+      image: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    // DAY 09 PLACES
+    "Whale Watching at Mirissa": {
+      image: "https://images.unsplash.com/photo-1593698350977-6e32f9b7f4b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Coconut Tree Hill": {
+      image: "https://images.unsplash.com/photo-1596428669978-1a27c8c7b5a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    "Weligama Beach": {
+      image: "https://images.unsplash.com/photo-1549180030-48bf079fb38a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   };
 
