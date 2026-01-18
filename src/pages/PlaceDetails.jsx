@@ -1154,7 +1154,7 @@ function PlaceDetails() {
       ]
     },
     "Ramboda Falls": {
-      image: "/assets/img/ramboda-falls.jpg",
+      image: "/assets/img/ramboda-fall.jpg",
       description: "Ramboda Falls is a stunning waterfall located between Nuwara Eliya and Kandy, visible from the A5 highway. It cascades down in multiple steps from a height of 109 meters. The waterfall is surrounded by dense forests and tea plantations, creating a picturesque landscape. There's a viewpoint near the highway where visitors can stop to admire the falls, and a more adventurous path leads closer to the base for a more immersive experience.",
       highlights: [
         "109-meter high waterfall",
