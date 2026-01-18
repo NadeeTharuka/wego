@@ -108,7 +108,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background: rgba(6, 163, 218, 0.9);
+    background: rgba(13, 110, 253, 0.9);
     color: white;
     padding: 8px 12px;
     border-bottom-left-radius: 8px;
@@ -148,20 +148,20 @@
 
 .highlight-tag {
     display: inline-block;
-    background: #e3f2fd;
-    color: #1976d2;
+    background: #e7f1ff;
+    color: #0d6efd;
     padding: 3px 7px;
     margin: 2px;
     border-radius: 10px;
     font-size: 0.7rem;
-    border: 1px solid #bbdefb;
+    border: 1px solid #b6d4fe;
 }
 
 .view-button {
     display: block;
     width: 100%;
     padding: 10px;
-    background: #06A3DA;
+    background: linear-gradient(45deg, #0d6efd, #0a58ca);
     color: white;
     border: none;
     border-radius: 6px;
@@ -175,9 +175,9 @@
 }
 
 .view-button:hover {
-    background: #0585B3;
+    background: #0a58ca;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(6, 163, 218, 0.3);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
 }
 
 /* Country Card Styling */
@@ -186,8 +186,8 @@
 }
 
 .country-card:hover .btn {
-    background: #06A3DA !important;
-    border-color: #06A3DA !important;
+    background: #0d6efd !important;
+    border-color: #0d6efd !important;
 }
 
 /* Trip Steps Section */
@@ -212,7 +212,7 @@
 .step-circle {
     width: 60px;
     height: 60px;
-    background: #06A3DA;
+    background: linear-gradient(45deg, #0d6efd, #0a58ca);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -225,7 +225,7 @@
 
 .step-icon {
     font-size: 2.5rem;
-    color: #06A3DA;
+    color: #0d6efd;
     margin-bottom: 1rem;
 }
 
@@ -298,13 +298,13 @@
 /* Pulse effect for interactive features */
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(6, 163, 218, 0.7);
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.7);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(6, 163, 218, 0);
+    box-shadow: 0 0 0 10px rgba(13, 110, 253, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(6, 163, 218, 0);
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0);
   }
 }
 
@@ -328,7 +328,7 @@
 }
 
 .itinerary-header {
-    background-color: #06A3DA;
+    background: linear-gradient(45deg, #0d6efd, #0a58ca);
     color: white;
     padding: 0.75rem 1rem;
     cursor: pointer;
@@ -357,18 +357,18 @@
 
 .itinerary-places span {
     display: inline-block;
-    background: #e3f2fd;
-    color: #1976d2;
+    background: linear-gradient(45deg, #0d6efd, #0a58ca);
+    color: white;
     padding: 3px 7px;
     margin: 2px;
     border-radius: 10px;
     font-size: 0.7rem;
-    border: 1px solid #bbdefb;
+    border: 1px solid #0d6efd;
     cursor: pointer;
 }
 
 .itinerary-places span:hover {
-    background: #1976d2;
+    background: linear-gradient(45deg, #0a58ca, #084298);
     color: white;
 }
 
@@ -378,4 +378,19 @@
 
 .toggle-icon.active {
     transform: rotate(180deg);
+}
+
+/* One Day Tours Section - Read More and Book Now Buttons */
+.btn-primary {
+    background: linear-gradient(45deg, #0d6efd, #0a58ca) !important;
+    border-color: #0d6efd !important;
+    color: white !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #0a58ca, #084298) !important;
+    border-color: #0a58ca !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3) !important;
 }
