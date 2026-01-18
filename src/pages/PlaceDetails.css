@@ -2,6 +2,12 @@
     padding-top: 20px; /* Reduced space from navbar to content */
 }
 
+/* Remove card border */
+.place-details-card {
+    border: none !important;
+    box-shadow: none !important;
+}
+
 .place-details-image-container {
     width: 100%;
     position: relative;
@@ -12,7 +18,7 @@
 .place-details-image {
     width: 100%;
     height: auto; /* Changed from fixed 400px to auto */
-    max-height: 500px; /* Added max-height to prevent too tall images */
+    max-height: 350px; /* Reduced from 500px to 350px - smaller image */
     display: block;
     object-fit: contain; /* Changed from cover to contain - shows full image */
     object-position: center; /* Center the image within the container */
@@ -20,7 +26,7 @@
     image-rendering: crisp-edges;
     backface-visibility: hidden; /* Prevent blur on transforms */
     -webkit-backface-visibility: hidden;
-    margin-top: -30px; /* Pull image closer to navbar */
+    margin-top: -20px; /* Pull image closer to navbar */
 }
 
 .place-details-content {
@@ -33,16 +39,17 @@
 
 .place-details-title {
     font-size: 2rem;
-    font-weight: 700;
-    color: #333;
+    font-weight: 800; /* Increased from 700 to 800 for bolder text */
+    color: #000; /* Changed to black */
     margin-bottom: 1rem;
 }
 
 .place-details-description {
     font-size: 1rem;
     line-height: 1.6;
-    color: #555;
+    color: #000; /* Changed to black */
     margin-bottom: 2rem;
+    text-align: justify; /* Added justify alignment */
 }
 
 .place-details-highlights-title {
@@ -60,9 +67,10 @@
 
 .place-details-highlights li {
     padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: none; /* Removed ash-colored line */
     display: flex;
     align-items: center;
+    color: #000; /* Changed to black color */
 }
 
 .place-details-highlights li:last-child {
@@ -127,13 +135,13 @@
 
 .not-found-container h2 {
     font-size: 2rem;
-    color: #333;
+    color: #000; /* Changed to black */
     margin-bottom: 1rem;
 }
 
 .not-found-container p {
     font-size: 1.1rem;
-    color: #666;
+    color: #000; /* Changed to black */
     margin-bottom: 2rem;
 }
 
