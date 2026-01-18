@@ -899,6 +899,17 @@ function PlaceDetails() {
         "Experienced guides"
       ]
     },
+    "Hamilton Dutch Canal": {
+  image: "/assets/img/hamilton-dutch-canal.jpg",
+  description: "The Hamilton Dutch Canal is a historic waterway that stretches from Negombo to Colombo, built during the Dutch colonial period in the 17th century. Originally constructed for the transportation of cinnamon and other goods, this canal stands as a testament to Sri Lanka's colonial engineering prowess.",
+  highlights: [
+    "Scenic boat rides through historic waterways",
+    "Traditional fishing communities along the banks",
+    "Colonial-era bridges and structures",
+    "Rich biodiversity with various bird species",
+    "Connection to Sri Lanka's spice trade history"
+  ]
+  },
     "Yala National Park Morning Safari": {
       image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       description: "Yala National Park, located in southeastern Sri Lanka, is the country's most visited and second-largest national park. It's renowned for its diverse ecosystems ranging from moist monsoon forests to freshwater and marine wetlands. The park is famous for having one of the highest leopard densities in the world, making it one of the best places to spot these elusive big cats. In addition to leopards, Yala is home to a wide variety of wildlife including elephants, sloth bears, crocodiles, and numerous bird species. The morning safari offers the best opportunity to spot wildlife as animals are most active during the cooler hours of the day. Experienced guides accompany visitors in 4x4 vehicles, helping them spot and identify wildlife in their natural habitat.",
