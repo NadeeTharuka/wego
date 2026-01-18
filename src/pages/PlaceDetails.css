@@ -1,24 +1,26 @@
 .place-details-container {
-    padding-top: 0; /* Remove top padding */
+    padding-top: 20px; /* Reduced space from navbar to content */
 }
 
 .place-details-image-container {
     width: 100%;
     position: relative;
-    margin-top: 80px; /* Add top margin to push image down below navbar */
+    margin-top: 20px; /* Reduced space between navbar and image */
     margin-bottom: 2rem;
 }
 
 .place-details-image {
     width: 100%;
-    height: 400px; /* Keep the original height you wanted */
+    height: auto; /* Changed from fixed 400px to auto */
+    max-height: 500px; /* Added max-height to prevent too tall images */
     display: block;
-    object-fit: cover; /* Use cover to fill the container while maintaining aspect ratio */
+    object-fit: contain; /* Changed from cover to contain - shows full image */
     object-position: center; /* Center the image within the container */
     image-rendering: -webkit-optimize-contrast; /* Improve rendering quality */
     image-rendering: crisp-edges;
     backface-visibility: hidden; /* Prevent blur on transforms */
     -webkit-backface-visibility: hidden;
+    margin-top: -30px; /* Pull image closer to navbar */
 }
 
 .place-details-content {
@@ -46,7 +48,7 @@
 .place-details-highlights-title {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #06A3DA;
+    color: #0d6efd;
     margin-bottom: 1rem;
 }
 
@@ -68,7 +70,7 @@
 }
 
 .place-details-highlights i {
-    color: #06A3DA;
+    color: #0d6efd;
     margin-right: 0.5rem;
 }
 
@@ -80,8 +82,8 @@
 
 .place-details-back-btn {
     background-color: transparent;
-    border: 1px solid #06A3DA;
-    color: #06A3DA;
+    border: 1px solid #0d6efd;
+    color: #0d6efd;
     padding: 0.5rem 1.5rem;
     border-radius: 30px;
     font-weight: 500;
@@ -92,13 +94,13 @@
 }
 
 .place-details-back-btn:hover {
-    background-color: #06A3DA;
+    background-color: #0d6efd;
     color: white;
     text-decoration: none;
 }
 
 .place-details-book-btn {
-    background-color: #06A3DA;
+    background: linear-gradient(45deg, #0d6efd, #0a58ca);
     border: none;
     color: white;
     padding: 0.5rem 1.5rem;
@@ -111,9 +113,9 @@
 }
 
 .place-details-book-btn:hover {
-    background-color: #0585B3;
+    background: linear-gradient(45deg, #0a58ca, #084298);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(6, 163, 218, 0.3);
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
     color: white;
     text-decoration: none;
 }
@@ -136,7 +138,7 @@
 }
 
 .not-found-back-btn {
-    background-color: #06A3DA;
+    background: linear-gradient(45deg, #0d6efd, #0a58ca);
     border: none;
     color: white;
     padding: 0.75rem 2rem;
