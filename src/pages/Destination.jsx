@@ -1359,12 +1359,17 @@ function Destination() {
           <div className="row">
             <div className="col-lg-8">
               <div className="tour-header mb-4">
-                <img
-                  src={selectedPackage.image}
-                  alt={selectedPackage.name}
-                  className="img-fluid rounded w-100 mb-4"
-                  style={{ height: '400px', objectFit: 'cover' }}
-                />
+  <img
+    src={selectedPackage.image}
+    alt={selectedPackage.name}
+    className="img-fluid rounded w-100 mb-4"
+style={{ 
+  height: '490px', 
+  width: '100%',
+  objectFit: 'cover', 
+  backgroundColor: '#f8f9fa' 
+}}
+/>
                 <div className="tour-title-section">
                   <h1 className="display-5 fw-bold text-primary mb-3">{selectedPackage.name}</h1>
                   <div className="tour-meta d-flex flex-wrap gap-4 mb-4">
