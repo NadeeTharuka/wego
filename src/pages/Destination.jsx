@@ -1273,6 +1273,23 @@ function Destination() {
     }
   };
 
+  // Check if an activity is part of the Colombo City Tour
+  const isColomboCityTourPlace = (activityName) => {
+    const colomboPlaces = [
+      "Gangaramaya Temple",
+      "Historic Fort Area",
+      "Galle Face Green",
+      "Old Dutch Church",
+      "Independence Square",
+      "Colombo National Museum",
+      "BMICH",
+      "Kelaniya Temple",
+      "Lotus Tower"
+    ];
+    
+    return colomboPlaces.includes(activityName);
+  };
+
   return (
     <div>
       <div className="container-fluid bg-primary py-5 mb-5 hero-header"
@@ -1448,9 +1465,22 @@ function Destination() {
                                       {isExpanded && (
                                         <div className="mt-2 ms-4 ps-3 border-start border-3 border-primary">
                                           {activity.subActivities.map((subActivity, subIndex) => (
-                                            <div key={subIndex} className="py-2 px-3 bg-white rounded mb-2 shadow-sm">
-                                              <i className="fa fa-check-circle text-success me-2"></i>
-                                              <span>{subActivity}</span>
+                                            <div key={subIndex} className="py-2 px-3 bg-white rounded mb-2 shadow-sm d-flex justify-content-between align-items-center">
+                                              <span>
+                                                <i className="fa fa-check-circle text-success me-2"></i>
+                                                {subActivity}
+                                              </span>
+                                              {/* Add + button for Colombo City Tour sub-activities */}
+                                              {activityName === "Colombo City Tour" && isColomboCityTourPlace(subActivity) && (
+                                                <button 
+                                                  className="btn btn-outline-primary btn-sm rounded-circle ms-2"
+                                                  onClick={() => handlePlaceClick(subActivity, dayIndex)}
+                                                  style={{ width: '30px', height: '30px', padding: '0' }}
+                                                  title="View Place Details"
+                                                >
+                                                  <i className="fa fa-plus"></i>
+                                                </button>
+                                              )}
                                             </div>
                                           ))}
                                         </div>
