@@ -73,9 +73,9 @@ function Header() {
           <h1 
             className="m-0 d-flex align-items-center"
             style={{
-              fontFamily: 'Playfair Display, Georgia, serif',
-              fontWeight: '700',
-              fontSize: '2.5rem',
+              fontFamily: "'Berkshire Swash', cursive",
+              fontWeight: '400',
+              fontSize: '3.0rem',
               letterSpacing: '1px',
               textTransform: 'capitalize',
               background: 'linear-gradient(45deg, #0d6efd, #0a58ca)',
