@@ -17,10 +17,9 @@
 
 .place-details-image {
     width: 100%;
-    height: auto; /* Changed from fixed 400px to auto */
-    max-height: 350px; /* Reduced from 500px to 350px - smaller image */
+    height: 440px; /* Reduced height for all images */
     display: block;
-    object-fit: contain; /* Changed from cover to contain - shows full image */
+    object-fit: cover; /* Cover to fill the entire box */
     object-position: center; /* Center the image within the container */
     image-rendering: -webkit-optimize-contrast; /* Improve rendering quality */
     image-rendering: crisp-edges;
@@ -28,6 +27,7 @@
     -webkit-backface-visibility: hidden;
     margin-top: -20px; /* Pull image closer to navbar */
 }
+
 
 .place-details-content {
     background-color: white;
