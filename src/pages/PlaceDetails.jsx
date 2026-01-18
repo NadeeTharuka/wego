@@ -458,7 +458,7 @@ function PlaceDetails() {
       ]
     },
     "Ravana Waterfall": {
-      image: "/assets/img/ravana-falls.jpg",
+      image: "/assets/img/ramboda-fall.jpg",
       description: "Ravana Waterfall, located near Ella in Sri Lanka, is one of the island's most popular and picturesque waterfalls. With a height of approximately 25 meters, it cascades down a series of rock formations, creating a beautiful natural spectacle. The waterfall is named after the legendary King Ravana from the Hindu epic Ramayana, who is said to have used this area as a hiding place. Surrounded by lush greenery and tea plantations, the waterfall offers a serene environment for visitors. The natural pool at the base of the falls is perfect for a refreshing swim, and the area is a popular spot for photography, especially during the rainy season when the water flow is at its peak.",
       highlights: [
         "Waterfall Views",
@@ -467,6 +467,18 @@ function PlaceDetails() {
         "Ramayana Legend",
         "Scenic Beauty",
         "Refreshing Swim"
+      ]
+    },
+    "Ramboda Waterfall": {
+      image: "/assets/img/ramboda-fall.jpg",
+      description: "Ramboda Falls is a stunning waterfall located between Nuwara Eliya and Kandy, visible from the A5 highway. It cascades down in multiple steps from a height of 109 meters. The waterfall is surrounded by dense forests and tea plantations, creating a picturesque landscape. There's a viewpoint near the highway where visitors can stop to admire the falls, and a more adventurous path leads closer to the base for a more immersive experience.",
+      highlights: [
+        "109-meter high waterfall",
+        "Multiple-step cascade",
+        "Highway visibility",
+        "Dense forest surroundings",
+        "Tea plantation backdrop",
+        "Viewpoint access"
       ]
     },
     "Ravana Cave (Optional)": {
