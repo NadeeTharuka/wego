@@ -821,20 +821,11 @@ function Destination() {
             "Overnight in Hikkaduwa"
           ]
         },
-        {
+         {
           day: "Day 06",
-          title: "Hikkaduwa → Colombo",
+          title: "Hikkaduwa â†' Colombo",
           activities: [
-            {
-              name: "Turtle Conservation Project",
-              isExpandable: true,
-              subActivities: [
-                "Turtle Conservation Education",
-                "Baby Turtle Viewing",
-                "Release Ceremony",
-                "Multiple Turtle Species"
-              ]
-            },
+            "Sea Turtle Hatchery",
             {
               name: "Madu River Boat Safari",
               isExpandable: true,
