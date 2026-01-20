@@ -899,6 +899,18 @@ function PlaceDetails() {
         "Experienced guides"
       ]
     },
+    "Yala Safari Adventure": {
+      image: "/assets/img/yala-safari-adventure.jpg",
+      description: "Yala National Park, located in southeastern Sri Lanka, is the country's most visited and second-largest national park. It's renowned for its diverse ecosystems ranging from moist monsoon forests to freshwater and marine wetlands. The park is famous for having one of the highest leopard densities in the world, making it one of the best places to spot these elusive big cats. In addition to leopards, Yala is home to a wide variety of wildlife including elephants, sloth bears, crocodiles, and numerous bird species. The park offers both morning and afternoon safari experiences in 4x4 vehicles with experienced guides who help visitors spot and identify wildlife in their natural habitat.",
+      highlights: [
+        "Leopard Spotting",
+        "Elephant Herds",
+        "Bird Watching",
+        "Wildlife Photography",
+        "Diverse ecosystems",
+        "Experienced guides"
+      ]
+    },
     "Hamilton Dutch Canal": {
   image: "/assets/img/hamilton-dutch-canal.jpg",
   description: "The Hamilton Dutch Canal is a historic waterway that stretches from Negombo to Colombo, built during the Dutch colonial period in the 17th century. Originally constructed for the transportation of cinnamon and other goods, this canal stands as a testament to Sri Lanka's colonial engineering prowess.",
