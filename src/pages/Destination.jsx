@@ -826,16 +826,7 @@ function Destination() {
           title: "Hikkaduwa â†' Colombo",
           activities: [
             "Sea Turtle Hatchery",
-            {
-              name: "Madu River Boat Safari",
-              isExpandable: true,
-              subActivities: [
-                "Mangrove Exploration",
-                "Island Temple Visit",
-                "Cinnamon Garden Visit",
-                "Bird Watching"
-              ]
-            },
+            "Madu River Boat Safari",
             {
               name: "Cinnamon Garden Visit",
               isExpandable: true,
