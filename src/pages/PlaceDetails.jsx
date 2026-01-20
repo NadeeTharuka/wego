@@ -719,6 +719,24 @@ function PlaceDetails() {
         "Cinnamon plantations"
       ]
     },
+    "Madu River Boat Safari": {
+      image: "/assets/img/madhu-river-boat-safari.jpg",
+      description: "The Madu River boat safari in Balapitiya, Sri Lanka, is a tranquil eco-tourism experience that takes visitors through a stunning wetland ecosystem. The river meanders through dense mangrove forests, creating a network of waterways and small islands. During the safari, you'll glide past lush vegetation, spot various bird species including kingfishers, cormorants, and herons, and observe monitor lizards basking on riverbanks. The tour includes visits to small islands with attractions such as the ancient Kothduwa Temple, cinnamon plantations where you can see traditional harvesting methods, and fish therapy centers where tiny fish naturally exfoliate your feet. Local boatmen share insights about the ecosystem, traditional fishing methods, and the importance of mangrove conservation. The river is home to over 300 species of plants and 248 species of vertebrate animals, making it a biodiversity hotspot. The peaceful atmosphere, combined with the unique blend of nature and culture, makes the Madu River boat safari a must-do activity on Sri Lanka's southern coast.",
+      highlights: [
+        "Dense mangrove forest ecosystems",
+        "Rich biodiversity with over 300 plant species",
+        "248 species of vertebrate animals",
+        "Bird watching - kingfishers, cormorants, herons",
+        "Visit to ancient Kothduwa Temple on island",
+        "Traditional cinnamon plantation tours",
+        "Natural fish therapy experience",
+        "Monitor lizard sightings",
+        "Traditional fishing methods demonstration",
+        "Peaceful wetland scenery",
+        "Eco-tourism and conservation education",
+        "Local boatmen guides"
+      ]
+    },
     "Cinnamon Garden Visit": {
       image: "/assets/img/cinnamon-garden.jpg",
       description: "A Cinnamon Garden Visit in Sri Lanka offers a unique insight into one of the island's most prized exports – Ceylon Cinnamon. Visitors can stroll through aromatic plantations, where cinnamon trees thrive along the southern coastal belt. During the tour, you'll witness the age-old art of peeling and preparing cinnamon, a skill passed down through generations. The visit also highlights the spice's cultural and historical importance, once sought after by traders from around the world. Guests can enjoy the rich aroma, taste cinnamon-infused teas and dishes, and explore its use in oils, medicine, and cosmetics. It's an immersive experience that blends history, culture, and flavor in the heart of Sri Lanka.",
