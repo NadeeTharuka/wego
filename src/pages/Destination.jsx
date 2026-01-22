@@ -302,6 +302,9 @@ function Destination() {
     "Koneswaram Temple": {
       image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Polonnaruwa Ancient Kingdom Exploration": {
+  image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+},
     "Pigeon Island National Park": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -373,33 +376,24 @@ function Destination() {
           ]
         },
         {
-          day: "Day 02",
-          title: "Sigiriya → Polonnaruwa → Habarana",
-          activities: [
-            "Sigiriya Lion Rock Fortress - UNESCO World Heritage Site",
-            {
-              name: "Polonnaruwa Ancient Kingdom Exploration",
-              isExpandable: true,
-              subActivities: [
-                "Bicycle Tour Option",
-                "Car Tour Option",
-                "Gal Vihara Rock Temple",
-                "Royal Palace Ruins"
-              ]
-            },
-            {
-              name: "Minneriya/Kaudulla/Eco Park Wild Safari",
-              isExpandable: true,
-              subActivities: [
-                "Elephant Gathering",
-                "Wildlife Photography",
-                "Bird Watching",
-                "Jeep Safari Experience"
-              ]
-            },
-            "Overnight in Habarana"
-          ]
-        },
+  day: "Day 02",
+  title: "Sigiriya → Polonnaruwa → Habarana",
+  activities: [
+    "Sigiriya Lion Rock Fortress - UNESCO World Heritage Site",
+    "Polonnaruwa Ancient Kingdom Exploration",
+    {
+      name: "Minneriya/Kaudulla/Eco Park Wild Safari",
+      isExpandable: true,
+      subActivities: [
+        "Elephant Gathering",
+        "Wildlife Photography",
+        "Bird Watching",
+        "Jeep Safari Experience"
+      ]
+    },
+    "Overnight in Habarana"
+  ]
+},
         {
           day: "Day 03",
           title: "Habarana → Kandy",
