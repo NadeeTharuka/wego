@@ -73,6 +73,22 @@ function PlaceDetails() {
         "Cultural significance"
       ]
     },
+    "Colonial Town exploration": {
+  image: "/assets/img/nuwara-eliya-colonial.jpg",
+  description: "Nuwara Eliya, often called 'Little England,' is a charming colonial hill station nestled in the heart of Sri Lanka's central highlands at 1,868 meters above sea level. Founded by British colonial planters in the 19th century, the town retains its colonial character with Victorian-style buildings, manicured gardens, and a cool temperate climate reminiscent of the English countryside. A colonial town exploration takes you through the town's historic center, showcasing landmarks such as the Grand Hotel (built in 1891), the Hill Club with its colonial-era traditions, the old British Governor's residence, and the picturesque Victoria Park.",
+  highlights: [
+    "Victorian-era architecture and buildings",
+    "Grand Hotel - historic colonial landmark built in 1891",
+    "Hill Club with traditional colonial customs",
+    "Tudor-style cottages and English gardens",
+    "Historic Nuwara Eliya Golf Club",
+    "Victoria Park with manicured gardens",
+    "Gregory Lake created during British era",
+    "Queen's Cottage - colonial residence",
+    "Cool temperate climate year-round",
+    "Colonial-era markets with fresh produce"
+  ]
+},
     "Independence Square": {
       image: "/assets/img/independence-square.jpg",
       description: "The Independence Square in Colombo, Sri Lanka, is a historic site dedicated to the country's independence from British rule in 1948. This iconic landmark features a grand monument, with a central pavilion where important events are held. Surrounded by lush gardens and a tranquil atmosphere, it is a symbol of Sri Lanka's freedom and national pride. The square is a popular spot for both locals and tourists, offering a blend of history, culture, and scenic beauty.",
@@ -229,6 +245,7 @@ function PlaceDetails() {
         "Scenic hillside location"
       ]
     },
+   
     "Dambulla Royal Cave Temple and Golden Temple": {
       image: "/assets/img/dambulla-cave-temple.jpg",
       description: "Dambulla is a commercial town in Sri Lanka, located 20 km south of Habarana and 55 km north of Matale, known for hosting the country's largest produce market. Its most famous attractions are the Dambulla Cave Temples and the Golden Temple, both of which are part of one of Sri Lanka's eight UNESCO World Heritage Sites. The Dambulla heritage site has a history that spans from prehistoric times to the modern era. The Dambulla Cave Temples, located near the geographical center of the island, are a significant cultural treasure. Dating back to the 1st century BCE, these caves are renowned for their exquisite Sinhala art and sculpture. The complex includes five caves beneath a vast overhanging rock, with intricately painted ceilings and images of Lord Buddha, Bodhisattvas, and various deities. These caves were developed during the Anuradhapura and Polonnaruwa periods and are among the most impressive cave temples in Sri Lanka. Visitors to Dambulla can also explore the nearby ironwood forest, rose quartz mountain, and a megalithic cemetery, making it a worthwhile stop on the way to Sigiriya.",
