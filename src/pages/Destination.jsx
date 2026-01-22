@@ -118,6 +118,9 @@ function Destination() {
     "Sigiriya Village Tour": {
       image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Colonial Town exploration": {
+      image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
     "Matale Spice Garden": {
       image: "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -925,15 +928,15 @@ function Destination() {
           ]
         },
         {
-          day: "Day 05",
-          title: "Kandy → Nuwara Eliya",
-          activities: [
-            "Tea Plantation Visit with factory visit",
-            "Colonial Town exploration",
-            "Tea-picking experience",
-            "Overnight in Nuwara Eliya"
-          ]
-        },
+  day: "Day 05",
+  title: "Kandy → Nuwara Eliya",
+  activities: [
+    "Tea Plantation Visit with factory visit",
+    "Colonial Town exploration",
+    "Tea-picking experience",
+    "Overnight in Nuwara Eliya"
+  ]
+},
         {
           day: "Day 06",
           title: "Nuwara Eliya → Udawalawe",
