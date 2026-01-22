@@ -73,6 +73,27 @@ function PlaceDetails() {
         "Cultural significance"
       ]
     },
+    "Polonnaruwa Ancient Kingdom Exploration": {
+  image: "/assets/img/polonnaruwa-ancient-kingdom.jpg",
+  description: "Polonnaruwa Ancient Kingdom Exploration offers an immersive journey through one of Sri Lanka's most magnificent medieval capitals. As the second capital of Sri Lanka after Anuradhapura, Polonnaruwa flourished from the 11th to 13th centuries under the rule of great kings like Parakramabahu I and Nissanka Malla. This UNESCO World Heritage Site spans over 122 hectares and showcases remarkable examples of ancient urban planning, hydraulic engineering, and artistic achievement. The exploration can be done by bicycle or car, allowing visitors to cover the extensive archaeological park at their own pace. Highlights include the iconic Gal Vihara with its four magnificent Buddha statues carved from a single granite rock face, the Royal Palace complex with its impressive audience hall, the Quadrangle (Dalada Maluwa) containing eight significant structures including the Vatadage circular relic house, and the Lankathilaka temple with its towering brick walls. The Parakrama Samudra, a massive ancient reservoir built by King Parakramabahu I, demonstrates the advanced irrigation systems of the era. Other notable sites include the Rankot Vihara stupa, Kiri Vihara, and numerous Hindu temples reflecting the religious harmony of the period. The well-preserved ruins, detailed stone carvings, and moonstone entrances provide insight into the grandeur of medieval Sinhalese civilization. Exploring Polonnaruwa is like walking through a living museum where every stone tells a story of ancient glory, royal ambition, and architectural brilliance.",
+  highlights: [
+    "UNESCO World Heritage Site from 11th-13th century",
+    "Explore by bicycle or car through 122-hectare park",
+    "Gal Vihara - Four magnificent Buddha statues in granite",
+    "Royal Palace complex with impressive ruins",
+    "Quadrangle (Dalada Maluwa) with 8 significant structures",
+    "Vatadage - Circular relic house with intricate carvings",
+    "Lankathilaka temple with towering brick walls",
+    "Parakrama Samudra - Massive ancient reservoir",
+    "Rankot Vihara - Fourth largest stupa in Sri Lanka",
+    "Kiri Vihara - Well-preserved white stupa",
+    "Hindu temples showing religious harmony",
+    "Detailed moonstones and stone carvings",
+    "Ancient urban planning and architecture",
+    "King Parakramabahu I statue and legacy",
+    "Medieval Sinhalese civilization showcase"
+  ]
+},
     "Colonial Town exploration": {
   image: "/assets/img/nuwara-eliya-colonial.jpg",
   description: "Nuwara Eliya, often called 'Little England,' is a charming colonial hill station nestled in the heart of Sri Lanka's central highlands at 1,868 meters above sea level. Founded by British colonial planters in the 19th century, the town retains its colonial character with Victorian-style buildings, manicured gardens, and a cool temperate climate reminiscent of the English countryside. A colonial town exploration takes you through the town's historic center, showcasing landmarks such as the Grand Hotel (built in 1891), the Hill Club with its colonial-era traditions, the old British Governor's residence, and the picturesque Victoria Park.",
