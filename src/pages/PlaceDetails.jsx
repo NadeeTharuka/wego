@@ -101,6 +101,24 @@ function PlaceDetails() {
     "Breathtaking highland scenery"
   ]
 },
+"Nuwara Eliya walking city tour": {
+  image: "/assets/img/nuwara-eliya-city-tour.jpg",
+  description: "A Nuwara Eliya walking city tour takes you through the heart of Sri Lanka's hill country, known as 'Little England' for its cool climate, colonial buildings, and neatly kept gardens. Founded by British colonial planters in the 19th century, the town retains its colonial character with Victorian-style buildings, manicured gardens, and a cool temperate climate reminiscent of the English countryside. The walking tour showcases the town's historic center with landmarks such as the Grand Hotel (built in 1891), the Hill Club with its colonial-era traditions, the old British Governor's residence, and the picturesque Victoria Park. You'll stroll past Tudor-style cottages with their well-maintained English gardens, visit the historic Nuwara Eliya Golf Club (one of the oldest in Asia), and explore the colonial-era post office. The tour includes visits to Gregory Lake, the vibrant local markets selling fresh vegetables and flowers, and Queen's Cottage. The cool misty weather, combined with the colonial architecture and beautifully landscaped gardens, creates an atmosphere that truly feels like stepping back in time to the British Raj era.",
+  highlights: [
+    "Victorian-era architecture and buildings",
+    "Grand Hotel - historic colonial landmark built in 1891",
+    "Hill Club with traditional colonial customs",
+    "Tudor-style cottages and English gardens",
+    "Historic Nuwara Eliya Golf Club (oldest in Asia)",
+    "Victoria Park with manicured gardens",
+    "Gregory Lake and waterfront area",
+    "Queen's Cottage - colonial residence",
+    "Cool temperate climate year-round",
+    "Colonial-era post office and markets",
+    "Fresh produce markets with local flowers",
+    "'Little England' atmosphere and charm"
+  ]
+},
 "Gregory Lake": {
   image: "/assets/img/gregory-lake.jpg",
   description: "Gregory Lake is a picturesque man-made lake located in the heart of Nuwara Eliya, Sri Lanka's premier hill station. Built in 1873 during the British colonial era by Governor Sir William Gregory, the lake was created by damming a tributary of the Uma Oya. Surrounded by lush green hills, manicured gardens, and colonial-era buildings, Gregory Lake offers a serene escape with stunning mountain views. The lake is a popular recreational spot where visitors can enjoy various activities including boating (pedal boats, swan boats, and motor boats), jet skiing, pony rides, and leisurely walks along the lakeside promenade. The surrounding Gregory Park features beautifully maintained gardens, children's play areas, and picnic spots perfect for families. The lake comes alive during the Sinhala and Tamil New Year in April with boat races and cultural festivities. Early morning mists create a magical atmosphere, making it ideal for photography. The cool climate, scenic beauty, and recreational facilities make Gregory Lake a must-visit attraction in Nuwara Eliya.",
@@ -361,6 +379,18 @@ function PlaceDetails() {
     },
      "Sigiriya Village Tour": {
       image: "/assets/img/village-tours.jpg",
+      description: "Village tours in Sigiriya offer a glimpse into traditional Sri Lankan rural life. These tours typically include a bullock cart ride, a boat ride on a serene lake, and a walk-through paddy fields and local farms. Visitors can experience traditional cooking, visit a village home, and interact with local villagers, learning about their customs and daily activities. The tours provide an authentic cultural experience, set against the backdrop of Sigiriya's natural beauty, including the iconic Sigiriya Rock Fortress.",
+      highlights: [
+        "Bullock cart ride",
+        "Traditional cooking class",
+        "Boat ride on village lake",
+        "Walk through paddy fields",
+        "Village home visit",
+        "Cultural interaction"
+      ]
+    },
+      "Village Tour": {
+      image: "/assets/img/village-tour.jpg",
       description: "Village tours in Sigiriya offer a glimpse into traditional Sri Lankan rural life. These tours typically include a bullock cart ride, a boat ride on a serene lake, and a walk-through paddy fields and local farms. Visitors can experience traditional cooking, visit a village home, and interact with local villagers, learning about their customs and daily activities. The tours provide an authentic cultural experience, set against the backdrop of Sigiriya's natural beauty, including the iconic Sigiriya Rock Fortress.",
       highlights: [
         "Bullock cart ride",
