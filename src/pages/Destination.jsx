@@ -232,6 +232,9 @@ function Destination() {
     "Colombo National Museum": {
       image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Nuwara Eliya walking city tour": {
+  image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+},
     "St. Mary's Church": {
       image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -286,9 +289,7 @@ function Destination() {
     "Temple of Tooth Relic": {
       image: "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
-    "Overnight in Kandy": {
-      image: "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
+   
     // NEW ADDITIONS
     "Matale Hindu Temple": {
       image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
