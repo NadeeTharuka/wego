@@ -1519,7 +1519,7 @@ function PlaceDetails() {
       ]
     },
     "Beach Leisure/Water Sports at Pasikuda": {
-      image: "/assets/img/beach-leisure-pasikuda.jpg",
+      image: "/assets/img/beach-pasikuda.jpg",
       description: "Pasikuda Bay, located on Sri Lanka's east coast, is a pristine tropical paradise renowned for its calm, turquoise waters and one of the longest stretches of shallow reef-lined coastlines in the world. The bay's unique geography creates a natural swimming pool-like environment with waters rarely exceeding waist-deep for hundreds of meters, making it ideal for families and safe swimming enthusiasts. The beach offers a perfect blend of relaxation and adventure, with opportunities for sunbathing on the soft golden sand, beach volleyball, and building sandcastles. Water sports enthusiasts can enjoy jet skiing, banana boat rides, windsurfing, and kayaking in the protected waters. The area also features some of Sri Lanka's best snorkeling spots, with vibrant coral reefs teeming with colorful marine life just offshore. Several luxury resorts and boutique hotels line the beach, offering world-class amenities, spa treatments, and exquisite dining experiences with fresh seafood. The bay is particularly beautiful during sunrise and sunset, creating perfect opportunities for photography and romantic walks along the shore.",
       highlights: [
         "One of the world's longest shallow reef coastlines",
