@@ -262,6 +262,9 @@ function Destination() {
     "Thissamaharama Lake": {
       image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Minneriya/Kaudulla/Eco Park Wild Safari": {
+  image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+},
     "Overnight in Yala": {
       image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -375,22 +378,13 @@ function Destination() {
             "Overnight in Sigiriya (Activities depend on arrival time)"
           ]
         },
-        {
+     {
   day: "Day 02",
   title: "Sigiriya → Polonnaruwa → Habarana",
   activities: [
     "Sigiriya Lion Rock Fortress - UNESCO World Heritage Site",
     "Polonnaruwa Ancient Kingdom Exploration",
-    {
-      name: "Minneriya/Kaudulla/Eco Park Wild Safari",
-      isExpandable: true,
-      subActivities: [
-        "Elephant Gathering",
-        "Wildlife Photography",
-        "Bird Watching",
-        "Jeep Safari Experience"
-      ]
-    },
+    "Minneriya/Kaudulla/Eco Park Wild Safari",
     "Overnight in Habarana"
   ]
 },
