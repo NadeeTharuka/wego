@@ -101,6 +101,22 @@ function PlaceDetails() {
     "Breathtaking highland scenery"
   ]
 },
+"Gregory Lake": {
+  image: "/assets/img/gregory-lake.jpg",
+  description: "Gregory Lake is a picturesque man-made lake located in the heart of Nuwara Eliya, Sri Lanka's premier hill station. Built in 1873 during the British colonial era by Governor Sir William Gregory, the lake was created by damming a tributary of the Uma Oya. Surrounded by lush green hills, manicured gardens, and colonial-era buildings, Gregory Lake offers a serene escape with stunning mountain views. The lake is a popular recreational spot where visitors can enjoy various activities including boating (pedal boats, swan boats, and motor boats), jet skiing, pony rides, and leisurely walks along the lakeside promenade. The surrounding Gregory Park features beautifully maintained gardens, children's play areas, and picnic spots perfect for families. The lake comes alive during the Sinhala and Tamil New Year in April with boat races and cultural festivities. Early morning mists create a magical atmosphere, making it ideal for photography. The cool climate, scenic beauty, and recreational facilities make Gregory Lake a must-visit attraction in Nuwara Eliya.",
+  highlights: [
+    "Built in 1873 during British colonial era",
+    "Picturesque man-made lake with mountain views",
+    "Boating activities - pedal boats, swan boats, motor boats",
+    "Jet skiing and water sports",
+    "Pony rides around the lake",
+    "Beautiful Gregory Park with gardens",
+    "Lakeside promenade for walks",
+    "Photography paradise with morning mists",
+    "Cultural festivities during New Year",
+    "Cool climate and serene atmosphere"
+  ]
+},
     "Polonnaruwa Ancient Kingdom Exploration": {
   image: "/assets/img/polonnaruwa-ancient-kingdom.jpg",
   description: "Polonnaruwa Ancient Kingdom Exploration offers an immersive journey through one of Sri Lanka's most magnificent medieval capitals. As the second capital of Sri Lanka after Anuradhapura, Polonnaruwa flourished from the 11th to 13th centuries under the rule of great kings like Parakramabahu I and Nissanka Malla. This UNESCO World Heritage Site spans over 122 hectares and showcases remarkable examples of ancient urban planning, hydraulic engineering, and artistic achievement. The exploration can be done by bicycle or car, allowing visitors to cover the extensive archaeological park at their own pace. Highlights include the iconic Gal Vihara with its four magnificent Buddha statues carved from a single granite rock face, the Royal Palace complex with its impressive audience hall, the Quadrangle (Dalada Maluwa) containing eight significant structures including the Vatadage circular relic house, and the Lankathilaka temple with its towering brick walls. The Parakrama Samudra, a massive ancient reservoir built by King Parakramabahu I, demonstrates the advanced irrigation systems of the era. Other notable sites include the Rankot Vihara stupa, Kiri Vihara, and numerous Hindu temples reflecting the religious harmony of the period. The well-preserved ruins, detailed stone carvings, and moonstone entrances provide insight into the grandeur of medieval Sinhalese civilization. Exploring Polonnaruwa is like walking through a living museum where every stone tells a story of ancient glory, royal ambition, and architectural brilliance.",
