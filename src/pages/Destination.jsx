@@ -330,6 +330,9 @@ function Destination() {
     "Dondra Lighthouse": {
       image: "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Horton Plains National Park": {
+  image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+},
     "Mirissa Beach Relaxation": {
       image: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -415,33 +418,24 @@ function Destination() {
   ]
 },
         {
-          day: "Day 05",
-          title: "Nuwara Eliya → Ella",
-          activities: [
-            {
-              name: "Horton Plains National Park",
-              isExpandable: true,
-              subActivities: [
-                "World's End Viewpoint",
-                "Baker's Falls",
-                "Highland Ecosystem Trekking",
-                "Endemic Flora & Fauna"
-              ]
-            },
-            {
-              name: "Blue Train Journey - Nanu Oya to Ella",
-              isExpandable: true,
-              subActivities: [
-                "World's Most Scenic Train Ride",
-                "Tea Plantation Panoramic Views",
-                "Mountain Landscapes",
-                "Photography Paradise"
-              ]
-            },
-            "Nine Arch Bridge",
-            "Overnight in Ella"
-          ]
-        },
+  day: "Day 05",
+  title: "Nuwara Eliya → Ella",
+  activities: [
+    "Horton Plains National Park",
+    {
+      name: "Blue Train Journey - Nanu Oya to Ella",
+      isExpandable: true,
+      subActivities: [
+        "World's Most Scenic Train Ride",
+        "Tea Plantation Panoramic Views",
+        "Mountain Landscapes",
+        "Photography Paradise"
+      ]
+    },
+    "Nine Arch Bridge",
+    "Overnight in Ella"
+  ]
+},
         {
           day: "Day 06",
           title: "Ella Full Day Exploration",
