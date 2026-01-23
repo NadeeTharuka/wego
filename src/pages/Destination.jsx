@@ -302,6 +302,9 @@ function Destination() {
     "Beach Leisure/Water Sports at Pasikuda": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Tea Factory & Tea Plantation Tour": {
+  image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+},
     "Koneswaram Temple": {
       image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -401,25 +404,16 @@ function Destination() {
           ]
         },
         {
-          day: "Day 04",
-          title: "Kandy → Nuwara Eliya",
-          activities: [
-            "Peradeniya Botanical Garden",
-            "Ramboda Waterfall",
-            {
-              name: "Tea Factory & Tea Plantation Tour",
-              isExpandable: true,
-              subActivities: [
-                "Tea Plucking Experience",
-                "Factory Visit & Processing",
-                "Tea Tasting Session",
-                "Learn Traditional Tea Making"
-              ]
-            },
-            "Walking City Tour of Nuwara Eliya",
-            "Overnight in Nuwara Eliya"
-          ]
-        },
+  day: "Day 04",
+  title: "Kandy → Nuwara Eliya",
+  activities: [
+    "Peradeniya Botanical Garden",
+    "Ramboda Waterfall",
+    "Tea Factory & Tea Plantation Tour",
+    "Walking City Tour of Nuwara Eliya",
+    "Overnight in Nuwara Eliya"
+  ]
+},
         {
           day: "Day 05",
           title: "Nuwara Eliya → Ella",
