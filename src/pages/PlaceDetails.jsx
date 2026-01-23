@@ -73,6 +73,20 @@ function PlaceDetails() {
         "Cultural significance"
       ]
     },
+    "Minneriya/Kaudulla/Eco Park Wild Safari": {
+  image: "/assets/img/minneriya-wild-safari.jpg",
+  description: "The Minneriya/Kaudulla/Eco Park Wild Safari offers an unforgettable wildlife experience in Sri Lanka's North Central Province. These three national parks are renowned for hosting one of the world's most spectacular wildlife phenomena - 'The Gathering,' where hundreds of Asian elephants congregate during the dry season (July to October) around the ancient reservoirs. Minneriya National Park is famous for its large elephant gatherings, Kaudulla offers excellent leopard and sloth bear sightings, while Eco Park provides a more intimate wildlife experience with diverse bird species. The safari takes you through diverse landscapes including dry zone forests, grasslands, and wetlands, home to elephants, leopards, sloth bears, sambar deer, wild buffalo, and over 160 species of birds. Experienced guides and drivers help track wildlife and share insights about animal behavior and conservation efforts. The best time for safaris is early morning or late afternoon when animals are most active.",
+  highlights: [
+    "Witness 'The Gathering' of hundreds of elephants",
+    "Three premier national parks in one experience",
+    "Excellent leopard and sloth bear sightings",
+    "Diverse ecosystems and landscapes",
+    "Over 160 bird species",
+    "Ancient reservoirs and historical sites",
+    "Experienced wildlife guides",
+    "Best viewing times: early morning and late afternoon"
+  ]
+},
     "Polonnaruwa Ancient Kingdom Exploration": {
   image: "/assets/img/polonnaruwa-ancient-kingdom.jpg",
   description: "Polonnaruwa Ancient Kingdom Exploration offers an immersive journey through one of Sri Lanka's most magnificent medieval capitals. As the second capital of Sri Lanka after Anuradhapura, Polonnaruwa flourished from the 11th to 13th centuries under the rule of great kings like Parakramabahu I and Nissanka Malla. This UNESCO World Heritage Site spans over 122 hectares and showcases remarkable examples of ancient urban planning, hydraulic engineering, and artistic achievement. The exploration can be done by bicycle or car, allowing visitors to cover the extensive archaeological park at their own pace. Highlights include the iconic Gal Vihara with its four magnificent Buddha statues carved from a single granite rock face, the Royal Palace complex with its impressive audience hall, the Quadrangle (Dalada Maluwa) containing eight significant structures including the Vatadage circular relic house, and the Lankathilaka temple with its towering brick walls. The Parakrama Samudra, a massive ancient reservoir built by King Parakramabahu I, demonstrates the advanced irrigation systems of the era. Other notable sites include the Rankot Vihara stupa, Kiri Vihara, and numerous Hindu temples reflecting the religious harmony of the period. The well-preserved ruins, detailed stone carvings, and moonstone entrances provide insight into the grandeur of medieval Sinhalese civilization. Exploring Polonnaruwa is like walking through a living museum where every stone tells a story of ancient glory, royal ambition, and architectural brilliance.",
