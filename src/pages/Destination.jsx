@@ -265,9 +265,6 @@ function Destination() {
     "Minneriya/Kaudulla/Eco Park Wild Safari": {
   image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
 },
-    "Overnight in Yala": {
-      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
     "Buduruwagala Rock Temple": {
       image: "https://images.unsplash.com/photo-1596428669978-1a27c8c7b5a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
