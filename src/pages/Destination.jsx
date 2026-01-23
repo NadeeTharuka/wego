@@ -247,6 +247,9 @@ function Destination() {
     "Peradeniya Botanical Garden": {
       image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Gregory Lake": {
+  image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+},
     "Rumassala": {
       image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -1043,33 +1046,24 @@ function Destination() {
           ]
         },
         {
-          day: "Day 06",
-          title: "Ella → Nuwara Eliya",
-          activities: [
-            {
-              name: "Blue Train Journey",
-              isExpandable: true,
-              subActivities: [
-                "Scenic Train Ride",
-                "Tea Plantation Views",
-                "Mountain Landscapes",
-                "Photography Paradise"
-              ]
-            },
-            {
-              name: "Gregory Lake",
-              isExpandable: true,
-              subActivities: [
-                "Boating Activities",
-                "Lakeside Walking",
-                "Scenic Views",
-                "Relaxation"
-              ]
-            },
-            "Nuwara Eliya walking city tour",
-            "Overnight in Nuwara Eliya"
-          ]
-        },
+  day: "Day 06",
+  title: "Ella → Nuwara Eliya",
+  activities: [
+    {
+      name: "Blue Train Journey",
+      isExpandable: true,
+      subActivities: [
+        "Scenic Train Ride",
+        "Tea Plantation Views",
+        "Mountain Landscapes",
+        "Photography Paradise"
+      ]
+    },
+    "Gregory Lake",
+    "Nuwara Eliya walking city tour",
+    "Overnight in Nuwara Eliya"
+  ]
+},
         {
           day: "Day 07",
           title: "Nuwara Eliya → Kandy",
