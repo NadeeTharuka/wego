@@ -87,6 +87,20 @@ function PlaceDetails() {
     "Best viewing times: early morning and late afternoon"
   ]
 },
+"Tea Factory & Tea Plantation Tour": {
+  image: "/assets/img/tea-plantation-factory.jpg",
+  description: "Sri Lanka's tea story dates back to the 19th century, when British planter James Taylor introduced tea cultivation in 1867 in Kandy. What began as a small experiment soon transformed the island into one of the world's leading tea exporters, giving birth to the world-renowned 'Ceylon Tea.' Today, the rolling green plantations remain an iconic part of the central highlands. A visit to a tea plantation and factory lets you walk through these scenic landscapes, learn the art of tea plucking, and explore the fascinating process of tea production—from withering and rolling to drying and grading. The experience often concludes with a tea tasting session, where you can enjoy the rich flavors of authentic Ceylon Tea while overlooking breathtaking mountain views. You'll witness firsthand how tea leaves are carefully handpicked by skilled workers, processed through traditional machinery, and transformed into the aromatic beverage enjoyed worldwide.",
+  highlights: [
+    "Historic tea cultivation since 1867",
+    "Scenic tea plantations with mountain views",
+    "Hands-on tea plucking demonstration",
+    "Complete tea production process tour",
+    "Tea tasting session with authentic Ceylon Tea",
+    "Learn traditional tea making methods",
+    "Factory visit with machinery demonstrations",
+    "Breathtaking highland scenery"
+  ]
+},
     "Polonnaruwa Ancient Kingdom Exploration": {
   image: "/assets/img/polonnaruwa-ancient-kingdom.jpg",
   description: "Polonnaruwa Ancient Kingdom Exploration offers an immersive journey through one of Sri Lanka's most magnificent medieval capitals. As the second capital of Sri Lanka after Anuradhapura, Polonnaruwa flourished from the 11th to 13th centuries under the rule of great kings like Parakramabahu I and Nissanka Malla. This UNESCO World Heritage Site spans over 122 hectares and showcases remarkable examples of ancient urban planning, hydraulic engineering, and artistic achievement. The exploration can be done by bicycle or car, allowing visitors to cover the extensive archaeological park at their own pace. Highlights include the iconic Gal Vihara with its four magnificent Buddha statues carved from a single granite rock face, the Royal Palace complex with its impressive audience hall, the Quadrangle (Dalada Maluwa) containing eight significant structures including the Vatadage circular relic house, and the Lankathilaka temple with its towering brick walls. The Parakrama Samudra, a massive ancient reservoir built by King Parakramabahu I, demonstrates the advanced irrigation systems of the era. Other notable sites include the Rankot Vihara stupa, Kiri Vihara, and numerous Hindu temples reflecting the religious harmony of the period. The well-preserved ruins, detailed stone carvings, and moonstone entrances provide insight into the grandeur of medieval Sinhalese civilization. Exploring Polonnaruwa is like walking through a living museum where every stone tells a story of ancient glory, royal ambition, and architectural brilliance.",
