@@ -803,7 +803,7 @@ function Destination() {
         },
          {
           day: "Day 06",
-          title: "Hikkaduwa â†' Colombo",
+          title: "Hikkaduwa → Colombo",
           activities: [
             "Sea Turtle Hatchery",
             "Madu River Boat Safari",
@@ -1680,7 +1680,7 @@ style={{
                     <div className="contact-info text-center">
                       <small className="text-muted">
                         Or contact us directly:<br/>
-                        <i className="fa fa-phone me-1"></i> +9471 534 5060<br/>
+                        <i className="fa fa-phone me-1"></i> +94 74 234 3484<br/>
                         <i className="fa fa-envelope me-1"></i> opulenttoursinfo@gmail.com
                       </small>
                     </div>
