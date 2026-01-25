@@ -50,7 +50,7 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
           <h6 className="section-title bg-white text-center text-primary px-3">
             Process
           </h6>
-          <h1 className="mb-5">3 Easy Steps</h1>
+          <h1 className="mb-5" style={{ color: '#000000' }}>3 Easy Steps</h1>
         </div>
         <div className="row gy-5 gx-4 justify-content-center">
           <div
@@ -64,10 +64,10 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
               >
                 <i className="fa fa-globe fa-3x text-white" />
               </div>
-              <h5 className="mt-4">Choose A Destination</h5>
+              <h5 className="mt-4" style={{ color: '#000000' }}>Choose A Destination</h5>
               <hr className="w-25 mx-auto bg-primary mb-1" />
               <hr className="w-50 mx-auto bg-primary mt-0" />
-              <p className="mb-0">
+              <p className="mb-0" style={{ color: '#000000' }}>
                 Tempor erat elitr rebum clita dolor diam ipsum sit diam amet
                 diam eos erat ipsum et lorem et sit sed stet lorem sit
               </p>
@@ -84,10 +84,10 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
               >
                 <i className="fa fa-dollar-sign fa-3x text-white" />
               </div>
-              <h5 className="mt-4">Pay Online</h5>
+              <h5 className="mt-4" style={{ color: '#000000' }}>Pay Online</h5>
               <hr className="w-25 mx-auto bg-primary mb-1" />
               <hr className="w-50 mx-auto bg-primary mt-0" />
-              <p className="mb-0">
+              <p className="mb-0" style={{ color: '#000000' }}>
                 Tempor erat elitr rebum clita dolor diam ipsum sit diam amet
                 diam eos erat ipsum et lorem et sit sed stet lorem sit
               </p>
@@ -104,10 +104,10 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
               >
                 <i className="fa fa-plane fa-3x text-white" />
               </div>
-              <h5 className="mt-4">Fly Today</h5>
+              <h5 className="mt-4" style={{ color: '#000000' }}>Fly Today</h5>
               <hr className="w-25 mx-auto bg-primary mb-1" />
               <hr className="w-50 mx-auto bg-primary mt-0" />
-              <p className="mb-0">
+              <p className="mb-0" style={{ color: '#000000' }}>
                 Tempor erat elitr rebum clita dolor diam ipsum sit diam amet
                 diam eos erat ipsum et lorem et sit sed stet lorem sit
               </p>

@@ -1,4 +1,4 @@
-// Home.jsx
+// Home.jsx - Updated with black text colors
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -47,7 +47,6 @@ export default function Home() {
     }
   ];
 
-  // Sri Lanka Tour Packages - Updated with local image paths
   const sriLankaTourPackages = [
     {
       id: 2,
@@ -107,12 +106,10 @@ export default function Home() {
     }
   ];
 
-  // Function to handle navigation to tour details
   const handleViewOneDayTour = (tour) => {
     navigate('/one-day-tour-details', { state: { tour } });
   };
 
-  // Function to handle navigation to package details
   const handleViewPackage = (pkg) => {
     navigate('/destination', { state: { package: pkg } });
   };
@@ -120,21 +117,22 @@ export default function Home() {
   return (
     <div>
       {/* Hero Header */}
-<div 
-  className="container-fluid bg-primary mb-5 hero-header"
-  style={{
-       background: `linear-gradient(rgba(20, 20, 31, 0.3), rgba(20, 20, 31, 0.5)), url('https://images.unsplash.com/photo-1570789210967-2cac24afeb00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`,    backgroundPosition: 'center center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    minHeight: '80vh',
-    paddingTop: '4rem',
-    paddingBottom: '2rem',
-    imageRendering: 'crisp-edges',
-    WebkitImageRendering: 'crisp-edges',
-    transform: 'translateZ(0)',
-    backfaceVisibility: 'hidden'
-  }}
->
+      <div 
+        className="container-fluid bg-primary mb-5 hero-header"
+        style={{
+          background: `linear-gradient(rgba(20, 20, 31, 0.3), rgba(20, 20, 31, 0.5)), url('https://images.unsplash.com/photo-1570789210967-2cac24afeb00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`,
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          minHeight: '80vh',
+          paddingTop: '4rem',
+          paddingBottom: '2rem',
+          imageRendering: 'crisp-edges',
+          WebkitImageRendering: 'crisp-edges',
+          transform: 'translateZ(0)',
+          backfaceVisibility: 'hidden'
+        }}
+      >
         <div className="container py-5">
           <div className="row justify-content-center py-5">
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
@@ -182,7 +180,7 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Welcome Section */}
+      {/* Welcome Section - UPDATED TEXT COLOR TO BLACK */}
       <div className="container-xxl py-5">
         <div className="container">
           <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -190,24 +188,24 @@ export default function Home() {
           </div>
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <p className="text-center mb-4" style={{ fontSize: '1.25rem', lineHeight: '2', color: '#555' }}>
+              <p className="text-center mb-4" style={{ fontSize: '1.25rem', lineHeight: '2', color: '#000000' }}>
                 Discover the essence of Sri Lanka with <strong>Opulent Tours</strong>, your trusted travel companion, backed by over 15 years of experience and a young, creative team dedicated to crafting unforgettable journeys.
               </p>
-              <p className="text-center mb-4" style={{ fontSize: '1.25rem', lineHeight: '2', color: '#555' }}>
+              <p className="text-center mb-4" style={{ fontSize: '1.25rem', lineHeight: '2', color: '#000000' }}>
                 From misty mountain peaks to golden beaches, from ancient cities to lush tea gardens, Sri Lanka is a land where beauty, culture, and adventure come together in perfect harmony. At Opulent Tours, we take pride in showcasing the island's timeless charm through personalized travel experiences that reflect warmth, authenticity, and comfort.
               </p>
-              <p className="text-center mb-4" style={{ fontSize: '1.25rem', lineHeight: '2', color: '#555' }}>
+              <p className="text-center mb-4" style={{ fontSize: '1.25rem', lineHeight: '2', color: '#000000' }}>
                 Let us guide you through Sri Lanka's wonders, where every journey tells a story, and every moment becomes a cherished memory.
               </p>
               <p className="text-center" style={{ fontSize: '1.3rem', fontWeight: '600', color: '#086AD8' }}>
-                Opulent Tours — Where every journey begins with the magic of Sri Lanka.
+                Opulent Tours – Where every journey begins with the magic of Sri Lanka.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Service Start */}
+      {/* Service Start - UPDATED TEXT COLOR TO BLACK */}
       <div className="container-xxl py-5">
         <div className="container">
           <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -219,7 +217,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-plane text-primary mb-4" />
                   <h5>Airport Pick-up & Drop-off</h5>
-                  <p>
+                  <p style={{ color: '#000000' }}>
                     Comfortable and reliable transfers with friendly drivers and clean vehicles
                   </p>
                 </div>
@@ -230,7 +228,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-hotel text-primary mb-4" />
                   <h5>Hotel Reservations</h5>
-                  <p>
+                  <p style={{ color: '#000000' }}>
                     Star-class, boutique, or budget hotels handpicked for quality and comfort
                   </p>
                 </div>
@@ -241,7 +239,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-car text-primary mb-4" />
                   <h5>Transportation Services</h5>
-                  <p>
+                  <p style={{ color: '#000000' }}>
                     Luxury cars, vans, and coaches with chauffeur-driven or self-drive options
                   </p>
                 </div>
@@ -252,7 +250,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-map-marked-alt text-primary mb-4" />
                   <h5>Tailor-Made Tours</h5>
-                  <p>
+                  <p style={{ color: '#000000' }}>
                     Personalized itineraries designed to match your interests and budget
                   </p>
                 </div>
@@ -263,7 +261,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-user-tie text-primary mb-4" />
                   <h5>Professional Tour Guides</h5>
-                  <p>
+                  <p style={{ color: '#000000' }}>
                     Licensed multilingual guides with cultural insights and local expertise
                   </p>
                 </div>
@@ -274,7 +272,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-binoculars text-primary mb-4" />
                   <h5>Excursions & Sightseeing</h5>
-                  <p>
+                  <p style={{ color: '#000000' }}>
                     Day trips to top attractions, hidden gems, and wildlife safaris
                   </p>
                 </div>
@@ -285,7 +283,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-mountain text-primary mb-4" />
                   <h5>Adventure Activities</h5>
-                  <p>
+                  <p style={{ color: '#000000' }}>
                     Hiking, rafting, surfing, diving, and camping under professional supervision
                   </p>
                 </div>
@@ -296,7 +294,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-headset text-primary mb-4" />
                   <h5>24/7 Customer Support</h5>
-                  <p>
+                  <p style={{ color: '#000000' }}>
                     Round-the-clock assistance to ensure a safe and smooth journey
                   </p>
                 </div>
@@ -305,14 +303,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Service End */}
 
-      {/* Sri Lanka Tour Packages Section - Updated with local images */}
+      {/* Sri Lanka Tour Packages Section */}
       <section className="tour-packages py-5">
         <div className="container">
           <div className="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
             <h2 className="display-5">Sri Lanka Tour Packages</h2>
-            <p className="text-muted">Choose your perfect adventure</p>
+            <p style={{ color: '#000000' }}>Choose your perfect adventure</p>
           </div>
           
           <div className="packages-grid">
@@ -345,7 +342,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Sri Lanka Tour Packages Section End */}
 
       {/* Special One Day Tours Start */}
       <div className="container-xxl py-5">
@@ -382,7 +378,7 @@ export default function Home() {
                       <small className="fa fa-star text-primary" />
                     </div>
                     <h5 className="mb-3">{tour.name}</h5>
-                    <p>{tour.description}</p>
+                    <p style={{ color: '#000000' }}>{tour.description}</p>
                     <div className="d-flex justify-content-center mb-2">
                       <button
                         onClick={() => handleViewOneDayTour(tour)}
@@ -406,7 +402,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Special One Day Tours End */}
 
       {/* Booking Start */}
       <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -493,9 +488,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Booking End */}
 
-      {/* Process Start */}
+      {/* Process Start - UPDATED TEXT COLOR TO BLACK */}
       <div className="container-xxl py-5">
         <div className="container">
           <div className="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -516,7 +510,7 @@ export default function Home() {
                 <h5 className="mt-4">Choose A Destination</h5>
                 <hr className="w-25 mx-auto bg-primary mb-1" />
                 <hr className="w-50 mx-auto bg-primary mt-0" />
-                <p className="mb-0">
+                <p className="mb-0" style={{ color: '#000000' }}>
                   Select from our curated destinations across Sri Lanka, or let us create a custom itinerary just for you
                 </p>
               </div>
@@ -532,7 +526,7 @@ export default function Home() {
                 <h5 className="mt-4">Confirm & Pay</h5>
                 <hr className="w-25 mx-auto bg-primary mb-1" />
                 <hr className="w-50 mx-auto bg-primary mt-0" />
-                <p className="mb-0">
+                <p className="mb-0" style={{ color: '#000000' }}>
                   Review your personalized tour package and complete your booking with our secure payment options
                 </p>
               </div>
@@ -548,7 +542,7 @@ export default function Home() {
                 <h5 className="mt-4">Start Your Journey</h5>
                 <hr className="w-25 mx-auto bg-primary mb-1" />
                 <hr className="w-50 mx-auto bg-primary mt-0" />
-                <p className="mb-0">
+                <p className="mb-0" style={{ color: '#000000' }}>
                   Pack your bags and get ready for an unforgettable adventure with 24/7 support throughout your journey
                 </p>
               </div>
@@ -556,7 +550,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Process End */}
     </div>
   )
 }

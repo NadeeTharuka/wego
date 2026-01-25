@@ -52,7 +52,7 @@ function Contact() {
             <h6 className="section-title bg-white text-center text-primary px-3">
               Contact Us
             </h6>
-            <h1 className="mb-5">Contact For Any Query</h1>
+            <h1 className="mb-5" style={{ color: '#000000' }}>Contact For Any Query</h1>
           </div>
           
           {/* Map Box - Full Width on Top */}
@@ -82,7 +82,7 @@ function Contact() {
                 <h4 className="text-primary mb-4">
                   <i className="fa fa-phone-alt me-3"></i>Get In Touch
                 </h4>
-                <p className="mb-4">
+                <p className="mb-4" style={{ color: '#000000' }}>
                   Contact us for any inquiries about our tours and services. We're here to help you plan your perfect Sri Lankan adventure.
                 </p>
                 
@@ -93,7 +93,7 @@ function Contact() {
                     </div>
                     <div className="ms-3">
                       <h6 className="text-primary mb-2">Office Address</h6>
-                      <p className="mb-0 text-dark">Duwa Temple Road, Kalutara South, Sri Lanka</p>
+                      <p className="mb-0" style={{ color: '#000000' }}>Duwa Temple Road, Kalutara South, Sri Lanka</p>
                     </div>
                   </div>
                 </div>
@@ -105,8 +105,8 @@ function Contact() {
                     </div>
                     <div className="ms-3">
                       <h6 className="text-primary mb-2">Call Us</h6>
-                      <p className="mb-0 text-dark">
-                        <a href="tel:+94715345060" className="text-dark text-decoration-none">
+                      <p className="mb-0" style={{ color: '#000000' }}>
+                        <a href="tel:+94715345060" className="text-decoration-none" style={{ color: '#000000' }}>
                           +94 71 534 5060
                         </a>
                       </p>
@@ -121,8 +121,8 @@ function Contact() {
                     </div>
                     <div className="ms-3">
                       <h6 className="text-primary mb-2">Email Us</h6>
-                      <p className="mb-0 text-dark">
-                        <a href="mailto:opulenttoursinfo@gmail.com" className="text-dark text-decoration-none">
+                      <p className="mb-0" style={{ color: '#000000' }}>
+                        <a href="mailto:opulenttoursinfo@gmail.com" className="text-decoration-none" style={{ color: '#000000' }}>
                           opulenttoursinfo@gmail.com
                         </a>
                       </p>
@@ -148,7 +148,7 @@ function Contact() {
                           id="name"
                           placeholder="Your Name"
                         />
-                        <label htmlFor="name">Your Name</label>
+                        <label htmlFor="name" style={{ color: '#000000' }}>Your Name</label>
                       </div>
                     </div>
                     <div className="col-12">
@@ -159,7 +159,7 @@ function Contact() {
                           id="email"
                           placeholder="Your Email"
                         />
-                        <label htmlFor="email">Your Email</label>
+                        <label htmlFor="email" style={{ color: '#000000' }}>Your Email</label>
                       </div>
                     </div>
                     <div className="col-12">
@@ -170,7 +170,7 @@ function Contact() {
                           id="subject"
                           placeholder="Subject"
                         />
-                        <label htmlFor="subject">Subject</label>
+                        <label htmlFor="subject" style={{ color: '#000000' }}>Subject</label>
                       </div>
                     </div>
                     <div className="col-12">
@@ -182,7 +182,7 @@ function Contact() {
                           style={{ height: 120 }}
                           defaultValue={""}
                         />
-                        <label htmlFor="message">Message</label>
+                        <label htmlFor="message" style={{ color: '#000000' }}>Message</label>
                       </div>
                     </div>
                     <div className="col-12">
