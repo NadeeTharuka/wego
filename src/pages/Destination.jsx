@@ -202,6 +202,10 @@ function Destination() {
     "Tea Plantation & Factory Visit": {
       image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+     "Fish Therapy":{
+    image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+
+    },
     "Udawalawe Safari": {
       image: "https://images.unsplash.com/photo-1535083783855-76ae62b2914e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -334,6 +338,9 @@ function Destination() {
     "Horton Plains National Park": {
   image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
 },
+ "Cinnamon Garden Visit": {
+      image: "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
     "Mirissa Beach Relaxation": {
       image: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -807,26 +814,9 @@ function Destination() {
           activities: [
             "Sea Turtle Hatchery",
             "Madu River Boat Safari",
-            {
-              name: "Cinnamon Garden Visit",
-              isExpandable: true,
-              subActivities: [
-                "Cinnamon Harvesting Process",
-                "Traditional Methods",
-                "Spice Products",
-                "Guided Tour"
-              ]
-            },
-            {
-              name: "Fish Therapy",
-              isExpandable: true,
-              subActivities: [
-                "Natural Foot Spa",
-                "Therapeutic Experience",
-                "Garra Rufa Fish",
-                "Relaxation"
-              ]
-            },
+            "Cinnamon Garden Visit",
+            "Fish Therapy",
+              
             "Overnight in Colombo"
           ]
         },
