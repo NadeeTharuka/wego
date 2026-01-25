@@ -399,6 +399,33 @@
   100% { transform: rotate(360deg); }
 }
 
+/* ========================================
+   ROUNDED CORNERS FOR ALL IMAGES
+   ======================================== */
+
+/* Main tour package image at the top */
+.tour-header .img-fluid,
+.tour-header img {
+    border-radius: 15px !important;
+}
+
+/* Override any existing rounded class */
+.tour-header .rounded {
+    border-radius: 15px !important;
+}
+
+/* All images in the destination page */
+img.img-fluid {
+    border-radius: 15px !important;
+}
+
+/* Package images */
+.package-item img,
+.destination-image,
+.tour-image {
+    border-radius: 15px !important;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .booking-sidebar {
