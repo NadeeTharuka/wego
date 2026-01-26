@@ -497,6 +497,18 @@ function PlaceDetails() {
         "Peaceful retreat"
       ]
     },
+    "Royal Botanical Garden": {
+      image: "/assets/img/peradeniya-botanical-garden.jpg",
+      description: "The Peradeniya Botanical Garden, located in Kandy, Sri Lanka, is one of the most renowned botanical gardens in Asia. Covering 147 acres, it was originally established in the 14th century as a royal garden and later expanded by the British in the 19th century. The garden is famous for its diverse collection of over 4,000 species of plants, including tropical trees, orchids, medicinal plants, and palms. One of its highlights is the impressive avenue of royal palm trees. The garden is not only a botanical treasure but also a peaceful retreat, attracting both nature lovers and tourists seeking a tranquil escape.",
+      highlights: [
+        "Renowned botanical garden",
+        "4,000+ plant species",
+        "Royal palm avenue",
+        "Orchid collection",
+        "Historic royal garden",
+        "Peaceful retreat"
+      ]
+    },
     "Nuwara Eliya City Tour": {
       image: "/assets/img/nuwara-eliya-city-tour.jpg",
       description: "A Nuwara Eliya City Tour takes you through the heart of Sri Lanka's hill country, known as 'Little England' for its cool climate, colonial buildings, and neatly kept gardens. The tour highlights include visits to lush tea plantations and factories, where you can learn about the island's world-famous Ceylon tea. You can enjoy the peaceful surroundings of Gregory Lake, stroll through the colorful Victoria Park, and explore the lively local fruit and vegetable market. Other attractions include the Hakgala Botanical Garden, the historic racecourse, and the sacred Seetha Amman Temple, linked to the Ramayana legend. Surrounded by misty mountains, waterfalls, and rolling tea fields, Nuwara Eliya offers a perfect mix of natural beauty, colonial heritage, and cultural charm.",
