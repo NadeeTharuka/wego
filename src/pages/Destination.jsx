@@ -332,6 +332,9 @@ function Destination() {
     "Goyambokka Beach": {
       image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Gem Museum visit":{
+
+    },
     "Dondra Lighthouse": {
       image: "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -889,7 +892,6 @@ function Destination() {
             "Temple of the Sacred Tooth Relic",
             "Kandyan Cultural Dance Show",
             "Royal Botanical Garden",
-            "Gem Shop Visit",
             "Gem Museum visit",
             "Overnight in Kandy"
           ]
