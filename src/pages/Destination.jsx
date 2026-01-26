@@ -1314,8 +1314,7 @@ style={{
 }}
 />
                 <div className="tour-title-section">
-                  <h1 className="display-5 fw-bold text-primary mb-3">{selectedPackage.name}</h1>
-                  <div className="tour-meta d-flex flex-wrap gap-4 mb-4">
+<h1 className="display-5 fw-bold text-primary mb-3" style={{ textTransform: 'capitalize' }}>{selectedPackage.name.toLowerCase()}</h1>                  <div className="tour-meta d-flex flex-wrap gap-4 mb-4">
                     <div className="meta-item">
                       <i className="fa fa-clock text-primary me-2"></i>
                       <span className="fw-semibold">Duration:</span> {selectedPackage.duration}
