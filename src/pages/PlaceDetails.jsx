@@ -413,6 +413,18 @@ function PlaceDetails() {
         "Royal palace complex"
       ]
     },
+        "Gem Museum visit": {
+      image: "/assets/img/gem-museum-kandy.jpg",
+      description: "The Gem Museum in Kandy, Sri Lanka, is a fascinating destination showcasing the island's rich gem-mining history and vibrant gem industry. Sri Lanka is famous for its precious gemstones, including sapphires, rubies, and topaz, and the museum offers visitors a chance to explore a wide variety of these stunning gems. The museum features display of raw and polished stones, as well as detailed explanations of the gem mining and cutting process. Visitors can also learn about the significance of gems in Sri Lankan culture and view exquisite jewelry pieces. It's a must-visit for anyone interested in the island's gem heritage.",
+      highlights: [
+        "Gemstone collection",
+        "Mining history",
+        "Cutting process demonstration",
+        "Cultural significance",
+        "Jewelry displays",
+        "Educational experience"
+      ]
+    },
       "Temple of the Sacred Tooth Relic (Dalada Maligawa)": {
       image: "/assets/img/temple-of-sacred-tooth.jpg",
       description: "The Temple of the Sacred Tooth Relic, or Dalada Maligawa, in Kandy is one of Sri Lanka's most significant religious and cultural sites, housing the revered tooth relic of the Buddha. This sacred relic, symbolizing both spiritual and political authority, has been enshrined in Kandy since the 16th century and is closely associated with the Sinhalese monarchy. The temple, part of the royal palace complex, showcases exquisite Kandyan architecture, with its golden canopy, intricate woodwork, and the iconic Paththirippuwa. Daily rituals and ceremonies, enhanced by traditional drumming and dancing, create a deeply spiritual atmosphere. The annual Esala Perahera, a grand procession featuring decorated elephants and cultural performances, highlights the temple's importance and attracts thousands of pilgrims and tourists. Recognized as a UNESCO World Heritage Site, the Dalada Maligawa is a vital center of Buddhist worship and Sri Lankan cultural heritage.",
