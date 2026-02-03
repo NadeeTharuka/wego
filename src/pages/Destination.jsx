@@ -121,6 +121,9 @@ function Destination() {
     "Colonial Town exploration": {
       image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Coastal Train Ride (Galle to Colombo)": {
+  image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+},
     "Matale Spice Garden": {
       image: "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
