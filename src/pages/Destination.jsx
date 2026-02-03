@@ -338,6 +338,9 @@ function Destination() {
     "Goyambokka Beach": {
       image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Train Journey": {
+  image: "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+},
     "Gem Museum visit":{
 
     },
@@ -439,16 +442,7 @@ function Destination() {
   title: "Nuwara Eliya → Ella",
   activities: [
     "Horton Plains National Park",
-    {
-      name: "Blue Train Journey - Nanu Oya to Ella",
-      isExpandable: true,
-      subActivities: [
-        "World's Most Scenic Train Ride",
-        "Tea Plantation Panoramic Views",
-        "Mountain Landscapes",
-        "Photography Paradise"
-      ]
-    },
+    "Train Journey",
     "Nine Arch Bridge",
     "Overnight in Ella"
   ]
