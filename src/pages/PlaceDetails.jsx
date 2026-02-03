@@ -156,6 +156,26 @@ function PlaceDetails() {
     "Medieval Sinhalese civilization showcase"
   ]
 },
+"Coastal Train Ride (Galle to Colombo)": {
+  image: "/assets/img/coastal-train-ride.jpg",
+  description: "The coastal train journey from Galle to Colombo is one of the most scenic and iconic railway experiences in the world. This unforgettable ride takes you along Sri Lanka's stunning southwestern coastline, where the tracks run mere meters from the Indian Ocean, offering breathtaking views of golden beaches, swaying palm trees, and fishing villages. Built during British colonial rule in the late 19th century, this historic railway line connects the colonial fort city of Galle with Sri Lanka's bustling capital, Colombo. The journey takes approximately 2.5 to 3 hours, covering around 115 kilometers of pristine coastline. As the train chugs along, passengers can enjoy panoramic ocean views from open carriage doors, watch local fishermen at work, see colorful houses dotting the shoreline, and experience the authentic charm of Sri Lankan coastal life. The route passes through numerous stations including Hikkaduwa, Mount Lavinia, and Bentota, each offering glimpses of local culture and seaside beauty. The train rides closest to the ocean between Colombo and Galle, particularly near Bentota and Hikkaduwa, where waves sometimes spray onto the tracks. This scenic railway journey has been featured in countless travel documentaries and is considered one of the most beautiful train routes in Asia. The experience combines adventure, natural beauty, and a touch of colonial nostalgia, making it a must-do activity for any visitor to Sri Lanka. Best enjoyed during the morning or late afternoon when the light creates magical reflections on the water.",
+  highlights: [
+    "World's most scenic coastal railway journey",
+    "115 km of stunning Indian Ocean views",
+    "Historic British colonial railway (late 19th century)",
+    "Tracks run meters from the ocean",
+    "Views of golden beaches and palm trees",
+    "Authentic local fishing villages",
+    "Passes through Hikkaduwa, Bentota, Mount Lavinia",
+    "Open carriage doors for photography",
+    "Waves spray onto tracks near Bentota",
+    "Featured in international travel documentaries",
+    "2.5-3 hour scenic journey",
+    "Colonial-era railway experience",
+    "Best during morning or late afternoon",
+    "Perfect for photography enthusiasts"
+  ]
+},
     "Colonial Town exploration": {
   image: "/assets/img/nuwara-eliya-colonial.jpg",
   description: "Nuwara Eliya, often called 'Little England,' is a charming colonial hill station nestled in the heart of Sri Lanka's central highlands at 1,868 meters above sea level. Founded by British colonial planters in the 19th century, the town retains its colonial character with Victorian-style buildings, manicured gardens, and a cool temperate climate reminiscent of the English countryside. A colonial town exploration takes you through the town's historic center, showcasing landmarks such as the Grand Hotel (built in 1891), the Hill Club with its colonial-era traditions, the old British Governor's residence, and the picturesque Victoria Park.",
