@@ -176,6 +176,30 @@ function PlaceDetails() {
     "Perfect for photography enthusiasts"
   ]
 },
+"Train Journey": {
+  image: "/assets/img/blue-train-journey.jpg",
+  description: "The train journey from Nanu Oya to Ella is universally acclaimed as one of the most scenic and breathtaking railway routes in the world. This iconic journey takes you through the heart of Sri Lanka's stunning central highlands, offering an unforgettable visual feast of emerald tea plantations, misty mountains, cascading waterfalls, and picturesque villages. The route covers approximately 60 kilometers through some of the most dramatic landscapes on the island, climbing through elevations that offer constantly changing and spectacular views. Built during the British colonial era in the late 19th century, this historic railway line was an engineering marvel, carved through mountains and valleys to transport tea from the highland plantations to Colombo. The journey typically takes 2.5 to 3 hours, though travelers often wish it could last longer. As the train slowly winds its way through the mountains, passengers are treated to panoramic vistas of endless tea estates where workers can be seen plucking tea leaves by hand, just as they have for over a century. The route passes through numerous tunnels and over impressive bridges, including views of the famous Nine Arch Bridge from a different perspective. Small mountain stations dot the route, each offering glimpses into rural Sri Lankan life. The train cars, though basic, add to the authentic experience - many travelers choose to sit in the open doorways (safely, of course) or hang out the windows for unobstructed photography and to feel the cool mountain breeze. The landscape transitions from the British colonial charm of Nuwara Eliya through increasingly wild and dramatic terrain as you approach Ella. Waterfalls appear around almost every bend, some cascading down cliff faces just meters from the tracks. On clear days, the views extend for miles across valleys and mountain ranges. The journey is particularly magical during early morning when mist hangs in the valleys, or in late afternoon when golden light bathes the tea plantations. This train ride has been featured in countless travel documentaries and consistently ranks among the world's most beautiful train journeys, alongside routes in Switzerland and Norway. It's more than just transportation - it's a moving observation deck showcasing Sri Lanka's natural beauty at its finest, a photographer's paradise, and an experience that captures the romantic essence of rail travel.",
+  highlights: [
+    "World's most scenic train journey",
+    "60 km through central highlands",
+    "Panoramic tea plantation views",
+    "Historic British colonial railway (late 19th century)",
+    "2.5-3 hour mountain journey",
+    "Views of endless emerald tea estates",
+    "Multiple tunnels and mountain bridges",
+    "Cascading waterfalls along the route",
+    "Misty mountain valleys and peaks",
+    "Authentic Sri Lankan rural life views",
+    "Open door/window riding experience",
+    "Photography paradise with changing landscapes",
+    "Featured in international travel documentaries",
+    "Views of Nine Arch Bridge from train",
+    "Cool mountain breeze experience",
+    "Colonial-era charm and nostalgia",
+    "Best during early morning or late afternoon",
+    "Ranks among Switzerland and Norway's famous routes"
+  ]
+},
     "Colonial Town exploration": {
   image: "/assets/img/nuwara-eliya-colonial.jpg",
   description: "Nuwara Eliya, often called 'Little England,' is a charming colonial hill station nestled in the heart of Sri Lanka's central highlands at 1,868 meters above sea level. Founded by British colonial planters in the 19th century, the town retains its colonial character with Victorian-style buildings, manicured gardens, and a cool temperate climate reminiscent of the English countryside. A colonial town exploration takes you through the town's historic center, showcasing landmarks such as the Grand Hotel (built in 1891), the Hill Club with its colonial-era traditions, the old British Governor's residence, and the picturesque Victoria Park.",
