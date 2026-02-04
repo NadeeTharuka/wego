@@ -1121,7 +1121,19 @@ function PlaceDetails() {
   ]
   },
     "Yala National Park Morning Safari": {
-      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/yala-safari.jpg",
+      description: "Yala National Park, located in southeastern Sri Lanka, is the country's most visited and second-largest national park. It's renowned for its diverse ecosystems ranging from moist monsoon forests to freshwater and marine wetlands. The park is famous for having one of the highest leopard densities in the world, making it one of the best places to spot these elusive big cats. In addition to leopards, Yala is home to a wide variety of wildlife including elephants, sloth bears, crocodiles, and numerous bird species. The morning safari offers the best opportunity to spot wildlife as animals are most active during the cooler hours of the day. Experienced guides accompany visitors in 4x4 vehicles, helping them spot and identify wildlife in their natural habitat.",
+      highlights: [
+        "Leopard Spotting",
+        "Elephant Herds",
+        "Bird Watching",
+        "Wildlife Photography",
+        "Best wildlife viewing time",
+        "Experienced guides"
+      ]
+    },
+        "Yala National Park Safari": {
+      image: "/assets/img/yala-safari.jpg",
       description: "Yala National Park, located in southeastern Sri Lanka, is the country's most visited and second-largest national park. It's renowned for its diverse ecosystems ranging from moist monsoon forests to freshwater and marine wetlands. The park is famous for having one of the highest leopard densities in the world, making it one of the best places to spot these elusive big cats. In addition to leopards, Yala is home to a wide variety of wildlife including elephants, sloth bears, crocodiles, and numerous bird species. The morning safari offers the best opportunity to spot wildlife as animals are most active during the cooler hours of the day. Experienced guides accompany visitors in 4x4 vehicles, helping them spot and identify wildlife in their natural habitat.",
       highlights: [
         "Leopard Spotting",
