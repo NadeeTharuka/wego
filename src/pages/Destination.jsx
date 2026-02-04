@@ -555,7 +555,7 @@ function Destination() {
                 "Jami Ul-Alfar Mosque"
               ]
             },
-            "Negombo Lagoon Tour (time permitting)",
+            "Negombo Lagoon Tour",
             "Departure to Airport (Activities depend on departure time)"
           ]
         }
@@ -1037,16 +1037,8 @@ function Destination() {
   day: "Day 06",
   title: "Ella → Nuwara Eliya",
   activities: [
-    {
-      name: "Blue Train Journey",
-      isExpandable: true,
-      subActivities: [
-        "Scenic Train Ride",
-        "Tea Plantation Views",
-        "Mountain Landscapes",
-        "Photography Paradise"
-      ]
-    },
+   "Train Journey",
+      
     "Gregory Lake",
     "Nuwara Eliya walking city tour",
     "Overnight in Nuwara Eliya"
