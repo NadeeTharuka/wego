@@ -181,6 +181,9 @@ function Destination() {
     "Yala National Park Morning Safari": {
       image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Yala National Park Safari": {
+      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
     "Galle Fort": {
       image: "https://images.unsplash.com/photo-1580837119756-563d608dd119?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -477,16 +480,8 @@ function Destination() {
               isExpandable: false, // Changed to false to remove sub-activities
               subActivities: [] // Empty sub-activities array
             },
-            {
-              name: "Yala National Park Safari",
-              isExpandable: true,
-              subActivities: [
-                "Leopard Spotting",
-                "Elephant Herds",
-                "Sloth Bears",
-                "Bird Watching & Wildlife Photography"
-              ]
-            },
+            "Yala National Park Safari",
+              
             "Overnight in Yala"
           ]
         },
