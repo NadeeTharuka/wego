@@ -68,8 +68,7 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
               <hr className="w-25 mx-auto bg-primary mb-1" />
               <hr className="w-50 mx-auto bg-primary mt-0" />
               <p className="mb-0" style={{ fontSize: '1.15rem', lineHeight: '1.8', color: '#000000'  }}>
-                Tempor erat elitr rebum clita dolor diam ipsum sit diam amet
-                diam eos erat ipsum et lorem et sit sed stet lorem sit
+                Explore our handpicked destinations and tour packages. Select the place that matches your travel style, budget, and schedule.
               </p>
             </div>
           </div>
@@ -88,8 +87,7 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
               <hr className="w-25 mx-auto bg-primary mb-1" />
               <hr className="w-50 mx-auto bg-primary mt-0" />
               <p className="mb-0" style={{ fontSize: '1.15rem', lineHeight: '1.8', color: '#000000'  }}>
-                Tempor erat elitr rebum clita dolor diam ipsum sit diam amet
-                diam eos erat ipsum et lorem et sit sed stet lorem sit
+                Confirm your booking with our secure online payment system. Fast, safe, and hassle-free transactions guaranteed.
               </p>
             </div>
           </div>
@@ -108,8 +106,7 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
               <hr className="w-25 mx-auto bg-primary mb-1" />
               <hr className="w-50 mx-auto bg-primary mt-0" />
               <p className="mb-0" style={{ fontSize: '1.15rem', lineHeight: '1.8', color: '#000000' }}>
-                Tempor erat elitr rebum clita dolor diam ipsum sit diam amet
-                diam eos erat ipsum et lorem et sit sed stet lorem sit
+                Get ready to travel! Receive instant confirmation and enjoy a smooth, memorable journey with Wego Travelling.
               </p>
             </div>
           </div>
