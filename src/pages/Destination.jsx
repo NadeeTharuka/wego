@@ -19,12 +19,18 @@ function Destination() {
     if (location.state?.expandedDays && location.state?.scrollToDay !== undefined) {
       // Coming back from PlaceDetails - restore state and scroll instantly
       setExpandedDays(location.state.expandedDays);
+      
+      // Also restore the expanded activities state (for Colombo City Tour, etc.)
+      if (location.state.expandedActivities) {
+        setExpandedActivities(location.state.expandedActivities);
+      }
+      
       setScrollToDay(location.state.scrollToDay);
     } else {
       // Normal page load - scroll to top
       window.scrollTo(0, 0);
     }
-  }, [location.state?.expandedDays, location.state?.scrollToDay]);
+  }, [location.state?.expandedDays, location.state?.expandedActivities, location.state?.scrollToDay]);
 
   // Scroll to the specific day INSTANTLY without any animation
   useEffect(() => {
@@ -371,14 +377,16 @@ function Destination() {
     }
   };
 
-  const handlePlaceClick = (placeName, dayIndex) => {
+  const handlePlaceClick = (placeName, dayIndex, activityIndex = null) => {
     navigate('/place-details', { 
       state: { 
         placeName,
         fromDestination: true,
         expandedDays: expandedDays,
+        expandedActivities: expandedActivities, // Pass current expanded activities state
         dayIndex: dayIndex,
-        package: selectedPackage  // Add this line to preserve the package
+        activityIndex: activityIndex, // Pass the activity index if provided
+        package: selectedPackage
       } 
     });
   };
@@ -1406,7 +1414,7 @@ style={{
                                           {hasPlaceDetail && (
                                             <button 
                                               className="btn btn-outline-primary btn-sm rounded-circle"
-                                              onClick={() => handlePlaceClick(activityName, dayIndex)}
+                                              onClick={() => handlePlaceClick(activityName, dayIndex, activityIndex)}
                                               style={{ width: '35px', height: '35px', padding: '0' }}
                                               title="View Place Details"
                                             >
@@ -1436,7 +1444,7 @@ style={{
                                               {activityName === "Colombo City Tour" && isColomboCityTourPlace(subActivity) && (
                                                 <button 
                                                   className="btn btn-outline-primary btn-sm rounded-circle ms-2"
-                                                  onClick={() => handlePlaceClick(subActivity, dayIndex)}
+                                                  onClick={() => handlePlaceClick(subActivity, dayIndex, activityIndex)}
                                                   style={{ width: '30px', height: '30px', padding: '0' }}
                                                   title="View Place Details"
                                                 >
@@ -1469,7 +1477,7 @@ style={{
                                       </div>
                                       <button 
                                         className="btn btn-outline-primary btn-sm rounded-circle"
-                                        onClick={() => handlePlaceClick(activityName, dayIndex)}
+                                        onClick={() => handlePlaceClick(activityName, dayIndex, activityIndex)}
                                         style={{ width: '35px', height: '35px', padding: '0' }}
                                         title="View Details"
                                       >
