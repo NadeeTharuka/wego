@@ -485,7 +485,7 @@ const TourPackages = () => {
         <div className="container">
           <div className="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
             <h2 className="display-5">Sri lanka Tour packages Recommended by Opulent</h2>
-            <p className="text-muted">Choose your perfect adventure</p>
+            <p className="text-muted" style={{ fontSize: '1.15rem', lineHeight: '1.8', color: '#000000' }}>Choose your perfect adventure</p>
           </div>
           
           <div className="packages-grid">
