@@ -122,7 +122,7 @@ function Header() {
               Booking
             </Link>
             <Link to="/Contact" className="nav-item nav-link">
-              Contact
+              Contact Us
             </Link>
           </div>
         </div>
