@@ -64,10 +64,10 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
               >
                 <i className="fa fa-globe fa-3x text-white" />
               </div>
-              <h5 className="mt-4" style={{ color: '#000000' }}>Choose A Destination</h5>
+              <h5 className="mt-4" style={{ fontSize: '1.35rem', lineHeight: '1.8', color: '#000000' }}>Choose A Destination</h5>
               <hr className="w-25 mx-auto bg-primary mb-1" />
               <hr className="w-50 mx-auto bg-primary mt-0" />
-              <p className="mb-0" style={{ color: '#000000' }}>
+              <p className="mb-0" style={{ fontSize: '1.15rem', lineHeight: '1.8', color: '#000000'  }}>
                 Tempor erat elitr rebum clita dolor diam ipsum sit diam amet
                 diam eos erat ipsum et lorem et sit sed stet lorem sit
               </p>
@@ -84,10 +84,10 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
               >
                 <i className="fa fa-dollar-sign fa-3x text-white" />
               </div>
-              <h5 className="mt-4" style={{ color: '#000000' }}>Pay Online</h5>
+              <h5 className="mt-4" style={{ fontSize: '1.35rem', lineHeight: '1.8', color: '#000000' }}>Pay Online</h5>
               <hr className="w-25 mx-auto bg-primary mb-1" />
               <hr className="w-50 mx-auto bg-primary mt-0" />
-              <p className="mb-0" style={{ color: '#000000' }}>
+              <p className="mb-0" style={{ fontSize: '1.15rem', lineHeight: '1.8', color: '#000000'  }}>
                 Tempor erat elitr rebum clita dolor diam ipsum sit diam amet
                 diam eos erat ipsum et lorem et sit sed stet lorem sit
               </p>
@@ -104,10 +104,10 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
               >
                 <i className="fa fa-plane fa-3x text-white" />
               </div>
-              <h5 className="mt-4" style={{ color: '#000000' }}>Fly Today</h5>
+              <h5 className="mt-4" style={{ fontSize: '1.35rem', lineHeight: '1.8', color: '#000000' }}>Fly Today</h5>
               <hr className="w-25 mx-auto bg-primary mb-1" />
               <hr className="w-50 mx-auto bg-primary mt-0" />
-              <p className="mb-0" style={{ color: '#000000' }}>
+              <p className="mb-0" style={{ fontSize: '1.15rem', lineHeight: '1.8', color: '#000000' }}>
                 Tempor erat elitr rebum clita dolor diam ipsum sit diam amet
                 diam eos erat ipsum et lorem et sit sed stet lorem sit
               </p>
