@@ -308,7 +308,7 @@ export default function Home() {
       <section className="tour-packages py-5">
         <div className="container">
           <div className="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <h2 className="display-5">Sri Lanka Tour Packages</h2>
+            <h2 className="display-5">Sri lanka Tour packages Recommended by Opulent</h2>
             <p style={{ color: '#000000' }}>Choose your perfect adventure</p>
           </div>
           
@@ -413,7 +413,7 @@ export default function Home() {
                 <p className="mb-4">
                   You can customize our recommended tours or plan your dream trip by discussing your preferences with the friendly team at Opulent Tours.
                 </p>
-                <a className="btn btn-outline-light py-3 px-5 mt-2" href="/about">
+                <a className="btn btn-outline-light py-3 px-5 mt-2" href="/contact">
                   Read More
                 </a>
               </div>
