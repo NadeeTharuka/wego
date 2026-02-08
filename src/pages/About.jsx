@@ -39,7 +39,7 @@ function About() {
                     className="breadcrumb-item text-white active"
                     aria-current="page"
                   >
-                    About
+                    About Us
                   </li>
                 </ol>
               </nav>
