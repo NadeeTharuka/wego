@@ -113,7 +113,7 @@ function Header() {
               Home
             </Link>
             <Link to="/About" className="nav-item nav-link">
-              About
+              About Us
             </Link>
             <Link to="/Tours" className="nav-item nav-link">
               Tours
