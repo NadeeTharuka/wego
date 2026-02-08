@@ -35,7 +35,7 @@ function Contact() {
                     <a href="/">Home</a>
                   </li>
                   <li className="breadcrumb-item text-white active" aria-current="page">
-                    Contact
+                    Contact Us
                   </li>
                 </ol>
               </nav>
