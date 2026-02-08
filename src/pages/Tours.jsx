@@ -534,14 +534,14 @@ const TourPackages = () => {
                     <img className="img-fluid" src={tour.image} alt={tour.name} />
                   </div>
                   <div className="d-flex border-bottom">
-                    <small className="flex-fill text-center border-end py-2">
+                    <small className="flex-fill text-center border-end py-2" style={{ color: '#000' }}>
                       <i className="fa fa-map-marker-alt text-primary me-2" />
                       Sri Lanka
                     </small>
-                    <small className="flex-fill text-center border-end py-2">
+                    <small className="flex-fill text-center border-end py-2" style={{ color: '#000' }}>
                       <i className="fa fa-calendar-alt text-primary me-2" />1 Day
                     </small>
-                    <small className="flex-fill text-center py-2">
+                    <small className="flex-fill text-center py-2" style={{ color: '#000' }}>
                       <i className="fa fa-user text-primary me-2" />Any Group
                     </small>
                   </div>
