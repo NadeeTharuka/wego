@@ -484,7 +484,7 @@ const TourPackages = () => {
       <section className="tour-packages py-5">
         <div className="container">
           <div className="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <h2 className="display-5">Recommended Tour Packages by Opulent</h2>
+            <h2 className="display-5">Sri lanka Tour packages Recommended by Opulent</h2>
             <p className="text-muted">Choose your perfect adventure</p>
           </div>
           
@@ -498,10 +498,11 @@ const TourPackages = () => {
                   </div>
                 </div>
                 <div className="package-content">
-                  <h3 className="package-title">{pkg.name}</h3>
-                  <div className="package-duration">
-                    <i className="fa fa-clock text-primary me-2"></i>
-                    {pkg.duration}
+                  <h3 className="package-title" style={{ fontSize: '1.6rem', fontWeight: '700', marginBottom: '0.3rem' }}>
+                    {pkg.name.split(' - ')[0]}
+                  </h3>
+                  <div style={{ fontSize: '1rem', fontWeight: '500', marginBottom: '1rem', color: '#000000' }}>
+                    {pkg.name.split(' - ')[1]}
                   </div>
                   <div className="package-highlights">
                     {pkg.highlights.map((highlight, index) => (
