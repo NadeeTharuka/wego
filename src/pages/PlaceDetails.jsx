@@ -8,7 +8,9 @@ function PlaceDetails() {
   const placeName = location.state?.placeName;
   const fromDestination = location.state?.fromDestination || false;
   const expandedDays = location.state?.expandedDays || {};
+  const expandedActivities = location.state?.expandedActivities || {}; // Get expanded activities state
   const dayIndex = location.state?.dayIndex;
+  const activityIndex = location.state?.activityIndex; // Get activity index
   const selectedPackage = location.state?.package; // Get the package information
 
   useEffect(() => {
@@ -1748,6 +1750,7 @@ function PlaceDetails() {
         state: { 
           package: selectedPackage,
           expandedDays: expandedDays,
+          expandedActivities: expandedActivities, // Pass back the expanded activities state
           scrollToDay: dayIndex
         } 
       });
