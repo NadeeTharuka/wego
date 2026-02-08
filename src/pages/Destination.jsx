@@ -1511,12 +1511,13 @@ style={{
                         <i className="fa fa-check-circle me-2"></i>What's Included
                       </h5>
                       <ul className="list-unstyled">
-                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Accommodation in selected hotels</li>
-                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Daily breakfast</li>
-                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Transportation by air-conditioned vehicle</li>
-                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>English-speaking guide</li>
-                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Entrance fees to mentioned sites</li>
-                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Safari jeep charges</li>
+                                     <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Air-Conditioned Private Vehicle</li>
+                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>English Speaking Professional Driver</li>
+                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Driver's Accommodation & Meals</li>
+                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Pickup & Drop Off</li>
+                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Fuel & Parking Fees</li>
+                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>24 Hours Service</li>
+                        <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Unlimited Mileage/Kilometer for entire round tour</li>
                       </ul>
                     </div>
                   </div>
@@ -1526,13 +1527,11 @@ style={{
                         <i className="fa fa-times-circle me-2"></i>What's Not Included
                       </h5>
                       <ul className="list-unstyled">
-                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>International airfare</li>
-                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>Visa fees</li>
-                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>Lunch and dinner (except mentioned)</li>
-                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>Personal expenses</li>
-                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>Tips for guide and driver</li>
-                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>Travel insurance</li>
-                      </ul>
+                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>Your Accommodation</li>
+                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>Food & Drinks</li>
+                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>Entrance & Activities Fees</li>
+                        <li className="mb-2"><i className="fa fa-times text-danger me-2"></i>Any others expenses which are not mentioned on Price Includes section</li>
+                     </ul>
                     </div>
                   </div>
                 </div>
