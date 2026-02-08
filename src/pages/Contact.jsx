@@ -80,9 +80,9 @@ function Contact() {
             <div className="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.3s">
               <div className="bg-light rounded h-100 p-5">
                 <h4 className="text-primary mb-4">
-                  <i className="fa fa-phone-alt me-3"></i>Get In Touch
+                  <i className="fa fa-phone-alt me-3" ></i>Get In Touch
                 </h4>
-                <p className="mb-4" style={{ color: '#000000' }}>
+                <p className="mb-4" style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#000000' }}>
                   Contact us for any inquiries about our tours and services. We're here to help you plan your perfect Sri Lankan adventure.
                 </p>
                 
@@ -92,8 +92,8 @@ function Contact() {
                       <i className="fa fa-map-marker-alt text-white fa-lg"></i>
                     </div>
                     <div className="ms-3">
-                      <h6 className="text-primary mb-2">Office Address</h6>
-                      <p className="mb-0" style={{ color: '#000000' }}>Duwa Temple Road, Kalutara South, Sri Lanka</p>
+                      <h6 className="text-primary mb-2" style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#000000' }} >Office Address</h6>
+                      <p className="mb-0" style={{ fontSize: '1.05rem', lineHeight: '1.8', color: '#000000' }}>Duwa Temple Road, Kalutara South, Sri Lanka</p>
                     </div>
                   </div>
                 </div>
@@ -104,10 +104,10 @@ function Contact() {
                       <i className="fa fa-phone-alt text-white fa-lg"></i>
                     </div>
                     <div className="ms-3">
-                      <h6 className="text-primary mb-2">Call Us</h6>
+                      <h6 className="text-primary mb-2" style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#000000' }}>Call Us</h6>
                       <p className="mb-0" style={{ color: '#000000' }}>
-                        <a href="tel:+94715345060" className="text-decoration-none" style={{ color: '#000000' }}>
-                          +94 71 534 5060
+                        <a href="tel:+94742343484" className="text-decoration-none" style={{ fontSize: '1.05rem', lineHeight: '1.8', color: '#000000'}}>
+                          +94 74 234 3484
                         </a>
                       </p>
                     </div>
@@ -120,9 +120,9 @@ function Contact() {
                       <i className="fa fa-envelope-open text-white fa-lg"></i>
                     </div>
                     <div className="ms-3">
-                      <h6 className="text-primary mb-2">Email Us</h6>
+                      <h6 className="text-primary mb-2" style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#000000' }} >Email Us</h6>
                       <p className="mb-0" style={{ color: '#000000' }}>
-                        <a href="mailto:opulenttoursinfo@gmail.com" className="text-decoration-none" style={{ color: '#000000' }}>
+                        <a href="mailto:opulenttoursinfo@gmail.com" className="text-decoration-none" style={{ fontSize: '1.05rem', lineHeight: '1.8', color: '#000000' }}>
                           opulenttoursinfo@gmail.com
                         </a>
                       </p>
@@ -136,7 +136,7 @@ function Contact() {
             <div className="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
               <div className="bg-light rounded h-100 p-5">
                 <h4 className="text-primary mb-4">
-                  <i className="fa fa-paper-plane me-3"></i>Send Message
+                  <i className="fa fa-paper-plane me-3" ></i>Send Message
                 </h4>
                 <form>
                   <div className="row g-3">
@@ -148,7 +148,7 @@ function Contact() {
                           id="name"
                           placeholder="Your Name"
                         />
-                        <label htmlFor="name" style={{ color: '#000000' }}>Your Name</label>
+                        <label htmlFor="name" style={{ fontSize: '1.05rem', lineHeight: '1.8', color: '#000000' }}>Your Name</label>
                       </div>
                     </div>
                     <div className="col-12">
@@ -159,7 +159,7 @@ function Contact() {
                           id="email"
                           placeholder="Your Email"
                         />
-                        <label htmlFor="email" style={{ color: '#000000' }}>Your Email</label>
+                        <label htmlFor="email" style={{ fontSize: '1.05rem', lineHeight: '1.8', color: '#000000' }}>Your Email</label>
                       </div>
                     </div>
                     <div className="col-12">
@@ -170,7 +170,7 @@ function Contact() {
                           id="subject"
                           placeholder="Subject"
                         />
-                        <label htmlFor="subject" style={{ color: '#000000' }}>Subject</label>
+                        <label htmlFor="subject" style={{ fontSize: '1.05rem', lineHeight: '1.8', color: '#000000' }}>Subject</label>
                       </div>
                     </div>
                     <div className="col-12">
