@@ -123,12 +123,12 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
         <div className="booking p-5">
           <div className="row g-5 align-items-center">
             <div className="col-md-6 text-white">
-              <h1 className="text-white mb-4">Online Booking</h1>
+              <h1 className="text-white mb-4">Customize / Plan your Dream Trip</h1>
               <p className="mb-4">
                 You can customize our recommended tours or plan your dream trip by discussing your preferences with the friendly team at Opulent Tours.
               </p>
               {/* FIXED: Changed href from empty string to /tours */}
-              <a className="btn btn-outline-light py-3 px-5 mt-2" href="/tours">
+              <a className="btn btn-outline-light py-3 px-5 mt-2" href="/contact">
                 Read More
               </a>
             </div>
