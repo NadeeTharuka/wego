@@ -1260,12 +1260,12 @@ function Destination() {
     <div>
       <div className="container-fluid bg-primary py-5 mb-5 hero-header"
       style={{
-    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)), url("https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200")',
+    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.5), rgba(20, 20, 31, 0.7)), url("https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200")',
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     imageRendering: '-webkit-optimize-contrast',
-    filter: 'contrast(1.1) brightness(1.05) saturate(1.1)',
+    filter: 'contrast(1.1) brightness(1.3) saturate(1.1)',
     transform: 'translateZ(0)',
     backfaceVisibility: 'hidden'
   }}
