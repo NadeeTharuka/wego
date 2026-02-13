@@ -484,8 +484,7 @@ function PlaceDetails() {
       ]
     },
     "Kandyan Cultural Dance Show": {
-      image: "/assets/img/kandyan-cultural-dance.jpg",
-      description: "Cultural shows in Sri Lanka showcase the island's rich traditions through vibrant performances of dance, music, and rituals. Key highlights include Kandyan dance, known for its elegant movements and elaborate costumes, and Low Country dance, featuring energetic performances with striking masks. Fire dancing and fire walking add dramatic flair, while folk dances and puppet shows depict rural life and folklore. These shows are most popular in Kandy, Colombo, and Sigiriya, offering tourists a lively glimpse into Sri Lanka's cultural heritage.",
+  image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/5c/08/b0/the-costume.jpg?w=1000&h=-1&s=1",
       highlights: [
         "Traditional Kandyan dance",
         "Elaborate costumes",
