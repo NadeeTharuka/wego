@@ -966,6 +966,18 @@ function PlaceDetails() {
         "Seaside charm"
       ]
     },
+     "Galle Dutch Fort - UNESCO World Heritage Site": {
+      image: "/assets/img/galle-fort.jpg",
+      description: "Galle Fort, located in the coastal city of Galle, Sri Lanka, is a UNESCO World Heritage Site and one of the best-preserved colonial-era forts in Asia. Originally built by the Portuguese in the 16th century and later expanded by the Dutch in the 17th century, the fort showcases a blend of European architecture and South Asian culture. Its thick stone walls enclose a vibrant town with cobbled streets, historic buildings, boutique shops, and cafes. Key attractions within the fort include the Dutch Reformed Church, Galle Lighthouse, and the Maritime Museum. Galle Fort is a popular destination for its historical significance, architecture, and seaside charm.",
+      highlights: [
+        "UNESCO World Heritage Site",
+        "Colonial architecture",
+        "Cobbled streets",
+        "Historic buildings",
+        "Dutch Reformed Church",
+        "Seaside charm"
+      ]
+    },
     "Old Dutch Church (Galle)": {
       image: "/assets/img/old-dutch-church-galle.jpg",
       description: "The Old Dutch Church in Galle, Sri Lanka, is one of the oldest Protestant churches still in use on the island. Built by the Dutch in 1755 within the Galle Fort, it reflects classic Dutch colonial architecture with simple yet elegant design features. The church is noted for its arched stained-glass windows, antique wooden pews, and beautifully carved tombstones that date back centuries, many of which are from the colonial period. Beyond being a place of worship, the Old Dutch Church stands as a symbol of Sri Lanka's colonial heritage and remains a popular attraction for visitors exploring the historic Galle Fort.",
