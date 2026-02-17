@@ -16,7 +16,7 @@ function OneDayTourDetails() {
 
   const tourDetails = {
     "Yala Safari": {
-      headerImage: "assets/img/yala-safari-header.jpg",
+      headerImage: "assets/img/yala-safarii.jpg",
       introduction: "Yala National Park, the most iconic wildlife destination in Sri Lanka, is a breathtaking blend of coastal beauty, dry forests, and rich biodiversity. Known for having one of the highest leopard densities in the world, Yala offers travelers a rare opportunity to witness majestic wildlife roaming freely in their natural habitat. Its rugged landscapes, ancient ruins, and tranquil lagoons make it a must-visit destination for nature lovers and adventure seekers.",
       invite: "Experience the wild heart of Sri Lanka! Join us on an unforgettable journey through Yala's untamed wilderness—where every turn reveals a new encounter, every sunrise paints a new memory, and every safari brings you closer to the wonders of nature. Let us take you on a world-class wildlife adventure in Yala!",
       highlights: [
@@ -45,7 +45,7 @@ function OneDayTourDetails() {
       }
     },
     "Kandy & Pinnawala": {
-      headerImage: "assets/img/kandy-pinnawala-header.jpg",
+      headerImage: "https://www.civitatis.com/f/sri-lanka/kandy/kandy.jpg",
       introduction: "Kandy, the cultural capital of Sri Lanka, is a city of charm, history, and spiritual significance. Surrounded by misty hills and centered around the beautiful Kandy Lake, the city is home to the world-renowned Temple of the Sacred Tooth Relic, vibrant traditions, and captivating cultural performances. Just a short drive away lies the Pinnawala Elephant Orphanage, where visitors can enjoy heartwarming encounters with rescued elephants and witness daily routines such as feeding and river bathing. Together, Kandy and Pinnawala offer a rich blend of culture, nature, and unforgettable experiences.",
       invite: "Discover the cultural soul and gentle giants of Sri Lanka! Join us as we take you through the sacred heritage of Kandy and the inspiring beauty of Pinnawala. Let us create a memorable escape filled with culture, nature, and warm Sri Lankan hospitality.",
       highlights: [
@@ -75,7 +75,7 @@ function OneDayTourDetails() {
       }
     },
     "Sigiriya & Dambulla": {
-      headerImage: "assets/img/sigiriya-dambulla-header.jpg",
+      headerImage: "https://cdn.tripspoint.com/uploads/photos/7989/all-inclusive-day-tour-of-sigiriya-dambulla-from-colombo_k0xtu.jpeg",
       introduction: "Sigiriya and Dambulla, two UNESCO World Heritage Sites, form the cultural heart of Sri Lanka's ancient kingdom. Sigiriya, known as the 'Lion Rock,' is an ancient rock fortress and one of Sri Lanka's most iconic landmarks. Built in the 5th century AD by King Kashyapa I, it served as a royal palace atop a 200-meter rock for strategic defense. After his death, the site was abandoned as a royal residence and later used as a Buddhist monastery until the 14th century. Dambulla, famed for its 5 magnificent cave temples, features over 150 Buddha statues and centuries-old murals that tell the story of Sri Lanka's spiritual heritage. The Dambulla Cave Temples, dating back to the 1st century BCE, are renowned for their exquisite Sinhala art and sculpture.",
       invite: "Step into the ancient wonders of Sri Lanka! Join us on an unforgettable journey to explore the majestic Sigiriya Fortress and the sacred Dambulla Cave Temples. Let us guide you through a world of kings, legends, and timeless beauty.",
       highlights: [
@@ -104,7 +104,7 @@ function OneDayTourDetails() {
       }
     },
     "Galle Fort": {
-      headerImage: "assets/img/galle-fort-header.jpg",
+      headerImage: "https://do6raq9h04ex.cloudfront.net/sites/8/2021/07/galle-fort-1050x700-1.jpg",
       introduction: "Galle, located along Sri Lanka's stunning southern coastline, is a city where colonial charm meets tropical beauty. Its highlight, the iconic Galle Dutch Fort, is a UNESCO World Heritage Site and one of the best-preserved colonial-era forts in Asia. Originally built by the Portuguese in the 16th century and later expanded by the Dutch in the 17th century, the fort showcases a blend of European architecture and South Asian culture. Its thick stone walls enclose a vibrant town with cobbled streets, historic buildings, boutique shops, and cafes. Key attractions within the fort include the Dutch Reformed Church, Galle Lighthouse, and the Maritime Museum. With golden beaches, vibrant culture, and a relaxed coastal atmosphere, Galle offers an unforgettable blend of history and seaside serenity.",
       invite: "Explore the timeless beauty of Galle! Walk along ancient ramparts, soak in breathtaking ocean views, and discover the rich heritage of Sri Lanka's most picturesque coastal city. Join us for a journey that blends history, culture, and coastal charm.",
       highlights: [
@@ -133,7 +133,7 @@ function OneDayTourDetails() {
       }
     },
     "Whale Watching": {
-      headerImage: "assets/img/whale-watching-header.jpg",
+      headerImage: "https://d1jyxxz9imt9yb.cloudfront.net/article/5517/meta_image/regular/5-Whale-Watching-Humpback-Breaching-Stellwagen_reduced.jpg",
       introduction: "Sri Lanka is one of the best places in the world to witness majestic marine life up close. From the southern coast—especially Mirissa—travelers can spot blue whales, sperm whales, spinner dolphins, and other incredible ocean giants. The warm tropical waters and rich marine ecosystem create ideal conditions for unforgettable whale-watching experiences, attracting marine enthusiasts from around the globe. Blue whales - Sri Lanka is one of the few places on Earth where you can reliably spot the largest animal ever to live. Mirissa's calm seas and rich marine waters make it one of Asia's top whale watching destinations.",
       invite: "Set sail into the deep blue and meet the gentle giants of the ocean! Join us for a thrilling and eco-friendly whale watching tour, where every moment brings excitement, serenity, and breathtaking natural beauty. Let us take you on an unforgettable ocean adventure in Sri Lanka.",
       highlights: [
@@ -238,10 +238,7 @@ function OneDayTourDetails() {
           minHeight: '60vh',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
-          imageRendering: 'auto',
-          imageRendering: '-webkit-optimize-contrast',
-          filter: 'contrast(1.05) brightness(1.02)'
+          justifyContent: 'center'
         }}
       >
         <div className="container">
@@ -398,10 +395,7 @@ function OneDayTourDetails() {
                     style={{ 
                       height: '350px', 
                       objectFit: 'cover',
-                      width: '100%',
-                      imageRendering: 'auto',
-                      imageRendering: '-webkit-optimize-contrast',
-                      filter: 'contrast(1.05) brightness(1.02)'
+                      width: '100%'
                     }}
                   />
                   <div className="carousel-caption">
