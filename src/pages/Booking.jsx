@@ -29,14 +29,9 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb justify-content-center">
               <li className="breadcrumb-item">
-                <a href="/">Home</a>
+                <a href="/" style={{ color: 'white' }}>Your adventure begins here. Book with confidence</a>
               </li>
-              <li
-                className="breadcrumb-item text-white active"
-                aria-current="page"
-              >
-                Booking
-              </li>
+             
             </ol>
           </nav>
         </div>
