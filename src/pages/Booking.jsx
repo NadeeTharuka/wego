@@ -68,8 +68,7 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
               <hr className="w-25 mx-auto bg-primary mb-1" />
               <hr className="w-50 mx-auto bg-primary mt-0" />
               <p className="mb-0" style={{ fontSize: '1.15rem', lineHeight: '1.8', color: '#000000'  }}>
-                Explore our handpicked destinations and tour packages. Select the place that matches your travel style, budget, and schedule.
-              </p>
+Select from our curated destinations across Sri Lanka, or let us create a custom itinerary just for you              </p>
             </div>
           </div>
           <div
@@ -83,12 +82,11 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
               >
                 <i className="fa fa-dollar-sign fa-3x text-white" />
               </div>
-              <h5 className="mt-4" style={{ fontSize: '1.35rem', lineHeight: '1.8', color: '#000000' }}>Pay Online</h5>
+              <h5 className="mt-4" style={{ fontSize: '1.35rem', lineHeight: '1.8', color: '#000000' }}>Confirm & Pay</h5>
               <hr className="w-25 mx-auto bg-primary mb-1" />
               <hr className="w-50 mx-auto bg-primary mt-0" />
               <p className="mb-0" style={{ fontSize: '1.15rem', lineHeight: '1.8', color: '#000000'  }}>
-                Confirm your booking with our secure online payment system. Fast, safe, and hassle-free transactions guaranteed.
-              </p>
+Review your personalized tour package and complete your booking with our secure payment options              </p>
             </div>
           </div>
           <div
@@ -102,12 +100,11 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
               >
                 <i className="fa fa-plane fa-3x text-white" />
               </div>
-              <h5 className="mt-4" style={{ fontSize: '1.35rem', lineHeight: '1.8', color: '#000000' }}>Fly Today</h5>
+              <h5 className="mt-4" style={{ fontSize: '1.35rem', lineHeight: '1.8', color: '#000000' }}>Start Your Journey</h5>
               <hr className="w-25 mx-auto bg-primary mb-1" />
               <hr className="w-50 mx-auto bg-primary mt-0" />
               <p className="mb-0" style={{ fontSize: '1.15rem', lineHeight: '1.8', color: '#000000' }}>
-                Get ready to travel! Receive instant confirmation and enjoy a smooth, memorable journey with Wego Travelling.
-              </p>
+Pack your bags and get ready for an unforgettable adventure with 24/7 support throughout your journey              </p>
             </div>
           </div>
         </div>
@@ -115,23 +112,21 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
     </div>
     {/* Process Start */}
     {/* Booking Start */}
-    <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-      <div className="container">
-        <div className="booking p-5">
-          <div className="row g-5 align-items-center">
-            <div className="col-md-6 text-white">
-              <h1 className="text-white mb-4">Customize / Plan your Dream Trip</h1>
-              <p className="mb-4">
-                You can customize our recommended tours or plan your dream trip by discussing your preferences with the friendly team at Opulent Tours.
-              </p>
-              {/* FIXED: Changed href from empty string to /tours */}
-              <a className="btn btn-outline-light py-3 px-5 mt-2" href="/contact">
-                Read More
-              </a>
-            </div>
-            <div className="col-md-6">
-              <h1 className="text-white mb-4">Plan A Tour</h1>
-              <form>
+      <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div className="container">
+          <div className="booking p-5">
+            <div className="row g-5 align-items-center">
+              <div className="col-md-6 text-white">
+                <h1 className="text-white mb-4">Customize / Plan your Dream Trip</h1>
+                <p className="mb-4">
+                  You can customize our recommended tours or plan your dream trip by discussing your preferences with the friendly team at Opulent Tours.
+                </p>
+                <a className="btn btn-outline-light py-3 px-5 mt-2" href="/contact">
+                  Read More
+                </a>
+              </div>
+              <div className="col-md-6">
+                <h1 className="text-white mb-4">Plan A Tour</h1>
                 <div className="row g-3">
                   <div className="col-md-6">
                     <div className="form-floating">
@@ -156,11 +151,7 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
                     </div>
                   </div>
                   <div className="col-md-6">
-                    <div
-                      className="form-floating date"
-                      id="date3"
-                      data-target-input="nearest"
-                    >
+                    <div className="form-floating date" id="date3" data-target-input="nearest">
                       <input
                         type="text"
                         className="form-control bg-transparent datetimepicker-input"
@@ -174,13 +165,9 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
                   </div>
                   <div className="col-md-6">
                     <div className="form-floating">
-                      <select
-                        className="form-select bg-transparent"
-                        id="select1"
-                      >
-                        <option value={1}>Destination 1</option>
-                        <option value={2}>Destination 2</option>
-                        <option value={3}>Destination 3</option>
+                      <select className="form-select bg-transparent" id="select1">
+                        <option value={1}>Sri Lanka</option>
+                        
                       </select>
                       <label htmlFor="select1">Destination</label>
                     </div>
@@ -198,20 +185,16 @@ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
                     </div>
                   </div>
                   <div className="col-12">
-                    <button
-                      className="btn btn-outline-light w-100 py-3"
-                      type="submit"
-                    >
+                    <button className="btn btn-outline-light w-100 py-3" type="button">
                       Inquire Now
                     </button>
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     {/* Booking Start */}
     </div>
   )
