@@ -308,9 +308,12 @@ export default function Home() {
       <section className="tour-packages py-5">
         <div className="container">
           <div className="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <h2 className="display-5">Sri lanka Tour packages Recommended by Opulent</h2>
-            <p style={{ color: '#000000' }}>Choose your perfect adventure</p>
-          </div>
+<h2 className="display-5" style={{ color: "black" }}>
+  Sri Lanka Tour Packages Recommended by Opulent
+</h2>
+<p style={{ color: '#000000', fontSize: '24px' }}>
+  Choose your perfect adventure
+</p>          </div>
           
           <div className="packages-grid">
             {sriLankaTourPackages.map((pkg) => (
@@ -357,28 +360,34 @@ export default function Home() {
                     <img className="img-fluid" src={tour.image} alt={tour.name} />
                   </div>
                   <div className="d-flex border-bottom">
-                    <small className="flex-fill text-center border-end py-2">
-                      <i className="fa fa-map-marker-alt text-primary me-2" />
-                      Sri Lanka
-                    </small>
-                    <small className="flex-fill text-center border-end py-2">
-                      <i className="fa fa-calendar-alt text-primary me-2" />1 Day
-                    </small>
-                    <small className="flex-fill text-center py-2">
-                      <i className="fa fa-user text-primary me-2" />Any Group
-                    </small>
-                  </div>
+  <small className="flex-fill text-center border-end py-2 fs-6">
+    <i className="fa fa-map-marker-alt text-primary me-2" />
+    Sri Lanka
+  </small>
+
+  <small className="flex-fill text-center border-end py-2 fs-6">
+    <i className="fa fa-calendar-alt text-primary me-2" />
+    1 Day
+  </small>
+
+  <small className="flex-fill text-center py-2 fs-6">
+    <i className="fa fa-user text-primary me-2" />
+    Any Group
+  </small>
+</div>
+
                   <div className="text-center p-4">
-                    <h3 className="mb-0">{tour.price}</h3>
-                    <div className="mb-3">
-                      <small className="fa fa-star text-primary" />
-                      <small className="fa fa-star text-primary" />
-                      <small className="fa fa-star text-primary" />
-                      <small className="fa fa-star text-primary" />
-                      <small className="fa fa-star text-primary" />
-                    </div>
-                    <h5 className="mb-3">{tour.name}</h5>
-                    <p style={{ color: '#000000' }}>{tour.description}</p>
+                    
+<h5 
+  className="mb-3"
+  style={{ 
+    color: '#000000', 
+    fontWeight: 'bold', 
+    fontSize: '24px' 
+  }}
+>
+  {tour.name}
+</h5>                    <p style={{ color: '#000000' }}>{tour.description}</p>
                     <div className="d-flex justify-content-center mb-2">
                       <button
                         onClick={() => handleViewOneDayTour(tour)}
@@ -459,8 +468,7 @@ export default function Home() {
                     <div className="form-floating">
                       <select className="form-select bg-transparent" id="select1">
                         <option value={1}>Sri Lanka</option>
-                        <option value={2}>India</option>
-                        <option value={3}>Thailand</option>
+                        
                       </select>
                       <label htmlFor="select1">Destination</label>
                     </div>
