@@ -13,7 +13,6 @@
   image-rendering: -webkit-optimize-contrast;
   image-rendering: auto;
   filter: contrast(1.05) brightness(1.02);
-  overflow: hidden;
 }
 
 .tour-hero::before {
@@ -34,7 +33,6 @@
 
 .tour-introduction {
   transition: all 0.3s ease;
-  border-left: 4px solid #06A3DA;
 }
 
 .tour-introduction:hover {
