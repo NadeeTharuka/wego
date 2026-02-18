@@ -471,8 +471,7 @@ const TourPackages = () => {
               <h1 className="display-3 text-white animated slideInDown">Tours</h1>
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb justify-content-center">
-                  <li className="breadcrumb-item"><a href="/">Home</a></li>
-                  <li className="breadcrumb-item text-white active" aria-current="page">Tours</li>
+                  <li className="breadcrumb-item"><a href="/" style={{ color: 'white' }}>Carefully crafted tours for unforgettable experiences</a></li>
                 </ol>
               </nav>
             </div>
