@@ -235,9 +235,7 @@ function OneDayTourDetails() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          minHeight: '85vh',
-          width: '100vw',
-          marginLeft: 'calc(-50vw + 50%)',
+          minHeight: '80vh',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
@@ -294,11 +292,11 @@ function OneDayTourDetails() {
             </button>
 
             {/* Introduction */}
-            <div className="tour-introduction mb-5 p-4 bg-light rounded">
+            <div className="tour-introduction mb-5 p-4">
               <h2 className="text-primary mb-4">
                 <i className="fa fa-info-circle me-2"></i>Introduction
               </h2>
-              <p className="lead" style={{ lineHeight: '1.8', textAlign: 'justify', color: '#333' }}>
+              <p className="lead" style={{ lineHeight: '1.8', textAlign: 'justify', color: '#212529' }}>
                 {details.introduction}
               </p>
             </div>
