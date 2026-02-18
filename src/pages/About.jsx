@@ -33,14 +33,9 @@ function About() {
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb justify-content-center">
                   <li className="breadcrumb-item">
-                    <a href="/" className="text-white">Home</a>
+                    <a href="/" className="text-white">Your journey, perfected with heart and care</a>
                   </li>
-                  <li
-                    className="breadcrumb-item text-white active"
-                    aria-current="page"
-                  >
-                    About Us
-                  </li>
+                  
                 </ol>
               </nav>
             </div>
