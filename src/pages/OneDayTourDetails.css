@@ -13,6 +13,7 @@
   image-rendering: -webkit-optimize-contrast;
   image-rendering: auto;
   filter: contrast(1.05) brightness(1.02);
+  overflow: hidden;
 }
 
 .tour-hero::before {
