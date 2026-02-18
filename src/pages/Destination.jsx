@@ -548,7 +548,7 @@ function Destination() {
                 "Beach Relaxation"
               ]
             },
-            "Turtle Conservation Project",
+            "Sea Turtle Hatchery ",
             {
               name: "Colombo City Tour",
               isExpandable: true,
