@@ -235,7 +235,9 @@ function OneDayTourDetails() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          minHeight: '60vh',
+          minHeight: '85vh',
+          width: '100vw',
+          marginLeft: 'calc(-50vw + 50%)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
