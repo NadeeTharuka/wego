@@ -32,11 +32,9 @@ function Contact() {
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb justify-content-center">
                   <li className="breadcrumb-item">
-                    <a href="/">Home</a>
+                    <a href="/" style={{ color: 'white' }} >One message. Endless adventures</a>
                   </li>
-                  <li className="breadcrumb-item text-white active" aria-current="page">
-                    Contact Us
-                  </li>
+                  
                 </ol>
               </nav>
             </div>
