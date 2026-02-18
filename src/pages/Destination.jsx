@@ -1256,6 +1256,15 @@ function Destination() {
     return colomboPlaces.includes(activityName);
   };
 
+  // Renders activity name with "Overnight in" bolded
+  const renderActivityName = (name) => {
+    if (name && name.startsWith('Overnight in')) {
+      const rest = name.slice('Overnight in'.length);
+      return <><span style={{ color: '#212529', fontWeight: '600' }}>Overnight in</span>{rest}</>;
+    }
+    return name;
+  };
+
   return (
     <div>
       <div className="container-fluid bg-primary py-5 mb-5 hero-header"
@@ -1407,7 +1416,7 @@ style={{
                                             <i className="fa fa-map-marker-alt"></i>
                                           </div>
                                           <div className="flex-grow-1">
-                                            <h6 className="mb-0 fw-semibold">{activityName}</h6>
+                                            <h6 className="mb-0 fw-semibold">{renderActivityName(activityName)}</h6>
                                           </div>
                                         </div>
                                         <div className="d-flex gap-2">
@@ -1472,7 +1481,7 @@ style={{
                                           <i className="fa fa-map-marker-alt"></i>
                                         </div>
                                         <div>
-                                          <h6 className="mb-0 fw-semibold">{activityName}</h6>
+                                          <h6 className="mb-0 fw-semibold">{renderActivityName(activityName)}</h6>
                                         </div>
                                       </div>
                                       <button 
@@ -1489,7 +1498,7 @@ style={{
                                   return (
                                     <div key={activityIndex} className="mb-2 p-2 bg-white rounded">
                                       <i className="fa fa-chevron-right text-primary me-2"></i>
-                                      <span>{activityName}</span>
+                                      <span>{renderActivityName(activityName)}</span>
                                     </div>
                                   );
                                 }
@@ -1677,7 +1686,7 @@ style={{
                     <h6 className="text-primary mb-3">
                       <i className="fa fa-info-circle me-2"></i>Important Information
                     </h6>
-                    <ul className="list-unstyled small">
+                    <ul className="list-unstyled small" style={{ color: '#212529' }}>
                       <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Free cancellation up to 48 hours</li>
                       <li className="mb-2"><i className="fa fa-check text-success me-2"></i>24/7 customer support</li>
                       <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Customizable itinerary</li>
