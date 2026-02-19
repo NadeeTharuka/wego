@@ -120,13 +120,15 @@ body > div > a:not(.whatsapp-button) {
     image-rendering: crisp-edges;
 }
 
-/* Ensure hero images display in original quality */
+/* Ensure hero images display in original quality - NO color manipulation */
 .hero-header,
 .container-fluid.bg-primary {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+    position: relative;
+    overflow: hidden;
 }
 
 /* Responsive hero heights */
@@ -181,13 +183,12 @@ body > div > a:not(.whatsapp-button) {
     }
 }
 
-/* 4. HIGH DPI / RETINA DISPLAY */
-
+/* High DPI / Retina Display - natural rendering */
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
        only screen and (min-resolution: 192dpi) {
     img[alt*="Sri Lanka"],
     img[alt*="Map"] {
-        filter: contrast(1.2) brightness(1.1) saturate(1.15);
+        image-rendering: -webkit-optimize-contrast;
     }
 }
 
@@ -239,7 +240,7 @@ img {
     height: auto;
 }
 
-/* For high DPI displays */
+/* For high DPI displays - show at full natural quality */
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
        only screen and (min-resolution: 192dpi) {
     .hero-header {
@@ -249,7 +250,7 @@ img {
     }
 }
 
-/* Enhance image sharpness and clarity */
+/* Decorative ::after pattern overlay on hero - subtle, non-color-altering */
 .hero-header::before {
     content: '';
     position: absolute;
@@ -257,12 +258,33 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: inherit;
-    background-position: inherit;
-    background-repeat: inherit;
-    background-size: inherit;
-    filter: contrast(1.1) brightness(1.1) saturate(1.2);
-    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.40);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-header > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Decorative ::after pattern overlay on hero - subtle, non-color-altering */
+.hero-header::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 320px;
+    height: 320px;
+    background-image: url('https://z-cdn-media.chatglm.cn/files/4ac46857-b4b3-4feb-b15a-4dd1fe09c0d3.jpg?auth_key=1868705682-356eef7e4dd4405aa4d927904b79b8ba-0-0555f78001106265a11ed885a820b27b');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.07;
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+    animation: slidePattern 25s ease-in-out infinite;
 }
 
 /* ============================================================= */
