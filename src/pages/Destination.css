@@ -4,7 +4,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 60vh;
+  min-height: 100vh;
   /* FIXED: Removed duplicate imageRendering, kept only one */
   image-rendering: -webkit-optimize-contrast;
   filter: contrast(1.1) brightness(1.05) saturate(1.1);

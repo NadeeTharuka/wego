@@ -1285,19 +1285,7 @@ function Destination() {
               <h1 className="display-3 text-white animated slideInDown">
                 Tour Details
               </h1>
-              <nav aria-label="breadcrumb">
-                <ol className="breadcrumb justify-content-center">
-                  <li className="breadcrumb-item">
-                    <a href="/" className="text-white">Home</a>
-                  </li>
-                  <li className="breadcrumb-item">
-                    <a href="/tours" className="text-white">Tours</a>
-                  </li>
-                  <li className="breadcrumb-item text-white active" aria-current="page">
-                    Details
-                  </li>
-                </ol>
-              </nav>
+              
             </div>
           </div>
         </div>
@@ -1559,19 +1547,19 @@ style={{
             <div className="col-lg-4">
               <div className="booking-sidebar sticky-top">
                 <div className="booking-card bg-light p-4 rounded shadow">
-                  <h4 className="text-primary mb-4">
+                  <h4 className="text-primary mb-4" style={{ fontSize: '1.5rem' }}>
                     <i className="fa fa-calendar-check me-2"></i>Book This Tour
                   </h4>
                   
                   <div className="price-display text-center mb-4 p-3 bg-primary bg-opacity-10 rounded">
-                    <div className="price-label text-muted">Starting from</div>
+                    <div className="price-label text-muted" style={{ fontSize: '1.1rem' }}>Starting from</div>
                     <div className="price-amount display-6 fw-bold text-primary">{selectedPackage.price}</div>
-                    <div className="price-note small text-muted">per person</div>
+                    <div className="price-note text-muted" style={{ fontSize: '1rem' }}>per person</div>
                   </div>
 
                   <form onSubmit={handleSubmit}>
                     <div className="mb-3">
-                      <label htmlFor="name" className="form-label fw-semibold">
+                      <label htmlFor="name" className="form-label fw-semibold" style={{ fontSize: '1.05rem' }}>
                         <i className="fa fa-user me-2"></i>Full Name *
                       </label>
                       <input 
@@ -1581,12 +1569,13 @@ style={{
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
+                        style={{ fontSize: '1.05rem' }}
                         required
                       />
                     </div>
 
                     <div className="mb-3">
-                      <label htmlFor="email" className="form-label fw-semibold">
+                      <label htmlFor="email" className="form-label fw-semibold" style={{ fontSize: '1.05rem' }}>
                         <i className="fa fa-envelope me-2"></i>Email Address *
                       </label>
                       <input 
@@ -1596,12 +1585,13 @@ style={{
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
+                        style={{ fontSize: '1.05rem' }}
                         required
                       />
                     </div>
 
                     <div className="mb-3">
-                      <label htmlFor="phone" className="form-label fw-semibold">
+                      <label htmlFor="phone" className="form-label fw-semibold" style={{ fontSize: '1.05rem' }}>
                         <i className="fa fa-phone me-2"></i>Phone Number
                       </label>
                       <input 
@@ -1612,12 +1602,13 @@ style={{
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder="+94 XX XXX XXXX"
+                        style={{ fontSize: '1.05rem' }}
                       />
                     </div>
 
                     <div className="row">
                       <div className="col-md-6 mb-3">
-                        <label htmlFor="date" className="form-label fw-semibold">
+                        <label htmlFor="date" className="form-label fw-semibold" style={{ fontSize: '1.05rem' }}>
                           <i className="fa fa-calendar me-2"></i>Travel Date *
                         </label>
                         <input 
@@ -1628,11 +1619,12 @@ style={{
                           value={formData.date}
                           onChange={handleInputChange}
                           min={new Date().toISOString().split('T')[0]}
+                          style={{ fontSize: '1.05rem' }}
                           required
                         />
                       </div>
                       <div className="col-md-6 mb-3">
-                        <label htmlFor="guests" className="form-label fw-semibold">
+                        <label htmlFor="guests" className="form-label fw-semibold" style={{ fontSize: '1.05rem' }}>
                           <i className="fa fa-users me-2"></i>Guests
                         </label>
                         <select 
@@ -1641,6 +1633,7 @@ style={{
                           name="guests"
                           value={formData.guests}
                           onChange={handleInputChange}
+                          style={{ fontSize: '1.05rem' }}
                         >
                           <option value="1">1 Person</option>
                           <option value="2">2 People</option>
@@ -1653,7 +1646,7 @@ style={{
                     </div>
 
                     <div className="mb-4">
-                      <label htmlFor="specialRequests" className="form-label fw-semibold">
+                      <label htmlFor="specialRequests" className="form-label fw-semibold" style={{ fontSize: '1.05rem' }}>
                         <i className="fa fa-comment me-2"></i>Special Requests
                       </label>
                       <textarea 
@@ -1664,29 +1657,30 @@ style={{
                         value={formData.specialRequests}
                         onChange={handleInputChange}
                         placeholder="Any special dietary requirements, accessibility needs, or preferences..."
+                        style={{ fontSize: '1.05rem' }}
                       />
                     </div>
 
-                    <button type="submit" className="btn btn-primary w-100 py-3 mb-3">
+                    <button type="submit" className="btn btn-primary w-100 py-3 mb-3" style={{ fontSize: '1.1rem' }}>
                       <i className="fa fa-paper-plane me-2"></i>Send Booking Request
                     </button>
 
                     <div className="contact-info text-center">
-                      <small className="text-muted">
+                      <p className="text-muted mb-0" style={{ fontSize: '1rem' }}>
                         Or contact us directly:<br/>
                         <i className="fa fa-phone me-1"></i> +94 74 234 3484<br/>
                         <i className="fa fa-envelope me-1"></i> opulenttoursinfo@gmail.com
-                      </small>
+                      </p>
                     </div>
                   </form>
                 </div>
 
                 <div className="additional-info mt-4">
                   <div className="info-card bg-white p-4 rounded shadow-sm">
-                    <h6 className="text-primary mb-3">
+                    <h6 className="text-primary mb-3" style={{ fontSize: '1.15rem' }}>
                       <i className="fa fa-info-circle me-2"></i>Important Information
                     </h6>
-                    <ul className="list-unstyled small" style={{ color: '#212529' }}>
+                    <ul className="list-unstyled" style={{ color: '#212529', fontSize: '1rem' }}>
                       <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Free cancellation up to 48 hours</li>
                       <li className="mb-2"><i className="fa fa-check text-success me-2"></i>24/7 customer support</li>
                       <li className="mb-2"><i className="fa fa-check text-success me-2"></i>Customizable itinerary</li>

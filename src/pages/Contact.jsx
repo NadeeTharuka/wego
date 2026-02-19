@@ -11,7 +11,7 @@ function Contact() {
       {/* Hero Start */}
 <div className="container-fluid bg-primary py-5 mb-5 hero-header"
   style={{
- backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)), url("https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200")',    backgroundPosition: 'center center',
+ backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.35), rgba(20, 20, 31, 0.45)), url("https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=90")',    backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     minHeight: '95vh',
@@ -26,17 +26,10 @@ function Contact() {
         <div className="container py-5">
           <div className="row justify-content-center py-5">
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-              <h1 className="display-3 text-white mb-3 animated slideInDown">
-                Contact Us
+ <h1 className="display-3 text-white animated slideInDown" style={{ fontSize: '2.5rem' }}>                
+  One message, Endless adventures
               </h1>
-              <nav aria-label="breadcrumb">
-                <ol className="breadcrumb justify-content-center">
-                  <li className="breadcrumb-item">
-                    <a href="/" style={{ color: 'white' }} >One message. Endless adventures</a>
-                  </li>
-                  
-                </ol>
-              </nav>
+              
             </div>
           </div>
         </div>
