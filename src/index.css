@@ -378,3 +378,33 @@ body::after {
         opacity: 0.02;
     }
 }
+/* ============================================================= */
+/* ACTIVE NAV LINK - CURRENTLY VISITED PAGE STAYS GREEN          */
+/* ============================================================= */
+
+/* Active page link - always green */
+.active-nav-link,
+.nav-item.nav-link.active-nav-link {
+    color: #28a745 !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid #28a745 !important;
+    padding-bottom: 4px !important;
+}
+
+/* Hover effect for non-active links */
+.nav-item.nav-link:not(.active-nav-link):hover {
+    color: #28a745 !important;
+}
+
+/* Mobile: active link still shows green in collapsed menu */
+@media (max-width: 991px) {
+    .active-nav-link,
+    .nav-item.nav-link.active-nav-link {
+        color: #28a745 !important;
+        border-bottom: none !important;
+        border-left: 3px solid #28a745 !important;
+        padding-left: 12px !important;
+        background-color: rgba(40, 167, 69, 0.05) !important;
+        border-radius: 4px !important;
+    }
+}
