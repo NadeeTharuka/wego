@@ -1260,7 +1260,7 @@ function Destination() {
   const renderActivityName = (name) => {
     if (name && name.startsWith('Overnight in')) {
       const rest = name.slice('Overnight in'.length);
-      return <><span style={{ color: '#212529', fontWeight: '600' }}>Overnight in</span>{rest}</>;
+      return <span style={{ color: '#212529', fontWeight: '600' }}>Overnight in{rest}</span>;
     }
     return name;
   };
