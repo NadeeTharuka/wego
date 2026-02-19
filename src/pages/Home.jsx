@@ -134,7 +134,14 @@ export default function Home() {
           position: 'relative'
         }}
       >
-        <div className="container py-5">
+        {/* Dark overlay - only darkens, does not affect image zoom/position */}
+        <div style={{
+          position: 'absolute',
+          top: 0, left: 0, right: 0, bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.40)',
+          zIndex: 0
+        }} />
+        <div className="container py-5" style={{ position: 'relative', zIndex: 1 }}>
           <div className="row justify-content-center py-5">
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
               <h1 className="text-white mb-4 animated slideInDown" style={{ 
