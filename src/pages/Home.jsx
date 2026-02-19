@@ -226,7 +226,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-plane text-primary mb-4" />
                   <h5>Airport Pick-up & Drop-off</h5>
-                  <p style={{ color: '#000000' }}>
+                  <p style={{ color: '#000000', fontSize: '1.25rem', lineHeight: '1.8' }}>
                     Comfortable and reliable transfers with friendly drivers and clean vehicles
                   </p>
                 </div>
@@ -237,7 +237,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-hotel text-primary mb-4" />
                   <h5>Hotel Reservations</h5>
-                  <p style={{ color: '#000000' }}>
+                  <p style={{ color: '#000000', fontSize: '1.25rem', lineHeight: '1.8' }}>
                     Star-class, boutique, or budget hotels handpicked for quality and comfort
                   </p>
                 </div>
@@ -248,7 +248,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-car text-primary mb-4" />
                   <h5>Transportation Services</h5>
-                  <p style={{ color: '#000000' }}>
+                  <p style={{ color: '#000000', fontSize: '1.25rem', lineHeight: '1.8' }}>
                     Luxury cars, vans, and coaches with chauffeur-driven or self-drive options
                   </p>
                 </div>
@@ -259,7 +259,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-map-marked-alt text-primary mb-4" />
                   <h5>Tailor-Made Tours</h5>
-                  <p style={{ color: '#000000' }}>
+                  <p style={{ color: '#000000', fontSize: '1.25rem', lineHeight: '1.8' }}>
                     Personalized itineraries designed to match your interests and budget
                   </p>
                 </div>
@@ -270,7 +270,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-user-tie text-primary mb-4" />
                   <h5>Professional Tour Guides</h5>
-                  <p style={{ color: '#000000' }}>
+                  <p style={{ color: '#000000', fontSize: '1.25rem', lineHeight: '1.8' }}>
                     Licensed multilingual guides with cultural insights and local expertise
                   </p>
                 </div>
@@ -281,7 +281,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-binoculars text-primary mb-4" />
                   <h5>Excursions & Sightseeing</h5>
-                  <p style={{ color: '#000000' }}>
+                  <p style={{ color: '#000000', fontSize: '1.25rem', lineHeight: '1.8' }}>
                     Day trips to top attractions, hidden gems, and wildlife safaris
                   </p>
                 </div>
@@ -292,7 +292,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-mountain text-primary mb-4" />
                   <h5>Adventure Activities</h5>
-                  <p style={{ color: '#000000' }}>
+                  <p style={{ color: '#000000', fontSize: '1.25rem', lineHeight: '1.8' }}>
                     Hiking, rafting, surfing, diving, and camping under professional supervision
                   </p>
                 </div>
@@ -303,7 +303,7 @@ export default function Home() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-headset text-primary mb-4" />
                   <h5>24/7 Customer Support</h5>
-                  <p style={{ color: '#000000' }}>
+                  <p style={{ color: '#000000', fontSize: '1.25rem', lineHeight: '1.8' }}>
                     Round-the-clock assistance to ensure a safe and smooth journey
                   </p>
                 </div>
@@ -397,7 +397,7 @@ export default function Home() {
   }}
 >
   {tour.name}
-</h5>                    <p style={{ color: '#000000' }}>{tour.description}</p>
+</h5>                    <p style={{ color: '#000000', fontSize: '1.25rem', lineHeight: '1.8' }}>{tour.description}</p>
                     <div className="d-flex justify-content-center mb-2">
                       <button
                         onClick={() => handleViewOneDayTour(tour)}
@@ -528,7 +528,7 @@ export default function Home() {
                 <h5 className="mt-4">Choose A Destination</h5>
                 <hr className="w-25 mx-auto bg-primary mb-1" />
                 <hr className="w-50 mx-auto bg-primary mt-0" />
-                <p className="mb-0" style={{ color: '#000000' }}>
+                <p className="mb-0" style={{ color: '#000000', fontSize: '1.25rem', lineHeight: '1.8' }}>
                   Select from our curated destinations across Sri Lanka, or let us create a custom itinerary just for you
                 </p>
               </div>
@@ -544,7 +544,7 @@ export default function Home() {
                 <h5 className="mt-4">Confirm & Pay</h5>
                 <hr className="w-25 mx-auto bg-primary mb-1" />
                 <hr className="w-50 mx-auto bg-primary mt-0" />
-                <p className="mb-0" style={{ color: '#000000' }}>
+                <p className="mb-0" style={{ color: '#000000', fontSize: '1.25rem', lineHeight: '1.8' }}>
                   Review your personalized tour package and complete your booking with our secure payment options
                 </p>
               </div>
@@ -560,7 +560,7 @@ export default function Home() {
                 <h5 className="mt-4">Start Your Journey</h5>
                 <hr className="w-25 mx-auto bg-primary mb-1" />
                 <hr className="w-50 mx-auto bg-primary mt-0" />
-                <p className="mb-0" style={{ color: '#000000' }}>
+                <p className="mb-0" style={{ color: '#000000', fontSize: '1.25rem', lineHeight: '1.8' }}>
                   Pack your bags and get ready for an unforgettable adventure with 24/7 support throughout your journey
                 </p>
               </div>
