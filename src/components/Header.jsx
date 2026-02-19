@@ -1,7 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 function Header() {
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
+  const navLinkClass = (path) =>
+    `nav-item nav-link${isActive(path) ? ' active-nav-link' : ''}`;
+
   return (
     <div>
     {/* Topbar Start */}
@@ -30,34 +37,19 @@ function Header() {
             className="d-inline-flex align-items-center"
             style={{ height: 45 }}
           >
-            <a
-              className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href="/"
-            >
+            <a className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="/">
               <i className="fab fa-twitter fw-normal" />
             </a>
-            <a
-              className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href="/"
-            >
+            <a className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="/">
               <i className="fab fa-facebook-f fw-normal" />
             </a>
-            <a
-              className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href="/"
-            >
+            <a className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="/">
               <i className="fab fa-linkedin-in fw-normal" />
             </a>
-            <a
-              className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href="/"
-            >
+            <a className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="/">
               <i className="fab fa-instagram fw-normal" />
             </a>
-            <a
-              className="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
-              href="/"
-            >
+            <a className="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="/">
               <i className="fab fa-youtube fw-normal" />
             </a>
           </div>
@@ -109,21 +101,11 @@ function Header() {
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <div className="navbar-nav ms-auto py-0">
-            <Link to="/" className="nav-item nav-link">
-              Home
-            </Link>
-            <Link to="/About" className="nav-item nav-link">
-              About Us
-            </Link>
-            <Link to="/Tours" className="nav-item nav-link">
-              Tours
-            </Link>
-            <Link to="/Booking" className="nav-item nav-link">
-              Booking
-            </Link>
-            <Link to="/Contact" className="nav-item nav-link">
-              Contact Us
-            </Link>
+            <Link to="/" className={navLinkClass('/')}>Home</Link>
+            <Link to="/About" className={navLinkClass('/About')}>About Us</Link>
+            <Link to="/Tours" className={navLinkClass('/Tours')}>Tours</Link>
+            <Link to="/Booking" className={navLinkClass('/Booking')}>Booking</Link>
+            <Link to="/Contact" className={navLinkClass('/Contact')}>Contact Us</Link>
           </div>
         </div>
       </nav>
