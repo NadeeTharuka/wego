@@ -120,7 +120,7 @@ export default function Home() {
       <div 
         className="container-fluid bg-primary mb-5 hero-header"
         style={{
-          background: `linear-gradient(rgba(20, 20, 31, 0.3), rgba(20, 20, 31, 0.5)), url('https://images.unsplash.com/photo-1570789210967-2cac24afeb00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1570789210967-2cac24afeb00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`,
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
@@ -130,7 +130,8 @@ export default function Home() {
           imageRendering: 'crisp-edges',
           WebkitImageRendering: 'crisp-edges',
           transform: 'translateZ(0)',
-          backfaceVisibility: 'hidden'
+          backfaceVisibility: 'hidden',
+          position: 'relative'
         }}
       >
         <div className="container py-5">
