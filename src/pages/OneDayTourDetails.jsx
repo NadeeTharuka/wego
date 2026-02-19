@@ -235,7 +235,7 @@ function OneDayTourDetails() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          minHeight: '80vh',
+          minHeight: '100vh',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
@@ -281,7 +281,7 @@ function OneDayTourDetails() {
               <h2 className="text-primary mb-4">
                 <i className="fa fa-info-circle me-2"></i>Introduction
               </h2>
-              <p className="lead" style={{ lineHeight: '1.8', textAlign: 'justify', color: '#212529' }}>
+              <p className="lead" style={{ lineHeight: '1.8', textAlign: 'justify', color: '#000000' }}>
                 {details.introduction}
               </p>
             </div>
