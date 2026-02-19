@@ -1,6 +1,7 @@
 // Home.jsx - Updated with black text colors
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import "./TourPackages.css";
 
 export default function Home() {
   useEffect(() => {
@@ -333,10 +334,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="package-content">
-                  <h3 className="package-title">{pkg.name}</h3>
-                  <div className="package-duration">
-                    <i className="fa fa-clock text-primary me-2"></i>
-                    {pkg.duration}
+                  <h3 className="package-title" style={{ fontSize: '1.6rem', fontWeight: '700', marginBottom: '0.3rem' }}>
+                    {pkg.name.split(' - ')[0]}
+                  </h3>
+                  <div style={{ fontSize: '1rem', fontWeight: '500', marginBottom: '1rem', color: '#000000' }}>
+                    {pkg.name.split(' - ')[1]}
                   </div>
                   <div className="package-highlights">
                     {pkg.highlights.map((highlight, index) => (
