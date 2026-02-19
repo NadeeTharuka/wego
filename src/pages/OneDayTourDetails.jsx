@@ -256,24 +256,9 @@ function OneDayTourDetails() {
                   <i className="fa fa-sun me-2"></i>
                   <span className="fs-5">Start: {details.tourDetails.startTime}</span>
                 </div>
-                <div className="text-white">
-                  <i className="fa fa-tag me-2"></i>
-                  <span className="fs-5 fw-bold">{tour.price}</span>
-                </div>
+                
               </div>
-              <nav aria-label="breadcrumb">
-                <ol className="breadcrumb justify-content-center">
-                  <li className="breadcrumb-item">
-                    <a href="/" className="text-white">Home</a>
-                  </li>
-                  <li className="breadcrumb-item">
-                    <a href="/tours" className="text-white">Tours</a>
-                  </li>
-                  <li className="breadcrumb-item text-white active" aria-current="page">
-                    {tour.name}
-                  </li>
-                </ol>
-              </nav>
+             
             </div>
           </div>
         </div>
