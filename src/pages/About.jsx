@@ -67,16 +67,16 @@ function About() {
               <h1 className="mb-4">
                 Welcome to <span className="text-primary">Opulent Tours</span>
               </h1>
-              <p className="mb-4" style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#000000' }}>
+              <p className="mb-4" style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#000000', textAlign: 'justify' }}>
                 Welcome to Opulent Tours, your gateway to Sri Lanka, a tropical island that captivates travelers with its golden beaches, misty mountains, ancient cities, and the genuine warmth of its people. A land where culture, nature, and adventure blend beautifully, Sri Lanka promises unforgettable experiences at every turn.
               </p>
-              <p className="mb-4" style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#000000' }}>
+              <p className="mb-4" style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#000000', textAlign: 'justify' }}>
                 Based in Kalutara, Opulent Tours proudly stands as a leading Sri Lankan travel company, with over 15 years of experience in crafting unforgettable travel experiences. Our young and creative team combines local expertise with modern innovation, ensuring every journey is crafted with care, comfort, and a touch of luxury.
               </p>
-              <p className="mb-4" style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#000000' }}>
+              <p className="mb-4" style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#000000', textAlign: 'justify' }}>
                 We design exceptional tours not only across Sri Lanka, but also to India and Thailand, offering everything from exotic getaways and cultural escapes to thrilling adventures. Each itinerary is tailor-made to reflect your style – whether you seek relaxation, exploration, or indulgence.
               </p>
-              <p className="mb-4" style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#086AD8' }}>
+              <p className="mb-4" style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#086AD8', textAlign: 'justify' }}>
                 At Opulent Tours, we believe travel should be as extraordinary as the destinations themselves.
               </p>
             </div>
