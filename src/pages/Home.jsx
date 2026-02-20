@@ -125,7 +125,7 @@ export default function Home() {
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
-          minHeight: '80vh',
+          minHeight: '100vh',
           paddingTop: '4rem',
           paddingBottom: '2rem',
           imageRendering: 'crisp-edges',
