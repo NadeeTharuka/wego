@@ -1269,7 +1269,7 @@ function Destination() {
     <div>
       <div className="container-fluid bg-primary py-5 mb-5 hero-header"
       style={{
-    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.5), rgba(20, 20, 31, 0.7)), url("https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200")',
+    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.5), rgba(20, 20, 31, 0.7)), url("assets/img/destinationheaderr.jpg")',
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
