@@ -469,12 +469,15 @@ const TourPackages = () => {
         <div className="container py-5">
           <div className="row justify-content-center py-5">
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-<h1 className="text-white animated slideInDown" style={{ 
-                fontWeight: '500',
-                textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
-                fontSize: '3rem',
-                lineHeight: '1.4'
-              }}>                Carefully crafted tours for unforgettable experiences
+<h1 className="animated slideInDown" style={{ 
+                fontFamily: 'Georgia, "Times New Roman", serif',
+                fontStyle: 'italic',
+                fontWeight: '400',
+                fontSize: '4rem',
+                lineHeight: '1.3',
+                color: '#f5f0e8',
+                textShadow: '2px 2px 8px rgba(0,0,0,0.6)'
+              }}>Carefully crafted tours for unforgettable experiences
                 </h1>
              
             </div>
