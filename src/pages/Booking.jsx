@@ -34,7 +34,7 @@ backgroundPosition: 'center center',
                 lineHeight: '1.3',
                 color: '#f5f0e8',
                 textShadow: '2px 2px 8px rgba(0,0,0,0.6)'
-              }}>Your adventure begins here. Book with confidence
+              }}>Your adventure begins here, Book with confidence
           </h1>
           
         </div>
