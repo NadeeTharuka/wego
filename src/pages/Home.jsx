@@ -145,20 +145,26 @@ export default function Home() {
         <div className="container py-5" style={{ position: 'relative', zIndex: 1 }}>
           <div className="row justify-content-center py-5">
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-              <h1 className="text-white mb-4 animated slideInDown" style={{ 
-                fontWeight: '500',
-                textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
-                fontSize: '3rem',
-                lineHeight: '1.4'
+              <h1 className="mb-4 animated slideInDown" style={{ 
+                fontFamily: 'Georgia, "Times New Roman", serif',
+                fontStyle: 'italic',
+                fontWeight: '400',
+                fontSize: '4rem',
+                lineHeight: '1.3',
+                color: '#f5f0e8',
+                textShadow: '2px 2px 8px rgba(0,0,0,0.6)',
+                marginTop: '-4rem'
               }}>
                 Gateway to the Pearl of the Indian Ocean
               </h1>
-              <p className="text-white mb-4 animated slideInDown" style={{ 
-                color: '#ffffff',
-                textShadow: 'none',
-                filter: 'none',
-                fontSize: '2.0rem',
+              <p className="mb-4 animated slideInDown" style={{ 
+                fontFamily: 'Georgia, "Times New Roman", serif',
+                fontStyle: 'italic',
                 fontWeight: '400',
+                fontSize: '2.2rem',
+                lineHeight: '1.3',
+                color: '#f5f0e8',
+                textShadow: '2px 2px 8px rgba(0,0,0,0.6)',
                 marginBottom: '2rem'
               }}>
                 Where Your Journey Begins
