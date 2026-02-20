@@ -26,7 +26,12 @@ backgroundPosition: 'center center',
   <div className="container py-5">
       <div className="row justify-content-center py-5">
         <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-<h1 className="display-3 text-white animated slideInDown" style={{ fontSize: '2.5rem' }}>            Your adventure begins here. Book with confidence
+<h1 className="text-white animated slideInDown" style={{ 
+                fontWeight: '500',
+                textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+                fontSize: '3rem',
+                lineHeight: '1.4'
+              }}>            Your adventure begins here. Book with confidence
           </h1>
           
         </div>
