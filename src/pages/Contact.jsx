@@ -38,6 +38,18 @@ function Contact() {
               }}>                
   One message, Endless adventures
               </h1>
+              <p className="animated slideInDown" style={{
+                fontFamily: 'Georgia, "Times New Roman", serif',
+                fontStyle: 'normal',
+                fontWeight: '400',
+                fontSize: '2rem',
+                lineHeight: '1.3',
+                color: '#f5f0e8',
+                textShadow: '2px 2px 8px rgba(0,0,0,0.6)',
+                marginTop: '1rem'
+              }}>
+                Experience the difference
+              </p>
               
             </div>
           </div>

@@ -479,7 +479,18 @@ const TourPackages = () => {
                 textShadow: '2px 2px 8px rgba(0,0,0,0.6)'
               }}>Carefully crafted tours for unforgettable experiences
                 </h1>
-             
+              <p className="animated slideInDown" style={{
+                fontFamily: 'Georgia, "Times New Roman", serif',
+                fontStyle: 'normal',
+                fontWeight: '400',
+                fontSize: '2rem',
+                lineHeight: '1.3',
+                color: '#f5f0e8',
+                textShadow: '2px 2px 8px rgba(0,0,0,0.6)',
+                marginTop: '1rem'
+              }}>
+                Crafted with passion
+              </p>
             </div>
           </div>
         </div>
