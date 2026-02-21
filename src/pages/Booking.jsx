@@ -29,8 +29,8 @@ backgroundPosition: 'center center',
 <h1 className="animated slideInDown" style={{ 
                 fontFamily: 'Georgia, "Times New Roman", serif',
                 fontStyle: 'normal',
-                fontWeight: '700',
-                fontSize: '4rem',
+                fontWeight: '400',
+                fontSize: '5rem',
                 lineHeight: '1.3',
                 color: '#f5f0e8',
                 textShadow: '2px 2px 8px rgba(0,0,0,0.6)'
