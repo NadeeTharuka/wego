@@ -14,6 +14,14 @@ function Destination() {
   const scrollTimeoutRef = useRef(null);
   const pageContentRef = useRef(null);
 
+  // Add black navbar text for destination page
+  useEffect(() => {
+    document.body.classList.add('destination-page');
+    return () => {
+      document.body.classList.remove('destination-page');
+    };
+  }, []);
+
   // Restore expanded state when returning from PlaceDetails
   useEffect(() => {
     if (location.state?.expandedDays && location.state?.scrollToDay !== undefined) {
@@ -1267,32 +1275,8 @@ function Destination() {
 
   return (
     <div>
-      <div className="container-fluid bg-primary py-5 mb-5 hero-header"
-      style={{
-    backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.5), rgba(20, 20, 31, 0.7)), url("assets/img/destinationheaderr.jpg")',
-    backgroundPosition: 'center center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    imageRendering: '-webkit-optimize-contrast',
-    filter: 'contrast(1.1) brightness(1.3) saturate(1.1)',
-    transform: 'translateZ(0)',
-    backfaceVisibility: 'hidden'
-  }}
->
-        <div className="container py-5">
-          <div className="row justify-content-center py-5">
-            <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-              <h1 className="display-3 text-white animated slideInDown">
-                Tour Details
-              </h1>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-
       {selectedPackage ? (
-        <div className="container py-5" ref={pageContentRef}>
+        <div className="container py-5" ref={pageContentRef} style={{ marginTop: '80px' }}>
           <div className="row">
             <div className="col-lg-8">
               <div className="tour-header mb-4">
