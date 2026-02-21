@@ -121,7 +121,7 @@ export default function Home() {
       <div 
         className="container-fluid bg-primary mb-5 hero-header"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1570789210967-2cac24afeb00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=90')`,
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
@@ -139,7 +139,7 @@ export default function Home() {
         <div style={{
           position: 'absolute',
           top: 0, left: 0, right: 0, bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.01)',
+          backgroundColor: 'rgba(0, 0, 0, 0.15)',
           zIndex: 0
         }} />
         <div className="container py-5" style={{ position: 'relative', zIndex: 1 }}>
