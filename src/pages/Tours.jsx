@@ -471,8 +471,8 @@ const TourPackages = () => {
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
 <h1 className="animated slideInDown" style={{ 
                 fontFamily: 'Georgia, "Times New Roman", serif',
-                fontStyle: 'italic',
-                fontWeight: '400',
+                fontStyle: 'normal',
+                fontWeight: '700',
                 fontSize: '4rem',
                 lineHeight: '1.3',
                 color: '#f5f0e8',

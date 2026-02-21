@@ -147,21 +147,21 @@ export default function Home() {
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
               <h1 className="mb-4 animated slideInDown" style={{ 
                 fontFamily: 'Georgia, "Times New Roman", serif',
-                fontStyle: 'italic',
-                fontWeight: '400',
-                fontSize: '4rem',
+                fontStyle: 'normal',
+                fontWeight: '700',
+                fontSize: '5rem',
                 lineHeight: '1.3',
                 color: '#f5f0e8',
                 textShadow: '2px 2px 8px rgba(0,0,0,0.6)',
-                marginTop: '-4rem'
+                marginTop: '-6rem'
               }}>
                 <span style={{ color: '#ffffff', fontStyle: 'normal', fontWeight: '900' }}>{'\u201C'}</span>Gateway to the Pearl of the Indian Ocean<span style={{ color: '#ffffff', fontStyle: 'normal', fontWeight: '900' }}>{'\u201D'}</span>
               </h1>
               <p className="mb-4 animated slideInDown" style={{ 
                 fontFamily: 'Georgia, "Times New Roman", serif',
-                fontStyle: 'italic',
-                fontWeight: '400',
-                fontSize: '2.2rem',
+                fontStyle: 'normal',
+                fontWeight: '600',
+                fontSize: '2.8rem',
                 lineHeight: '1.3',
                 color: '#f5f0e8',
                 textShadow: '2px 2px 8px rgba(0,0,0,0.6)',
