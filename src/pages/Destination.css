@@ -493,6 +493,12 @@ img.img-fluid {
   }
 }
 
+/* Destination page navbar text - black color */
+body.destination-page .navbar .nav-link,
+body.destination-page .navbar .nav-item.nav-link {
+  color: #000000 !important;
+}
+
 /* Print Styles */
 @media print {
   .booking-sidebar,
