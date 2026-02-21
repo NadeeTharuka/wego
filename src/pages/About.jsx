@@ -92,7 +92,7 @@ function About() {
                 About Us
               </h6>
               <h1 className="mb-4">
-                Welcome to <span className="text-primary">Opulent Tours</span>
+                Welcome to <span style={{ background: 'linear-gradient(135deg, #876417 0%, #D3A125 30%, #F8D740 50%, #D3A125 70%, #876417 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Opulent Tours</span>
               </h1>
               <p className="mb-4" style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#000000', textAlign: 'justify' }}>
                 Welcome to Opulent Tours, your gateway to Sri Lanka, a tropical island that captivates travelers with its golden beaches, misty mountains, ancient cities, and the genuine warmth of its people. A land where culture, nature, and adventure blend beautifully, Sri Lanka promises unforgettable experiences at every turn.
