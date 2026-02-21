@@ -70,10 +70,11 @@ function Header() {
               fontSize: '3.0rem',
               letterSpacing: '1px',
               textTransform: 'capitalize',
-              background: 'linear-gradient(45deg, #0d6efd, #0a58ca)',
+              background: 'linear-gradient(135deg, #876417 0%, #D3A125 30%, #F8D740 50%, #D3A125 70%, #876417 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              textShadow: '0px 2px 4px rgba(0,0,0,0.1)',
+              backgroundClip: 'text',
+              textShadow: 'none',
               position: 'relative',
               display: 'inline-block'
             }}
