@@ -11,11 +11,11 @@ function About() {
       <div 
         className="container-fluid bg-primary py-5 mb-5 hero-header"
         style={{
-          backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.35), rgba(20, 20, 31, 0.45)), url("https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=90")',
+          backgroundImage: 'linear-gradient(rgba(20, 20, 31, 0.35), rgba(20, 20, 31, 0.45)), url("https://images.unsplash.com/photo-1570789210967-2cac24afeb00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80")',
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
-          minHeight: '95vh',
+          minHeight: '100vh',
           paddingTop: '8rem',
           paddingBottom: '8rem',
           imageRendering: 'crisp-edges',
@@ -24,6 +24,13 @@ function About() {
           backfaceVisibility: 'hidden'
         }}
       >
+          {/* Dark overlay - only darkens, does not affect image zoom/position */}
+        <div style={{
+          position: 'absolute',
+          top: 0, left: 0, right: 0, bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.01)',
+          zIndex: 0
+        }} />
         <div className="container py-5">
           <div className="row justify-content-center py-5">
             <div className="col-lg-10 pt-lg-5 mt-lg-5 text-center">
