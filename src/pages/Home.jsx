@@ -155,7 +155,7 @@ export default function Home() {
                 textShadow: '2px 2px 8px rgba(0,0,0,0.6)',
                 marginTop: '-4rem'
               }}>
-                Gateway to the Pearl of the Indian Ocean
+                <span style={{ color: '#ffffff', fontStyle: 'normal', fontWeight: '900' }}>{'\u201C'}</span>Gateway to the Pearl of the Indian Ocean<span style={{ color: '#ffffff', fontStyle: 'normal', fontWeight: '900' }}>{'\u201D'}</span>
               </h1>
               <p className="mb-4 animated slideInDown" style={{ 
                 fontFamily: 'Georgia, "Times New Roman", serif',
