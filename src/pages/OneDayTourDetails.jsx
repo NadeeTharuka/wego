@@ -325,35 +325,22 @@ function OneDayTourDetails() {
 
             {/* Tour Details */}
             <div className="tour-info-section mb-5">
-              <div className="row g-4">
-                <div className="col-md-6">
-                  <div className="info-card p-4 bg-light rounded shadow-sm h-100">
-                    <h4 className="text-primary mb-3">
-                      <i className="fa fa-check-circle me-2"></i>What's Included
-                    </h4>
-                    <ul className="list-unstyled">
-                      {details.tourDetails.included.map((item, index) => (
-                        <li key={index} className="mb-2" style={{color: '#333'}}>
-                          <i className="fa fa-check text-success me-2"></i>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="info-card p-4 bg-light rounded shadow-sm h-100">
-                    <h4 className="text-primary mb-3">
+              <div className="row g-4 justify-content-center">
+                <div className="col-md-8">
+                  <div className="info-card p-4 bg-light rounded shadow-sm">
+                    <h4 className="text-primary mb-4 text-center">
                       <i className="fa fa-suitcase me-2"></i>What to Bring
                     </h4>
-                    <ul className="list-unstyled">
+                    <div className="row g-3">
                       {details.tourDetails.whatToBring.map((item, index) => (
-                        <li key={index} className="mb-2" style={{color: '#333'}}>
-                          <i className="fa fa-arrow-right text-primary me-2"></i>
-                          {item}
-                        </li>
+                        <div key={index} className="col-sm-6">
+                          <div className="d-flex align-items-center p-2 bg-white rounded shadow-sm">
+                            <i className="fa fa-arrow-right text-primary me-3"></i>
+                            <span style={{color: '#333'}}>{item}</span>
+                          </div>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 </div>
               </div>
