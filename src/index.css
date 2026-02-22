@@ -385,27 +385,27 @@ body::after {
 /* Active page link - always green */
 .active-nav-link,
 .nav-item.nav-link.active-nav-link {
-    color: #00C851 !important;
+    color: #D3A125 !important;
     font-weight: 700 !important;
-    border-bottom: 2px solid #00C851 !important;
+    border-bottom: 2px solid #D3A125 !important;
     padding-bottom: 4px !important;
-    text-shadow: 0 0 8px rgba(0, 200, 81, 0.35) !important;
+    text-shadow: 0 0 8px rgba(211, 161, 37, 0.35) !important;
 }
 
 /* Hover effect for non-active links */
 .nav-item.nav-link:not(.active-nav-link):hover {
-    color: #00C851 !important;
+    color: #D3A125 !important;
 }
 
 /* Mobile: active link still shows green in collapsed menu */
 @media (max-width: 991px) {
     .active-nav-link,
     .nav-item.nav-link.active-nav-link {
-        color: #00C851 !important;
+        color: #D3A125 !important;
         border-bottom: none !important;
-        border-left: 3px solid #00C851 !important;
+        border-left: 3px solid #D3A125 !important;
         padding-left: 12px !important;
-        background-color: rgba(0, 200, 81, 0.08) !important;
+        background-color: rgba(211, 161, 37, 0.08) !important;
         border-radius: 4px !important;
         text-shadow: none !important;
     }
@@ -429,4 +429,28 @@ body::after {
     ) !important;
     box-shadow: 0 8px 25px rgba(100, 120, 40, 0.4), 0 4px 12px rgba(150, 120, 20, 0.3) !important;
     transform: translateY(-4px);
+}
+/* ============================================================= */
+/* FORCE GOLD ANIMATED LINE - OVERRIDE TEMPLATE GREEN            */
+/* ============================================================= */
+
+/* Target every possible way the template draws the animated underline */
+.navbar-nav .nav-link::before,
+.navbar-nav .nav-link::after,
+.nav-item .nav-link::before,
+.nav-item .nav-link::after,
+.nav-link::before,
+.nav-link::after {
+    background: #D3A125 !important;
+    background-color: #D3A125 !important;
+    border-color: #D3A125 !important;
+}
+
+/* Remove double line - no static border, only animated line */
+.nav-item.nav-link.active-nav-link,
+.nav-item.nav-link.active-nav-link:hover,
+.nav-item.nav-link.active-nav-link:focus {
+    color: #D3A125 !important;
+    border-bottom: none !important;
+    text-shadow: 0 0 8px rgba(211, 161, 37, 0.35) !important;
 }
