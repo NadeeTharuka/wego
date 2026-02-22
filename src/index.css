@@ -421,13 +421,13 @@ body::after {
 .service-item:hover {
     background: linear-gradient(
         135deg,
-        #4a5a28 0%,
-        #6b7a3a 25%,
-        #9a7a1a 50%,
-        #6b7a3a 75%,
-        #4a5a28 100%
+        #a08828 0%,
+        #c4a832 40%,
+        #d4b83a 60%,
+        #c4a832 80%,
+        #a08828 100%
     ) !important;
-    box-shadow: 0 8px 25px rgba(100, 120, 40, 0.4), 0 4px 12px rgba(150, 120, 20, 0.3) !important;
+    box-shadow: 0 8px 25px rgba(196, 168, 50, 0.5), 0 4px 12px rgba(212, 184, 58, 0.35) !important;
     transform: translateY(-4px);
 }
 /* ============================================================= */
