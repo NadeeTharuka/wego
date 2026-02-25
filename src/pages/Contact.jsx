@@ -75,7 +75,7 @@ function Contact() {
               </h4>
               <iframe
                 className="position-relative rounded w-100"
-                src="https://maps.google.com/maps?q=6.579556,79.962382&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=6.5895,79.9635278&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 frameBorder="0"
                 style={{ height: 450, border: 0 }}
                 allowFullScreen=""
