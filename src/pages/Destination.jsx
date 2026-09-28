@@ -330,6 +330,9 @@ function Destination() {
     "Beach Leisure/Water Sports at Pasikuda": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Wax Museum": {
+    image: "https://your-image-url.com/wax-museum.jpg"
+  },
     "Tea Factory & Tea Plantation Tour": {
   image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
 },
