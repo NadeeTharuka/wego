@@ -978,6 +978,21 @@ function PlaceDetails() {
         "Seaside charm"
       ]
     },
+    "Wax Museum": {
+  image: "/assets/img/wax-museum.jpg",
+  location: "Ehelepola Walawwa, Raja Veediya, Kandy 20000, Sri Lanka",
+  description: "The Wax Museum at Ehelepola Walawwa is Sri Lanka's first historical wax museum. It showcases lifelike wax figures of important historical personalities connected with the Kandyan Kingdom, together with exhibits highlighting Kandyan architecture, royal customs, traditional arts and crafts, and ancient royal cuisine.",
+  highlights: [
+    "35+ lifelike wax figures of historical personalities",
+    "Kandyan Kingdom history and culture",
+    "Traditional Kandyan architecture",
+    "Royal customs and ceremonial traditions",
+    "Traditional arts and crafts",
+    "Royal cuisine exhibition"
+  ],
+  openingHours: "Open daily",
+  address: "Ehelepola Walawwa, Raja Veediya, Kandy 20000, Sri Lanka"
+},
     "Old Dutch Church (Galle)": {
       image: "/assets/img/old-dutch-church-galle.jpg",
       description: "The Old Dutch Church in Galle, Sri Lanka, is one of the oldest Protestant churches still in use on the island. Built by the Dutch in 1755 within the Galle Fort, it reflects classic Dutch colonial architecture with simple yet elegant design features. The church is noted for its arched stained-glass windows, antique wooden pews, and beautifully carved tombstones that date back centuries, many of which are from the colonial period. Beyond being a place of worship, the Old Dutch Church stands as a symbol of Sri Lanka's colonial heritage and remains a popular attraction for visitors exploring the historic Galle Fort.",

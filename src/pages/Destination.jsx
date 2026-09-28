@@ -235,6 +235,17 @@ function Destination() {
     "Ravana Falls": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
+    "Temple of the Tooth Relic (Dalada Maligawa)": {
+  image: "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+},
+
+"Wax Museum": {
+  image: "/images/wax-museum.jpg"
+},
+
+"Kandyan Cultural Dance Show": {
+  image: "https://images.unsplash.com/photo-1524230659092-07f99a75c013?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+},
     "Ravana Waterfall": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -330,9 +341,7 @@ function Destination() {
     "Beach Leisure/Water Sports at Pasikuda": {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
-    "Wax Museum": {
-    image: "https://your-image-url.com/wax-museum.jpg"
-  },
+   
     "Tea Factory & Tea Plantation Tour": {
   image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
 },
@@ -654,7 +663,6 @@ function Destination() {
           day: "Day 02",
           title: "Negombo → Dambulla",
           activities: [
-            "Short break at a hotel during the journey",
             "Pinnawala Elephant Orphanage",
             "Dambulla Cave Temple – UNESCO World Heritage Site",
             "Overnight in Dambulla"
@@ -674,11 +682,12 @@ function Destination() {
           day: "Day 04",
           title: "Kandy → Colombo",
           activities: [
-            "Temple of the Sacred Tooth Relic (Dalada Maligawa)",
-            "Kandyan Cultural Dance Show",
-            "Gem Shop Visit",
-            "Evening Shopping in Colombo",
-            "Overnight in Colombo"
+            "Temple of the Tooth Relic (Dalada Maligawa)",
+    "Wax Museum",
+    "Gem Museum",
+    "Peradeniya Botanical Garden",
+    "Evening Shopping in Colombo",
+    "Overnight in Colombo"
           ]
         },
         {
@@ -739,11 +748,12 @@ function Destination() {
           day: "Day 04",
           title: "Kandy → Colombo",
           activities: [
-            "Temple of the Sacred Tooth Relic",
-            "Kandyan Cultural Dance Show",
-            "Gem Shop Visit",
-            "Evening Shopping in Colombo",
-            "Overnight in Colombo"
+            "Temple of the Tooth Relic (Dalada Maligawa)",
+    "Wax Museum",
+    "Gem Museum",
+    "Peradeniya Botanical Garden",
+    "Evening Shopping in Colombo",
+    "Overnight in Colombo"
           ]
         },
         {
@@ -799,7 +809,7 @@ function Destination() {
           title: "Kandy → Nuwara Eliya",
           activities: [
             "Temple of the Sacred Tooth Relic",
-            "Kandyan Cultural Dance Show",
+            "Wax Museum",
             "Gem Shop Visit",
             "Journey to Hill Country",
             "Overnight in Nuwara Eliya"
