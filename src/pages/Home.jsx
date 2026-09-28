@@ -167,7 +167,7 @@ export default function Home() {
                 textShadow: '2px 2px 8px rgba(0,0,0,0.6)',
                 marginBottom: '2rem'
               }}>
-                here Your Journey Begins
+                Where Your Journey Begins
               </p>
               <a 
                 href="/booking" 
