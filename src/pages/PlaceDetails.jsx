@@ -981,7 +981,7 @@ function PlaceDetails() {
     "Wax Museum": {
   image: "/assets/img/wax-museum.jpg",
   location: "Ehelepola Walawwa, Raja Veediya, Kandy 20000, Sri Lanka",
-  description: "The Wax Museum at Ehelepola Walawwa is Sri Lanka's first historical wax museum. It showcases lifelike wax figures of important historical personalities connected with the Kandyan Kingdom, together with exhibits highlighting Kandyan architecture, royal customs, traditional arts and crafts, and ancient royal cuisine.",
+  description: "The Wax Museum in Kandy is an interesting cultural attraction that showcases lifelike wax figures of important and well-known personalities. Located within the historic Temple of the Sacred Tooth Relic complex, the museum provides visitors with an opportunity to learn more about Sri Lanka’s history, culture, and notable figures in an engaging way. The carefully crafted wax figures are displayed in different settings, allowing visitors to observe their traditional clothing, appearances, and historical significance. The museum is also a popular place for photography and is suitable for visitors of different ages. A visit to the Wax Museum can be combined with exploring the surrounding temple complex and other important attractions in the historic city of Kandy.",
   highlights: [
     "35+ lifelike wax figures of historical personalities",
     "Kandyan Kingdom history and culture",
