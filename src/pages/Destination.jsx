@@ -602,11 +602,12 @@ function Destination() {
           day: "Day 03",
           title: "Kandy → Colombo",
           activities: [
-            "Temple of the Sacred Tooth Relic (Dalada Maligawa)",
-            "Kandyan Cultural Dance Show",
-            "Gem Shop Visit",
-            "Evening Shopping in Colombo",
-            "Overnight in Colombo"
+            "Temple of the Tooth Relic (Dalada Maligawa)",
+    "Wax Museum",
+    "Gem Museum",
+    "Peradeniya Botanical Garden",
+    "Evening Shopping in Colombo",
+    "Overnight in Colombo"
           ]
         },
         {
