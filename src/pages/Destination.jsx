@@ -1241,7 +1241,7 @@ const handleSubmit = async (e) => {
   try {
     const response = await emailjs.send(
       'service_2uv1ro8',
-      'YOUR_ACTUAL_TEMPLATE_ID',
+      'template_i2v5qje',
       templateParams,
       {
         publicKey: '__7SlszWPsKdtx5A9'
