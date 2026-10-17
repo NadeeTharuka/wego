@@ -1222,53 +1222,36 @@ function Destination() {
   };
 
  
-const handleSubmit = async (e) => {
+const handleSubmit = (e) => {
   e.preventDefault();
 
-  const templateParams = {
-    to_email: 'opulenttoursinfo@gmail.com',
-    from_name: formData.name,
-    from_email: formData.email,
-    phone: formData.phone,
-    guests: formData.guests,
-    travel_date: formData.date,
-    special_requests: formData.specialRequests,
-    package_name: selectedPackage?.name || 'Custom Package',
-    duration: selectedPackage?.duration || 'To be determined',
-    price: selectedPackage?.price || 'Quote on request'
-  };
+  const whatsappNumber = "94742343484";
 
-  try {
-    const response = await emailjs.send(
-      'service_2uv1ro8',
-      'template_i2v5qje',
-      templateParams,
-      {
-        publicKey: '__7SlszWPsKdtx5A9'
-      }
-    );
+  const message = `
+*New Booking Request - Opulent Tours*
 
-    console.log('EmailJS success:', response);
+*Customer Details*
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
 
-    setFormData({
-      name: '',
-      email: '',
-      date: '',
-      phone: '',
-      guests: '2',
-      specialRequests: ''
-    });
+*Booking Details*
+Package: ${selectedPackage?.name || "Custom Package"}
+Duration: ${selectedPackage?.duration || "To be determined"}
+Price: ${selectedPackage?.price || "Quote on request"}
+Travel Date: ${formData.date}
+Guests: ${formData.guests}
 
-    alert(
-      'Booking request sent successfully! We will contact you within 24 hours.'
-    );
-  } catch (error) {
-    console.error('EmailJS error details:', error);
+*Special Requests*
+${formData.specialRequests || "None"}
 
-    alert(
-      `Booking failed: ${error?.text || error?.message || 'Please check your EmailJS configuration.'}`
-    );
-  }
+Please confirm this booking request.
+  `;
+
+  const whatsappURL =
+    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
 };
 
 
