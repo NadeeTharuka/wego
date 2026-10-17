@@ -1244,7 +1244,7 @@ const handleSubmit = async (e) => {
       'YOUR_ACTUAL_TEMPLATE_ID',
       templateParams,
       {
-        publicKey: 'YOUR_ACTUAL_PUBLIC_KEY'
+        publicKey: '__7SlszWPsKdtx5A9'
       }
     );
 
