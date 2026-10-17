@@ -1221,45 +1221,56 @@ function Destination() {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    const templateParams = {
-      to_email: 'opulenttoursinfo@gmail.com',
-      from_name: formData.name,
-      from_email: formData.email,
-      phone: formData.phone,
-      guests: formData.guests,
-      travel_date: formData.date,
-      special_requests: formData.specialRequests,
-      package_name: selectedPackage?.name || 'Custom Package',
-      duration: selectedPackage?.duration || 'To be determined',
-      price: selectedPackage?.price || 'Quote on request'
-    };
+ 
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    try {
-      await emailjs.send(
-        'your_service_id',
-        'your_template_id',
-        templateParams,
-        'your_public_key'
-      );
-      
-      setFormData({ 
-        name: '', 
-        email: '', 
-        date: '', 
-        phone: '', 
-        guests: '2', 
-        specialRequests: '' 
-      });
-      
-      alert('Booking request sent successfully! We will contact you within 24 hours.');
-    } catch (error) {
-      console.error('Failed to send email:', error);
-      alert('Failed to send booking request. Please contact us directly at +9471 534 5060 or opulenttoursinfo@gmail.com');
-    }
+  const templateParams = {
+    to_email: 'opulenttoursinfo@gmail.com',
+    from_name: formData.name,
+    from_email: formData.email,
+    phone: formData.phone,
+    guests: formData.guests,
+    travel_date: formData.date,
+    special_requests: formData.specialRequests,
+    package_name: selectedPackage?.name || 'Custom Package',
+    duration: selectedPackage?.duration || 'To be determined',
+    price: selectedPackage?.price || 'Quote on request'
   };
+
+  try {
+    const response = await emailjs.send(
+      'YOUR_ACTUAL_SERVICE_ID',
+      'YOUR_ACTUAL_TEMPLATE_ID',
+      templateParams,
+      {
+        publicKey: 'YOUR_ACTUAL_PUBLIC_KEY'
+      }
+    );
+
+    console.log('EmailJS success:', response);
+
+    setFormData({
+      name: '',
+      email: '',
+      date: '',
+      phone: '',
+      guests: '2',
+      specialRequests: ''
+    });
+
+    alert(
+      'Booking request sent successfully! We will contact you within 24 hours.'
+    );
+  } catch (error) {
+    console.error('EmailJS error details:', error);
+
+    alert(
+      `Booking failed: ${error?.text || error?.message || 'Please check your EmailJS configuration.'}`
+    );
+  }
+};
+
 
   // Check if an activity is part of the Colombo City Tour
   const isColomboCityTourPlace = (activityName) => {
